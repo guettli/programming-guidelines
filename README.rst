@@ -1,0 +1,45 @@
+Programming Guidelines
+======================
+
+No Shell Scripting
+------------------
+
+The shell is nice for interactive usage. I use it daily. But shell scripts are unreliable. Don't do it. Use Python.
+
+C is slow
+---------
+
+... looking at the time you need to get things implemented. Avoid it.
+
+SSH to remote-server
+--------------------
+
+I still do this, but I want to reduce it. Configuration management is much better. For example salt-stack
+
+Logging to files
+----------------
+I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
+Both concepts don't fit together. Logrotating is a happit from the last century.
+
+Use Systemd
+------------
+
+It is avaible, don't reinvent. Don't do double-fork magic any more. Use service Type=simpel
+
+Avoid Office Documents
+----------------------
+
+Use a way to edit content (use cases, specs, ...) over the internet: Use wikis.
+
+
+Focus on datastructures
+-----------------------
+
+A relational database is a rock solid fundment. Use a tool to get schema migrations done (for example django).
+
+Version Control
+---------------
+
+Use git.
+
+
