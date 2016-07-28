@@ -43,3 +43,11 @@ Version Control
 Use git.
 
 
+Time is too short to run all tests before commit+push
+-----------------------------------------------------
+If the guideline of your team is: "Run all tests before commit+push", then there
+is something wrong. Time is too short to watch tests running!
+
+CI
+--
+Use continous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
