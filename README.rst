@@ -54,5 +54,5 @@ Use continous integration. Only tested code is allowed to get deployed. This nee
 
 Avoid Threads and Async
 -----------------------
-Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initial estimate. Avoid it, if you want to get done. It's different in your spare time: Do what you want and what is fascinating for you.
+Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initial estimated. Avoid it, if you want to get done. It's different in your spare time: Do what you want and what is fascinating for you.
 
