@@ -35,7 +35,7 @@ Use a way to edit content (use cases, specs, ...) over the internet: Use wikis.
 Focus on datastructures
 -----------------------
 
-A relational database is a rock solid fundment. Use a tool to get schema migrations done (for example django).
+A relational database is a rock solid fundment. Use a tool to get schema migrations done (for example django). Use PostgreSQL.
 
 Version Control
 ---------------
