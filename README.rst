@@ -46,7 +46,7 @@ Use git.
 Time is too short to run all tests before commit+push
 -----------------------------------------------------
 If the guideline of your team is: "Run all tests before commit+push", then there
-is something wrong. Time is too short to watch tests running!
+is something wrong. Time is too short to watch tests running! Run only the tests of the code you touched (py.test -k my_keyword).
 
 CI
 --
