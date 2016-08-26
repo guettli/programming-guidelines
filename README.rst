@@ -56,3 +56,8 @@ Avoid Threads and Async
 -----------------------
 Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initial estimated. Avoid it, if you want to get done. It's different in your spare time: Do what you want and what is fascinating for you.
 
+
+Use a modern IDE
+----------------
+
+Time for vi and emacs has passed. Use a modern IDE on modern hardware (SSD disk). For example PyCharm.
