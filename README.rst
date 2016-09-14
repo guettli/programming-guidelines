@@ -60,4 +60,12 @@ Threads and Async are fascinating. BUT: It's hard to debug. You will need much l
 Use a modern IDE
 ----------------
 
-Time for vi and emacs has passed. Use a modern IDE on modern hardware (SSD disk). For example PyCharm.
+Time for vi and emacs has passed. Use a modern IDE on modern hardware (SSD disk). For example PyCharm. I switched from Emacs to PyCharm in 2016. I used Emacs from 1997 until 2015 (18 years).
+
+Cardinality
+-----------
+
+It does not matter how you work with your data (struct in C, classes in OOP, tables in SQL, ...). Cardinality is very important. Using 0..* is often easier to implement than 0..1. The first can be handled by a simple loop. The second is often a nullable column/attribute. You need conditions (IFs) to handle nullable columns/attributes.
+
+https://en.wikipedia.org/wiki/Cardinality_(data_modeling)
+
