@@ -69,3 +69,7 @@ It does not matter how you work with your data (struct in C, classes in OOP, tab
 
 https://en.wikipedia.org/wiki/Cardinality_(data_modeling)
 
+Communication with Customers: Tell customers what they should test
+------------------------------------------------------------------
+I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens. That's not satisfying since software developers want to hear that their work does help. If you (the developer) provide a check-list of things to test, then the likelihood to get feedback soon is bigger.
+
