@@ -6,7 +6,7 @@ My programming guidelines. Please provide feedback, tell me what's wrong and wha
 No Shell Scripting
 ------------------
 
-The shell is nice for interactive usage. I use it daily. But shell scripts are unreliable. Don't do it. Use Python.
+The shell is nice for interactive usage. I use it daily. But shell scripts are unreliable. Don't do it. I use Python.
 
 C is slow
 ---------
@@ -26,7 +26,7 @@ Both concepts don't fit together. Logrotating is a happit from the last century.
 Use Systemd
 ------------
 
-It is avaible, don't reinvent. Don't do double-fork magic any more. Use service Type=simpel
+It is avaible, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simpel
 
 Avoid Office Documents
 ----------------------
@@ -56,7 +56,7 @@ Use continous integration. Only tested code is allowed to get deployed. This nee
 
 Avoid Threads and Async
 -----------------------
-Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initial estimated. Avoid it, if you want to get done. It's different in your spare time: Do what you want and what is fascinating for you.
+Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get done. It's different in your spare time: Do what you want and what is fascinating for you.
 
 Don't waste time doing it "generic and reusable" if you don't need to
 ----------------------------------------------------------------------
