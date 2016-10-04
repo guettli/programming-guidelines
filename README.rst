@@ -1,6 +1,8 @@
 Programming Guidelines
 ======================
 
+My programming guidelines. Please provide feedback, tell me what's wrong and what's missing: https://github.com/guettli/programming-guidelines/issues
+
 No Shell Scripting
 ------------------
 
@@ -55,6 +57,16 @@ Use continous integration. Only tested code is allowed to get deployed. This nee
 Avoid Threads and Async
 -----------------------
 Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initial estimated. Avoid it, if you want to get done. It's different in your spare time: Do what you want and what is fascinating for you.
+
+Don't waste time doing it "generic and reusable" if you don't need to
+----------------------------------------------------------------------
+If you are doing some kind of software project for the first time, then focus on getting it done. Don't was time to do it perfect, reusable, perfomant or portable. 
+You don't know the needs of the future today.
+
+Use all features PostgreSQL does offer
+--------------------------------------
+
+Use all features PostgreSQL does offer. Don't constrain yourself to use only the portable features. It's ok if your code does work only with PostgreSQL and no other database. If there is the need to support other databases in the future, then handle this problem in the future, not today. PostgreSQL is great, and you waste time if you don't use its features.
 
 
 Use a modern IDE
