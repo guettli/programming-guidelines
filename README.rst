@@ -74,6 +74,10 @@ Use a modern IDE
 
 Time for vi and emacs has passed. Use a modern IDE on modern hardware (SSD disk). For example PyCharm. I switched from Emacs to PyCharm in 2016. I used Emacs from 1997 until 2015 (18 years).
 
+Type with ten fingers
+---------------------
+Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eys down (to keyboard) and up (to monitor) several hundret times per day. This saves a lot of energy.
+
 Cardinality
 -----------
 
