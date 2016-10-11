@@ -21,7 +21,7 @@ I still do this, but I want to reduce it. Configuration management is much bette
 Logging to files
 ----------------
 I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
-Both concepts don't fit together. Logrotating is a happit from the last century.
+Both concepts don't fit together. Rotating logfiles is a habbit from the last century, which is broken by design.
 
 Use Systemd
 ------------
