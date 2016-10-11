@@ -85,7 +85,7 @@ Easy to read code: Use guard clauses
 ------------------------------------
 Guard clauses help to avoid indentation. It makes code easier to read and understand. See http://programmers.stackexchange.com/a/101043/129077
 
-Keep it simple and stupid. 
+
 Cardinality
 -----------
 
