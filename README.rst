@@ -88,3 +88,6 @@ Communication with Customers: Tell customers what they should test
 ------------------------------------------------------------------
 I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens. That's not satisfying since software developers want to hear that their work does help. If you (the developer) provide a check-list of things to test, then the likelihood to get feedback soon is bigger.
 
+Communication with Customers: Define "done"
+-------------------------------------------
+Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page.
