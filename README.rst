@@ -75,7 +75,7 @@ Time for vi and emacs has passed. Use a modern IDE on modern hardware (SSD disk)
 
 Type with ten fingers
 ---------------------
-Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eys down (to keyboard) and up (to monitor) several hundret times per day. This saves a lot of energy.
+Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eys down (to keyboard) and up (to monitor) several hundret times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. I like lenovo keyboards with track point. Use a clipboard manager like Diodon.
 
 Cardinality
 -----------
