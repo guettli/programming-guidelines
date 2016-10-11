@@ -50,6 +50,10 @@ Time is too short to run all tests before commit+push
 If the guideline of your team is: "Run all tests before commit+push", then there
 is something wrong. Time is too short to watch tests running! Run only the tests of the code you touched (py.test -k my_keyword).
 
+Try to do it conditionless
+--------------------------
+
+
 CI
 --
 Use continous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
@@ -77,6 +81,11 @@ Type with ten fingers
 ---------------------
 Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eys down (to keyboard) and up (to monitor) several hundret times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. I like lenovo keyboards with track point. Use a clipboard manager like Diodon.
 
+Easy to read code: Use guard clauses
+------------------------------------
+Guard clauses help to avoid indentation. It makes code easier to read and understand. See http://programmers.stackexchange.com/a/101043/129077
+
+Keep it simple and stupid. 
 Cardinality
 -----------
 
