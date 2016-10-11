@@ -28,10 +28,10 @@ Use Systemd
 
 It is avaible, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simpel
 
-Avoid Office Documents
-----------------------
+Avoid Office Documents or UML-tools
+-----------------------------------
 
-Use a way to edit content (use cases, specs, ...) over the internet: Use wikis.
+Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinaltiy and the steps. Sequence diagrams are not needed. Just: first, second, third ...
 
 
 Focus on datastructures
