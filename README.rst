@@ -56,12 +56,11 @@ Use continous integration. Only tested code is allowed to get deployed. This nee
 
 Avoid Threads and Async
 -----------------------
-Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get done. It's different in your spare time: Do what you want and what is fascinating for you.
+Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get things done. It's different in your spare time: Do what you want and what is fascinating for you.
 
 Don't waste time doing it "generic and reusable" if you don't need to
 ----------------------------------------------------------------------
-If you are doing some kind of software project for the first time, then focus on getting it done. Don't was time to do it perfect, reusable, perfomant or portable. 
-You don't know the needs of the future today.
+If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, perfomant or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments.
 
 Use all features PostgreSQL does offer
 --------------------------------------
