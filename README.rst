@@ -50,9 +50,9 @@ Time is too short to run all tests before commit+push
 If the guideline of your team is: "Run all tests before commit+push", then there
 is something wrong. Time is too short to watch tests running! Run only the tests of the code you touched (py.test -k my_keyword).
 
-Try to do it conditionless
---------------------------
-
+Conditionless Datastructures
+----------------------------
+Imagine you have a table "meeting" and a table "place". The table "meeting" has a ForeignKey to table "place". In the beginning it might be not clear yet where the meeting will be. Most developers will make the ForeignKey optional (nullable). WAIT: This will create a condition in your datastructure. There is a way easier solution: Create a place called "unknown". Use this as default, avoid nullable columns. This datastructure (without a nullable ForeignKey) makes implementing the GUI much easier.
 
 CI
 --
