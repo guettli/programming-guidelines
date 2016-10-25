@@ -100,3 +100,10 @@ I have seen it several times: Software gets developed. The customer was told to 
 Communication with Customers: Define "done"
 -------------------------------------------
 Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page.
+
+Dare to say "Please wait, I want to take a note"
+------------------------------------------------
+
+Most people can listen and write at once. I can't. And I guess a lot of programmers have this problem. I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you, don't fool yourself. You will only remember 4 of 5 issues. Dare to day "please wait, I want to take a note". This way you can care for all issues, which results in happy customers.
+
+
