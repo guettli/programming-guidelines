@@ -106,4 +106,9 @@ Dare to say "Please wait, I want to take a note"
 
 Most people can listen and write at once. I can't. And I guess a lot of programmers have this problem. I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you, don't fool yourself. You will only remember 4 of 5 issues. Dare to day "please wait, I want to take a note". This way you can care for all issues, which results in happy customers.
 
+Source code generation is a stupid idea
+---------------------------------------
 
+I guess every young programmer wants to write a tool which creates software (sooner or later). Stop! Please think about it again. What do you gain? Don't confuse data and code. Imagine you have a source code generator which takes DATA as input and creates SOURCE as output. What is the difference between DATA and SOURCE? What do you gain? Even if you have some kind of artifical intelligence, you can't create new (redundancy free) data if your only input is DATA. It is just a different syntax. Why not write a programm which reads DATA and does the thing you want to do with SOURCE?
+
+Exception1: If you have some sort of Interface Definition Langauge like (Corba or Protocol Buffers), then you can create stubs as source code. But this generated source should not contains conditions (IFs) or loops.
