@@ -112,3 +112,9 @@ Source code generation is a stupid idea
 I guess every young programmer wants to write a tool which creates software (sooner or later). Stop! Please think about it again. What do you gain? Don't confuse data and code. Imagine you have a source code generator which takes DATA as input and creates SOURCE as output. What is the difference between DATA and SOURCE? What do you gain? Even if you have some kind of artifical intelligence, you can't create new (redundancy free) data if your only input is DATA. It is just a different syntax. Why not write a programm which reads DATA and does the thing you want to do with SOURCE?
 
 Exception1: If you have some sort of Interface Definition Langauge like (Corba or Protocol Buffers), then you can create stubs as source code. But this generated source should not contains conditions (IFs) or loops.
+
+Regex are great - But it's like eating rubish
+---------------------------------------------
+
+Yes, I like regular expression. But slow down: What do I do, if I use a regex? I think it is "parsing". I remember to have read this some time ago: "Time is too short to rewrite parsers". Don't parse data! We live in the 21 century. Consume high level data structures like json, yaml or protcol buffers.
+
