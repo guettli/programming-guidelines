@@ -99,7 +99,7 @@ I have seen it several times: Software gets developed. The customer was told to 
 
 Communication with Customers: Define "done"
 -------------------------------------------
-Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page.
+Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page. If you don't have a defition of done/ready, then you should not start to write source code. First define the goal, then choose a strategy to get to the goal.
 
 Dare to say "Please wait, I want to take a note"
 ------------------------------------------------
