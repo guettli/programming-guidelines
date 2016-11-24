@@ -26,7 +26,7 @@ Both concepts don't fit together. Rotating logfiles is a habbit from the last ce
 Use Systemd
 ------------
 
-It is avaible, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simpel
+It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simpel
 
 Avoid Office Documents or UML-tools
 -----------------------------------
@@ -34,10 +34,10 @@ Avoid Office Documents or UML-tools
 Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinaltiy and the steps. Sequence diagrams are not needed. Just: first, second, third ...
 
 
-Focus on datastructures
+Focus on Data Structures
 -----------------------
 
-A relational database is a rock solid fundment. Use a tool to get schema migrations done (for example django). Use PostgreSQL.
+A relational database is a rock solid data storage. Use a tool to get schema migrations done (for example django). Use PostgreSQL.
 
 Version Control
 ---------------
@@ -50,13 +50,13 @@ Time is too short to run all tests before commit+push
 If the guideline of your team is: "Run all tests before commit+push", then there
 is something wrong. Time is too short to watch tests running! Run only the tests of the code you touched (py.test -k my_keyword).
 
-Conditionless Datastructures
+Conditionless Data Structures
 ----------------------------
-Imagine you have a table "meeting" and a table "place". The table "meeting" has a ForeignKey to table "place". In the beginning it might be not clear yet where the meeting will be. Most developers will make the ForeignKey optional (nullable). WAIT: This will create a condition in your datastructure. There is a way easier solution: Create a place called "unknown". Use this as default, avoid nullable columns. This datastructure (without a nullable ForeignKey) makes implementing the GUI much easier.
+Imagine you have a table "meeting" and a table "place". The table "meeting" has a ForeignKey to table "place". In the beginning it might be not clear yet where the meeting will be. Most developers will make the ForeignKey optional (nullable). WAIT: This will create a condition in your data structure. There is a way easier solution: Create a place called "unknown". Use this as default, avoid nullable columns. This data structure (without a nullable ForeignKey) makes implementing the GUI much easier.
 
 CI
 --
-Use continous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
+Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
 
 Avoid Threads and Async
 -----------------------
@@ -64,7 +64,7 @@ Threads and Async are fascinating. BUT: It's hard to debug. You will need much l
 
 Don't waste time doing it "generic and reusable" if you don't need to
 ----------------------------------------------------------------------
-If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, perfomant or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments.
+If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments.
 
 Use all features PostgreSQL does offer
 --------------------------------------
@@ -79,7 +79,7 @@ Time for vi and emacs has passed. Use a modern IDE on modern hardware (SSD disk)
 
 Type with ten fingers
 ---------------------
-Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eys down (to keyboard) and up (to monitor) several hundret times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. I like lenovo keyboards with track point. Use a clipboard manager like Diodon.
+Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eyes down (to keyboard) and up (to monitor) several hundred times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. I like lenovo keyboards with track point. Use a clipboard manager like Diodon.
 
 Easy to read code: Use guard clauses
 ------------------------------------
@@ -99,7 +99,7 @@ I have seen it several times: Software gets developed. The customer was told to 
 
 Communication with Customers: Define "done"
 -------------------------------------------
-Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page. If you don't have a defition of done/ready, then you should not start to write source code. First define the goal, then choose a strategy to get to the goal.
+Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page. If you don't have a definition of done/ready, then you should not start to write source code. First define the goal, then choose a strategy to get to the goal.
 
 Dare to say "Please wait, I want to take a note"
 ------------------------------------------------
@@ -109,9 +109,9 @@ Most people can listen and write at once. I can't. And I guess a lot of programm
 Source code generation is a stupid idea
 ---------------------------------------
 
-I guess every young programmer wants to write a tool which creates software (sooner or later). Stop! Please think about it again. What do you gain? Don't confuse data and code. Imagine you have a source code generator which takes DATA as input and creates SOURCE as output. What is the difference between DATA and SOURCE? What do you gain? Even if you have some kind of artifical intelligence, you can't create new (redundancy free) data if your only input is DATA. It is just a different syntax. Why not write a programm which reads DATA and does the thing you want to do with SOURCE?
+I guess every young programmer wants to write a tool which creates software (sooner or later). Stop! Please think about it again. What do you gain? Don't confuse data and code. Imagine you have a source code generator which takes DATA as input and creates SOURCE as output. What is the difference between DATA and SOURCE? What do you gain? Even if you have some kind of artificial intelligence, you can't create new (redundancy free) data if your only input is DATA. It is just a different syntax. Why not write a program which reads DATA and does the thing you want to do with SOURCE?
 
-Exception1: If you have some sort of Interface Definition Langauge like (Corba or Protocol Buffers), then you can create stubs as source code. But this generated source should not contains conditions (IFs) or loops.
+Exception1: If you have some sort of Interface Definition Language like (Corba or Protocol Buffers), then you can create stubs as source code. But this generated source should not contains conditions (IFs) or loops.
 
 Regex are great - But it's like eating rubish
 ---------------------------------------------
@@ -121,4 +121,3 @@ Yes, I like regular expression. But slow down: What do I do, if I use a regex? I
 Give booleans a "positive" name
 -------------------------------
 I once gave a DB column the name "failed". It was a boolean indicating if the transmission of data to the next system was successful. The output as table in the GUI looked confusing for humans. The column heading was "failed". What should be visible in the cell for failed rows? Boolean usually get translated to "Yes/No" or "True/False". But if the human brain reads "Yes" or "True" it initially things "all right". But in this case "Yes" meant "Yes, it failed". The next time I will call the column "was_successful", then "Yes" means "Yes, it was successful".
-
