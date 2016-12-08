@@ -3,15 +3,24 @@ Programming Guidelines
 
 My programming guidelines. Please provide feedback, tell me what's wrong and what's missing: https://github.com/guettli/programming-guidelines/issues
 
+Introduction
+------------
+
+I was born 1076. I started coding with basic and assemlber when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python.
+
 No Shell Scripting
 ------------------
 
-The shell is nice for interactive usage. I use it daily. But shell scripts are unreliable. Don't do it. I use Python.
+The shell is nice for interactive usage. But shell scripts are unreliable: Most scripts fail if filenames contain whitespaces. Shell-Gurus know how to work around this. But quoting can get really complicated. I use the shell for interactive stuff daily. But I stopped writing shell scripts.
+
+Sometimes I see young and talented programmers wasting time. There are two ways to learn: Make mistakes yourself, or read from the mistakes which were done by other people. 
+
+This list summarizes a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
 
 C is slow
 ---------
 
-... looking at the time you need to get things implemented. Avoid it.
+... looking at the time you need to get things implemented. Avoid it if possible.
 
 SSH to remote-server
 --------------------
@@ -21,12 +30,12 @@ I still do this, but I want to reduce it. Configuration management is much bette
 Logging to files
 ----------------
 I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
-Both concepts don't fit together. Rotating logfiles is a habbit from the last century, which is broken by design.
+Both concepts don't fit together. Somer or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematicaly version of "every line". This gets really compliated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundret times and each time different ...
 
 Use Systemd
 ------------
 
-It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simpel
+It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simple.
 
 Avoid Office Documents or UML-tools
 -----------------------------------
@@ -42,7 +51,7 @@ A relational database is a rock solid data storage. Use a tool to get schema mig
 Version Control
 ---------------
 
-Use git.
+I like git.
 
 
 Time is too short to run all tests before commit+push
