@@ -6,7 +6,7 @@ My programming guidelines. Please provide feedback, tell me what's wrong and wha
 Introduction
 ------------
 
-I was born 1076. I started coding with basic and assemlber when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python.
+I was born 1976. I started coding with basic and assemlber when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python.
 
 No Shell Scripting
 ------------------
