@@ -130,3 +130,8 @@ Yes, I like regular expression. But slow down: What do I do, if I use a regex? I
 Give booleans a "positive" name
 -------------------------------
 I once gave a DB column the name "failed". It was a boolean indicating if the transmission of data to the next system was successful. The output as table in the GUI looked confusing for humans. The column heading was "failed". What should be visible in the cell for failed rows? Boolean usually get translated to "Yes/No" or "True/False". But if the human brain reads "Yes" or "True" it initially things "all right". But in this case "Yes" meant "Yes, it failed". The next time I will call the column "was_successful", then "Yes" means "Yes, it was successful".
+
+Love your docs
+--------------
+I have seen it several times on github: If I profide a hint that the docs could be improved, a lot of maintainers don't care much. Just look at the README files on github. They starts with "Installing", then "Configuring" ... What is missing? An Introduction. Just some sentences what this great project is all about. Programmers love details. Dear programmers, learn to relax and look at the thing you create like a new comer. If you have this mind set "I do the important (programming) stuff. Someone else can care for the docs", then your open source project won't be successful.
+
