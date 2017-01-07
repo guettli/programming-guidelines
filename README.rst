@@ -144,3 +144,4 @@ Thank you
 * Robert C. Martin for the book "Clean Coder"
 * Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
 * All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
+* All people who ask question and/or answers them at places like StackOverflow.
