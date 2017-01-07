@@ -73,12 +73,12 @@ Threads and Async are fascinating. BUT: It's hard to debug. You will need much l
 
 Don't waste time doing it "generic and reusable" if you don't need to
 ----------------------------------------------------------------------
-If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments.
+If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments. First get the basics working, then tests and CI, then listen to the needs, whishes and dreams of your customers.
 
 Use all features PostgreSQL does offer
 --------------------------------------
 
-Use all features PostgreSQL does offer. Don't constrain yourself to use only the portable features. It's ok if your code does work only with PostgreSQL and no other database. If there is the need to support other databases in the future, then handle this problem in the future, not today. PostgreSQL is great, and you waste time if you don't use its features.
+Use all features PostgreSQL does offer. Don't constrain yourself to use only the portable SQL features. It's ok if your code does work only with PostgreSQL and no other database. If there is the need to support other databases in the future, then handle this problem in the future, not today. PostgreSQL is great, and you waste time if you don't use its features.
 
 
 Use a modern IDE
