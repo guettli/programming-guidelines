@@ -1,7 +1,7 @@
 Programming Guidelines
 ======================
 
-My programming guidelines. Please provide feedback, tell me what's wrong and what's missing: https://github.com/guettli/programming-guidelines/issues
+My personal programming guidelines. Please provide feedback, tell me what's wrong and what's missing: https://github.com/guettli/programming-guidelines/issues
 
 Introduction
 ------------
