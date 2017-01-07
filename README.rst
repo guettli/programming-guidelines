@@ -138,3 +138,9 @@ I have seen it several times on github: If I profide a hint that the docs could 
 Passing around methods make things hard to debug
 ------------------------------------------------
 Even in C you can pass around method-pointers. It's very common in JavaScript and sometimes it gets done in Python, too. It is hard to debug. IDE's can't resolve the code: "Find usages" don't work.  I try to avoid it. I prefer OOP (Inheritance) and avoid passing around methods or using them as variables.
+
+Thank you
+---------
+ * Robert C. Martin for the book "Clean Coder"
+ * Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
+ * All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
