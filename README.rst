@@ -6,7 +6,7 @@ My personal programming guidelines. Please provide feedback, tell me what's wron
 Introduction
 ------------
 
-I was born 1976. I started coding with basic and assemlber when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python.
+I was born 1976. I started coding with basic and assembler when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python.
 
 No Shell Scripting
 ------------------
@@ -15,7 +15,7 @@ The shell is nice for interactive usage. But shell scripts are unreliable: Most 
 
 Sometimes I see young and talented programmers wasting time. There are two ways to learn: Make mistakes yourself, or read from the mistakes which were done by other people. 
 
-This list summarizes a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
+This list summarises a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
 
 C is slow
 ---------
@@ -30,7 +30,7 @@ I still do this, but I want to reduce it. Configuration management is much bette
 Logging to files
 ----------------
 I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
-Both concepts don't fit together. Somer or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematicaly version of "every line". This gets really compliated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundret times and each time different ...
+Both concepts don't fit together. Sooner or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematically version of "every line". This gets really complicated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundred times and each time different ...
 
 Use Systemd
 ------------
@@ -40,7 +40,7 @@ It is available, don't reinvent. Don't do double-fork magic any more. Use a syst
 Avoid Office Documents or UML-tools
 -----------------------------------
 
-Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinaltiy and the steps. Sequence diagrams are not needed. Just: first, second, third ...
+Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps. Sequence diagrams are not needed. Just: first, second, third ...
 
 
 Focus on Data Structures
@@ -73,7 +73,7 @@ Threads and Async are fascinating. BUT: It's hard to debug. You will need much l
 
 Don't waste time doing it "generic and reusable" if you don't need to
 ----------------------------------------------------------------------
-If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments. First get the basics working, then tests and CI, then listen to the needs, whishes and dreams of your customers.
+If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments. First get the basics working, then tests and CI, then listen to the needs, wishes and dreams of your customers.
 
 Use all features PostgreSQL does offer
 --------------------------------------
@@ -133,7 +133,7 @@ I once gave a DB column the name "failed". It was a boolean indicating if the tr
 
 Love your docs
 --------------
-I have seen it several times on github: If I profide a hint that the docs could be improved, a lot of maintainers don't care much. Just look at the README files on github. They starts with "Installing", then "Configuring" ... What is missing? An Introduction. Just some sentences what this great project is all about. Programmers love details. Dear programmers, learn to relax and look at the thing you create like a new comer. If you have this mind set "I do the important (programming) stuff. Someone else can care for the docs", then your open source project won't be successful.
+I have seen it several times on github: If I provide a hint that the docs could be improved, a lot of maintainers don't care much. Just look at the README files on github. They starts with "Installing", then "Configuring" ... What is missing? An Introduction! Just some sentences what this great project is all about. Programmers love details. Dear programmers, learn to relax and look at the thing you create like a new comer. If you have this mind set "I do the important (programming) stuff. Someone else can care for the docs", then your open source project won't be successful.
 
 Passing around methods make things hard to debug
 ------------------------------------------------
