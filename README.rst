@@ -141,6 +141,6 @@ Even in C you can pass around method-pointers. It's very common in JavaScript an
 
 Thank you
 ---------
- * Robert C. Martin for the book "Clean Coder"
- * Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
- * All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
+* Robert C. Martin for the book "Clean Coder"
+* Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
+* All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
