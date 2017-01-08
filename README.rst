@@ -80,6 +80,9 @@ Use all features PostgreSQL does offer
 
 Use all features PostgreSQL does offer. Don't constrain yourself to use only the portable SQL features. It's ok if your code does work only with PostgreSQL and no other database. If there is the need to support other databases in the future, then handle this problem in the future, not today. PostgreSQL is great, and you waste time if you don't use its features.
 
+Imagine there is be a a Meta-Programming-Language (AFAIK this does not exist) and it is an official standard created by the ISO (like SQL). You can compile this Meta-Programming-Language to Java, Python, C and other languages. But this Meta-Programming-Language would only support 70% of all features of the underlaying programming languages. Would it make sense to say "My code must be portable, you must not use implementation specific stuff!"?. No, I think it would make no sense.
+
+My conclusion: Use all features PostgreSQL has. Don't make live more complicated than necessary and don't restrict yourself to use only portable SQL.
 
 Use a modern IDE
 ----------------
