@@ -150,3 +150,10 @@ Thank you
 * All people who ask question and/or answers them at places like StackOverflow.
 * People I meat during study at HTW-Dresden
 * My teammates at TBZ
+
+Software Design Patterns are overrated
+--------------------------------------
+
+If you need several pages in a book to explain a software design pattern, then it is too complicated.
+I think Software Design Patterns are overrated.
+
