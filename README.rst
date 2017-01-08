@@ -157,3 +157,8 @@ Software Design Patterns are overrated
 If you need several pages in a book to explain a software design pattern, then it is too complicated.
 I think Software Design Patterns are overrated.
 
+KISS
+----
+
+Keep it simple and stupid. The most boring and most obvious solution is often the best. Although it sometimes takes months until you know which solution it is.
+
