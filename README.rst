@@ -165,3 +165,7 @@ Keep it simple and stupid. The most boring and most obvious solution is often th
 Time is too short for "git rebase" vs "git merge" discussions
 --------------------------------------------------------------
 What's the net result of "git rebase" vs "git merge" discussion? The result is source code. Who cares how source code got into the current state? Me, but only sometimes. Archeology is intresting .... but more interesting is the future, since you can influence it.
+
+traceroute won't help you
+-------------------------
+.... if you have trouble with a tcp connection. Use tcptraceroute for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: traceroute uses UDP, not TCP.
