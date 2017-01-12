@@ -162,6 +162,6 @@ KISS
 
 Keep it simple and stupid. The most boring and most obvious solution is often the best. Although it sometimes takes months until you know which solution it is.
 
-Time is too short for git rebase vs merge discussions
------------------------------------------------------
+Time is too short for "git rebase" vs "git merge" discussions
+--------------------------------------------------------------
 What's the net result of "git rebase" vs "git merge" discussion? The result is source code. Who cares how source code got into the current state? Me, but only sometimes. Archeology is intresting .... but more interesting is the future, since you can influence it.
