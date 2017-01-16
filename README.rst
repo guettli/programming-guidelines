@@ -173,3 +173,15 @@ What's the net result of "git rebase" vs "git merge" discussion? The result is s
 traceroute won't help you
 -------------------------
 .... if you have trouble with a tcp connection. Use tcptraceroute for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: traceroute uses UDP, not TCP.
+
+This is untestable code
+-----------------------
+
+If you are new to software unit testing, then you might think ... "some parts of my code is *untestable*".
+I don't think so. I guess your software uses the IPO pattern: https://en.wikipedia.org/wiki/IPO_model Input, Processing, Output. The question is: How to feed the input for testing to my code? Mocking, virtualization and automation are your friends.
+
+The "untestable" code needs to be cared of. Code is always testable, there is no untestable code. Maybe your knowledge of testing is limited up to now. Finding untestable code is the beginning of an interesting route to good code.
+
+
+
+
