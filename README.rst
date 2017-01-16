@@ -63,6 +63,10 @@ Conditionless Data Structures
 ----------------------------
 Imagine you have a table "meeting" and a table "place". The table "meeting" has a ForeignKey to table "place". In the beginning it might be not clear yet where the meeting will be. Most developers will make the ForeignKey optional (nullable). WAIT: This will create a condition in your data structure. There is a way easier solution: Create a place called "unknown". Use this as default, avoid nullable columns. This data structure (without a nullable ForeignKey) makes implementing the GUI much easier.
 
+Yes, True, Unknown is not a nullable Bollean Column
+---------------------------------------------------
+If you want to store a data in a SQL database which has three states (maybe True, False, Unknown), then you might think a nullable boolean column (here "my_column") is the right choice. But I think it is not. Do you think the SQL statement "select * from my_table where my_column = %s" works? No, it won't work since "select * from my_table where my_column = NULL" will never ever return a single line. If you don't believe me, read: https://en.wikipedia.org/wiki/Null_(SQL)#Effect_of_Unknown_in_WHERE_clauses. If you like typing, you can work-around this in your application, but I prefer straight forward solutions with only few conditions.
+
 CI
 --
 Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
