@@ -25,7 +25,7 @@ C is slow
 SSH to remote-server
 --------------------
 
-I still do this, but I want to reduce it. Configuration management is much better. For example salt-stack
+I still do this (ssh remote-server ... vi /etc/...), but I want to reduce it. Configuration management is much better. For example salt-stack or ansible.
 
 Logging to files
 ----------------
