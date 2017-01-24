@@ -182,6 +182,19 @@ I don't think so. I guess your software uses the IPO pattern: https://en.wikiped
 
 The "untestable" code needs to be cared of. Code is always testable, there is no untestable code. Maybe your knowledge of testing is limited up to now. Finding untestable code is the beginning of an interesting route to good code.
 
+If you do coding to implement backup ...
+----------------------------------------
+
+If you do coding/programming to implement your backup of data, then you are on the wrong track.
+
+It is very likely that I will do it wrong, and this will be a big risk, if your context is backing up data.
+
+Why? Because you will notice your fault if you try to recover your data. 
+
+Compare this to an gadet app for a mobile phone. If this app fails, it is likely that the fault does not lead to data loss.
+
+**Use** a backup tool, even if you love to do programming. Configure it, but don't write it yourself.
+
 
 
 
