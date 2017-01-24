@@ -195,6 +195,24 @@ Compare this to an gadet app for a mobile phone. If this app fails, it is likely
 
 **Use** a backup tool, even if you love to do programming. Configure it, but don't write it yourself.
 
+ForeignKey from code to DB
+--------------------------
 
+This code is uses the ORM of django
+
+```
+if ....:
+    ticket.responsible_group=Group.objects.get(name='Leaders')
+```
+
+Above code is dirty because 'Leaders' is like ForeignKey from code to a database row.
+
+If you think this is better .....
+
+```
+if ....:
+    ticket.responsible_group=Group.objects.get(name=constants_module.GROUP_NAME_OF_LEADERS)
+```
+.... then you did not understand what I tried to explain.
 
 
