@@ -224,9 +224,9 @@ Testcode should not contain conditions (the keyword`if`). If you have loops (`fo
 
 Tests should be straight forward::
 
-#. Build environment: Data structures, ...
-#. Run the code which operates on the data structures
-#. Ensure that the output is like you want it to.
+ #. Build environment: Data structures, ...
+ #. Run the code which operates on the data structures
+ #. Ensure that the output is like you want it to.
 
 .. code-block:: python
 
