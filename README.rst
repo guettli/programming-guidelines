@@ -222,17 +222,17 @@ Testcode is conditionless
 
 Testcode should not contain conditions (the keyword`if`). If you have loops (`for`, `while`) in your tests, then this looks strange, too.
 
-Tests should be straight forward:
+Tests should be straight forward::
 
- # Build environment: Data structures, ...
- # Run the code which operates on the data structures
- # Ensure that the output is like you want it to.
+#. Build environment: Data structures, ...
+#. Run the code which operates on the data structures
+#. Ensure that the output is like you want it to.
 
 .. code-block:: python
 
-class MyTest(unittest.TestCase):
-    def test_foo(self):
-        foo=Foo()
-        self.assertEqual(42, foo.find_answer_to_the_ultimate_question_of_life_the_universe_and_everything())
+    class MyTest(unittest.TestCase):
+        def test_foo(self):
+            foo=Foo()
+            self.assertEqual(42, foo.find_answer_to_the_ultimate_question_of_life_the_universe_and_everything())
         
 
