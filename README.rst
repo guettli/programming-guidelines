@@ -148,15 +148,6 @@ Passing around methods make things hard to debug
 ------------------------------------------------
 Even in C you can pass around method-pointers. It's very common in JavaScript and sometimes it gets done in Python, too. It is hard to debug. IDE's can't resolve the code: "Find usages" don't work.  I try to avoid it. I prefer OOP (Inheritance) and avoid passing around methods or using them as variables.
 
-Thank you
----------
-* Robert C. Martin for the book "Clean Coder"
-* Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
-* All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
-* All people who ask question and/or answers them at places like StackOverflow.
-* People I meat during study at HTW-Dresden
-* My teammates at TBZ
-
 Software Design Patterns are overrated
 --------------------------------------
 
@@ -179,7 +170,8 @@ traceroute won't help you
 This is untestable code
 -----------------------
 
-If you are new to software unit testing, then you might think ... "some parts of my code is *untestable*".
+If you are new to software unit testing, then you might think ... "some parts of my code are *untestable*".
+
 I don't think so. I guess your software uses the IPO pattern: https://en.wikipedia.org/wiki/IPO_model Input, Processing, Output. The question is: How to feed the input for testing to my code? Mocking, virtualization and automation are your friends.
 
 The "untestable" code needs to be cared of. Code is always testable, there is no untestable code. Maybe your knowledge of testing is limited up to now. Finding untestable code is the beginning of an interesting route to good code.
@@ -189,7 +181,7 @@ If you do coding to implement backup ...
 
 If you do coding/programming to implement your backup of data, then you are on the wrong track.
 
-It is very likely that I will do it wrong, and this will be a big risk, if your context is backing up data.
+It is very likely that you will do it wrong, and this will be a big risk, if your context is backing up data.
 
 Why? Because you will notice your fault if you try to recover your data. 
 
@@ -242,3 +234,13 @@ Don't search the needle in a haystack. Inject dynamite and let it explode
 -------------------------------------------------------------------------
 
 Imagine you have a huge code base which was written by a nerd which is gone since several months. Somewhere in the code a database row gets updated. This update should not happen, and you can't find the relevant source code line during the first minutes. You can reproduce this failure in a test environment. What can you do? You can start a debugger and jump through the lines which get executed. Yes, this works. But this is "Searching the needle in a haystack". This takes too long. I like solutions like this: Add a constraint trigger to your database which fires on modification. Execute the code and BANG. you get the relevant code line with a nice stacktrace. This way you get the solution provided on a silver plattern with minimal effort :-)
+
+
+Thank you
+---------
+* Robert C. Martin for the book "Clean Coder"
+* Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
+* All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
+* All people who ask question and/or answers them at places like StackOverflow.
+* People I meat during study at HTW-Dresden
+* My teammates at TBZ
