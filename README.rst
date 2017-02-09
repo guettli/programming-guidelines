@@ -242,9 +242,9 @@ Imagine you have a huge code base which was written by a nerd which is gone sinc
 Avoid magic or uncommon things
 ------------------------------
 
- * hard links
- * file system ACLs (Access control lists)
- * git submodules (Please configuration management, deployment tools, ...)
+* hard links
+* file system ACLs (Access control lists)
+* git submodules (Please use configuration management, deployment tools, ...)
 
 Thank you
 ---------
