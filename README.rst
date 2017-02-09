@@ -239,6 +239,12 @@ Don't search the needle in a haystack. Inject dynamite and let it explode
 
 Imagine you have a huge code base which was written by a nerd which is gone since several months. Somewhere in the code a database row gets updated. This update should not happen, and you can't find the relevant source code line during the first minutes. You can reproduce this failure in a test environment. What can you do? You can start a debugger and jump through the lines which get executed. Yes, this works. But this is "Searching the needle in a haystack". This takes too long. I like solutions like this: Add a constraint trigger to your database which fires on modification. Execute the code and BANG. you get the relevant code line with a nice stacktrace. This way you get the solution provided on a silver plattern with minimal effort :-)
 
+Avoid magic or uncommon things
+------------------------------
+
+ * hard links
+ * file system ACLs (Access control lists)
+ * git submodules (Please configuration management, deployment tools, ...)
 
 Thank you
 ---------
