@@ -246,6 +246,18 @@ Avoid magic or uncommon things
 * file system ACLs (Access control lists)
 * git submodules (Please use configuration management, deployment tools, ...)
 
+Learn one programming language, not ten.
+----------------------------------------
+
+Most young developers think you need to learn many programming languages to be a good developer.
+
+Yes, it does help sometimes to know how the programming language C works.
+
+My opinion: Lear Python, JavaScript.
+
+Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument.
+
+
 Thank you
 ---------
 * Robert C. Martin for the book "Clean Coder"
