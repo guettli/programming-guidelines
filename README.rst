@@ -257,6 +257,23 @@ My opinion: Lear Python, JavaScript.
 
 Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument.
 
+Learn "git bisect"
+------------------
+"git bisect" is a great tool to find the commit, which introduced an error. Unfortunately there it is not a one-liner up to now, but you can use it like this:
+
+```
+user@host> git bisect start HEAD HEAD~10 
+
+
+user@host> git bisect run py.test -k test_something
+ ...
+c8bed9b56861ea626833637e11a216555d7e7414 is the first bad commit
+Author: ...
+
+
+# useless, but unfortunately needed
+user@host> git bisect reset
+```
 
 Thank you
 ---------
