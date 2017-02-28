@@ -31,7 +31,7 @@ Reasons:
 C is slow
 ---------
 
-... looking at the time you need to get things implemented. Avoid it if possible.
+... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem dones takes "ages". I avoid it, if possible. If Python/Ruby/... get to slow, you can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then optimize.
 
 SSH to remote-server
 --------------------
