@@ -8,14 +8,24 @@ Introduction
 
 I was born 1976. I started coding with basic and assembler when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python.
 
+
+Sometimes I see young and talented programmers wasting time. There are two ways to learn: Make mistakes yourself, or read from the mistakes which were done by other people. 
+
+This list summarises a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
+
+It's my personal opinion/feeling. No facts or no truth.
+
 No Shell Scripting
 ------------------
 
 The shell is nice for interactive usage. But shell scripts are unreliable: Most scripts fail if filenames contain whitespaces. Shell-Gurus know how to work around this. But quoting can get really complicated. I use the shell for interactive stuff daily. But I stopped writing shell scripts.
 
-Sometimes I see young and talented programmers wasting time. There are two ways to learn: Make mistakes yourself, or read from the mistakes which were done by other people. 
-
-This list summarises a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
+Reasons:
+* If a error happens in a shell script, the interpreter steps silently to the next line. Yes I know you can use "set -e". But  you don't get a stacktrace. Without stacktrace you waste a lot of time to analyze why this error happened.
+* AFAIK you can't do object oriented programming in a shell. I like inheritance.
+* AFAIK you can't raise exceptions in shell scripts.
+* Shell-Scripts tend to call a lot of subprocesses. Every call to grep,head,tail,cut  creates a new process. This tends to get slow.
+* I do this "find ... | xargs" daily, but only while using the shell interactively. But what happends if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find .. | grep | xargs" does not work any more .... It is dirty and will never get clean.
 
 C is slow
 ---------
