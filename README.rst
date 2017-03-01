@@ -332,7 +332,7 @@ It is very likely that this means you need to move the body of a loop into a new
         do_y(foo)
         ...
 
-Now you can write a test which checks `my_method_foo()` and you don't need a conditional breakpoint any more.
+Now you can call `my_method_foo()` in a test, and you don't need a conditional breakpoint any more.
 
 
 Thank you
