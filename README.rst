@@ -310,13 +310,14 @@ Write a test where a normal breakpoint is enough.
 
 It is very likely that this means you need to move the body of a loop into a new method.
 
+
 .. code-block::
 
     # Old
     def my_method(...):
         for foo in get_foos():
-            do_x(f)
-            do_y(f)
+            do_x(foo)
+            do_y(foo)
             ...
 
 .. code-block::
@@ -326,8 +327,8 @@ It is very likely that this means you need to move the body of a loop into a new
         for foo in get_foos():
 
     def my_method__foo(foo):
-        do_x(f)
-        do_y(f)
+        do_x(foo)
+        do_y(foo)
         ...
 
 Now you can write a test which checks `my_method_foo()` and you don't need a conditional breakpoint any more.
