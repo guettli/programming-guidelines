@@ -304,7 +304,7 @@ Learn "git bisect"
 Conditional Breakpoints
 -----------------------
 
-Imagine, you are able to reproduce a bug in a test. But you could not fix it up to now. If you create a conditional breakpoint to find the root of the problem, then write a more fine grained test.
+Imagine, you are able to reproduce a bug in a test. But you could not fix it up to now. If you want to create a conditional breakpoint to find the root of the problem, then you could be on the wrong track. Why not rewrite the code first, to make it more fine-grained testable?
 
 Write a test where a normal breakpoint is enough.
 
