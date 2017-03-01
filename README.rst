@@ -325,6 +325,7 @@ It is very likely that this means you need to move the body of a loop into a new
     # new
     def my_method(...):
         for foo in get_foos():
+            my_method__foo(foo)
 
     def my_method__foo(foo):
         do_x(foo)
