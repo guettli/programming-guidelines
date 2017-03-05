@@ -33,10 +33,21 @@ C is slow
 
 ... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem dones takes "ages". I avoid it, if possible. If Python/Ruby/... get to slow, you can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then optimize.
 
-SSH to remote-server
+SSH to production-server
 --------------------
 
-I still do this (ssh remote-server ... vi /etc/...), but I want to reduce it. Configuration management is much better. For example salt-stack or ansible.
+I still do interactive logins to production remote-server (mostly via ssh). But I want to reduce it. 
+
+
+Sooner or later you will make a typo. See this article from github for a exciting report what happened during a denial of service: https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/ We are humans, and humans make mistakes. Automation helps to reduce the risk of data loss.
+
+
+If you are doing "ssh production-server ... vi /etc/..." or "... apt install": Configuration management is much better. For example salt-stack or ansible.
+
+If you are doing "ssh production-server .... less /var/log/...": No log-management yet? Get your logs to a central place.
+
+If you are doing "ssh production-server ... rm ...": Please ask yourself what you are doing here. How can you automate this, to make this unneccessary in the future. 
+
 
 Logging to files
 ----------------
