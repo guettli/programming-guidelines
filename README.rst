@@ -28,6 +28,14 @@ Reasons:
  * Shell-Scripts tend to call a lot of subprocesses. Every call to grep,head,tail,cut  creates a new process. This tends to get slow.
  * I do this "find ... | xargs" daily, but only while using the shell interactively. But what happends if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find .. | grep | xargs" does not work any more .... It is dirty and will never get clean.
 
+Even Crontab lines are dangerous. Look at this:
+
+```
+@weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
+```
+
+Do you spot the big risk? (Solution below)
+
 C is slow
 ---------
 
@@ -347,6 +355,10 @@ It is very likely that this means you need to move the body of a loop into a new
 
 Now you can call `my_method_foo()` in a test, and you don't need a conditional breakpoint any more.
 
+Solution
+--------
+
+ * Big risk of "find $TMPDIR": If the variable $TMPDIR  is not set, then the `find` command does scan and delete all directories! 
 
 Thank you
 ---------
