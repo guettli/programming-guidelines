@@ -354,8 +354,13 @@ It is very likely that this means you need to move the body of a loop into a new
 
 Now you can call `my_method_foo()` in a test, and you don't need a conditional breakpoint any more.
 
-Solution
---------
+Don't set up a SMTP daemon
+--------------------------
+
+If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. Use a tool like getmail (not fetchmail) which is a mail fetching client. You will have much more trouble if you set up an SMTP daemon.
+
+Solutions
+---------
 
  * Big risk of "find $TMPDIR": If the variable $TMPDIR  is not set, then the `find` command does scan and delete all directories! 
 
