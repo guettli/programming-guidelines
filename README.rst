@@ -30,9 +30,8 @@ Reasons:
 
 Even Crontab lines are dangerous. Look at this:
 
-```
-@weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
-```
+    @weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
+
 
 Do you spot the big risk? (Solution below)
 
