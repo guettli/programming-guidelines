@@ -285,6 +285,8 @@ Imagine you have a huge code base which was written by a nerd which is gone sinc
 
 With other words: Don't waste time with searching.
 
+If you can't use a database constraing, maybe this helps: Raise Exception on unwanted syscall http://stackoverflow.com/a/42669844/633961
+
 Avoid magic or uncommon things
 ------------------------------
 
