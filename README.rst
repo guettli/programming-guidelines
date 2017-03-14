@@ -369,6 +369,7 @@ Solutions
 Thank you
 ---------
 * Robert C. Martin for the book "Clean Coder"
+* Malcolm Tredinnick. (His quote "knows enough about stuff to be dangerous" and his sudden death opens a universe of phantasies for paranoid people). Only few people listen (read and try to understand) like he did.
 * Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
 * All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
 * All people who ask question and/or answers them at places like StackOverflow.
