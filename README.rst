@@ -366,6 +366,16 @@ Don't set up a SMTP daemon
 
 If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. Use a tool like getmail (not fetchmail) which is a mail fetching client. You will have much more trouble if you set up an SMTP daemon.
 
+Get the difference between Authentication versus Authorization
+--------------------------------------------------------------
+
+It is important to understand the difference.
+
+**Authentication** happens first: Is the user really Bob, or is there just someone who pretends to be Bob?
+
+**Authorization** Is Bob allowed to do action "foo"? Here we already trust that the user is Bob and not someone else.
+
+
 Solutions
 ---------
 
