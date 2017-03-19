@@ -182,6 +182,13 @@ Love your docs
 --------------
 I have seen it several times on github: If I provide a hint that the docs could be improved, a lot of maintainers don't care much. Just look at the README files on github. They starts with "Installing", then "Configuring" ... What is missing? An Introduction! Just some sentences what this great project is all about. Programmers love details. Dear programmers, learn to relax and look at the thing you create like a new comer. If you have this mind set "I do the important (programming) stuff. Someone else can care for the docs", then your open source project won't be successful.
 
+Canonical docs
+--------------
+
+Look at the question concerning ssh options at the Q+A site serverfault. There is a lot of guessing. Something is wrong. Nobody knows where the canonical docs are. Easy linking to specific configuration is not possible. What happens? Redudant docs. Many blog posts try to explain stuff.... Don't write blog posts, improve the upstreams docs. Talk with the developers. Don't be shy.
+
+I am unsure if I should love or hate "wiki.archlinux.org". On the one hand I found there valuable information about systemd and other linux related secrets. On the other hand it is redundant and since a lot of users take their knowledge from this resource, the canonical upstream docs get less love. That's https://en.wikipedia.org/wiki/Ambivalence - that's live.
+
 Care for newcomers
 ------------------
 In the year 1997 I was very thankful that there was a hint "If unsure choose ..." when I need to compile a linux kernel. In these days you need to answer dozens question before you could compile the invention of Linus Torvalds.
@@ -190,10 +197,6 @@ I had no clue what most questions where about. But this small advice "If unsure 
 
 If you are managing a project: Care for newcomers. Provide them with guide lines. But don't reinvent docs. Provide links to the relevant upstream docs, if you just use a piece of software. Avoid redundant docs.
 
-Canonical docs
---------------
-
-Look at the question concerning ssh options at the Q+A site serverfault. There is a lot of guessing. Something is wrong. Nobody knows where the canonical docs are. Easy linking to specific configuration is not possible. What happens? Redudant docs. Many blog posts try to explain stuff.... Don't write blog posts, improve the upstreams docs. Talk with the developers. Don't be shy.
 
 
 
