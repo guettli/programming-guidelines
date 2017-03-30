@@ -380,6 +380,14 @@ It is important to understand the difference.
 
 **Authorization** Is Bob allowed to do action "foo"? Here we already trust that the user is Bob and not someone else.
 
+Idempotence is great
+--------------------
+
+Idempotence is great, since it ensures, that it does not do harm if the method is called twice.
+
+https://en.wikipedia.org/wiki/Idempotence
+
+Further reading: http://docs.celeryproject.org/en/latest/userguide/tasks.html (although I don't use celery any more)
 
 Solutions
 ---------
