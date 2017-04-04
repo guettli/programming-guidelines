@@ -297,6 +297,8 @@ With other words: Don't waste time with searching.
 
 If you can't use a database constraing, maybe this helps: Raise Exception on unwanted syscall http://stackoverflow.com/a/42669844/633961
 
+If you want to find the line where unwanted output gets emitted: http://stackoverflow.com/a/43210881/633961
+
 Avoid magic or uncommon things
 ------------------------------
 
