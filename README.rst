@@ -124,7 +124,7 @@ My conclusion: Use all features PostgreSQL has. Don't make live more complicated
 DB Constraints are great, but are sometimes a hint to redundancy
 ----------------------------------------------------------------
 
-Database constraints are great since you can fix the very important base of your fancy coding. But what does a constraint do? It ensures that data is valid. Sometimes it can be a hint that your data contains redundancy. If you need to keep column A and column B in sync, then why not put all information into one column? Then you don't need to keep both in sync. Maybe a simples database layout would help and then you don't need a constraint. This pattern applies sometimes, not always. 
+Database constraints are great since you can fix the very important base of your fancy coding. But what does a constraint do? It ensures that data is valid. Sometimes it can be a hint that your data contains redundancy. If you need to keep column A and column B in sync, then why not put all information into one column? Then you don't need to keep both in sync. Maybe a simpler database layout would help and then you don't need a constraint. This pattern applies sometimes, not always. 
 
 Here is a good example which explains that if you avoid redundancy, you can avoid complicated constraints: http://dba.stackexchange.com/a/168130/5705
 
