@@ -250,7 +250,7 @@ Compare this to an gadet app for a mobile phone. If this app fails, it is likely
 ForeignKey from code to DB
 --------------------------
 
-This code is uses the ORM of django
+This code uses the ORM of django
 
 .. code-block:: python
 
