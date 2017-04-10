@@ -402,7 +402,7 @@ There will be chaos if there is no central dispatcher.
 
 I like http://python-rq.org/ It is simple and robust.
 
-BTW, the topic is called https://en.wikipedia.org/wiki/Synchronization_(computer_science)
+BTW, the topic is called `Synchronization <https://en.wikipedia.org/wiki/Synchronization_(computer_science)>`_.
 
 
 [1] https://en.wikipedia.org/wiki/File_locking
