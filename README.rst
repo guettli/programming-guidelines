@@ -391,6 +391,22 @@ https://en.wikipedia.org/wiki/Idempotence
 
 Further reading: http://docs.celeryproject.org/en/latest/userguide/tasks.html (although I don't use celery any more)
 
+File Locking is deprecated
+--------------------------
+
+In the past File_Locking[1] was a very interesting and adventurous topic. Sometimes it worked, sometimes not, and you got interesting edge cases to solve again and again. It was fun. Only hard core experts know the difference between `fcntl`, `flock` and `lockf`.
+
+.... But on the other hand: It's too complicated, too many edge cases, too much wasting time.
+
+There will be chaos if there is no central dispatcher. 
+
+I like http://python-rq.org/ It is simple and robust.
+
+BTW, the topic is called https://en.wikipedia.org/wiki/Synchronization_(computer_science)
+
+
+[1] https://en.wikipedia.org/wiki/File_locking
+
 Solutions
 ---------
 
