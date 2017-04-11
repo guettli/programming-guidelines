@@ -299,6 +299,8 @@ If you can't use a database constraing, maybe this helps: Raise Exception on unw
 
 If you want to find the line where unwanted output gets emitted: http://stackoverflow.com/a/43210881/633961
 
+If you have a library which logs a warning, but the warning does not help, since it is missing important information. And you have no clue where this warning comes from. You can use this solution: http://stackoverflow.com/a/43232091/633961
+
 Avoid magic or uncommon things
 ------------------------------
 
