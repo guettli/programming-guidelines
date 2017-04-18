@@ -411,10 +411,10 @@ Configuration Management
 ------------------------
 Configuration Management (Salt, Ansible, Chef, Puppet, ...) of Unix/Linux servers can act in two ways:
 
- * change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_ 
- * put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
+* change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_ 
+* put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
  
- You have far less trouble if you use "put a whole file". Example: Do not fiddle with `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
+You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
 
 
 [1] https://en.wikipedia.org/wiki/File_locking
