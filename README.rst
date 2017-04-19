@@ -100,6 +100,18 @@ If you want to store a data in a SQL database which has three states (True, Fals
 
 If you want to store True, False, Unknown: Use text, integer or a new table and a foreign key.
 
+Avoid nullable characters columns in databases
+----------------------------------------------
+
+If you allow NULL in a character column, then you have two ways to express "empty":
+
+* NULL
+* empty string
+
+Avoid it if possible. In most cases you just need one variant of "empty". Simplest solution: avoid that a column holding character data types is allowed to be null.
+
+If you really think the character column should be allowed to be NULL, then consider a constraint: If the character string in the column is not NULL, then the string must not be empty. This way ensure that there are is only one variant of "empty".
+
 CI
 --
 Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
