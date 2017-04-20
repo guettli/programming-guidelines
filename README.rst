@@ -35,6 +35,23 @@ Even Crontab lines are dangerous. Look at this:
 
 Do you spot the big risk? (Solution below)
 
+Cron Jobs
+---------
+
+A server exists to serve. If the server does not receive requests, why should the server do something? This results into my rule of thumb: Avoid cron jobs.
+
+Sometimes you need to have a cron job for house keeping stuff.
+
+Keep cron jobs simple. 
+
+In general there are two ways to configure the arguments of a cron job:
+
+* the command line arguments which are part of the crontab line
+* additional source of configuration: config files or config from a database
+
+Avoid mixing these two ways of configuring a cron job. I prefer to configure the cron job via the later of both ways. This keeps the cron job simple. My guide line: Do not configure the cron job via optional command line arguments. Only use required arguments. 
+
+
 C is slow
 ---------
 
