@@ -439,6 +439,7 @@ I like http://python-rq.org/ It is simple and robust.
 
 BTW, the topic is called `Synchronization <https://en.wikipedia.org/wiki/Synchronization_(computer_science)>`_.
 
+Further reading about "task queues": https://www.fullstackpython.com/task-queues.html
 
 Configuration Management
 ------------------------
