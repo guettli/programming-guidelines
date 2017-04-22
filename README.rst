@@ -217,6 +217,8 @@ Love your docs
 --------------
 I have seen it several times on github: If I provide a hint that the docs could be improved, a lot of maintainers don't care much. Just look at the README files on github. They starts with "Installing", then "Configuring" ... What is missing? An Introduction! Just some sentences what this great project is all about. Programmers love details. Dear programmers, learn to relax and look at the thing you create like a new comer. If you have this mind set "I do the important (programming) stuff. Someone else can care for the docs", then your open source project won't be successful.
 
+If you write docs, then do it for new comers. Start with the introduction, define the important terms, then provide the simple use cases. Put details and special cases at the end.
+
 Canonical docs
 --------------
 
