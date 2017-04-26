@@ -452,7 +452,7 @@ Configuration Management (Salt, Ansible, Chef, Puppet, ...) of Unix/Linux server
  
 You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
 
-
+This link is for the github support, since the closing parantheses is not part of the link (bug): https://en.wikipedia.org/wiki/Synchronization_(computer_science)
 
 
 Solutions
