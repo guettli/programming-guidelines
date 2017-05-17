@@ -252,6 +252,13 @@ KISS
 
 Keep it simple and stupid. The most boring and most obvious solution is often the best. Although it sometimes takes months until you know which solution it is.
 
+From the book "Site Reliability Engineering" (O'Reilly Media 2016) https://landing.google.com/sre/book/chapters/simplicity.html
+
+> The Virtue of Boring 
+> 
+> Unlike just about everything else in life, "boring" is actually a positive attribute when it comes to software! We don’t want our programs to be spontaneous and interesting; we want them to stick to the script and predictably accomplish their business goals.
+
+
 Time is too short for "git rebase" vs "git merge" discussions
 --------------------------------------------------------------
 What's the net result of "git rebase" vs "git merge" discussion? The result is source code. Who cares how source code got into the current state? Me, but only sometimes. Archeology is intresting .... but more interesting is the future, since you can influence it.
