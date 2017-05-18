@@ -13,7 +13,7 @@ Sometimes I see young and talented programmers wasting time. There are two ways 
 
 This list summarises a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
 
-It's my personal opinion/feeling. No facts or no truth.
+It's my personal opinion and feeling. No facts, no single truth.
 
 No Shell Scripting
 ------------------
