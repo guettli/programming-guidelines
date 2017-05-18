@@ -162,14 +162,14 @@ Transactions do not nest
 
 I love nested function calls and recursion. This way you can write easy to read code. For example recursion in quicksort is great.
 
-Nested transactions ... sounds great. But stop: What is ACID about? This is about:
+Nested transactions ... sounds great. But stop: What is `ACID https://en.wikipedia.org/wiki/ACID`_ about? This is about:
 
 * Atomicity
 * Consistency
 * Isolation
 * Durability
 
-Database transactions are atomic. If the transaction was sucessful, then it is **D**urable.
+Database transactions are atomic. If the transaction was sucessful, then it is *D*urable.
 
 Imagine you have one outer-transaction, and two inner transaction.
 
