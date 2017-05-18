@@ -164,20 +164,20 @@ I love nested function calls and recursion. This way you can write easy to read 
 
 Nested transactions ... sounds great. But stop: What is ACID about? This is about:
 
- * Atomicity
- * Consistency
- * Isolation
- * Durability
+* Atomicity
+* Consistency
+* Isolation
+* Durability
 
 Database transactions are atomic. If the transaction was sucessful, then it is **D**urable.
 
 Imagine you have one outer-transaction, and two inner transaction.
 
-# Transaction OUTER starts
-# Transaction INNER1 starts
-# Transaction INNER1 commits
-# Transaction INNER2 starts
-# Transaction INNER2 raises an exception.
+#. Transaction OUTER starts
+#. Transaction INNER1 starts
+#. Transaction INNER1 commits
+#. Transaction INNER2 starts
+#. Transaction INNER2 raises an exception.
 
 Is the result of INNER1 durable or not?
 
