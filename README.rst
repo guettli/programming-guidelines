@@ -22,11 +22,11 @@ The shell is nice for interactive usage. But shell scripts are unreliable: Most 
 
 Reasons:
 
- * If a error happens in a shell script, the interpreter steps silently to the next line. Yes I know you can use "set -e". But  you don't get a stacktrace. Without stacktrace you waste a lot of time to analyze why this error happened.
- * AFAIK you can't do object oriented programming in a shell. I like inheritance.
- * AFAIK you can't raise exceptions in shell scripts.
- * Shell-Scripts tend to call a lot of subprocesses. Every call to grep,head,tail,cut  creates a new process. This tends to get slow.
- * I do this "find ... | xargs" daily, but only while using the shell interactively. But what happends if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find .. | grep | xargs" does not work any more .... It is dirty and will never get clean.
+* If a error happens in a shell script, the interpreter steps silently to the next line. Yes I know you can use "set -e". But  you don't get a stacktrace. Without stacktrace you waste a lot of time to analyze why this error happened.
+* AFAIK you can't do object oriented programming in a shell. I like inheritance.
+* AFAIK you can't raise exceptions in shell scripts.
+* Shell-Scripts tend to call a lot of subprocesses. Every call to grep,head,tail,cut  creates a new process. This tends to get slow.
+* I do this "find ... | xargs" daily, but only while using the shell interactively. But what happends if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find .. | grep | xargs" does not work any more .... It is dirty and will never get clean.
 
 Even Crontab lines are dangerous. Look at this:
 
