@@ -157,6 +157,34 @@ Database constraints are great since you can fix the very important base of your
 
 Here is a good example which explains that if you avoid redundancy, you can avoid complicated constraints: http://dba.stackexchange.com/a/168130/5705
 
+Transactions do not nest
+------------------------
+
+I love nested function calls and recursion. This way you can write easy to read code. For example recursion in quicksort is great.
+
+Nested transactions ... sounds great. But stop: What is ACID about? This is about:
+
+ * Atomicity
+ * Consistency
+ * Isolation
+ * Durability
+
+Database transactions are atomic. If the transaction was sucessful, then it is **D**urable.
+
+Imagine you have one outer-transaction, and two inner transaction.
+
+# Transaction OUTER starts
+# Transaction INNER1 starts
+# Transaction INNER1 commits
+# Transaction INNER2 starts
+# Transaction INNER2 raises an exception.
+
+Is the result of INNER1 durable or not?
+
+My conclusion: Transactions do not nest
+
+Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atomic-in-django
+
 Use a modern IDE
 ----------------
 
