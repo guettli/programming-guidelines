@@ -75,6 +75,7 @@ If you are doing "ssh production-server ... rm ...": Please ask yourself what yo
 
 Logging to files
 ----------------
+
 I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
 Both concepts don't fit together. Sooner or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematically version of "every line". This gets really complicated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundred times and each time different ...
 
@@ -88,6 +89,7 @@ Avoid Office Documents or UML-tools
 
 Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps. Sequence diagrams are not needed. Just: first, second, third ...
 
+`Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>` screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with you cell phone at the end.
 
 Focus on Data Structures
 -----------------------
