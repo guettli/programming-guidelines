@@ -237,6 +237,16 @@ Yes, I like regular expression. But slow down: What do I do, if I use a regex? I
 
 From time to time you need to do text processing. Unfortunately there are several regex flavors. My guide-line: Use PCRE. They are available in Python, Postfix and many other tools. Don't waste time with other regex flavors, if PCRE are available. 
 
+CSV - Comma-separated values
+----------------------------
+
+CSV is not a data format. It is an illness.
+
+If your customer sends you tabular data in Excel. Read the excel directly. Do not convert it to CSV just because you think this is easier.
+
+Use a library like: https://pypi.python.org/pypi/xlrd
+
+
 Give booleans a "positive" name
 -------------------------------
 I once gave a DB column the name "failed". It was a boolean indicating if the transmission of data to the next system was successful. The output as table in the GUI looked confusing for humans. The column heading was "failed". What should be visible in the cell for failed rows? Boolean usually get translated to "Yes/No" or "True/False". But if the human brain reads "Yes" or "True" it initially things "all right". But in this case "Yes" meant "Yes, it failed". The next time I will call the column "was_successful", then "Yes" means "Yes, it was successful".
