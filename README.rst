@@ -242,7 +242,7 @@ CSV - Comma-separated values
 
 CSV is not a data format. It is an illness.
 
-If your customer sends you tabular data in Excel. Read the excel directly. Do not convert it to CSV just because you think this is easier.
+If your customer sends you tabular data in Excel, read the excel directly. Do not convert it to CSV just because you think this is easier.
 
 Use a library like: https://pypi.python.org/pypi/xlrd
 
