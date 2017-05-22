@@ -89,7 +89,7 @@ Avoid Office Documents or UML-tools
 
 Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps. Sequence diagrams are not needed. Just: first, second, third ...
 
-`Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>` screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with you cell phone at the end.
+`Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>`_ screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with you cell phone at the end.
 
 Focus on Data Structures
 -----------------------
