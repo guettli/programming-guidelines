@@ -528,7 +528,7 @@ Slow down. Take a sip of tea. Look at your changes ("git diff" in your preferend
 
 Run the "surrounding tests". If do_foo() is inside the module "bar". Then run all tests for module "bar" (I use py.test -k bar). But if this would take more then three minutes, then leave the testing to the CI which happens after you commit+push (you have a CI, haven't you?)
 
-Then commit+push. Let CI run all tests in background.
+Then commit+push. Let CI run all tests in background (don't waste time watching your unittests running and passing)
 
 
 Solutions
