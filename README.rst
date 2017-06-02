@@ -541,6 +541,7 @@ Thank you
 * Robert C. Martin for the book "Clean Coder"
 * Malcolm Tredinnick. (His quote "knows enough about stuff to be dangerous" and his sudden death opens a universe of phantasies for paranoid people). Only few people listened like he did. With "listen" I mean "trying to understand the conversation partner".
 * Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
+* Bill Gates for the quote "I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it." 
 * All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
 * All people who ask question and/or answers them at places like StackOverflow.
 * People I meat during study at HTW-Dresden
