@@ -502,6 +502,34 @@ You have far less trouble if you use "put a whole file". Example: Do not fiddle 
 
 This link is for the github support, since the closing parantheses is not part of the link (bug): https://en.wikipedia.org/wiki/Synchronization_(computer_science)
 
+Test Driven Development
+-----------------------
+
+red, green, refactor. More verbose: make the test fail, make the test pass, refactor (simplify) code.
+
+From bug to fix
+...............
+
+Imagine there is a bug in your method do_foo(). You see the mistake easily and you fix it. Done?
+
+I think you are not done yet. I try to follow this guideline:
+
+Before fixing the bug, search test_do_foo(). There is no test for this method up to now? Then write it.
+
+Now you have test_do_foo(). 
+
+You have two choices now: extend test_do_foo() or write test_do_foo__your_special_case(). I use the double underscore here.
+
+Make the test fail (red)
+
+Fix the code. Test is green now.
+
+Slow down. Take a sip of tea. Look at your changes ("git diff" in your preferend IDE). Is there a way to simplify your patch? If yes, simplify it. 
+
+Run the "surrounding tests". If do_foo() is inside the module "bar". Then run all tests for module "bar" (I use py.test -k bar). But if this would take more then three minutes, then leave the testing to the CI which happens after you commit+push (you have a CI, haven't you?)
+
+Then commit+push. Let CI run all tests in background.
+
 
 Solutions
 ---------
