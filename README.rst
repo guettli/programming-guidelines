@@ -6,6 +6,9 @@ My personal programming guidelines. **Please provide feedback**, tell me what's 
 1. Introduction
 ---------------
 
+About this README
+.................
+
 I was born 1976. I started coding with basic and assembler when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python.
 
 
@@ -14,6 +17,15 @@ Sometimes I see young and talented programmers wasting time. There are two ways 
 This list summarises a lot of mistakes I did in the past. I wrote it, to help you, to avoid these mistakes.
 
 It's my personal opinion and feeling. No facts, no single truth.
+
+Type with ten fingers
+.....................
+
+Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eyes down (to keyboard) and up (to monitor) several hundred times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. 
+
+I like lenovo keyboards with track point. If you want the track point to have more grip you can use sandpaper. Here are some images to illustrate what I use https://plus.google.com/108148237674350536526/posts/jF1Du1YwJwr?hl=de
+
+Use a clipboard manager like Diodon.
 
 2. Dev
 ------
@@ -38,92 +50,48 @@ Even Crontab lines are dangerous. Look at this:
 
 Do you spot the big risk? (Solution below)
 
-Cron Jobs
----------
-
-A server exists to serve. If the server does not receive requests, why should the server do something? This results into my rule of thumb: Avoid cron jobs.
-
-Sometimes you need to have a cron job for house keeping stuff.
-
-Keep cron jobs simple. 
-
-In general there are two ways to configure the arguments of a cron job:
-
-* the command line arguments which are part of the crontab line
-* additional source of configuration: config files or config from a database
-
-Avoid mixing these two ways of configuring a cron job. I prefer to configure the cron job via the later of both ways. This keeps the cron job simple. My guide line: Do not configure the cron job via optional command line arguments. Only use required arguments. 
 
 
 C is slow
----------
+.........
 
 ... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem dones takes "ages". I avoid it, if possible. If Python/Ruby/... get to slow, you can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then optimize.
 
-SSH to production-server
---------------------
-
-I still do interactive logins to production remote-server (mostly via ssh). But I want to reduce it. 
-
-
-Sooner or later you will make a typo. See this article from github for a exciting report what happened during a denial of service: https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/ We are humans, and humans make mistakes. Automation helps to reduce the risk of data loss.
-
-
-If you are doing "ssh production-server ... vi /etc/..." or "... apt install": Configuration management is much better. For example salt-stack or ansible.
-
-If you are doing "ssh production-server .... less /var/log/...": No log-management yet? Get your logs to a central place.
-
-If you are doing "ssh production-server ... rm ...": Please ask yourself what you are doing here. How can you automate this, to make this unneccessary in the future. 
-
-
-Logging to files
-----------------
-
-I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
-Both concepts don't fit together. Sooner or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematically version of "every line". This gets really complicated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundred times and each time different ...
-
-Use Systemd
-------------
-
-It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simple.
-
-Avoid Office Documents or UML-tools
------------------------------------
-
-Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps. Sequence diagrams are not needed. Just: first, second, third ...
-
-`Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>`_ screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with you cell phone at the end.
 
 Focus on Data Structures
------------------------
+........................
+
 
 A relational database is a rock solid data storage. Use a tool to get schema migrations done (for example django). Use PostgreSQL.
 
 Version Control
----------------
+...............
 
 I like git.
 
 
 Time is too short to run all tests before commit+push
------------------------------------------------------
+.....................................................
+
 If the guideline of your team is: "Run all tests before commit+push", then there
 is something wrong. Time is too short to watch tests running! Run only the tests of the code you touched (py.test -k my_keyword).
 
 Conditionless Data Structures
-----------------------------
+.............................
+
 Imagine you have a table "meeting" and a table "place". The table "meeting" has a ForeignKey to table "place". In the beginning it might be not clear yet where the meeting will be. Most developers will make the ForeignKey optional (nullable). WAIT: This will create a condition in your data structure. There is a way easier solution: Create a place called "unknown". Use this as default, avoid nullable columns. This data structure (without a nullable ForeignKey) makes implementing the GUI much easier.
 
 With other words: If there is no NULL in your data, then there will be no NullPointerException in your source code while processing the data :-)
 
 [True, False, Unknown] is not a nullable Bollean Column
--------------------------------------------------------
+.......................................................
+
 If you want to store a data in a SQL database which has three states (True, False, Unknown), then you might think a nullable boolean column (here "my_column") is the right choice. But I think it is not. Do you think the SQL statement "select * from my_table where my_column = %s" works? No, it won't work since "select * from my_table where my_column = NULL" will never ever return a single line. If you don't believe me, read: `Effect of NULL in WHERE clauses (Wikipedia) <https://en.wikipedia.org/wiki/Null_(SQL)#Effect_of_Unknown_in_WHERE_clauses>`_. If you like typing, you can work-around this in your application, but I prefer straight forward solutions with only few conditions.
 
 If you want to store True, False, Unknown: Use text, integer or a new table and a foreign key.
 
 Avoid nullable characters columns in databases
-----------------------------------------------
+..............................................
 
 If you allow NULL in a character column, then you have two ways to express "empty":
 
@@ -135,19 +103,22 @@ Avoid it if possible. In most cases you just need one variant of "empty". Simple
 If you really think the character column should be allowed to be NULL, then consider a constraint: If the character string in the column is not NULL, then the string must not be empty. This way ensure that there are is only one variant of "empty".
 
 CI
---
+..
+
 Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
 
 Avoid Threads and Async
------------------------
+.......................
+
 Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get things done. It's different in your spare time: Do what you want and what is fascinating for you.
 
 Don't waste time doing it "generic and reusable" if you don't need to
-----------------------------------------------------------------------
+.....................................................................
+
 If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments. First get the basics working, then tests and CI, then listen to the needs, wishes and dreams of your customers.
 
 Use all features PostgreSQL does offer
---------------------------------------
+......................................
 
 Use all features PostgreSQL does offer. Don't constrain yourself to use only the portable SQL features. It's ok if your code does work only with PostgreSQL and no other database. If there is the need to support other databases in the future, then handle this problem in the future, not today. PostgreSQL is great, and you waste time if you don't use its features.
 
@@ -156,14 +127,14 @@ Imagine there is be a a Meta-Programming-Language (AFAIK this does not exist) an
 My conclusion: Use all features PostgreSQL has. Don't make live more complicated than necessary and don't restrict yourself to use only portable SQL.
 
 DB Constraints are great, but are sometimes a hint to redundancy
-----------------------------------------------------------------
+................................................................
 
 Database constraints are great since you can fix the very important base of your fancy coding. But what does a constraint do? It ensures that data is valid. Sometimes it can be a hint that your data contains redundancy. If you need to keep column A and column B in sync, then why not put all information into one column? Then you don't need to keep both in sync. Maybe a simpler database layout would help and then you don't need a constraint. This pattern applies sometimes, not always. 
 
 Here is a good example which explains that if you avoid redundancy, you can avoid complicated constraints: http://dba.stackexchange.com/a/168130/5705
 
 Transactions do not nest
-------------------------
+........................
 
 I love nested function calls and recursion. This way you can write easy to read code. For example recursion in quicksort is great.
 
@@ -191,59 +162,40 @@ My conclusion: Transactions do not nest
 Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atomic-in-django
 
 Use a modern IDE
-----------------
+................
 
 Time for vi and emacs has passed. Use a modern IDE on modern hardware (SSD disk). For example PyCharm. I switched from Emacs to PyCharm in 2016. I used Emacs from 1997 until 2015 (18 years).
 
-Type with ten fingers
----------------------
-Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eyes down (to keyboard) and up (to monitor) several hundred times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. 
-
-I like lenovo keyboards with track point. If you want the track point to have more grip you can use sandpaper. Here are some images to illustrate what I use https://plus.google.com/108148237674350536526/posts/jF1Du1YwJwr?hl=de
-
-Use a clipboard manager like Diodon.
 
 Easy to read code: Use guard clauses
-------------------------------------
+....................................
+
 Guard clauses help to avoid indentation. It makes code easier to read and understand. See http://programmers.stackexchange.com/a/101043/129077
 
 
 Cardinality
------------
+...........
 
 It does not matter how you work with your data (struct in C, classes in OOP, tables in SQL, ...). Cardinality is very important. Using 0..* is often easier to implement than 0..1. The first can be handled by a simple loop. The second is often a nullable column/attribute. You need conditions (IFs) to handle nullable columns/attributes.
 
 https://en.wikipedia.org/wiki/Cardinality_(data_modeling)
 
-Communication with Customers: Tell customers what they should test
-------------------------------------------------------------------
-I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens. That's not satisfying since software developers want to hear that their work does help. If you (the developer) provide a check-list of things to test, then the likelihood to get feedback soon is bigger.
-
-Communication with Customers: Define "done"
--------------------------------------------
-Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page. If you don't have a definition of done/ready, then you should not start to write source code. First define the goal, then choose a strategy to get to the goal.
-
-Dare to say "Please wait, I want to take a note"
-------------------------------------------------
-
-Most people can listen and write at once. I can't. And I guess a lot of programmers have this problem. I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you, don't fool yourself. You will only remember 4 of 5 issues. Dare to day "please wait, I want to take a note". This way you can care for all issues, which results in happy customers.
-
 Source code generation is a stupid idea
----------------------------------------
+.......................................
 
 I guess every young programmer wants to write a tool which creates software (sooner or later). Stop! Please think about it again. What do you gain? Don't confuse data and code. Imagine you have a source code generator which takes DATA as input and creates SOURCE as output. What is the difference between DATA and SOURCE? What do you gain? Even if you have some kind of artificial intelligence, you can't create new (redundancy free) data if your only input is DATA. It is just a different syntax. Why not write a program which reads DATA and does the thing you want to do with SOURCE?
 
 Exception1: If you have some sort of Interface Definition Language like (Corba or Protocol Buffers), then you can create stubs as source code. But this generated source should not contains conditions (IFs) or loops.
 
 Regex are great - But it's like eating rubish
----------------------------------------------
+.............................................
 
 Yes, I like regular expression. But slow down: What do I do, if I use a regex? I think it is "parsing". I remember to have read this some time ago: "Time is too short to rewrite parsers". Don't parse data! We live in the 21 century. Consume high level data structures like json, yaml or protcol buffers. If possible, refuse to accept CSV or custom text format as input data.
 
 From time to time you need to do text processing. Unfortunately there are several regex flavors. My guide-line: Use PCRE. They are available in Python, Postfix and many other tools. Don't waste time with other regex flavors, if PCRE are available. 
 
 CSV - Comma-separated values
-----------------------------
+............................
 
 CSV is not a data format. It is an illness.
 
@@ -253,24 +205,27 @@ Use a library like: https://pypi.python.org/pypi/xlrd
 
 
 Give booleans a "positive" name
--------------------------------
+...............................
+
 I once gave a DB column the name "failed". It was a boolean indicating if the transmission of data to the next system was successful. The output as table in the GUI looked confusing for humans. The column heading was "failed". What should be visible in the cell for failed rows? Boolean usually get translated to "Yes/No" or "True/False". But if the human brain reads "Yes" or "True" it initially things "all right". But in this case "Yes" meant "Yes, it failed". The next time I will call the column "was_successful", then "Yes" means "Yes, it was successful".
 
 Love your docs
---------------
+..............
+
 I have seen it several times on github: If I provide a hint that the docs could be improved, a lot of maintainers don't care much. Just look at the README files on github. They starts with "Installing", then "Configuring" ... What is missing? An Introduction! Just some sentences what this great project is all about. Programmers love details. Dear programmers, learn to relax and look at the thing you create like a new comer. If you have this mind set "I do the important (programming) stuff. Someone else can care for the docs", then your open source project won't be successful.
 
 If you write docs, then do it for new comers. Start with the introduction, define the important terms, then provide the simple use cases. Put details and special cases at the end.
 
 Canonical docs
---------------
+..............
 
 Look at the question concerning ssh options at the Q+A site serverfault. There is a lot of guessing. Something is wrong. Nobody knows where the canonical docs are. Easy linking to specific configuration is not possible. What happens? Redudant docs. Many blog posts try to explain stuff.... Don't write blog posts, improve the upstreams docs. Talk with the developers. Don't be shy.
 
 I am unsure if I should love or hate "wiki.archlinux.org". On the one hand I found there valuable information about systemd and other linux related secrets. On the other hand it is redundant and since a lot of users take their knowledge from this resource, the canonical upstream docs get less love. That's https://en.wikipedia.org/wiki/Ambivalence - that's live.
 
 Care for newcomers
-------------------
+..................
+
 In the year 1997 I was very thankful that there was a hint "If unsure choose ..." when I need to compile a linux kernel. In these days you need to answer dozens question before you could compile the invention of Linus Torvalds.
 
 I had no clue what most questions where about. But this small advice "If unsure choose ..." helped me get it done.
@@ -278,20 +233,19 @@ I had no clue what most questions where about. But this small advice "If unsure 
 If you are managing a project: Care for newcomers. Provide them with guide lines. But don't reinvent docs. Provide links to the relevant upstream docs, if you just use a piece of software. Avoid redundant docs.
 
 
-
-
 Passing around methods make things hard to debug
-------------------------------------------------
+................................................
+
 Even in C you can pass around method-pointers. It's very common in JavaScript and sometimes it gets done in Python, too. It is hard to debug. IDE's can't resolve the code: "Find usages" don't work.  I try to avoid it. I prefer OOP (Inheritance) and avoid passing around methods or using them as variables.
 
 Software Design Patterns are overrated
---------------------------------------
+......................................
 
 If you need several pages in a book to explain a software design pattern, then it is too complicated.
 I think Software Design Patterns are overrated.
 
 KISS
-----
+....
 
 Keep it simple and stupid. The most boring and most obvious solution is often the best. Although it sometimes takes months until you know which solution it is.
 
@@ -304,15 +258,13 @@ Quote:
 
 
 Time is too short for "git rebase" vs "git merge" discussions
---------------------------------------------------------------
+.............................................................
+
 What's the net result of "git rebase" vs "git merge" discussion? The result is source code. Who cares how source code got into the current state? Me, but only sometimes. Archeology is interesting .... but more interesting is the future, since you can influence it.
 
-traceroute won't help you
--------------------------
-.... if you have trouble with a tcp connection. Use tcptraceroute for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: traceroute uses UDP, not TCP.
 
 This is untestable code
------------------------
+.......................
 
 If you are new to software unit testing, then you might think ... "some parts of my code are *untestable*".
 
@@ -320,21 +272,9 @@ I don't think so. I guess your software uses the IPO pattern: https://en.wikiped
 
 The "untestable" code needs to be cared of. Code is always testable, there is no untestable code. Maybe your knowledge of testing is limited up to now. Finding untestable code is the beginning of an interesting route to good code.
 
-If you do coding to implement backup ...
-----------------------------------------
-
-If you do coding/programming to implement your backup of data, then you are on the wrong track.
-
-It is very likely that you will do it wrong, and this will be a big risk, if your context is backing up data.
-
-Why? Because you will notice your fault if you try to recover your data. 
-
-Compare this to an gadet app for a mobile phone. If this app fails, it is likely that the fault does not lead to data loss.
-
-**Use** a backup tool, even if you love to do programming. Configure it, but don't write it yourself.
 
 ForeignKey from code to DB
---------------------------
+..........................
 
 This code uses the ORM of django
 
@@ -356,7 +296,7 @@ If you think this is better .....
 
 
 Testcode is conditionless
---------------------------
+.........................
 
 Testcode should not contain conditions (the keyword`if`). If you have loops (`for`, `while`) in your tests, then this looks strange, too.
 
@@ -375,7 +315,7 @@ Tests should be straight forward:
         
 
 Don't search the needle in a haystack. Inject dynamite and let it explode
--------------------------------------------------------------------------
+.........................................................................
 
 Imagine you have a huge code base which was written by a nerd which is gone since several months. Somewhere in the code a database row gets updated. This update should not happen, and you can't find the relevant source code line during the first minutes. You can reproduce this failure in a test environment. What can you do? You can start a debugger and jump through the lines which get executed. Yes, this works. But this is "Searching the needle in a haystack". This takes too long. I like solutions like this: Add a constraint trigger to your database which fires on modification. Execute the code and BANG. you get the relevant code line with a nice stacktrace. This way you get the solution provided on a silver plattern with minimal effort :-)
 
@@ -388,14 +328,15 @@ If you want to find the line where unwanted output gets emitted: http://stackove
 If you have a library which logs a warning, but the warning does not help, since it is missing important information. And you have no clue where this warning comes from. You can use this solution: http://stackoverflow.com/a/43232091/633961
 
 Avoid magic or uncommon things
-------------------------------
+..............................
 
 * hard links
 * file system ACLs (Access control lists)
 * git submodules (Please use configuration management, deployment tools, ...)
 
 Learn one programming language, not ten.
-----------------------------------------
+........................................
+
 
 Most young developers think you need to learn many programming languages to be a good developer.
 
@@ -406,7 +347,8 @@ My opinion: Lear Python, JavaScript.
 Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument.
 
 Learn "git bisect"
-------------------
+..................
+
 "git bisect" is a great tool to find the commit, which introduced an error. Unfortunately there it is not a one-liner up to now, but you can use it like this:
 
 .. code-block:: shell
@@ -424,7 +366,7 @@ Learn "git bisect"
     user@host> git bisect reset
 
 Conditional Breakpoints
------------------------
+.......................
 
 Imagine, you are able to reproduce a bug in a test. But you could not fix it up to now. If you want to create a conditional breakpoint to find the root of the problem, then you could be on the wrong track. Why not rewrite the code first, to make it more fine-grained testable?
 
@@ -456,13 +398,9 @@ It is very likely that this means you need to move the body of a loop into a new
 
 Now you can call `my_method_foo()` in a test, and you don't need a conditional breakpoint any more.
 
-Don't set up a SMTP daemon
---------------------------
 
-If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. Use a tool like getmail (not fetchmail) which is a mail fetching client. You will have much more trouble if you set up an SMTP daemon.
-
-Get the difference between Authentication versus Authorization
---------------------------------------------------------------
+Make a clear distinction between Authentication and Authorization
+.................................................................
 
 It is important to understand the difference.
 
@@ -471,7 +409,7 @@ It is important to understand the difference.
 **Authorization** Is Bob allowed to do action "foo"? Here we already trust that the user is Bob and not someone else.
 
 Idempotence is great
---------------------
+....................
 
 Idempotence is great, since it ensures, that it does not do harm if the method is called twice.
 
@@ -480,7 +418,7 @@ https://en.wikipedia.org/wiki/Idempotence
 Further reading: http://docs.celeryproject.org/en/latest/userguide/tasks.html (although I don't use celery any more)
 
 File Locking is deprecated
---------------------------
+..........................
 
 In the past `File_Locking <https://en.wikipedia.org/wiki/File_locking>`_ was a very interesting and adventurous topic. Sometimes it worked, sometimes not, and you got interesting edge cases to solve again and again. It was fun. Only hard core experts know the difference between `fcntl`, `flock` and `lockf`.
 
@@ -494,19 +432,8 @@ BTW, the topic is called `Synchronization <https://en.wikipedia.org/wiki/Synchro
 
 Further reading about "task queues": https://www.fullstackpython.com/task-queues.html
 
-Configuration Management
-------------------------
-Configuration Management (Salt, Ansible, Chef, Puppet, ...) of Unix/Linux servers can act in two ways:
-
-* change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_ 
-* put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
- 
-You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
-
-This link is for the github support, since the closing parantheses is not part of the link (bug): https://en.wikipedia.org/wiki/Synchronization_(computer_science)
-
 Test Driven Development
------------------------
+.......................
 
 red, green, refactor. More verbose: make the test fail, make the test pass, refactor (simplify) code.
 
@@ -533,7 +460,121 @@ Run the "surrounding tests". If do_foo() is inside the module "bar". Then run al
 
 Then commit+push. Let CI run all tests in background (don't waste time watching your unittests running and passing)
 
-4. Epilog
+3. Op
+-----
+
+Operation. The last two characters of DevOp.
+
+Configuration Management
+........................
+
+Configuration Management (Salt, Ansible, Chef, Puppet, ...) of Unix/Linux servers can act in two ways:
+
+* change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_ 
+* put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
+ 
+You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
+
+
+Cron Jobs
+.........
+
+A server exists to serve. If the server does not receive requests, why should the server do something? This results into my rule of thumb: Avoid cron jobs.
+
+Sometimes you need to have a cron job for house keeping stuff.
+
+Keep cron jobs simple. 
+
+In general there are two ways to configure the arguments of a cron job:
+
+* the command line arguments which are part of the crontab line
+* additional source of configuration: config files or config from a database
+
+Avoid mixing these two ways of configuring a cron job. I prefer to configure the cron job via the later of both ways. This keeps the cron job simple. My guide line: Do not configure the cron job via optional command line arguments. Only use required arguments. 
+
+
+SSH to production-server
+........................
+
+I still do interactive logins to production remote-server (mostly via ssh). But I want to reduce it. 
+
+
+Sooner or later you will make a typo. See this article from github for a exciting report what happened during a denial of service: https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/ We are humans, and humans make mistakes. Automation helps to reduce the risk of data loss.
+
+
+If you are doing "ssh production-server ... vi /etc/..." or "... apt install": Configuration management is much better. For example salt-stack or ansible.
+
+If you are doing "ssh production-server .... less /var/log/...": No log-management yet? Get your logs to a central place.
+
+If you are doing "ssh production-server ... rm ...": Please ask yourself what you are doing here. How can you automate this, to make this unneccessary in the future. 
+
+
+Logging to files
+................
+
+I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
+Both concepts don't fit together. Sooner or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematically version of "every line". This gets really complicated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundred times and each time different ...
+
+Use Systemd
+...........
+
+It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simple.
+
+traceroute won't help you
+.........................
+
+.... if you have trouble with a tcp connection. Use tcptraceroute for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: traceroute uses UDP, not TCP.
+
+
+If you do coding to implement backup ...
+........................................
+
+If you do coding/programming to implement your backup of data, then you are on the wrong track.
+
+It is very likely that you will do it wrong, and this will be a big risk, if your context is backing up data.
+
+Why? Because you will notice your fault if you try to recover your data. 
+
+Compare this to an gadet app for a mobile phone. If this app fails, it is likely that the fault does not lead to data loss.
+
+**Use** a backup tool, even if you love to do programming. Configure it, but don't write it yourself.
+
+Don't set up a SMTP daemon
+..........................
+
+If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. Use a tool like getmail (not fetchmail) which is a mail fetching client. You will have much more trouble if you set up an SMTP daemon.
+
+
+
+
+4. Communication
+----------------
+
+Avoid Office Documents or UML-tools
+...................................
+
+Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps. Sequence diagrams are not needed. Just: first, second, third ...
+
+`Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>`_ screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with you cell phone at the end.
+
+
+Communication with Customers: Tell customers what they should test
+..................................................................
+
+I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens. That's not satisfying since software developers want to hear that their work does help. If you (the developer) provide a check-list of things to test, then the likelihood to get feedback soon is bigger.
+
+Communication with Customers: Define "done"
+...........................................
+
+Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page. If you don't have a definition of done/ready, then you should not start to write source code. First define the goal, then choose a strategy to get to the goal.
+
+Dare to say "Please wait, I want to take a note"
+................................................
+
+Most people can listen and write at once. I can't. And I guess a lot of programmers have this problem. I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you, don't fool yourself. You will only remember 4 of 5 issues. Dare to day "please wait, I want to take a note". This way you can care for all issues, which results in happy customers.
+
+
+5. Epilog
 ---------
 
 Solutions
