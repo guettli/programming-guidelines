@@ -3,8 +3,8 @@ Programming Guidelines
 
 My personal programming guidelines. **Please provide feedback**, tell me what's wrong and what's missing and create a new issue here: https://github.com/guettli/programming-guidelines/issues
 
-Introduction
-------------
+1. Introduction
+---------------
 
 I was born 1976. I started coding with basic and assembler when I was 13. Later turbo pascal. From 1996-2001 I studied computer science at HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP and finally Python.
 
@@ -15,8 +15,11 @@ This list summarises a lot of mistakes I did in the past. I wrote it, to help yo
 
 It's my personal opinion and feeling. No facts, no single truth.
 
+2. Dev
+------
+
 No Shell Scripting
-------------------
+..................
 
 The shell is nice for interactive usage. But shell scripts are unreliable: Most scripts fail if filenames contain whitespaces. Shell-Gurus know how to work around this. But quoting can get really complicated. I use the shell for interactive stuff daily. But I stopped writing shell scripts.
 
@@ -530,14 +533,17 @@ Run the "surrounding tests". If do_foo() is inside the module "bar". Then run al
 
 Then commit+push. Let CI run all tests in background (don't waste time watching your unittests running and passing)
 
+4. Epilog
+---------
 
 Solutions
----------
+.........
 
  * Big risk of "find $TMPDIR": If the variable $TMPDIR  is not set, then the `find` command does scan and delete all directories! 
 
 Thank you
----------
+.........
+
 * Robert C. Martin for the book "Clean Coder"
 * Malcolm Tredinnick. (His quote "knows enough about stuff to be dangerous" and his sudden death opens a universe of phantasies for paranoid people). Only few people listened like he did. With "listen" I mean "trying to understand the conversation partner".
 * Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
