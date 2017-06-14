@@ -165,7 +165,7 @@ Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atom
 Zen of Python
 .............
 
-`Zen of Python https://www.python.org/dev/peps/pep-0020/`_
+`Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_
 
 Beautiful is better than ugly.
 Explicit is better than implicit.
@@ -637,7 +637,7 @@ If you do "talk"  with software to databases and APIs daily, your ability to com
 
 You might start to think like a computer (at least a bit). 
 
-The human mind works completly different, not just bits and bytes. It has `Emotions https://en.wikipedia.org/wiki/Emotion`_
+The human mind works completly different, not just bits and bytes. It has `Emotions <https://en.wikipedia.org/wiki/Emotion>`_
 
 Avoid to get a `Nerd https://en.wikipedia.org/wiki/Nerd`
 
