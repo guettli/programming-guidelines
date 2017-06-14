@@ -643,10 +643,10 @@ Avoid to get a `Nerd https://en.wikipedia.org/wiki/Nerd`
 
 Here some hints:
 
- * I like `Nonviolent Communication https://en.wikipedia.org/wiki/Nonviolent_Communication#Four_components` (In short, use this sequence: Facts, feelings, needs, request)
- * Meet with "normal" people. With "normal" I mean people who do not do IT stuff.
- * Do sport
- * Relax
+* I like `Nonviolent Communication <https://en.wikipedia.org/wiki/Nonviolent_Communication#Four_components>`_ (In short, use this sequence: Facts, feelings, needs, request)
+* Meet with "normal" people. With "normal" I mean people who do not do IT stuff.
+* Do sport
+* Relax
 
 
 
@@ -680,7 +680,7 @@ Most people can listen and write at once. I can't. And I guess a lot of programm
 Solutions
 .........
 
- * Big risk of "find $TMPDIR": If the variable $TMPDIR  is not set, then the `find` command does scan and delete all directories! 
+* Big risk of "find $TMPDIR": If the variable $TMPDIR  is not set, then the `find` command does scan and delete all directories! 
 
 Thank you
 .........
