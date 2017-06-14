@@ -546,7 +546,17 @@ Operation. The last two characters of DevOp.
 Configuration Management
 ........................
 
-Configuration Management (Salt, Ansible, Chef, Puppet, ...) of Unix/Linux servers can act in two ways:
+Use a configuration management tool like Salt or Ansible. 
+
+Use CI here, too. Otherwise only few people dare to make changes. And this means the speed of incremental evolution to a more efficent way will decreases.
+
+Do not use RPM/DPKG to configure a system.
+
+Change file vs put file
+.......................
+
+Often there are two ways to do configuration management:
+
 
 * change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_ 
 * put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
