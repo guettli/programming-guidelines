@@ -27,72 +27,30 @@ I like lenovo keyboards with track point. If you want the track point to have mo
 
 Use a clipboard manager like Diodon.
 
-2. Dev
-------
-
-No Shell Scripting
-..................
-
-The shell is nice for interactive usage. But shell scripts are unreliable: Most scripts fail if filenames contain whitespaces. Shell-Gurus know how to work around this. But quoting can get really complicated. I use the shell for interactive stuff daily. But I stopped writing shell scripts.
-
-Reasons:
-
-* If a error happens in a shell script, the interpreter steps silently to the next line. Yes I know you can use "set -e". But  you don't get a stacktrace. Without stacktrace you waste a lot of time to analyze why this error happened.
-* AFAIK you can't do object oriented programming in a shell. I like inheritance.
-* AFAIK you can't raise exceptions in shell scripts.
-* Shell-Scripts tend to call a lot of subprocesses. Every call to grep,head,tail,cut  creates a new process. This tends to get slow.
-* I do this "find ... | xargs" daily, but only while using the shell interactively. But what happends if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find .. | grep | xargs" does not work any more .... It is dirty and will never get clean.
-
-Even Crontab lines are dangerous. Look at this:
-
-    @weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
+####################################################################################################
 
 
-Do you spot the big risk? (Solution below)
+2. Data structures
+------------------
+
+Introduction
+............
+
+"Bad programmers worry about the code. Good programmers worry about data structures and their relationships." -- Linus Torvalds (creator and developer of the Linux kernel and the version control system git)
 
 
+Relational Database
+...................
 
-C is slow
-.........
+I know SQL is..... It is either obivious or incomprehensible. Yes, it is boring.
 
-... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem done takes "ages". I avoid it, if possible. If Python/Ruby/... get to slow, you can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then optimize.
+A relational database is a rock solid data storage. Use it.
 
+Use a tool to get schema migrations done (for example django). 
 
-Focus on Data Structures
-........................
+I use PostgreSQL.
 
-
-A relational database is a rock solid data storage. Use a tool to get schema migrations done (for example django). I use PostgreSQL.
-
-Version Control
-...............
-
-I like git.
-
-
-Time is too short to run all tests before commit+push
-.....................................................
-
-If the guideline of your team is: "Run all tests before commit+push", then there
-is something wrong. Time is too short to watch tests running! Run only the tests of the code you touched (py.test -k my_keyword).
-
-It's the job of automated CI (Continuous Integration) to run all tests. That's not your job.
-
-
-CI
-..
-
-Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
-
-Here is my travis file which does two things if all tests where successful:
-
- * Use "bumpversion" to increase the version number.
- * commit the new version info
- * Upload to pypi the new version.
- 
-https://github.com/guettli/compare-with-remote/blob/master/.travis.yml
-
-All I need to do is to commit. All other steps are automated :-)
+I don't like NoSQL, except for caching.
 
 
 Conditionless Data Structures
@@ -123,15 +81,7 @@ Avoid it if possible. In most cases you just need one variant of "empty". Simple
 
 If you really think the character column should be allowed to be NULL, then consider a constraint: If the character string in the column is not NULL, then the string must not be empty. This way ensure that there are is only one variant of "empty".
 
-Avoid Threads and Async
-.......................
 
-Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get things done. It's different in your spare time: Do what you want and what is fascinating for you.
-
-Don't waste time doing it "generic and reusable" if you don't need to
-.....................................................................
-
-If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments. First get the basics working, then tests and CI, then listen to the needs, wishes and dreams of your customers.
 
 Use all features PostgreSQL does offer
 ......................................
@@ -177,6 +127,87 @@ My conclusion: Transactions do not nest
 
 Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atomic-in-django
 
+
+
+
+
+
+
+
+####################################################################################################
+
+
+3. Dev
+------
+
+No Shell Scripting
+..................
+
+The shell is nice for interactive usage. But shell scripts are unreliable: Most scripts fail if filenames contain whitespaces. Shell-Gurus know how to work around this. But quoting can get really complicated. I use the shell for interactive stuff daily. But I stopped writing shell scripts.
+
+Reasons:
+
+* If a error happens in a shell script, the interpreter steps silently to the next line. Yes I know you can use "set -e". But  you don't get a stacktrace. Without stacktrace you waste a lot of time to analyze why this error happened.
+* AFAIK you can't do object oriented programming in a shell. I like inheritance.
+* AFAIK you can't raise exceptions in shell scripts.
+* Shell-Scripts tend to call a lot of subprocesses. Every call to grep,head,tail,cut  creates a new process. This tends to get slow.
+* I do this "find ... | xargs" daily, but only while using the shell interactively. But what happends if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find .. | grep | xargs" does not work any more .... It is dirty and will never get clean.
+
+Even Crontab lines are dangerous. Look at this:
+
+    @weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
+
+
+Do you spot the big risk? (Solution below)
+
+
+
+C is slow
+.........
+
+... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem done takes "ages". I avoid it, if possible. If Python/Ruby/... get to slow, you can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then optimize.
+
+
+Version Control
+...............
+
+I like git.
+
+
+Time is too short to run all tests before commit+push
+.....................................................
+
+If the guideline of your team is: "Run all tests before commit+push", then there
+is something wrong. Time is too short to watch tests running! Run only the tests of the code you touched (py.test -k my_keyword).
+
+It's the job of automated CI (Continuous Integration) to run all tests. That's not your job.
+
+
+CI
+..
+
+Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
+
+Here is my travis file which does two things if all tests where successful:
+
+ * Use "bumpversion" to increase the version number.
+ * commit the new version info
+ * Upload to pypi the new version.
+ 
+https://github.com/guettli/compare-with-remote/blob/master/.travis.yml
+
+All I need to do is to commit. All other steps are automated :-)
+
+
+Avoid Threads and Async
+.......................
+
+Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get things done. It's different in your spare time: Do what you want and what is fascinating for you.
+
+Don't waste time doing it "generic and reusable" if you don't need to
+.....................................................................
+
+If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments. First get the basics working, then tests and CI, then listen to the needs, wishes and dreams of your customers.
 Use a modern IDE
 ................
 
@@ -476,7 +507,9 @@ Run the "surrounding tests". If do_foo() is inside the module "bar". Then run al
 
 Then commit+push. Let CI run all tests in background (don't waste time watching your unittests running and passing)
 
-3. Op
+####################################################################################################
+
+4. Op
 -----
 
 Operation. The last two characters of DevOp.
@@ -561,10 +594,32 @@ Don't set up a SMTP daemon
 If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. Use a tool like getmail (not fetchmail) which is a mail fetching client. You will have much more trouble if you set up an SMTP daemon.
 
 
+####################################################################################################
 
 
-4. Communication
-----------------
+5. Communication with humans
+----------------------------
+
+Avoid to get a nerd
+...................
+
+
+If you do "talk"  with software to databases and APIs daily, your ability to communicate with humans might decrease.
+
+You might start to think like a computer (at least a bit). 
+
+The human mind works completly different, not just bits and bytes. It has `Emotions https://en.wikipedia.org/wiki/Emotion`_
+
+Avoid to get a `Nerd https://en.wikipedia.org/wiki/Nerd`
+
+Here some hints:
+
+ * I like `Nonviolent Communication https://en.wikipedia.org/wiki/Nonviolent_Communication#Four_components` (In short, use this sequence: Facts, feelings, needs, request)
+ * Meet with "normal" people. With "normal" I mean people who do not do IT stuff.
+ * Do sport
+ * Relax
+
+
 
 Avoid Office Documents or UML-tools
 ...................................
@@ -590,7 +645,7 @@ Dare to say "Please wait, I want to take a note"
 Most people can listen and write at once. I can't. And I guess a lot of programmers have this problem. I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you, don't fool yourself. You will only remember 4 of 5 issues. Dare to day "please wait, I want to take a note". This way you can care for all issues, which results in happy customers.
 
 
-5. Epilog
+6. Epilog
 ---------
 
 Solutions
