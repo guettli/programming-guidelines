@@ -27,6 +27,20 @@ I like lenovo keyboards with track point. If you want the track point to have mo
 
 Use a clipboard manager like Diodon.
 
+KISS
+....
+
+Keep it simple and stupid. The most boring and most obvious solution is often the best. Although it sometimes takes months until you know which solution it is.
+
+From the book "Site Reliability Engineering" (O'Reilly Media 2016) https://landing.google.com/sre/book/chapters/simplicity.html
+
+Quote:
+ The Virtue of Boring 
+ 
+ Unlike just about everything else in life, "boring" is actually a positive attribute when it comes to software! We don’t want our programs to be spontaneous and interesting; we want them to stick to the script and predictably accomplish their business goals.
+
+
+
 ####################################################################################################
 
 
@@ -51,6 +65,14 @@ Use a tool to get schema migrations done (for example django).
 I use PostgreSQL.
 
 I don't like NoSQL, except for caching.
+
+
+Cardinality
+...........
+
+It does not matter how you work with your data (struct in C, classes in OOP, tables in SQL, ...). Cardinality is very important. Using 0..* is often easier to implement than 0..1. The first can be handled by a simple loop. The second is often a nullable column/attribute. You need conditions (IFs) to handle nullable columns/attributes.
+
+https://en.wikipedia.org/wiki/Cardinality_(data_modeling)
 
 
 Conditionless Data Structures
@@ -140,6 +162,31 @@ Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atom
 3. Dev
 ------
 
+Zen of Python
+.............
+
+`Zen of Python https://www.python.org/dev/peps/pep-0020/`_
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
 No Shell Scripting
 ..................
 
@@ -220,13 +267,6 @@ Easy to read code: Use guard clauses
 Guard clauses help to avoid indentation. It makes code easier to read and understand. See http://programmers.stackexchange.com/a/101043/129077
 
 
-Cardinality
-...........
-
-It does not matter how you work with your data (struct in C, classes in OOP, tables in SQL, ...). Cardinality is very important. Using 0..* is often easier to implement than 0..1. The first can be handled by a simple loop. The second is often a nullable column/attribute. You need conditions (IFs) to handle nullable columns/attributes.
-
-https://en.wikipedia.org/wiki/Cardinality_(data_modeling)
-
 Source code generation is a stupid idea
 .......................................
 
@@ -291,17 +331,6 @@ Software Design Patterns are overrated
 If you need several pages in a book to explain a software design pattern, then it is too complicated.
 I think Software Design Patterns are overrated.
 
-KISS
-....
-
-Keep it simple and stupid. The most boring and most obvious solution is often the best. Although it sometimes takes months until you know which solution it is.
-
-From the book "Site Reliability Engineering" (O'Reilly Media 2016) https://landing.google.com/sre/book/chapters/simplicity.html
-
-Quote:
- The Virtue of Boring 
- 
- Unlike just about everything else in life, "boring" is actually a positive attribute when it comes to software! We don’t want our programs to be spontaneous and interesting; we want them to stick to the script and predictably accomplish their business goals.
 
 
 Time is too short for "git rebase" vs "git merge" discussions
