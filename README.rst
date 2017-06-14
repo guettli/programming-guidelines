@@ -55,14 +55,14 @@ Do you spot the big risk? (Solution below)
 C is slow
 .........
 
-... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem dones takes "ages". I avoid it, if possible. If Python/Ruby/... get to slow, you can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then optimize.
+... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem done takes "ages". I avoid it, if possible. If Python/Ruby/... get to slow, you can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then optimize.
 
 
 Focus on Data Structures
 ........................
 
 
-A relational database is a rock solid data storage. Use a tool to get schema migrations done (for example django). Use PostgreSQL.
+A relational database is a rock solid data storage. Use a tool to get schema migrations done (for example django). I use PostgreSQL.
 
 Version Control
 ...............
@@ -76,12 +76,33 @@ Time is too short to run all tests before commit+push
 If the guideline of your team is: "Run all tests before commit+push", then there
 is something wrong. Time is too short to watch tests running! Run only the tests of the code you touched (py.test -k my_keyword).
 
+It's the job of automated CI (Continuous Integration) to run all tests. That's not your job.
+
+
+CI
+..
+
+Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
+
+Here is my travis file which does two things if all tests where successful:
+
+ * Use "bumpversion" to increase the version number.
+ * commit the new version info
+ * Upload to pypi the new version.
+ 
+https://github.com/guettli/compare-with-remote/blob/master/.travis.yml
+
+All I need to do is to commit. All other steps are automated :-)
+
+
 Conditionless Data Structures
 .............................
 
 Imagine you have a table "meeting" and a table "place". The table "meeting" has a ForeignKey to table "place". In the beginning it might be not clear yet where the meeting will be. Most developers will make the ForeignKey optional (nullable). WAIT: This will create a condition in your data structure. There is a way easier solution: Create a place called "unknown". Use this as default, avoid nullable columns. This data structure (without a nullable ForeignKey) makes implementing the GUI much easier.
 
 With other words: If there is no NULL in your data, then there will be no NullPointerException in your source code while processing the data :-)
+
+Less conditions, less bugs.
 
 [True, False, Unknown] is not a nullable Bollean Column
 .......................................................
@@ -101,11 +122,6 @@ If you allow NULL in a character column, then you have two ways to express "empt
 Avoid it if possible. In most cases you just need one variant of "empty". Simplest solution: avoid that a column holding character data types is allowed to be null.
 
 If you really think the character column should be allowed to be NULL, then consider a constraint: If the character string in the column is not NULL, then the string must not be empty. This way ensure that there are is only one variant of "empty".
-
-CI
-..
-
-Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
 
 Avoid Threads and Async
 .......................
