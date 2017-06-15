@@ -393,13 +393,16 @@ Tests should be straight forward:
 Don't search the needle in a haystack. Inject dynamite and let it explode
 .........................................................................
 
-Imagine you have a huge code base which was written by a nerd which is gone since several months. Somewhere in the code a database row gets updated. This update should not happen, and you can't find the relevant source code line during the first minutes. You can reproduce this failure in a test environment. What can you do? You can start a debugger and jump through the lines which get executed. Yes, this works. But this is "Searching the needle in a haystack". This takes too long. I like solutions like this: Add a constraint trigger to your database which fires on modification. Execute the code and BANG. you get the relevant code line with a nice stacktrace. This way you get the solution provided on a silver plattern with minimal effort :-)
+Imagine you have a huge code base which was written by a nerd which is gone since several months. Somewhere in the code a database row gets updated. This update should not happen, and you can't find the relevant source code line during the first minutes. You can reproduce this failure in a test environment. What can you do? You can start a debugger and jump through the lines which get executed. Yes, this works. But this can take long, it is like "Searching the needle in a haystack". Here is a different way: Add a constraint trigger to your database which fires on the unwanted modification. Execute the code and BANG. you get the relevant code line with a nice stacktrace. This way you get the solution provided on a silver plattern with minimal effort :-)
+
 
 With other words: Don't waste time with searching.
 
+Sometimes you can't use a database constraint to find the relevant stacktrace, but often there are other ways.....
+
 If you can't use a database constraing, maybe this helps: Raise Exception on unwanted syscall http://stackoverflow.com/a/42669844/633961
 
-If you want to find the line where unwanted output gets emitted: http://stackoverflow.com/a/43210881/633961
+If you want to find the line where unwanted output in stdout gets emitted: http://stackoverflow.com/a/43210881/633961
 
 If you have a library which logs a warning, but the warning does not help, since it is missing important information. And you have no clue where this warning comes from. You can use this solution: http://stackoverflow.com/a/43232091/633961
 
