@@ -690,6 +690,28 @@ Most people can listen and write at once. I can't. And I guess a lot of programm
 6. Epilog
 ---------
 
+Be curious
+..........
+
+There is always something you don't have understood up to now. Ask questions, even if you think you now the answer. For one question, there are always several answers. If you know one answer, then it is likely that someone has a better answer. 
+
+I like:
+
+* https://stackoverflow.com/
+* https://softwarerecs.stackexchange.com/
+* https://serverfault.com/
+* And some mailing lists.
+
+Read the Release Notes
+......................
+
+I like these release notes:
+
+ * https://www.postgresql.org/docs/devel/static/release.html The "Overview" links show the most important changes
+ * https://docs.djangoproject.com/en/dev/releases/
+ * Python ... no, since I am still using Python 2.7
+
+
 Solutions
 .........
 
