@@ -686,6 +686,7 @@ Dare to say "Please wait, I want to take a note"
 
 Most people can listen and write at once. I can't. And I guess a lot of programmers have this problem. I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you, don't fool yourself. You will only remember 4 of 5 issues. Dare to day "please wait, I want to take a note". This way you can care for all issues, which results in happy customers.
 
+####################################################################################################
 
 6. Epilog
 ---------
@@ -707,9 +708,9 @@ Read the Release Notes
 
 I like these release notes:
 
- * https://www.postgresql.org/docs/devel/static/release.html The "Overview" links show the most important changes
- * https://docs.djangoproject.com/en/dev/releases/
- * Python ... no, since I am still using Python 2.7
+* https://www.postgresql.org/docs/devel/static/release.html The "Overview" links show the most important changes
+* https://docs.djangoproject.com/en/dev/releases/
+* Python ... no, since I am still using Python 2.7
 
 
 Solutions
