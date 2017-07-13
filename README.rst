@@ -187,6 +187,34 @@ Zen of Python
 * If the implementation is easy to explain, it may be a good idea.
 * Namespaces are one honking great idea -- let's do more of those!
 
+
+CRD
+...
+
+In most cases software des create, read, update, delete data. See `CRUD <https://en.wikipedia.org/wiki/Create,_read,_update_and_delete>`_
+
+The "update" part is the most difficult one.
+
+Sometimes CRD helps: Do not implement the update operation. Use delete+create.
+
+Transalting to SQL terms:
+
++-----------+-----------------------------------+
+|CRUD Term  | SQL                               |
++===========+===================================+
+| create    | insert into my_table values (...) |
++-----------+-----------------------------------+
+| read      | select ... from my_table          |
++-----------+-----------------------------------+
+| update    | update my_table set col1=...      | 
++-----------+-----------------------------------+
+| delete    | delete from my_table where ...    |
++-----------+-----------------------------------+
+
+
+
+
+
 No Shell Scripting
 ..................
 
