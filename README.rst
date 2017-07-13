@@ -191,7 +191,7 @@ Zen of Python
 CRD
 ...
 
-In most cases software des create, read, update, delete data. See `CRUD <https://en.wikipedia.org/wiki/Create,_read,_update_and_delete>`_
+In most cases software does create, read, update, delete data. See `CRUD <https://en.wikipedia.org/wiki/Create,_read,_update_and_delete>`_
 
 The "update" part is the most difficult one.
 
