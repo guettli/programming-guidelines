@@ -741,6 +741,22 @@ I like these release notes:
 * Python ... no, since I am still using Python 2.7
 
 
+Clean up your desk
+..................
+
+Don't forget to clean your desk. I don't write this here because I do it often and with joy. No, excat the opposite. I write it down since I want to push myself. 
+
+Don't look at all these things on your desk at once. Start on the left side take the first thing. Where is the best place for this thing single thing? Unsure? Why not throw in the garbage? If you are unsure put it at least in box behind a closed cabinet door. Some month later you might be able to throw it in the garbage.
+
+Then wipe the dust.
+
+If you have not time do this, then there is something wrong.
+
+"Wer es eilig hat sollte sich setzen"
+
+"Wer keinen Zeit hat ist ärmer als ein Bettler" TODO translate this.
+
+
 Solutions
 .........
 
