@@ -567,6 +567,17 @@ Run the "surrounding tests". If do_foo() is inside the module "bar". Then run al
 
 Then commit+push. Let CI run all tests in background (don't waste time watching your unittests running and passing)
 
+
+
+Debugging Performance
+.....................
+
+I use two ways to debug slow performance:
+
+ * Logging and profiling, if you have a particular reproducable use case
+ * Statistics collected on production environments. I use my own tool up to now: https://github.com/guettli/live-trace
+ 
+
 ####################################################################################################
 
 4. Op
