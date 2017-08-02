@@ -678,7 +678,7 @@ If you can avoid it, then refuse to set up a SMTP daemon. If the application you
 ####################################################################################################
 
 
-5. Communication with humans
+5. Communication with others
 ----------------------------
 
 Avoid to get a nerd
@@ -699,7 +699,7 @@ Here some hints:
 * Meet with "normal" people. With "normal" I mean people who do not do IT stuff.
 * Do sport
 * Relax
-
+* Do not complain. Do something if you can. If you can't, then cry and then seek new adventures.
 
 
 Avoid Office Documents or UML-tools
