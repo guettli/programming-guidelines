@@ -576,7 +576,26 @@ I use two ways to debug slow performance:
 
  * Logging and profiling, if you have a particular reproducable use case
  * Statistics collected on production environments. I use my own tool up to now: https://github.com/guettli/live-trace
- 
+
+You provide the GUI for configuring the system. Then the customer (not you) uses this GUI
+.........................................................................................
+
+I developed a workflow system for a customer. The customer gave me an excel sheet with steps, transitions and groups.
+
+The coding was the difficult part.
+
+Then I configured the system according to the excel sheet.
+
+The code was fine, but the I made mistakes when I entered the values (from excel to the new web based workflow GUI).
+
+The customer was upset, because the configuration contained mistakes.
+
+I learned. Now I ask if it would be ok if the customer enters the mapping. In most cases the customer likes to do this. 
+
+There is a big difference. The customer feels productive if he does something like this. I hate it. I care for the database design and theh code, but entering data with copy+paste from the Excel sheet ... No I don't like this. Results will be better if you like what you do :-)
+
+For detail lovers: No, it was not feasible to write a script which imported the excel sheet to the database. The excel sheet was not well structured.
+
 
 ####################################################################################################
 
