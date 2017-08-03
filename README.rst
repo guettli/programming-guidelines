@@ -699,7 +699,7 @@ Here some hints:
 * Meet with "normal" people. With "normal" I mean people who do not do IT stuff.
 * Do sport
 * Relax
-* Do not complain. Do something if you can. If you can't, then cry and then seek new adventures.
+* Do not complain. Do something if you can. If you can't, then talk to friends. If they can't help, then cry and then seek new adventures.
 
 
 Avoid Office Documents or UML-tools
