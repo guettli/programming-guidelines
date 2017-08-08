@@ -786,6 +786,15 @@ If you have not time do this, then there is something wrong.
 
 "Wer keinen Zeit hat ist ärmer als ein Bettler" TODO translate this.
 
+Highlander, "There can be only one"
+...................................
+
+Highlander is a 1986 British-American adventure action fantasy film with tagline "There can be only one".
+Thinking like this narrows your mind. There can be several thousand. Look how successfull ants and bees work. If someone is better or faster, then be smile. Give applaud and say "thank you".
+
+`Don't be evil. <https://en.wikipedia.org/wiki/Don%27t_be_evil>`_ Don't waste time and mental energie. Applauding if the competitor is better, was new to me in 2017. I was at Rothenbaum and attended the German Open (Tennis). The coach of one player was applauding every time the opponent made a good shot. I was astonished. We did the coach applauding the enemy? But this works. If you get angry, you waste energy and you start to think like a wild and stupid animal. Even if you have made a mistake or lost some how, no reason not to walk upright.
+
+
 
 Solutions
 .........
@@ -803,3 +812,5 @@ Thank you
 * All people who ask question and/or answers them at places like StackOverflow.
 * People I meat during study at HTW-Dresden
 * My teammates at TBZ
+
+.. Link in ReST: `text <http:....>`_
