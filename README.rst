@@ -604,9 +604,9 @@ These days I needed to debug a well known Python library. It works fine, but you
 
 One method accepted a object with three different meanings types as first argument:
 
- * case1: a string containing html markup
- * case2: a string containing a file path. This file contained the html to work on.
- * case3: a file descriptor with a read() method.
+* case1: a string containing html markup
+* case2: a string containing a file path. This file contained the html to work on.
+* case3: a file descriptor with a read() method.
  
 This looks convinient at the first sight. But in the long run it makes things complicated. This kind of guessing can always lead to false results. In my case the string was a accidently the name of an existing directory. In my case all calls to the library used case1 "a string containing html markup". This failed because of the existing directory :-(
 
