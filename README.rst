@@ -597,6 +597,38 @@ There is a big difference. The customer feels productive if he does something li
 For detail lovers: No, it was not feasible to write a script which imported the excel sheet to the database. The excel sheet was not well structured.
 
 
+Avoid clever guessing
+.....................
+
+These days I needed to debug a well known Python library. It works fine, but you don't want to look under hood.
+
+One method accepted a object with three different meanings types as first argument:
+
+ * case1: a string containing html markup
+ * case2: a string containing a file path. This file contained the html to work on.
+ * case3: a file descriptor with a read() method.
+ 
+This looks convinient at the first sight. But in the long run it makes things complicated. This kind of guessing can always lead to false results. In my case the string was a accidently the name of an existing directory. In my case all calls to the library used case1 "a string containing html markup". This failed because of the existing directory :-(
+
+STOP GUESSING.
+
+In Python you can use classmethods for alternative constructors.
+
+
+.. code-block::
+
+  # case 1
+  obj = MyClass.from_string('.....')
+
+  # case2
+  obj = MyClass.from_file_name('/tmp/...')
+
+  # case3
+  with io.open('...') as fd:
+      obj = MyClass.from_file_object(fd)
+
+
+
 ####################################################################################################
 
 4. Op
