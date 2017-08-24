@@ -347,6 +347,21 @@ I had no clue what most questions where about. But this small advice "If unsure 
 
 If you are managing a project: Care for newcomers. Provide them with guide lines. But don't reinvent docs. Provide links to the relevant upstream docs, if you just use a piece of software. Avoid redundant docs.
 
+Keep custom IDE configuration small
+...................................
+
+Imangine you lost your PC and you lost:
+
+* IDE configuration
+* Test data
+* Test database
+
+All that's left is your source code from version control, CI servers and deployment workflow.
+
+How much would you lose? How much time would you waste to set up your personal development environment again?
+
+Keep this time small. This is related to "care for newcomers". If you need several hours to setup your development environment, then new team members would need even much more time.
+
 
 Passing around methods make things hard to debug
 ................................................
