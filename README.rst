@@ -808,6 +808,13 @@ Most people can listen and write at once. I can't. And I guess a lot of programm
 6. Epilog
 ---------
 
+It is always possible to make things more complicated
+.....................................................
+
+
+It is always possible to make things more complicated. The interesting adventure is to make things simpler and easier. 
+
+
 Be curious
 ..........
 
