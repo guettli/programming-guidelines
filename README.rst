@@ -660,6 +660,18 @@ Use CI here, too. Otherwise only few people dare to make changes. And this means
 
 Do not use RPM/DPKG to configure a system.
 
+
+Provide specific import directories, not one generic
+....................................................
+
+If you still receive files via ftp/scp since you have not switched to http-APIs yet, then be sure to provide specific input directories.
+
+In the past I recevied files in a directory called "import". Several third party systems sent data to this directory. It looks easy in the first place. But sooner or later there will be chaos since you need to now where the data came from. Was it from third party system FOO or was the data from third party system BAR? You can't distinguish any more if you profide only one import directory.
+
+Now we provide import-FOO, import-BAR, import-qwerty ...
+
+I am sill unsure if the heading for this topic matches. This hint is not about development. It is not about datastructures. Is it about operation? I am unsure.
+
 Change file vs put file
 .......................
 
