@@ -837,6 +837,16 @@ I like these release notes:
 * Python ... no, since I am still using Python 2.7
 
 
+Three Mail Accounts
+...................
+
+I have three mail accounts:
+
+* for personal mails (family, friends, ...)
+* for work related mails
+* for mailing lists
+
+
 Clean up your desk
 ..................
 
