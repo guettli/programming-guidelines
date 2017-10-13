@@ -306,6 +306,8 @@ With other words and my point of view: source code gets created by humans with t
 
 Exception1: If you have some sort of Interface Definition Language like (Corba or Protocol Buffers), then you can create stubs as source code. But this generated source should not contains conditions (IFs) or loops.
 
+Exception2: Compiling to JavaScript. Since there is no better solution available, creating JavaScript from (for example) TypeScript makes sense. But please, never ever edit the created JS :-)
+
 Regex are great - But it's like eating rubish
 .............................................
 
