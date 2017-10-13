@@ -298,7 +298,11 @@ Guard clauses help to avoid indentation. It makes code easier to read and unders
 Source code generation is a stupid idea
 .......................................
 
-I guess every young programmer wants to write a tool which creates software (sooner or later). Stop! Please think about it again. What do you gain? Don't confuse data and code. Imagine you have a source code generator which takes DATA as input and creates SOURCE as output. What is the difference between DATA and SOURCE? What do you gain? Even if you have some kind of artificial intelligence, you can't create new (redundancy free) data if your only input is DATA. It is just a different syntax. Why not write a program which reads DATA and does the thing you want to do with SOURCE?
+I guess every young programmer wants to write a tool which creates software (sooner or later). Stop! Please think about it again. What do you gain? Don't confuse data and code. Imagine you have a source code generator which takes DATA as input and creates SOURCE as output. What is the difference between the input (DATA) and the output (SOURCE)? What do you gain? Even if you have some kind of artificial intelligence, you can't create new (redundancy free) data if your only input is DATA. It is just a different syntax. Why not write a program which reads DATA and does the thing you want to do with SOURCE?
+
+With other words and my point of view: source code gets created by humans with the help of an editor or IDE. It makes no sense to automatically create software. You think it would be great if a robot could create software? Why should a robot create software? It makes no sense. The robot could do the things the created software should do imidiately without the superfluous step of creating source code.
+
+
 
 Exception1: If you have some sort of Interface Definition Language like (Corba or Protocol Buffers), then you can create stubs as source code. But this generated source should not contains conditions (IFs) or loops.
 
