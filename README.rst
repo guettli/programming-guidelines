@@ -812,7 +812,7 @@ Most people can listen and write at once. I can't. And I guess a lot of programm
 Avoid Gossip
 ............
 
-Gossip creates an atmosphere which promotes negativity. Avoid to make jokes about other team mates or customers. Yes, there are people who do strange stuff and who have strange attitudes. Making jokes about them makes everything worse. Please be aware that this guideline has a major drawback. Sometimes all people around you are laughing about a customer or a team mate which is not here right now ... and you are the only one who is not laughing. It is up to you how to react. Be patient.
+Gossip creates an atmosphere which promotes negativity (bad karma). Avoid to make jokes about other team mates or customers. Yes, there are people who do strange stuff and who have strange attitudes. Making jokes about them makes everything worse. Please be aware that this guideline has a major drawback. Sometimes all people around you are laughing about a customer or a team mate which is not here right now ... and you are the only one who is not laughing. It is up to you how to react. Be patient.
 
 
 
