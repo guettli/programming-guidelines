@@ -197,7 +197,7 @@ The "update" part is the most difficult one.
 
 Sometimes CRD helps: Do not implement the update operation. Use delete+create.
 
-Transalting to SQL terms:
+Translating to SQL terms:
 
 +-----------+-----------------------------------+
 |CRUD Term  | SQL                               |
