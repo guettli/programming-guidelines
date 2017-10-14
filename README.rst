@@ -263,13 +263,7 @@ CI
 
 Use continuous integration. Only tested code is allowed to get deployed. This needs to be automated. Humans make more errors than automated processes.
 
-Here is my travis file which does two things if all tests where successful:
-
- * Use "bumpversion" to increase the version number.
- * commit the new version info
- * Upload to pypi the new version.
- 
-https://github.com/guettli/compare-with-remote/blob/master/.travis.yml
+I documented how to set up github commit, travis CI, bumpversion, Upload to pypi: https://github.com/guettli/github-travis-bumpversion-pypi
 
 All I need to do is to commit. All other steps are automated :-)
 
