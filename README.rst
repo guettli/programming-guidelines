@@ -809,6 +809,13 @@ Dare to say "Please wait, I want to take a note"
 
 Most people can listen and write at once. I can't. And I guess a lot of programmers have this problem. I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you, don't fool yourself. You will only remember 4 of 5 issues. Dare to day "please wait, I want to take a note". This way you can care for all issues, which results in happy customers.
 
+Avoid Gossip
+............
+
+Gossip creates an atmosphere which promotes negativity. Avoid to make jokes about other team mates or customers. Yes, there are people who do strange stuff and who have strange attitudes. Making jokes about them makes everything worse. Please be aware that this guideline has a major drawback. Sometimes all people around you are laughing about a customer or a team mate which is not here right now ... and you are the only one who is not laughing. It is up to you how to react. Be patient.
+
+
+
 ####################################################################################################
 
 6. Epilog
