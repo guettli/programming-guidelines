@@ -769,7 +769,7 @@ Writing Nagios checks is very simple. The exit status has this meaning:
 * 2: error
 * 3: unknown
 
-Is this KISS (keep it simple and stupid). Yes, I think it is **simple**. You can write a nagios plugin with any language you like.
+Is this KISS (keep it simple and stupid)? Yes, I think it is **simple**. You can write a nagios plugin with any language you like. Often less then ten lines of source code are enough to implement a nagios check.
 
 But on the other hand it is not **stupid**. The checks does two things: It collects some numbers (for example "How much disk space is left") and it does evaluate and judge ("only N MByte left, I think this is a warning"). That's not **stupid** this is some kind of intelligence. 
 
