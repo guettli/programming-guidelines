@@ -756,11 +756,34 @@ Don't set up a SMTP daemon
 
 If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. Use a tool like getmail (not fetchmail) which is a mail fetching client. You will have much more trouble if you set up an SMTP daemon.
 
+5. Monitoring
+----------------------------
+
+Nagios Plugin API (0=ok, 1=warn ...)
+....................................
+
+Writing Nagios checks is very simple. The exit status has this meaning:
+
+* 0: ok
+* 1: warn
+* 2: error
+* 3: unknown
+
+Is this KISS (keep it simple and stupid). Yes, I think it is **simple**. You can write a nagios plugin with any language you like.
+
+But on the other hand it is not **stupid**. The checks does two things: It collects some numbers (for example "How much disk space is left") and it does evaluate and judge ("only N MByte left, I think this is a warning"). That's not **stupid** this is some kind of intelligence. 
+
+After writing and working with nagios checks for several years I think the evaluation of the data should not be done inside the check. Some data-collector should collect data. Then a different tool does evaluate the data and judge if this ok, warn or error.
+
+
+
+
+
 
 ####################################################################################################
 
 
-5. Communication with others
+6. Communication with others
 ----------------------------
 
 Avoid to get a nerd
@@ -816,7 +839,7 @@ Gossip creates an atmosphere which promotes negativity (bad karma). Avoid to mak
 
 ####################################################################################################
 
-6. Epilog
+7. Epilog
 ---------
 
 It is always possible to make things more complicated
