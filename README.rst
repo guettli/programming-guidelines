@@ -235,6 +235,25 @@ Even Crontab lines are dangerous. Look at this:
 
 Do you spot the big risk? (Solution below)
 
+Avoid calling command line tools
+................................
+
+I try to avoid calling a command line tool, if a library is available.
+
+Example: You want to know how long a process is running (with Python). Yes, you could call `ps -p YOUR_PID -o lstart=` with the subprocess library. This works.
+
+But why not use a library like `psutil <https://pypi.python.org/pypi/psutil>`_?
+
+The only reason I see why you don't want to use a library is: I want to avoid a third party library.
+
+But why do you want to avoid a third party library?
+
+:-)
+
+Is there a feeling like "too much work, too complicated"?
+
+Check the license of the library. If it is BSD, MIT or Apache like, then use the library.
+
 
 
 C is slow
