@@ -739,6 +739,11 @@ If you are doing "ssh production-server .... less /var/log/...": No log-manageme
 
 If you are doing "ssh production-server ... rm ...": Please ask yourself what you are doing here. How can you automate this, to make this unneccessary in the future. 
 
+Keep you country clean
+......................
+
+There are two kind of files in the context of backup: Files which should be in the backup and temporary files which should not be in the backup. Keep you directories clean. In a directory there should be either only files which should be in the backup xor only files which should not be in the backup. This will make live easier for you. The configuration of your backup is easier and cleaning temporary files is easier and looking at the directory makes more fun since it is clean.
+
 
 Logging to files
 ................
