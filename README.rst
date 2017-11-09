@@ -830,6 +830,13 @@ Here some hints:
 * Relax
 * Do not complain. Do something if you can. If you can't, then talk to friends. If they can't help, then cry and then seek new adventures.
 
+Discussion, but no progress? V1, V2, v3, ...
+............................................
+
+If a discussion brings not progress, then grab a pen. Start with V1. The letter V stands for "Variant" or "One strategy of several to get to a goal". Find a term or short description of the first possible strategy. Write it down. Then which other ways exist? V2, V3, ... 
+
+Rember, there is always the last variant: Leave things like they are today and think about this again N days later.
+
 
 Avoid Office Documents or UML-tools
 ...................................
