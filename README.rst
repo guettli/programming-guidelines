@@ -5,7 +5,7 @@ My personal programming guidelines. **Please provide feedback**, tell me what's 
 
 `1. Introduction <#1-introduction>`_
 
-`2. Data structures <#2-data_structures>`_
+`2. Data structures <#2-data-structures>`_
 
 `3. Dev <#3-dev>`_
 
@@ -13,7 +13,7 @@ My personal programming guidelines. **Please provide feedback**, tell me what's 
 
 `5. Monitoring <#5-monitoring>`_
 
-`6. Communication with others <#6-communication_with_others>`_
+`6. Communication with others <#6-communication-with-others>`_
 
 `7. Epilog <#7-epilog>`_
 
