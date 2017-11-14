@@ -3,6 +3,21 @@ Programming Guidelines
 
 My personal programming guidelines. **Please provide feedback**, tell me what's wrong and what's missing and create a new issue here: https://github.com/guettli/programming-guidelines/issues or write me a mail to guettliml@thomas-guettler.de
 
+`1. Introduction <#introduction>`_
+
+`2. Data structures <#data_structures>`_
+
+`3. Dev <#dev>`_
+
+`4. Op <#op>`_
+
+`5. Monitoring <#monitoring>`_
+
+`6. Communication with others <#communication_with_others>`_
+
+`7. Epilog <#epilog>`_
+
+
 1. Introduction
 ---------------
 
