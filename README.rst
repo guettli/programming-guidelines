@@ -269,6 +269,22 @@ Is there a feeling like "too much work, too complicated"?
 
 Check the license of the library. If it is BSD, MIT or Apache like, then use the library.
 
+Do permission checking via SQL
+..............................
+
+Imagine you have three models (users, groups and permissions) as tables in a relational database system.
+
+Most systems do the permission checking via source code. Example: if user.is_admin then return True
+
+Sooner or later you need the reverse: Show all users which have a given permission.
+
+Now you write SQL (or use your ORM) to create a queryset which returns all users which satisfy the needed conditions.
+
+Now you have two implementations. The first "if user.is_admin then return True" and one which uses set operations (SQL).
+
+That's redundant.
+
+I was told to avoid redundancy.
 
 
 C is slow
