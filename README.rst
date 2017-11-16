@@ -641,7 +641,7 @@ No nested directory trees
 
 I you store files, then avoid nested directory trees. It is complicated and if you want to use a storage server like `S3 <https://en.wikipedia.org/wiki/Amazon_S3>`_ later, you are in trouble.
 
-Most storage servers support containers and `blobs <https://en.wikipedia.org/wiki/Binary_large_object>`_ inside this container. Containers in containers are not supported, and that's good, since it is simple.
+Most storage servers support containers and `blobs <https://en.wikipedia.org/wiki/Binary_large_object>`_ inside a container. Containers in containers are not supported, and that's good, since it is simple.
 
 
 Debugging Performance
