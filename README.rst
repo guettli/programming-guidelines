@@ -361,7 +361,9 @@ Regex are great - But it's like eating rubish
 
 Yes, I like regular expression. But slow down: What do I do, if I use a regex? I think it is "parsing". I remember to have read this some time ago: "Time is too short to rewrite parsers". Don't parse data! We live in the 21 century. Consume high level data structures like json, yaml or protcol buffers. If possible, refuse to accept CSV or custom text format as input data.
 
-From time to time you need to do text processing. Unfortunately there are several regex flavors. My guide-line: Use PCRE. They are available in Python, Postfix and many other tools. Don't waste time with other regex flavors, if PCRE are available. 
+From time to time you need to do text processing. Unfortunately there are several regex flavors. My guide-line: Use PCRE. They are available in Python, Postfix and many other tools. Don't waste time with other regex flavors, if PCRE are available.
+
+Current Linux distributions ship with a grep versions which has the `-P` option to enable PCRE. AFAIK this is the only way to grep for special characters like the binary null: `How to grep for special character <https://superuser.com/a/612336/95878>`_ 
 
 CSV - Comma-separated values
 ............................
