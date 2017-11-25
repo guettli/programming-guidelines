@@ -797,7 +797,7 @@ Both concepts don't fit together. Sooner or later your logs get rotated. Now you
 Use Systemd
 ...........
 
-It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simple.
+It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simple. See `Systemd makes many daemons obsolete <https://stackoverflow.com/a/30189540/633961>`_
 
 traceroute won't help you
 .........................
