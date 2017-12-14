@@ -317,6 +317,12 @@ I documented how to set up github commit, travis CI, bumpversion, Upload to pypi
 
 All I need to do is to commit. All other steps are automated :-)
 
+Jenkins
+.......
+
+If you use Jenkins or an other GUI for continuous integration be sure to sure to keep it simple. Yes, modern tools like Jenkins can do a lot. With every new version they get even more turing complete (this was a joke, I hope you understood it). Please do speration of concerns. Jenkins is the GUI to start a job. Then the jobs runs, and then you can see the result of the job via Jenkins. If you do complex condition handling "if ... then ... else ..." inside Jenkins, then I think you are on the wrong track.
+
+Jenkins calls a command line. To make it easy for debugging and development this job should be callable via the command line, too. With other word: Jenkins gets used to collect the arguments. Then a command line script gets called. Then Jenkins displays the result for you. I think it is wise to avoid a complex Jenkins setup.
 
 Avoid Threads and Async
 .......................
