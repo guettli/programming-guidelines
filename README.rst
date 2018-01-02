@@ -800,6 +800,8 @@ Logging to files
 I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
 Both concepts don't fit together. Sooner or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematically version of "every line". This gets really complicated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundred times and each time different ...
 
+In other words: Avoid logrotate. Logging is an endless stream.
+
 Use Systemd
 ...........
 
