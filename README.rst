@@ -884,9 +884,35 @@ Here some hints:
 Discussion, but no progress? V1, V2, V3, ...
 ............................................
 
-If a discussion brings not progress, then grab a pen. Start with V1. The letter V stands for "Variant" or "One strategy of several to get to a goal". Find a term or short description of the first possible strategy. Write it down. Then which other ways exist? V2, V3, ... 
+If a discussion brings not progress, then grab a pen. Start with V1. The letter V stands for "Solution Variant" or "One strategy of several to get to a goal". Find a term or short description of the first possible strategy. Write it down. Then: which other ways could be used? V2, V3, ... 
 
 Rember, there is always the last variant: Leave things like they are today and think about this again N days later.
+
+If you have found several solution variants, then look at them in detail. Most of the time it is useful to define the need sequence of steps. You can use the letter "S" for this: S1, S2, S3 ...
+
+A simple example:
+
+In the morning, you wake up.
+
+* V1: Go to work now
+* V2: Do some more sleeping
+* V3: Care for your family
+* V4: Try to remember what you dreamed, write it down
+* V5: Do some sports
+* V6: Play piano
+* V7: Remember your goals, what is the next step?
+* ...
+
+If you look at V1 in detail you get to a list of steps:
+
+* S1: get up
+* S2: make bed
+* S3: wash yourself
+* S4: put on clothings
+* S5: eat
+* S6: take bike and ride to work
+
+I think the first letter (V, S) helps if you are brainstorming.
 
 
 Avoid Office Documents or UML-tools
