@@ -594,7 +594,7 @@ It is important to understand the difference.
 
 **Authentication** happens first: Is the user really Bob, or is there just someone who pretends to be Bob?
 
-**Permission Checks** Is Bob allowed to do action "foo"? Here we already trust that the user is Bob and not someone else. I use the term "Permission Checks" on purpuse since the synonym "Authorization" sounds to similar to "Authentication". 
+**Permission Checks** Is Bob allowed to do action "foo"? Here we already trust that the user is Bob and not someone else. I use the term "Permission Checks" on purpuse since the synonym "Authorization" sounds too similar to "Authentication". 
 
 
 Related question: https://softwareengineering.stackexchange.com/questions/362350/synonym-for-authorization/363690#363690
