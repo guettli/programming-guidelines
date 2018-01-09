@@ -587,14 +587,18 @@ It is very likely that this means you need to move the body of a loop into a new
 Now you can call `my_method_foo()` in a test, and you don't need a conditional breakpoint any more.
 
 
-Make a clear distinction between Authentication and Authorization
-.................................................................
+Make a clear distinction between Authentication and Permission Checks
+.....................................................................
 
 It is important to understand the difference.
 
 **Authentication** happens first: Is the user really Bob, or is there just someone who pretends to be Bob?
 
-**Authorization** Is Bob allowed to do action "foo"? Here we already trust that the user is Bob and not someone else.
+**Permission Checks** Is Bob allowed to do action "foo"? Here we already trust that the user is Bob and not someone else. I use the term "Permission Checks" on purpuse since the synonym "Authorization" sounds to similar to "Authentication". 
+
+
+Related question: https://softwareengineering.stackexchange.com/questions/362350/synonym-for-authorization/363690#363690
+
 
 Idempotence is great
 ....................
