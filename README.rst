@@ -317,6 +317,18 @@ I documented how to set up github commit, travis CI, bumpversion, Upload to pypi
 
 All I need to do is to commit. All other steps are automated :-)
 
+CI must not connect to the internet
+...................................
+
+If you do automated testing you usualy have these steps: build then test.
+
+My guideline is to avoid internet access during both steps. During "build" dependencies
+get downloaded. Don't download them from the internet. Host your own repos for source code (git),
+system packages (rpm/dpkg) and your language (pip for python).
+
+
+
+
 Jenkins
 .......
 
