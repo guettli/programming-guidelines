@@ -749,6 +749,18 @@ Use CI here, too. Otherwise only few people dare to make changes. And this means
 Do not use RPM/DPKG to configure a system.
 
 
+Use http, avoid ftp/sftp/scp/rsync/smb
+......................................
+
+Use http for data transfer. Avoid the old ways (ftp/sftp/scp/rsync/smb). 
+
+If you want to transfer files via http from shell/cron you can use: `tbzuploader <https://github.com/guettli/tbzuploader>`_.
+
+The next step is to avoid clever `inotify <https://en.wikipedia.org/wiki/Inotify>`_-daemons. You don't need this any more if you receive your data via http.
+
+
+
+
 Provide specific import directories, not one generic
 ....................................................
 
