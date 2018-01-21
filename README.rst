@@ -1029,6 +1029,11 @@ Thinking like this narrows your mind. There can be several thousand. Look how su
 `Don't be evil. <https://en.wikipedia.org/wiki/Don%27t_be_evil>`_ Don't waste time and mental energie. Applauding if the competitor is better, was new to me in 2017. I was at Rothenbaum and attended the German Open (Tennis). The coach of one player was applauding every time the opponent made a good shot. I was astonished. Why was the coach applauding the enemy? But this works. If you get angry, you waste energy and you start to think like a wild and stupid animal. Even if you have made a mistake or lost some how, no reason not to walk upright.
 
 
+Don't waste your time with cheap hardeware
+..........................................
+
+Some people love the `Raspberry Pi <https://en.wikipedia.org/wiki/Raspberry_Pi>`_. I don't like it. It does not have enough computing power for my use cases. Yes, the device is cheap, but I prefer to spend some more money to have more performance. I don't like waiting.
+
 
 Solutions
 .........
