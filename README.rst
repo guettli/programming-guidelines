@@ -259,15 +259,17 @@ Example: You want to know how long a process is running (with Python). Yes, you 
 
 But why not use a library like `psutil <https://pypi.python.org/pypi/psutil>`_?
 
-The only reason I see why you don't want to use a library is: I want to avoid a third party library.
+Why do you want to avoid a third party library?
 
-But why do you want to avoid a third party library?
-
-:-)
-
-Is there a feeling like "too much work, too complicated"?
+Is there a feeling like "too much work, too complicated"? Installing a library is easy, do it.
 
 Check the license of the library. If it is BSD, MIT or Apache like, then use the library.
+
+Avoid GPL
+.........
+
+The GPL license is viral. Avoid it.
+
 
 Do permission checking via SQL
 ..............................
