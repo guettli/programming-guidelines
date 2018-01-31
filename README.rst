@@ -956,7 +956,10 @@ Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. 
 Communication with Customers: Tell customers what they should test
 ..................................................................
 
-I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens. That's not satisfying since software developers want to hear that their work does help. If you (the developer) provide a check-list of things to test, then the likelihood to get feedback soon is bigger.
+I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens. That's not satisfying since software developers want to hear that their work does help. If you (the developer) provide a checklist of things to test, then the likelihood to get feedback is bigger.
+
+It is wise to create this checklist for testing as early as possible. It tells the developer the desired result.
+
 
 Communication with Customers: Define "done"
 ...........................................
