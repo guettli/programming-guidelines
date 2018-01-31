@@ -691,7 +691,7 @@ The coding was the difficult part.
 
 Then I configured the system according to the excel sheet.
 
-The code was fine, but the I made mistakes when I entered the values (from excel to the new web based workflow GUI).
+The code was bug free, but I made a mistake when I entered the values (from excel to the new web based workflow GUI).
 
 The customer was upset, because the configuration contained mistakes.
 
