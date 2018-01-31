@@ -542,9 +542,9 @@ Learn one programming language, not ten.
 
 Most young developers think you need to learn many programming languages to be a good developer.
 
-Yes, it does help sometimes to know how the programming language C works.
+Yes, sometimes it helps to know the programming language C.
 
-My opinion: Lear Python, JavaScript.
+My opinion: Learn Python and some JavaScript.
 
 Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument.
 
