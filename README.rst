@@ -772,8 +772,6 @@ In the past I recevied files in a directory called "import". Several third party
 
 Now we provide import-FOO, import-BAR, import-qwerty ...
 
-I am sill unsure if the heading for this topic matches. This hint is not about development. It is not about datastructures. Is it about operation? I am unsure.
-
 Change file vs put file
 .......................
 
