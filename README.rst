@@ -533,7 +533,7 @@ Avoid magic or uncommon things
 ..............................
 
 * hard links
-* file system ACLs (Access control lists)
+* file system ACLs (Access control lists). Try to use as little as possible chmod/chown.
 * git submodules (Please use configuration management, deployment tools, ...)
 
 Learn one programming language, not ten.
