@@ -846,13 +846,15 @@ If you do coding to implement backup ...
 
 If you do coding/programming to implement your backup of data, then you are on the wrong track.
 
-It is very likely that you will do it wrong, and this will be a big risk, if your context is backing up data.
+It is very likely that you will do it wrong, and this will be a big risk.
 
 Why? Because you will notice your fault if you try to recover your data. 
 
 Compare this to an gadet app for a mobile phone. If this app fails, it is likely that the fault does not lead to data loss.
 
 **Use** a backup tool, even if you love to do programming. Configure it, but don't write it yourself.
+
+Same for data replication. Do not write code to do this. Use existing tools.
 
 Don't set up a SMTP daemon
 ..........................
