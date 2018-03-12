@@ -752,6 +752,19 @@ Use CI here, too. Otherwise only few people dare to make changes. And this means
 Do not use RPM/DPKG to configure a system.
 
 
+Change file vs put file
+.......................
+
+Often there are two ways to do configuration management:
+
+
+* change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_ 
+* put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
+ 
+You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
+
+
+
 Use http, avoid ftp/sftp/scp/rsync/smb
 ......................................
 
@@ -772,18 +785,6 @@ If you still receive files via ftp/scp since you have not switched to http-APIs 
 In the past I recevied files in a directory called "import". Several third party systems sent data to this directory. It looks easy in the first place. But sooner or later there will be chaos since you need to now where the data came from. Was it from third party system FOO or was the data from third party system BAR? You can't distinguish any more if you profide only one import directory.
 
 Now we provide import-FOO, import-BAR, import-qwerty ...
-
-Change file vs put file
-.......................
-
-Often there are two ways to do configuration management:
-
-
-* change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_ 
-* put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
- 
-You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
-
 
 Cron Jobs
 .........
