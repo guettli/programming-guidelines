@@ -535,6 +535,7 @@ Avoid magic or uncommon things
 * hard links
 * file system ACLs (Access control lists). Try to use as little as possible chmod/chown.
 * git submodules (Please use configuration management, deployment tools, ...)
+* gtk/qt/tk/tkinter: Avoid to write a native GUI. Use Django and its great admin interface.
 
 Learn one programming language, not ten.
 ........................................
