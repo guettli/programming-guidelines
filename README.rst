@@ -734,6 +734,11 @@ In Python you can use classmethods for alternative constructors.
       obj = MyClass.from_file_object(fd)
 
 
+Misc
+....
+
+* `<https://en.wikipedia.org/wiki/Release_early,_release_often> Release early, release often`_
+
 
 ####################################################################################################
 
