@@ -737,7 +737,7 @@ In Python you can use classmethods for alternative constructors.
 Misc
 ....
 
-* `<https://en.wikipedia.org/wiki/Release_early,_release_often> Release early, release often`_
+* `Release early, release often <https://en.wikipedia.org/wiki/Release_early,_release_often>`_
 
 
 ####################################################################################################
