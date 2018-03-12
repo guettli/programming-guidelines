@@ -738,6 +738,7 @@ Misc
 ....
 
 * `Release early, release often <https://en.wikipedia.org/wiki/Release_early,_release_often>`_
+* `Rough consensus and running code. <https://en.wikipedia.org/wiki/Rough_consensus>`_
 
 
 ####################################################################################################
