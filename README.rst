@@ -226,7 +226,7 @@ Translating to SQL terms:
 | delete    | delete from my_table where ...    |
 +-----------+-----------------------------------+
 
-Take a look at virtualization and containers (`Operating-system-level virtualization <https://en.wikipedia.org/wiki/Operating-system-level_virtualization>`_). There CRD gets used, not CRUD. Containers get created, then they execute, then they get deleted. Yes, you use configuration management to set up a container. But this gets done exactly once. There is no update. This makes it easier and more predictable.
+Take a look at virtualization and containers (`Operating-system-level virtualization <https://en.wikipedia.org/wiki/Operating-system-level_virtualization>`_). There CRD gets used, not CRUD. Containers get created, then they execute, then they get deleted. You might use configuration management to set up a container. But this gets done exactly once. There is one update from vanilla container to your custom container. But this is like "create". No updates will follow once the container was created. This makes it easier and more predictable.
 
 
 
