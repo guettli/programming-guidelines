@@ -692,8 +692,9 @@ Developers don't call mkdir
 Code runs in an environment. This environment was created with configuration management.
 This means: source code usualy does not call mkdir. With other words: Creating directories
 is the part of the configuration management. Setting up the environment and executing code in this environment are two distinct parts. If your software runs, the environment does already exist.
-Shell scripts calling `mkdir -p ...` are an ugly monster these two distinct parts are not seperated.
+Shell scripts calling `mkdir -p ...` are ugly monsters where these two distinct parts are not seperated.
 
+How to create directories? With automated configuration management (Salt, Ansible, Chef, ...) or during installation (RPM/DPKG)
 
 
 Debugging Performance
