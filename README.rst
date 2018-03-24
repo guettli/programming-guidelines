@@ -764,7 +764,7 @@ Change file vs put file
 Often there are two ways to do configuration management:
 
 
-* change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_ 
+* change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_, `blockreplace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.blockreplace>`_, append <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.append>`_, patch <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.patch>`_, 
 * put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
  
 You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
