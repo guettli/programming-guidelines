@@ -414,23 +414,25 @@ If you write docs, then do it for new comers. Start with the introduction, defin
 Canonical docs
 ..............
 
-Look at the question concerning ssh options at the Q+A site serverfault. There is a lot of guessing. Something is wrong. Nobody knows where the canonical docs are. Easy linking to specific configuration is not possible. What happens? Redudant docs. Many blog posts try to explain stuff.... Don't write blog posts, improve the upstreams docs. Talk with the developers. Don't be shy.
+Look at the question concerning ssh options at the Q+A site serverfault. There is a lot of guessing. Something is wrong. Nobody knows where the canonical docs are. Easy linking to specific configuration is not possible. What happens? Redudant docs. Many blog posts try to explain stuff.... Don't write blog posts, improve the upstreams docs. Talk with the developers. Open an issue in the issue tracker if you think there is something missing in the docs. 
+
+Open an issue if the docs start with the hairy details and don't start with an introduction/overview. Developers don't realize this, since they need to deal with the hairy details daily. Don't be shy: Help them to see the world through the eyes of a new comer.
 
 I am unsure if I should love or hate "wiki.archlinux.org". On the one hand I found there valuable information about systemd and other linux related secrets. On the other hand it is redundant and since a lot of users take their knowledge from this resource, the canonical upstream docs get less love. That's https://en.wikipedia.org/wiki/Ambivalence - that's live.
 
 Care for newcomers
 ..................
 
-In the year 1997 I was very thankful that there was a hint "If unsure choose ..." when I need to compile a linux kernel. In these days you need to answer dozens question before you could compile the invention of Linus Torvalds.
+In the year 1997 I was very thankful that there was a hint "If unsure choose ..." when I needed to compile a linux kernel. In these days you need to answer dozens question before you could compile the invention of Linus Torvalds.
 
 I had no clue what most questions where about. But this small advice "If unsure choose ..." helped me get it done.
 
-If you are managing a project: Care for newcomers. Provide them with guide lines. But don't reinvent docs. Provide links to the relevant upstream docs, if you just use a piece of software. Avoid redundant docs.
+If you are managing a project: Care for new comers. Provide them with guide lines. But don't reinvent docs. Provide links to the relevant upstream docs, if you just use a piece of software. Avoid redundant docs.
 
 Keep custom IDE configuration small
 ...................................
 
-Imangine you lost your PC and you lost:
+Imangine you lost your PC and you lost your development environment:
 
 * IDE configuration
 * Test data
@@ -440,7 +442,7 @@ All that's left is your source code from version control, CI servers and deploym
 
 How much would you lose? How much time would you waste to set up your personal development environment again?
 
-Keep this time small. This is related to "care for newcomers". If you need several hours to setup your development environment, then new team members would need even much more time.
+Keep this time small. This is related to "care for new comers". If you need several hours to setup your development environment, then new team members would need even much more time.
 
 
 Passing around methods make things hard to debug
@@ -461,6 +463,12 @@ Time is too short for "git rebase" vs "git merge" discussions
 
 What's the net result of "git rebase" vs "git merge" discussion? The result is source code. Who cares how source code got into the current state? Me, but only sometimes. Archeology is interesting .... but more interesting is the future, since you can influence it.
 
+For every method there is a corresponding test-method
+.....................................................
+
+You implemented the great method foo(). Implement a corresponding method called test_foo().
+It does not matter if you write foo() first, and then test_foo() or the other way round.
+But it makes sense to store both methods with one commit to your git repo.
 
 This is untestable code
 .......................
