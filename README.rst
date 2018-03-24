@@ -755,6 +755,27 @@ In Python you can use classmethods for alternative constructors.
   with io.open('...') as fd:
       obj = MyClass.from_file_object(fd)
 
+Cache for ever or don't cache at all
+....................................
+
+Avoid "maybe". If your http code returns a response you have two choices concering caching:
+
+* the web client should cache this response for ever.
+* the web client should not cache this response at all.
+
+If you follow this guide you will get great performance since revalidation and ETag magic is not needed.
+
+Avoid fiddling with ETag and If-Modified-Since http headers.
+
+But you have to care for one thing: If you cache for every, and you update your data, then you need to give your resource a new URL. That's easy:
+
+http://example.com/.../data-which-gets-cached-for-every?v=123456789
+
+If the data get of this URL gets changed, you need to update the v=123456789 to a new version.
+
+
+(I am unsure where to put this guide line. I think the heading "Dev" does not match)
+
 
 Misc
 ....
