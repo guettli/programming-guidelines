@@ -771,7 +771,7 @@ But you have to care for one thing: If you cache for every, and you update your 
 
 http://example.com/.../data-which-gets-cached-for-every?v=123456789
 
-If the data get of this URL gets changed, you need to update the v=123456789 to a new version.
+If the data of this URL gets changed, you need to update the v=123456789 to a new version.
 
 
 (I am unsure where to put this guide line. I think the heading "Dev" does not match)
