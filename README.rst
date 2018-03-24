@@ -472,7 +472,7 @@ But it makes sense to store both methods with one commit to your git repo.
 
 Several months later you discover a bug in your code. Or worse: our your customer discovers it.
 
-If you fix foo() you need to extend test_foo() or write a new method test_foo_special_case_...(). Again both changes walk into the git repo like a pair of young lovers holding hands :-)
+If you fix foo() you need to extend test_foo() or write a new method test_foo_with_special_input(). Again both changes walk into the git repo like a pair of young lovers holding hands :-)
 
 This is untestable code
 .......................
