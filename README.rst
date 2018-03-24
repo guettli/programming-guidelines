@@ -686,6 +686,15 @@ I you store files, then avoid nested directory trees. It is complicated and if y
 
 Most storage servers support containers and `blobs <https://en.wikipedia.org/wiki/Binary_large_object>`_ inside a container. Containers in containers are not supported, and that's good, since it is simple.
 
+Developers don't call mkdir
+...........................
+
+Code runs in an environment. This environment was created with configuration management.
+This means: source code usualy does not call mkdir. With other words: Creating directories
+is the part of the configuration management. Setting up the environment and executing code in this environment are two distinct parts. If your software runs, the environment does already exist.
+Shell scripts calling `mkdir -p ...` are an ugly monster these two distinct parts are not seperated.
+
+
 
 Debugging Performance
 .....................
