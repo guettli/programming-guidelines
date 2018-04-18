@@ -750,6 +750,9 @@ There is a big difference. The customer feels productive if he does something li
 
 For detail lovers: No, it was not feasible to write a script which imported the excel sheet to the database. The excel sheet was not well structured.
 
+The term "configuration" has two meanings in the guideline. Under this heading "configuration" means that a
+customer can change the configuration and the configuration gets stored in a database. The term "configuration" in
+"Configuration-Management" has a different meaning.
 
 Avoid clever guessing
 .....................
@@ -1094,6 +1097,21 @@ I like:
 * https://softwarerecs.stackexchange.com/
 * https://serverfault.com/
 * And some mailing lists.
+
+Cut bigger problems into smaller ones
+.....................................
+
+Imagine you are responsible for several servers and you want or should create graphs of their disk/cpu usage.
+
+Cut the bigger problem into smaller ones:
+
+* How to collect the data on one host
+* How to transport the data from the remote host to a central place?
+* How to store the data in a central database?
+* How to generate the graphs?
+
+BTW, why not use the PostgreSQL feature "Logical Replication"?
+
 
 Read the Release Notes
 ......................
