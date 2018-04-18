@@ -1023,7 +1023,9 @@ I think the first letter (V, S) helps if you are brainstorming.
 Avoid Office Documents or UML-tools
 ...................................
 
-Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps. Sequence diagrams are not needed. Just: first, second, third ...
+Use a way to edit content (use cases, specs, ...) over the internet: Use wikis.
+Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps.
+Sequence diagrams are not needed. Just: first, second, third ...
 
 `Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>`_ screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with you cell phone at the end.
 
@@ -1031,7 +1033,9 @@ Use a way to edit content (use cases, specs, ...) over the internet: Use wikis. 
 Communication with Customers: Tell customers what they should test
 ..................................................................
 
-I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens. That's not satisfying since software developers want to hear that their work does help. If you (the developer) provide a checklist of things to test, then the likelihood to get feedback is bigger.
+I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens.
+That's not satisfying since software developers want to hear that their work does help.
+If you (the developer) provide a checklist of things to test, then the likelihood to get feedback is bigger.
 
 It is wise to create this checklist for testing as early as possible. It tells the developer the desired result.
 
@@ -1039,17 +1043,29 @@ It is wise to create this checklist for testing as early as possible. It tells t
 Communication with Customers: Define "done"
 ...........................................
 
-Define "done" with your customers. Humans like to be creative and if thing X gets changed, then they have fancy ideas how to change thing Y. Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page. If you don't have a definition of done/ready, then you should not start to write source code. First define the goal, then choose a strategy to get to the goal.
+Define "done" with your customers. Humans like to be creative and if thing X gets changed,
+then they have fancy ideas how to change thing Y.
+Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page.
+If you don't have a definition of done/ready, then you should not start to write source code.
+First define the goal, then choose a strategy to get to the goal.
 
 Dare to say "Please wait, I want to take a note"
 ................................................
 
-Most people can listen and write at once. I can't. And I guess a lot of programmers have this problem. I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you, don't fool yourself. You will only remember 4 of 5 issues. Dare to day "please wait, I want to take a note". This way you can care for all issues, which results in happy customers.
+Most people can listen and write at once. I can't. And I guess a lot of developers have this problem.
+I can only do one thing at a time. If you are telephoning with a customer and he has a lot of things to tell you,
+don't fool yourself. You will only remember 4 of 5 issues. Dare to say "please wait, I want to take a note".
+This way you can care for all issues, which results in happy customers.
 
 Avoid Gossip
 ............
 
-Gossip creates an atmosphere which promotes negativity (bad karma). Avoid to make jokes about other team mates or customers. Yes, there are people who do strange stuff and who have strange attitudes. Making jokes about them makes everything worse. Please be aware that this guideline has a major drawback. Sometimes all people around you are laughing about a customer or a team mate which is not here right now ... and you are the only one who is not laughing. It is up to you how to react. Be patient.
+Gossip creates an atmosphere which promotes negativity (bad karma). Avoid to make jokes about other team mates
+or customers. Yes, there are people who do strange stuff and who have strange attitudes.
+Making jokes about them makes everything worse.
+Please be aware that this guideline has a major drawback.
+Sometimes all people around you are laughing about a customer or a team mate which is not here right now ...
+and you are the only one who is not laughing. It is up to you how to react. Be patient.
 
 
 
@@ -1068,7 +1084,9 @@ It is always possible to make things more complicated. The interesting adventure
 Be curious
 ..........
 
-There is always something you don't have understood up to now. Ask questions, even if you think you now the answer. For one question, there are always several answers. If you know one answer, then it is likely that someone has a better answer. 
+There is always something you don't have understood up to now. Ask questions, even if you think you now the answer.
+For one question, there are always several answers. If you know one answer,
+then it is likely that someone has a better answer.
 
 I like:
 
@@ -1100,17 +1118,17 @@ I have three mail accounts:
 Clean up your desk
 ..................
 
-Don't forget to clean your desk. I don't write this here because I do it often and with joy. No, excat the opposite. I write it down since I want to push myself. 
+Don't forget to clean your desk. I don't write this here because I do it often and with joy.
+No, excat the opposite. I write it down since I want to push myself.
 
-Don't look at all these things on your desk at once. Start on the left side take the first thing. Where is the best place for this thing single thing? Unsure? Why not throw in the garbage? If you are unsure put it at least in box behind a closed cabinet door. Some month later you might be able to throw it in the garbage.
+Don't look at all these things on your desk at once. Start on the left side take the first thing.
+Where is the best place for this thing single thing? Unsure? Why not throw in the garbage?
+If you are unsure put it at least in box behind a closed cabinet door.
+Some month later you might be able to throw it in the garbage.
 
 Then wipe the dust.
 
-If you have not time do this, then there is something wrong.
-
-"Wer es eilig hat sollte sich setzen"
-
-"Wer keinen Zeit hat ist ärmer als ein Bettler" TODO translate this.
+If you have not time do this, then there is something wrong. Slow down.
 
 Highlander, "There can be only one"
 ...................................
@@ -1142,8 +1160,14 @@ is the question and the back side is the answer. I use the first side for the da
 and the back side contains the text.
 This way I can ask myself what was on my mind these days. But all this should be fun, not a burden.
 
+The Bus factor
+..............
 
+From Wikipedia: The bus factor is a measurement of the risk resulting from information and capabilities not being shared among team members
 
+`Bus factor <https://en.wikipedia.org/wiki/Bus_factor>`_
+
+Avoid to create secret knowledge which is only available to you or to someone else. Share knowledge.
 
 
 Solutions
