@@ -89,6 +89,18 @@ It does not matter how you work with your data (struct in C, classes in OOP, tab
 
 https://en.wikipedia.org/wiki/Cardinality_(data_modeling)
 
+If this is new to you, I will give you two examples:
+
+One invoice has several invoice positions. For example you buy three books in one order,
+the invoice will have three invoice positions. This is a 1:N relationship. The invoice position is
+contain in exactly one invoice.
+
+If you look at tags, for example at the Question+Answer site stackoverflow: One question can be related to several
+tags/topics and of course a topic can be set on several questions. For example you have a strange UnicodeError in Python
+then you can set the tags "python" and "unicode" on your question. This is an N:M relationship.
+
+One more well know example of N:M is user and groups.
+
 
 Conditionless Data Structures
 .............................
@@ -166,9 +178,23 @@ Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atom
 
 
 
+Role vs Users+Groups
+....................
 
+What is the difference between roles and groups?
 
+There are several verbose and philosophical explanations. I like the way PostgreSQL handles it.
 
+There is no more a distinction between a user and a group. A role can contain a role and a user is a role.
+
+This makes some things easier and I whish I had choosen the role model and not the user+groups model which
+gets used by Django's auth app.
+
+Imagine you have an issue tracking system. If you have the user+group model and you want to give the responsibility
+of this issue to someone. You need two foreign keys if you use the user+group model: You can give the responsibility
+to a particular user or you can give the responsibility to a group. Two FKs.
+
+If you use the role model, then one FK is enough. Easier data structure, easier interface, less code, less bugs ...
 
 
 ####################################################################################################
