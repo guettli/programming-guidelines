@@ -1127,6 +1127,25 @@ Don't waste your time with cheap hardeware
 Some people love the `Raspberry Pi <https://en.wikipedia.org/wiki/Raspberry_Pi>`_. I don't like it. It does not have enough computing power for my use cases. Yes, the device is cheap, but I prefer to spend some more money to have more performance. I don't like waiting.
 
 
+Write a diary
+.............
+
+I think it helps to write a diary. Sitting down and writing about the last days help you to reflect the things you did.
+I found out that late (age of 40). A diary is fun to read several months later. I try to do it at least once a week.
+I have three types of diaries: One on facebook readable for everyone. It contains things from my daily life,
+ written in german and
+is readable by everyone. There is one on google-plus which contains IT topics
+(open source, python, linux, PostgreSQL), written in english and readable by everyone.
+
+And there is a private which I maintain with Anki. Anki is a flash card app. The front side
+is the question and the back side is the answer. I use the first side for the date and two or three words,
+and the back side contains the text.
+This way I can ask myself what was on my mind these days. But all this should be fun, not a burden.
+
+
+
+
+
 Solutions
 .........
 
