@@ -178,7 +178,7 @@ Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atom
 
 
 
-Role vs Users+Groups
+Roles vs Users+Groups
 ....................
 
 What is the difference between roles and groups?
@@ -187,7 +187,7 @@ There are several verbose and philosophical explanations. I like the way Postgre
 
 There is no more a distinction between a user and a group. A role can contain a role and a user is a role.
 
-This makes some things easier and I whish I had choosen the role model and not the user+groups model which
+This makes some things easier and I whish I had choosen the role model and not the user+group model which
 gets used by Django's auth app.
 
 Imagine you have an issue tracking system. If you have the user+group model and you want to give the responsibility
