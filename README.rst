@@ -576,7 +576,7 @@ If you have a library which logs a warning, but the warning does not help, since
 Avoid magic or uncommon things
 ..............................
 
-* hard links
+* hard links in linux file systems.
 * file system ACLs (Access control lists). Try to use as little as possible chmod/chown.
 * git submodules (Please use configuration management, deployment tools, ...)
 * gtk/qt/tk/tkinter: Avoid to write a native GUI. Use Django and its great admin interface.
@@ -589,7 +589,7 @@ Most young developers think you need to learn many programming languages to be a
 
 Yes, sometimes it helps to know the programming language C.
 
-My opinion: Learn Python and some JavaScript.
+My opinion: Learn Python, SQL and some JavaScript.
 
 Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument.
 
@@ -843,10 +843,13 @@ Configuration Management
 
 Use a configuration management tool like Salt or Ansible. 
 
-Use CI here, too. Otherwise only few people dare to make changes. And this means the speed of incremental evolution to a more efficent way will decreases.
+Use CI here, too. Otherwise only few people dare to make changes.
+And this means the speed of incremental evolution to a more efficent
+way will decreases.
 
 Do not use RPM/DPKG to configure a system.
 
+Do you know why this is called "`file.absent <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.absent>`_" and not "file.remove"?
 
 Change file vs put file
 .......................
