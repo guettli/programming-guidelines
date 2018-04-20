@@ -296,6 +296,14 @@ Avoid GPL
 
 The GPL license is viral. Avoid it.
 
+Loop in DB, not in your code
+............................
+
+Do the filtering in the database. In most cases it is faster then the
+loops in your programming language. And if the DB is not fast enough,
+then I guess there is just the matching index missing up to now.
+
+
 
 Do permission checking via SQL
 ..............................
