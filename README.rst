@@ -392,19 +392,25 @@ Guard clauses help to avoid indentation. It makes code easier to read and unders
 Source code generation is a stupid idea
 .......................................
 
-I guess every young programmer wants to write a tool which creates software (sooner or later). Stop! Please think about it again. What do you gain? Don't confuse data and code. Imagine you have a source code generator which takes DATA as input and creates SOURCE as output. What is the difference between the input (DATA) and the output (SOURCE)? What do you gain? Even if you have some kind of artificial intelligence, you can't create new (redundancy free) data if your only input is DATA. It is just a different syntax. Why not write a program which reads DATA and does the thing you want to do with SOURCE?
+I guess every young programmer wants to write a tool which automatically creates source code.
+Stop! Please think about it again. What do you gain?
+Don't confuse data and code.
+Imagine you have a source code generator which takes DATA as input and creates SOURCE as output.
+What is the difference between the input (DATA) and the output (SOURCE)? What do you gain?
+Even if you have some kind of artificial intelligence, you can't create new information if
+your only input is DATA. It is just a different syntax.
+Why not write a program which reads DATA and does the thing you want to do with SOURCE?
 
-According to wikipedia there are: source code, object code, byte code and machine code. For the current context I see only two different things: source code for humans and machine code for the machine (In this context it does not matter if it is object code, byte code or machine code).
+For the current context I see only two different things: **source code** for humans and
+**generated code** for the machine.
 
-If the TypeScript compiler creates JavaScript. Then the output is machine code (for me in this context) since the created JavaScript source is intended for the interpreter only. Not for the human.
+If the TypeScript compiler creates JavaScript. Then the output is generated code
+since the created JavaScript source is intended for the interpreter only. Not for the human.
 
-With other words and my point of view: source code gets created by humans with the help of an editor or IDE. It makes no sense to automatically create software. You think it would be great if a robot could create software? Why should a robot create software? It makes no sense. The robot could do the things the created software should do imidiately without the superfluous step of creating source code.
+With other words and my point of view: source code gets created by humans
+with the help of an editor or IDE.
 
 
-
-Exception1: If you have some sort of Interface Definition Language like (Corba or Protocol Buffers), then you can create stubs as source code. But this generated source should not contains conditions (IFs) or loops.
-
-Exception2: Compiling to JavaScript. Since there is no better solution available, creating JavaScript from (for example) TypeScript makes sense. But please, never ever edit the created JS :-)
 
 Regex are great - But it's like eating rubish
 .............................................
