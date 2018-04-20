@@ -1018,6 +1018,21 @@ Here some hints:
 * Relax
 * Do not complain. Do something if you can. If you can't, then talk to friends. If they can't help, then cry and then seek new adventures.
 
+Avoid stress
+............
+
+Stress trigger your body’s “fight or flight” response. It pushes your blood into the muscles.
+That's great if you need to jump onto the side walk because a fast red race care would hit you.
+But in your daily life this "fight or flight" response is hardly needed. You need the energy
+in your brain :-)
+
+Avoid stress, relax daily.
+
+On the other hand stress is fun: I like tennis and long distance running.
+
+Care for both: brain and body.
+
+
 Discussion, but no progress? V1, V2, V3, ...
 ............................................
 
