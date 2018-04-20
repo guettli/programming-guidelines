@@ -1195,7 +1195,11 @@ Avoid to create secret knowledge which is only available to you or to someone el
 
 Avoid overspecialization of yourself. It will have drawback. Imagine there are some things which only you know.
 Sooner or later you want to go on holiday and you want a relaxed holiday. You don't want to be called
-on your mobile phone by your boss or a team mate. You want two weeks off.
+on your mobile phone by your boss or a team mate. You want two weeks off without a single interrupt which
+is related to your work.
+
+I guess all people love it, if they are important. Everybody loves it, if someone needs them. You will get
+a burnout if no one else can do the things you do.
 
 Avoid overspecialization of a team mate. If a team mates has secret knowledge and there is no one
 else who has a clue: Talk. Try to reveal the things which only one person knows.
