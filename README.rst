@@ -795,6 +795,13 @@ In Python you can use classmethods for alternative constructors.
   with io.open('...') as fd:
       obj = MyClass.from_file_object(fd)
 
+OOP: Composition over inheritance
+.................................
+
+If unsure, then choose "has a" and not "is a".
+
+https://en.wikipedia.org/wiki/Composition_over_inheritance
+
 Cache for ever or don't cache at all
 ....................................
 
