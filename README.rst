@@ -1193,6 +1193,24 @@ From Wikipedia: The bus factor is a measurement of the risk resulting from infor
 
 Avoid to create secret knowledge which is only available to you or to someone else. Share knowledge.
 
+Avoid overspecialization of yourself. It will have drawback. Imagine there are some things which only you know.
+Sooner or later you want to go on holiday and you want a relaxed holiday. You don't want to be called
+on your mobile phone by your boss or a team mate. You want two weeks off.
+
+Avoid overspecialization of a team mate. If a team mates has secret knowledge and there is no one
+else who has a clue: Talk. Try to reveal the things which only one person knows.
+Tell him about your concerns (Bus factor). Maybe talk to his boss.
+
+Colorful use case: There is an action which needs to be done roughly twice a year. For example
+setting up a new server. Up to now Bob did this everytime. Talk to you team mates. Explain that
+every action should be known to at least two people.
+
+If you think "that's not my job, that's the
+job of the team leader" now, then I think it is time stop acting like a dumb sleeping sheep.
+Get resonsible. React relaxed if nobody is listening or understanding your concerns.
+"The Best Path to Long-Term Change Is Slow, Simple and Boring."
+
+
 
 Solutions
 .........
