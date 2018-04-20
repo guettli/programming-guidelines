@@ -750,15 +750,20 @@ The code was bug free, but I made a mistake when I entered the values (from exce
 
 The customer was upset, because the configuration contained mistakes.
 
-I learned. Now I ask if it would be ok if the customer enters the mapping. In most cases the customer likes to do this. 
+I learned. Now I ask if it would be ok if the customer enters the mapping.
+In most cases the customer likes to do this.
 
-There is a big difference. The customer feels productive if he does something like this. I hate it. I care for the database design and the code, but entering data with copy+paste from the Excel sheet ... No I don't like this. Results will be better if you like what you do :-)
+There is a big difference. The customer feels productive if he does something like this.
+I hate it. I care for the database design and the code, but entering data with copy+paste
+from the Excel sheet ... No I don't like this. Results will be better if you like what you do :-)
 
 For detail lovers: No, it was not feasible to write a script which imported the excel sheet to the database. The excel sheet was not well structured.
 
 The term "configuration" has two meanings in the guideline. Under this heading "configuration" means that a
 customer can change the configuration and the configuration gets stored in a database. The term "configuration" in
 "Configuration-Management" has a different meaning.
+
+*give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime*
 
 Avoid clever guessing
 .....................
