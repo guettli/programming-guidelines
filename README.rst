@@ -1070,7 +1070,8 @@ I think the first letter (V, S) helps if you are brainstorming.
 Avoid Office Documents or UML-tools
 ...................................
 
-Use a way to edit content (use cases, specs, ...) over the internet: Use wikis.
+Use a way to edit content (use cases, specs, ...) over the internet. An issue tracking system or wiki.
+
 Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps.
 Sequence diagrams are not needed. Just: first, second, third ...
 
@@ -1093,6 +1094,8 @@ Communication with Customers: Define "done"
 Define "done" with your customers. Humans like to be creative and if thing X gets changed,
 then they have fancy ideas how to change thing Y.
 Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page.
+
+
 If you don't have a definition of done/ready, then you should not start to write source code.
 First define the goal, then choose a strategy to get to the goal.
 
@@ -1142,8 +1145,12 @@ I like:
 * https://serverfault.com/
 * And some mailing lists.
 
+Often I just write the question, and don't write about the solution I have on my mind. If you write about our solution, then the discussion is narrowed to a simple pro/contra your idea. Ask the question like a newbee.
+
 Cut bigger problems into smaller ones
 .....................................
+
+Here is one example to illustrate the guideline "Cut bigger problems into smaller ones".
 
 Imagine you are responsible for several servers and you want or should create graphs of their disk/cpu usage.
 
@@ -1172,9 +1179,9 @@ Three Mail Accounts
 
 I have three mail accounts:
 
-* for personal mails (family, friends, ...)
-* for work related mails
-* for mailing lists
+* personal mails (family, friends, ...)
+* work related mails
+* mailing lists
 
 
 Clean up your desk
@@ -1184,7 +1191,7 @@ Don't forget to clean your desk. I don't write this here because I do it often a
 No, excat the opposite. I write it down since I want to push myself.
 
 Don't look at all these things on your desk at once. Start on the left side take the first thing.
-Where is the best place for this thing single thing? Unsure? Why not throw in the garbage?
+Where is the best place for this thing single thing? Unsure? Why not throw it in the trash can?
 If you are unsure put it at least in box behind a closed cabinet door.
 Some month later you might be able to throw it in the garbage.
 
@@ -1195,7 +1202,7 @@ If you have not time do this, then there is something wrong. Slow down.
 Highlander, "There can be only one"
 ...................................
 
-Highlander is a 1986 British-American adventure action fantasy film with tagline "There can be only one".
+"Highlander" is a 1986 British-American adventure action fantasy film with tagline "There can be only one".
 Thinking like this narrows your mind. There can be several thousand. Look how successfull ants and bees work. If someone is better or faster, then smile. Give applaud and say "wow".
 
 `Don't be evil. <https://en.wikipedia.org/wiki/Don%27t_be_evil>`_ Don't waste time and mental energie. Applauding if the competitor is better, was new to me in 2017. I was at Rothenbaum and attended the German Open (Tennis). The coach of one player was applauding every time the opponent made a good shot. I was astonished. Why was the coach applauding the enemy? But this works. If you get angry, you waste energy and you start to think like a wild and stupid animal. Even if you have made a mistake or lost some how, no reason not to walk upright.
@@ -1212,7 +1219,7 @@ Write a diary
 
 I think it helps to write a diary. Sitting down and writing about the last days help you to reflect the things you did.
 I found out that late (age of 40). A diary is fun to read several months later. I try to do it at least once a week.
-have three types of diaries: One on facebook readable for everyone. It contains things from my daily life,
+I have three types of diaries: One on facebook readable for everyone. It contains things from my daily life,
 written in german. There is one on google-plus which contains IT topics
 (open source, python, linux, PostgreSQL), written in english and readable by everyone.
 
@@ -1230,7 +1237,7 @@ From Wikipedia: The bus factor is a measurement of the risk resulting from infor
 
 Avoid to create secret knowledge which is only available to you or to someone else. Share knowledge.
 
-Avoid overspecialization of yourself. It will have drawback. Imagine there are some things which only you know.
+Avoid overspecialization of yourself. It will have drawbacks. Imagine there are some things which only you know.
 Sooner or later you want to go on holiday and you want a relaxed holiday. You don't want to be called
 on your mobile phone by your boss or a team mate. You want two weeks off without a single interrupt which
 is related to your work.
@@ -1244,7 +1251,8 @@ Tell him about your concerns (Bus factor). Maybe talk to his boss.
 
 Colorful use case: There is an action which needs to be done roughly twice a year. For example
 setting up a new server. Up to now Bob did this everytime. Talk to you team mates. Explain that
-every action should be known to at least two people.
+every action should be known to at least two people. In practice this means: The next time Bob won't do it.
+It needs to be done by someone else.
 
 If you think "that's not my job, that's the
 job of the team leader" now, then I think it is time stop acting like a dumb sleeping sheep.
@@ -1262,8 +1270,8 @@ Thank you
 .........
 
 * Robert C. Martin for the book "Clean Coder"
-* Malcolm Tredinnick. (His quote "knows enough about stuff to be dangerous" and his sudden death opens a universe of phantasies for paranoid people). Only few people listened like he did. With "listen" I mean "trying to understand the conversation partner".
-* Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
+* Malcolm Tredinnick. Only few people listened like he did. With "listen" I mean "trying to understand the conversation partner".
+* Linus Torvalds for the quote "Bad programmers worry about the code. Good programmers worry about data structures and their relationships.". 
 * Bill Gates for the quote "I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it." 
 * All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
 * All people who ask question and/or answers them at places like StackOverflow.
