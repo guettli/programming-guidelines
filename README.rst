@@ -335,6 +335,14 @@ That's redundant.
 
 I was told to avoid redundancy.
 
+SQL is an API
+.............
+
+If you have an database driven application and a third party tool wants to send data to the application, then sometimes the easiest solution is to give the third party access to the database. 
+
+Nitpickers will disagree: If the database schema changes, then the communication between both systems will break. Of course that's true. But in most cases this will be the same if you use a "real" API. If there is a change to the data structure, then the API needs to be changed, too.
+
+I don't say that SQL is always the best solution. But in some use cases doing more is not needed.
 
 C is slow
 .........
@@ -877,7 +885,8 @@ Avoid coding for one customer
 .............................
 
 Try to avoid to write software just for one customer. If you write code for one customer, you miss the great
-benefit of software: You can write it once and make several customers happy. Of course every business starts small, but try to create a re-usable product soon.
+benefit of software: You can write it once and make several customers happy. Of course every business starts small.
+But try to create a re-usable product soon.
 
 
 Misc
