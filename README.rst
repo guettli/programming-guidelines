@@ -464,6 +464,33 @@ I have seen it several times on github: If I provide a hint that the docs could 
 
 If you write docs, then do it for new comers. Start with the introduction, define the important terms, then provide the simple use cases. Put details and special cases at the end.
 
+If you write broken software, you will get feedback soon.
+
+Tests fail or even worse customers will complain.
+
+But if you write broken docs, no one will complain.
+
+Even if someone reads your mistake, it is unlikely
+that you get feedback. Unfortunately only few people are brave enough to tell 
+you that there is a mistake in your docs.
+
+
+How to solve this?
+
+
+Let someone else read your docs.
+
+The quality of feedback you get depends on the type
+of person you ask to read your docs.
+
+If it is a programmer, it is likely that he does not read
+your docs carefully. Most software developers do not
+care for orthography and it is hard for them to read
+the docs like a new comer. They already know
+what's writen there, and they will say "it is ok".
+
+My solution: resubmission: Read the text again 30 days later.
+
 Canonical docs
 ..............
 
