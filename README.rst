@@ -1001,7 +1001,29 @@ Why? Because you will notice your fault if you try to recover your data.
 
 **Use** a backup tool, even if you love to do programming. Configure it, but don't write it yourself.
 
-Same for data replication. Do not write code to do this. Use existing tools.
+
+The customer wants you to transfer data from database A to database B.
+
+Avoid re-inventing replication
+.............................. 
+
+That's what the customer wants from you to implement:
+
+You should transfer data from database A to database B.
+Every time there is an update in database A, data should get copied to
+database B.
+
+Slow down: What you are doing is replication. Replication creates
+redundancy and redundancy needs to be avoided.
+
+Why do you want redundancy in your data storage? The only reasons I can think
+of are speed/performance and faul-toleranz (like DNS/LDAP).
+
+If replication is really needed,
+then take the replication tools the databases offer. Do not implement
+replication yourself. This is not trival and experts with more knowledge than you and me
+have solved this issue before.
+
 
 Don't set up a SMTP daemon
 ..........................
