@@ -940,6 +940,10 @@ The next step is to avoid clever `inotify <https://en.wikipedia.org/wiki/Inotify
 
 Why? Because http can validate the data. If it is not valid, the data can be rejected. That's something you can't do with ftp/sftp/scp/rsync/smb.
 
+Avoid Polling
+.............
+
+Polling means checking for new data again and again. Avoid it, if possible. Try to find a way to "listen" for changes. In most databases you can execute a trigger if new data arrives.
 
 Provide specific import directories, not one generic
 ....................................................
