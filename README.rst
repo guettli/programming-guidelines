@@ -551,6 +551,8 @@ Time is too short for "git rebase" vs "git merge" discussions
 
 What's the net result of "git rebase" vs "git merge" discussion? The result is source code. Who cares how source code got into the current state? Me, but only sometimes. Archeology is interesting .... but more interesting is the future, since you can influence it.
 
+I hardly ever look at the graph of a git repository. But I love the "History for selection" feature of my favorite IDE. This way I can see the history of a part of the whole source code file.
+
 For every method there is a corresponding test-method
 .....................................................
 
