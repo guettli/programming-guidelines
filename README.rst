@@ -872,6 +872,14 @@ If the data of this URL gets changed, you need to update the v=123456789 to a ne
 (I am unsure where to put this guide line. I think the heading "Dev" does not match)
 
 
+
+Avoid coding for one customer
+.............................
+
+Try to avoid to write software just for one customer. If you write code for one customer, you miss the great
+benefit of software: You can write it once and make several customers happy. Of course every business starts small, but try to create a re-usable product soon.
+
+
 Misc
 ....
 
