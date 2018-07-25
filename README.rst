@@ -1067,8 +1067,39 @@ But on the other hand it is not **stupid**. The checks does two things: It colle
 After writing and working with nagios checks for several years I think the evaluation of the data should not be done inside the check. Some data-collector should collect data. Then a different tool should evaluate the data and judge if this ok, warn or error.
 
 
+Checks vs Logs
+..............
+
+Checks are for operators and logs are for developeres.
+
+Since there are always some temporary network failures,
+checks help more than logs do.
+
+Exampe: yesterday night at 3:40 there was a temporary network
+failure and this results in log messages.
+
+At 3:45 the network failure was gone.
+
+But the log messages persists.
+
+You don't know: Is this message still valid?
+
+Checks get executed again and again.
+
+If a check fails at 3:41 it will be ok some minutes later.
+
+Then you know immidiately that there was **temporary** failure.
+
+Logs are important for developers for debugging.
+
+But in this case, the developer can't do anything
+usefull. Temporary network failures happen again and again. That's live.
+Looking at the log which was created 
+by a temporary network failure wastes the time of the developer.
 
 
+Logs should contain the stacktrace and the local variables
+of each frame in the stacktrace (a tool like sentry could be used), if real errors occur.
 
 
 ####################################################################################################
