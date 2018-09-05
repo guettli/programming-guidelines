@@ -786,7 +786,7 @@ Shell scripts calling `mkdir -p ...` are ugly monsters where these two distinct 
 
 How to create directories? With automated configuration management (Salt, Ansible, Chef, ...) or during installation (RPM/DPKG)
 
-Exception: You create a temporary directory which is only needed for some seconds.
+Exception: You create a temporary directory which is only needed for some seconds. But since switching from subprocess/shell calling to using libraries (see "Avoid calling command line tools") temporary files get used much less. More and more gets done in memory.
 
 Debugging Performance
 .....................
