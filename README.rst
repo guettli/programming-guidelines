@@ -786,6 +786,7 @@ Shell scripts calling `mkdir -p ...` are ugly monsters where these two distinct 
 
 How to create directories? With automated configuration management (Salt, Ansible, Chef, ...) or during installation (RPM/DPKG)
 
+Exception: You create a temporary directory which is only needed for some seconds.
 
 Debugging Performance
 .....................
