@@ -506,7 +506,7 @@ Look at the question concerning ssh options at the Q+A site serverfault. There i
 
 Open an issue if the docs start with the hairy details and don't start with an introduction/overview. Developers don't realize this, since they need to deal with the hairy details daily. Don't be shy: Help them to see the world through the eyes of a new comer.
 
-I am unsure if I should love or hate "wiki.archlinux.org". On the one hand I found there valuable information about systemd and other linux related secrets. On the other hand it is redundant and since a lot of users take their knowledge from this resource, the canonical upstream docs get less love. That's https://en.wikipedia.org/wiki/Ambivalence - that's live.
+I am unsure if I should love or hate "wiki.archlinux.org". On the one hand I found there valuable information about systemd and other linux related secrets. On the other hand it is redundant and since a lot of users take their knowledge from this resource, the canonical upstream docs get less love. First determine where the canonical upstream docs are. Then communicate with the maintainers. Avoid redundant docs.
 
 Care for newcomers
 ..................
