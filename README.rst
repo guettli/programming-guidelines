@@ -11,7 +11,7 @@ My personal programming guidelines. **Please provide feedback**, tell me what's 
 
 `4. Op <#4-op>`_
 
-`5. Networking <#5-op>`_
+`5. Networking <#5-networking>`_
 
 `6. Monitoring <#6-monitoring>`_
 
