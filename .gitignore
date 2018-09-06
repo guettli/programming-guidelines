@@ -1,1 +1,7 @@
 .idea
+bin
+lib
+include
+README.html
+pip-selfcheck.json
+local
