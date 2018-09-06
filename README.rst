@@ -11,11 +11,13 @@ My personal programming guidelines. **Please provide feedback**, tell me what's 
 
 `4. Op <#4-op>`_
 
-`5. Monitoring <#5-monitoring>`_
+`5. Networking <#5-op>`_
 
-`6. Communication with others <#6-communication-with-others>`_
+`6. Monitoring <#6-monitoring>`_
 
-`7. Epilog <#7-epilog>`_
+`7. Communication with others <#7-communication-with-others>`_
+
+`8. Epilog <#8-epilog>`_
 
 
 1. Introduction
@@ -160,7 +162,7 @@ Nested transactions ... sounds great. But stop: What is `ACID <https://en.wikipe
 * Isolation
 * Durability
 
-Database transactions are atomic. If the transaction was sucessful, then it is *D*urable.
+Database transactions are atomic. If the transaction was sucessful, then it is \*D\*urable.
 
 Imagine you have one outer-transaction, and two inner transaction.
 
@@ -179,7 +181,7 @@ Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atom
 
 
 Roles vs Users+Groups
-....................
+.....................
 
 What is the difference between roles and groups?
 
@@ -1008,10 +1010,6 @@ Use Systemd
 
 It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simple. See `Systemd makes many daemons obsolete <https://stackoverflow.com/a/30189540/633961>`_
 
-traceroute won't help you
-.........................
-
-.... if you have trouble with a tcp connection. Use tcptraceroute for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: traceroute uses UDP, not TCP.
 
 
 If you do coding to implement backup ...
@@ -1054,8 +1052,27 @@ Don't set up a SMTP daemon
 
 If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. Use a tool like getmail (not fetchmail) which is a mail fetching client. You will have much more trouble if you set up an SMTP daemon.
 
-5. Monitoring
-----------------------------
+5. Networking
+-------------
+
+No routing on servers
+.....................
+
+Imagine there are 20 servers in your network. Each server should have exactly one default gateway. Imagine there are two network routes. One route goes to a second internal network and the other route goes to the internet. There are two ways to solve this:
+
+* V1: Each of the 20 servers has the corresponding routing configuration.
+* V2: There is one default gateway for the 20 servers and the default gateway does the routing.
+
+Please choose V2. It is simpler, it is easier to understand, it is less error prone, it is more sane.
+
+traceroute won't help you
+.........................
+
+If you have trouble with a tcp connection, then use tcptraceroute. Again \*tcp\*traceroute. It is the tool for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: normal traceroute uses UDP, not TCP.
+
+
+6. Monitoring
+-------------
 
 Nagios Plugin API (0=ok, 1=warn ...)
 ....................................
@@ -1112,7 +1129,7 @@ of each frame in the stacktrace (a tool like sentry could be used), if real erro
 ####################################################################################################
 
 
-6. Communication with others
+7. Communication with others
 ----------------------------
 
 Avoid to get a nerd
@@ -1238,7 +1255,7 @@ and you are the only one who is not laughing. It is up to you how to react. Be p
 
 ####################################################################################################
 
-7. Epilog
+8. Epilog
 ---------
 
 It is always possible to make things more complicated
