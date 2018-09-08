@@ -35,14 +35,20 @@ This list summarises a lot of mistakes I did in the past. I wrote it, to help yo
 
 It's my personal opinion and feeling. No facts, no single truth.
 
-Type with ten fingers
-.....................
+Relaxed focus on monitor
+........................
 
-Learn to type with ten fingers. It's like flying if you do it. Your eyes can stay on the rubbish you type, and you don't need to move your eyes down (to keyboard) and up (to monitor) several hundred times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. 
+Do not look at the keyboard while you type. Have a relaxed focus on your monitor.
+
+I type with ten fingers. It's like flying if learned it. Your eyes can stay on the rubbish you type, and you don't need to move your eyes down (to keyboard) and up (to monitor) several hundred times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. 
 
 I like lenovo keyboards with track point. If you want the track point to have more grip you can use sandpaper. Here are some images to illustrate what I use https://plus.google.com/108148237674350536526/posts/jF1Du1YwJwr?hl=de
 
 Use a clipboard manager like Diodon.
+
+Avoid searching with your eyes. Search with the tools of your IDE. You should be able to use it "blind". You should be able to move the cursor to the matching position in your code without looking at your keyboard, without grabbing your mouse/touchpad/trackpoint and without looking up/down on your screen.
+
+
 
 KISS
 ....
@@ -95,7 +101,7 @@ If this is new to you, I will give you two examples:
 
 One invoice has several invoice positions. For example you buy three books in one order,
 the invoice will have three invoice positions. This is a 1:N relationship. The invoice position is
-contain in exactly one invoice.
+contained in exactly one invoice.
 
 If you look at tags, for example at the Question+Answer site stackoverflow: One question can be related to several
 tags/topics and of course a topic can be set on several questions. For example you have a strange UnicodeError in Python
@@ -107,21 +113,28 @@ One more well know example of N:M is user and groups.
 Conditionless Data Structures
 .............................
 
+If you have no conditions in your data structures, then the coding for the input/output of your data will be much easier.
+
+Avoid nullable Foreign Keys
+...........................
+
 Imagine you have a table "meeting" and a table "place". The table "meeting" has a ForeignKey to table "place". In the beginning it might be not clear yet where the meeting will be. Most developers will make the ForeignKey optional (nullable). WAIT: This will create a condition in your data structure. There is a way easier solution: Create a place called "unknown". Use this as default, avoid nullable columns. This data structure (without a nullable ForeignKey) makes implementing the GUI much easier.
 
 With other words: If there is no NULL in your data, then there will be no NullPointerException in your source code while processing the data :-)
 
 Less conditions, less bugs.
 
-[True, False, Unknown] is not a nullable Bollean Column
-.......................................................
+Avoid nullable boolean columns
+..............................
+
+[True, False, Unknown] is not a nullable Bollean Column.
 
 If you want to store a data in a SQL database which has three states (True, False, Unknown), then you might think a nullable boolean column (here "my_column") is the right choice. But I think it is not. Do you think the SQL statement "select * from my_table where my_column = %s" works? No, it won't work since "select * from my_table where my_column = NULL" will never ever return a single line. If you don't believe me, read: `Effect of NULL in WHERE clauses (Wikipedia) <https://en.wikipedia.org/wiki/Null_(SQL)#Effect_of_Unknown_in_WHERE_clauses>`_. If you like typing, you can work-around this in your application, but I prefer straight forward solutions with only few conditions.
 
 If you want to store True, False, Unknown: Use text, integer or a new table and a foreign key.
 
-Avoid nullable characters columns in databases
-..............................................
+Avoid nullable characters columns
+.................................
 
 If you allow NULL in a character column, then you have two ways to express "empty":
 
@@ -142,6 +155,8 @@ Use all features PostgreSQL does offer. Don't constrain yourself to use only the
 Imagine there is be a a Meta-Programming-Language (AFAIK this does not exist) and it is an official standard created by the ISO (like SQL). You can compile this Meta-Programming-Language to Java, Python, C and other languages. But this Meta-Programming-Language would only support 70% of all features of the underlaying programming languages. Would it make sense to say "My code must be portable, you must not use implementation specific stuff!"?. No, I think it would make no sense.
 
 My conclusion: Use all features PostgreSQL has. Don't make live more complicated than necessary and don't restrict yourself to use only portable SQL.
+
+
 
 DB Constraints are great, but are sometimes a hint to redundancy
 ................................................................
@@ -276,7 +291,7 @@ Even Crontab lines are dangerous. Look at this:
     @weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
 
 
-Do you spot the big risk? (Solution below)
+Do you spot the big risk? If TMPDIR is not set, then the `find` command will not fail. It will delete files in all sub directories!
 
 Portable Shell Scripts
 ......................
@@ -309,7 +324,12 @@ Check the license of the library. If it is BSD, MIT or Apache like, then use the
 Avoid GPL
 .........
 
-The GPL license is viral. Avoid it.
+The GPL license is much too long. I tried to read it twice, but I felt asleep. 
+I don't like things which I don't understand.
+
+Next argument: The GPL license is viral.
+
+Avoid the GPL.
 
 Loop in DB, not in your code
 ............................
@@ -344,12 +364,12 @@ If you have an database driven application and a third party tool wants to send 
 
 Nitpickers will disagree: If the database schema changes, then the communication between both systems will break. Of course that's true. But in most cases this will be the same if you use a "real" API. If there is a change to the data structure, then the API needs to be changed, too.
 
-I don't say that SQL is always the best solution. But in some use cases doing more is not needed.
+I don't say that SQL is always the best solution. Of course http based APIs are better in general. But in some use cases doing more is not needed.
 
 C is slow
 .........
 
-... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem done takes "ages". I avoid it, if possible. If Python/Ruby/... get to slow, you can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then optimize.
+... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem done takes "ages". I avoid it, if possible. If Python gets to slow, I can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then clean up the code (simplify it). Then optimize.
 
 
 Version Control
@@ -393,7 +413,7 @@ Jenkins
 
 If you use Jenkins or an other GUI for continuous integration be sure to sure to keep it simple. Yes, modern tools like Jenkins can do a lot. With every new version they get even more turing complete (this was a joke, I hope you understood it). Please do speration of concerns. Jenkins is the GUI to start a job. Then the jobs runs, and then you can see the result of the job via Jenkins. If you do complex condition handling "if ... then ... else ..." inside Jenkins, then I think you are on the wrong track.
 
-Jenkins calls a command line. To make it easy for debugging and development this job should be callable via the command line, too. With other word: Jenkins gets used to collect the arguments. Then a command line script gets called. Then Jenkins displays the result for you. I think it is wise to avoid a complex Jenkins setup.
+Jenkins calls a command line. To make it easy for debugging and development this job should be callable via the command line, too. With other word: Jenkins gets used to collect the arguments. Then a command line script gets called. Then Jenkins displays the result for you. I think it is wise to avoid a complex Jenkins setup. If you want to switch to a different tool (gitlab or travis), then this is easy if your logic is in scripts and not in jenkins configuration.
 
 Avoid Threads and Async
 .......................
@@ -419,6 +439,34 @@ Easy to read code: Use guard clauses
 
 Guard clauses help to avoid indentation. It makes code easier to read and understand. See http://programmers.stackexchange.com/a/101043/129077
 
+Example::
+
+    def my_method(my_model_instance):
+        if my_model_instance.is_active:
+            if my_model_instance.number > MyModel.MAX_NUMBER:
+                if my_model_instance.foo:
+                    ....
+                    ....
+                    ....
+                    ....
+                    ....
+                    
+
+    def my_method(my_model_instance):
+        if not my_model_instance.is_active:
+            return
+        if not my_model_instance.number > MyModel.MAX_NUMBER:
+            return
+        if not my_model_instance.foo:
+            return
+        ....
+        ....
+        ....
+        ....
+        ....
+
+Look at the actual code which does something. I used five lines with `....` points for it. I think more indendation, makes the code more complex. The "return" simplifies the code. For me the second version is much easier to read.
+         
 
 Source code generation is a stupid idea
 .......................................
@@ -465,7 +513,7 @@ Use a library like: https://pypi.python.org/pypi/xlrd
 Give booleans a "positive" name
 ...............................
 
-I once gave a DB column the name "failed". It was a boolean indicating if the transmission of data to the next system was successful. The output as table in the GUI looked confusing for humans. The column heading was "failed". What should be visible in the cell for failed rows? Boolean usually get translated to "Yes/No" or "True/False". But if the human brain reads "Yes" or "True" it initially things "all right". But in this case "Yes" meant "Yes, it failed". The next time I will call the column "was_successful", then "Yes" means "Yes, it was successful".
+I once gave a DB column the name "failed". It was a boolean indicating if the transmission of data to the next system was successful. The output as table in the GUI looked confusing for humans. The column heading was "failed". What should be visible in the cell for failed rows? Boolean usually get translated to "Yes/No" or "True/False". But if the human brain reads "Yes" or "True" it initially things "all right". But in this case "Yes" meant "Yes, it failed". The next time I will call the column "was_successful", then "Yes" means "Yes, it was successful". Some GUI toolkits render "True" as a green (meaning "everything is ok") hook and "False" as a red cross (meaning "it failed"). 
 
 Love your docs
 ..............
@@ -517,7 +565,7 @@ In the year 1997 I was very thankful that there was a hint "If unsure choose ...
 
 I had no clue what most questions where about. But this small advice "If unsure choose ..." helped me get it done.
 
-If you are managing a project: Care for new comers. Provide them with guide lines. But don't reinvent docs. Provide links to the relevant upstream docs, if you just use a piece of software. Avoid redundant docs.
+If you are managing a project: Care for new comers. Provide them with guide lines. But don't reinvent docs. Provide links to the relevant upstream docs, if you just use a piece of software.
 
 Keep custom IDE configuration small
 ...................................
@@ -547,7 +595,6 @@ If you need several pages in a book to explain a software design pattern, then i
 I think Software Design Patterns are overrated.
 
 
-
 Time is too short for "git rebase" vs "git merge" discussions
 .............................................................
 
@@ -555,25 +602,69 @@ What's the net result of "git rebase" vs "git merge" discussion? The result is s
 
 I hardly ever look at the graph of a git repository. But I love the "History for selection" feature of my favorite IDE. This way I can see the history of a part of the whole source code file.
 
+
+Test Driven Development
+.......................
+
+red, green, refactor. More verbose: make the test fail, make the test pass, refactor (simplify) code.
+
+
+From bug to fix
+...............
+
+Imagine there is a bug in your method do_foo(). You see the mistake easily and you fix it. Done?
+
+I think you are not done yet. I try to follow this guideline:
+
+Before fixing the bug, search test_do_foo(). There is no test for this method up to now? Then write it.
+
+Now you have test_do_foo(). 
+
+You have two choices now: extend test_do_foo() or write test_do_foo__your_special_case(). I use the double underscore here.
+
+Make the test fail (red)
+
+Fix the code. Test is green now.
+
+Slow down. Take a sip of tea. Look at your changes ("git diff" in your preferend IDE). Is there a way to simplify your patch? If yes, simplify it. 
+
+Run the "surrounding tests". If do_foo() is inside the module "bar". Then run all tests for module "bar" (I use py.test -k bar). But if this would take more then three minutes, then leave the testing to the CI which happens after you commit+push (you have a CI, haven't you?)
+
+Then commit+push. Let CI run all tests in background (don't waste time watching your unittests running and passing)
+
+
 For every method there is a corresponding test-method
 .....................................................
 
-You implemented the great method foo(). Implement a corresponding method called test_foo().
+You implemented the great method foo() and you implement a corresponding method called test_foo().
 It does not matter if you write foo() first, and then test_foo() or the other way round.
-But it makes sense to store both methods with one commit to your git repo.
+But it makes sense to store both methods with one commit to one git repo.
 
 Several months later you discover a bug in your code. Or worse: our your customer discovers it.
 
-If you fix foo() you need to extend test_foo() or write a new method test_foo_with_special_input(). Again both changes walk into the git repo like a pair of young lovers holding hands :-)
+If you fix foo() you need to extend test_foo() or write a new method test_foo_with_special_input(). Again both changes (production code and testing code) walk into the git repo like a pair of young lovers holding hands :-)
 
 This is untestable code
 .......................
 
-If you are new to software unit testing, then you might think ... "some parts of my code are *untestable*".
+If you are new to software testing, then you might think ... "some parts of my code are *untestable*".
 
 I don't think so. I guess your software uses the IPO pattern: https://en.wikipedia.org/wiki/IPO_model Input, Processing, Output. The question is: How to feed the input for testing to my code? Mocking, virtualization and automation are your friends.
 
-The "untestable" code needs to be cared of. Code is always testable, there is no untestable code. Maybe your knowledge of testing is limited up to now. Finding untestable code is the beginning of an interesting route to good code.
+The "untestable" code needs to be cared of. Code is always testable, there is no untestable code. Maybe your knowledge of testing is limited up to now. Finding untestable code and making it testable is the beginning of an interesting adventure.
+
+Is config code or data?
+.......................
+
+This is a difficult question. At least at the beginning. For me most configuration is data, not code. That's why the config is in a database, not in a version control system.
+
+This has one major draw-back. All developers love their version control system. Most love git. At is such a secure place. Nothing can get lost or accidently modified. And if this would happen you can always revert to an old version. It is like heaven. Isn't it?
+
+No it is not. The customer can't change it. The customer needs to call you and you need to do stupid repeatable useless work. 
+
+For me configuration should be in the database. This way you can provide a GUI for the customer to change the config.
+
+Only the configuration and recipies for the configuration management is stored in git. But this is a different topic. If I speak about configuration management, then I speak mostly about configuring linux servers and networks. In my case this is nothing which my customer touches.
 
 
 ForeignKey from code to DB
@@ -586,17 +677,11 @@ This code uses the ORM of django
     if ....:
         issue.responsible_group=Group.objects.get(name='Leaders')
 
-Above code is dirty because 'Leaders' is like ForeignKey from code to a database row.
+Above code is dirty because 'Leaders' is like a ForeignKey from code to a database row.
 
-If you think this is better .....
+How to avoid this?
 
-.. code-block:: python
-
-    if ....:
-        issue.responsible_group=Group.objects.get(name=constants_module.GROUP_NAME_OF_LEADERS)
-
-.... then you did not understand what I tried to explain.
-
+Create global config table in your database. This table has exactly one row. That's the global config. There you can create column called "Leaders" and there you store the ForeignKey to the matching group.
 
 Testcode is conditionless
 .........................
@@ -614,20 +699,20 @@ Tests should be straight forward:
     class MyTest(unittest.TestCase):
         def test_foo(self):
             foo=Foo()
-            self.assertEqual(42, foo.find_answer_to_the_ultimate_question_of_life_the_universe_and_everything())
+            self.assertEqual(42, foo.find_answer())
         
 
 Don't search the needle in a haystack. Inject dynamite and let it explode
 .........................................................................
 
-Imagine you have a huge code base which was written by a nerd which is gone since several months. Somewhere in the code a database row gets updated. This update should not happen, and you can't find the relevant source code line during the first minutes. You can reproduce this failure in a test environment. What can you do? You can start a debugger and jump through the lines which get executed. Yes, this works. But this can take long, it is like "Searching the needle in a haystack". Here is a different way: Add a constraint trigger to your database which fires on the unwanted modification. Execute the code and BANG. you get the relevant code line with a nice stacktrace. This way you get the solution provided on a silver plattern with minimal effort :-)
+Imagine you have a huge code base which was written by a nerd which is gone since several months. Somewhere in the code a database row gets updated. This update should not happen, and you can't find the relevant source code line during the first minutes. You can reproduce this failure in a test environment. What can you do? You can start a debugger and jump through the lines which get executed. Yes, this works. But this can take long, it is like "Searching the needle in a haystack". Here is a different way: Add a constraint or trigger to your database which fires on the unwanted modification. Execute the code and BANG. you get the relevant code line with a nice stacktrace. This way you get the solution provided on a silver plattern with minimal effort :-)
 
 
 With other words: Don't waste time with searching.
 
 Sometimes you can't use a database constraint to find the relevant stacktrace, but often there are other ways.....
 
-If you can't use a database constraing, maybe this helps: Raise Exception on unwanted syscall http://stackoverflow.com/a/42669844/633961
+If you can't use a database constraint, maybe this helps: Raise Exception on unwanted syscall http://stackoverflow.com/a/42669844/633961
 
 If you want to find the line where unwanted output in stdout gets emitted: http://stackoverflow.com/a/43210881/633961
 
@@ -651,7 +736,7 @@ Yes, sometimes it helps to know the programming language C.
 
 My opinion: Learn Python, SQL and some JavaScript.
 
-Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument.
+Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument, long distance running, ...
 
 Learn "git bisect"
 ..................
@@ -669,13 +754,11 @@ Learn "git bisect"
     Author: ...
 
 
-    # useless, but unfortunately needed
-    user@host> git bisect reset
 
 Conditional Breakpoints
 .......................
 
-Imagine, you are able to reproduce a bug in a test. But you could not fix it up to now. If you want to create a conditional breakpoint to find the root of the problem, then you could be on the wrong track. Why not rewrite the code first, to make it more fine-grained testable?
+Imagine, you are able to reproduce a bug in a test. But you could not fix it up to now. If you want to create a conditional breakpoint to find the root of the problem, then you could be on the wrong track. Rewrite the code first, to make it more fine-grained debuggable and testable?
 
 Write a test where a normal breakpoint is enough.
 
@@ -743,40 +826,12 @@ BTW, the topic is called `Synchronization <https://en.wikipedia.org/wiki/Synchro
 
 Further reading about "task queues": https://www.fullstackpython.com/task-queues.html
 
-Test Driven Development
-.......................
-
-red, green, refactor. More verbose: make the test fail, make the test pass, refactor (simplify) code.
-
-From bug to fix
-...............
-
-Imagine there is a bug in your method do_foo(). You see the mistake easily and you fix it. Done?
-
-I think you are not done yet. I try to follow this guideline:
-
-Before fixing the bug, search test_do_foo(). There is no test for this method up to now? Then write it.
-
-Now you have test_do_foo(). 
-
-You have two choices now: extend test_do_foo() or write test_do_foo__your_special_case(). I use the double underscore here.
-
-Make the test fail (red)
-
-Fix the code. Test is green now.
-
-Slow down. Take a sip of tea. Look at your changes ("git diff" in your preferend IDE). Is there a way to simplify your patch? If yes, simplify it. 
-
-Run the "surrounding tests". If do_foo() is inside the module "bar". Then run all tests for module "bar" (I use py.test -k bar). But if this would take more then three minutes, then leave the testing to the CI which happens after you commit+push (you have a CI, haven't you?)
-
-Then commit+push. Let CI run all tests in background (don't waste time watching your unittests running and passing)
-
 No nested directory trees
 .........................
 
 I you store files, then avoid nested directory trees. It is complicated and if you want to use a storage server like `S3 <https://en.wikipedia.org/wiki/Amazon_S3>`_ later, you are in trouble.
 
-Most storage servers support containers and `blobs <https://en.wikipedia.org/wiki/Binary_large_object>`_ inside a container. Containers in containers are not supported, and that's good, since it is simple.
+Most storage servers support containers and `blobs <https://en.wikipedia.org/wiki/Binary_large_object>`_ inside a container. Containers in containers are not supported, and that's good, since it makes the environment simpler.
 
 Developers don't call mkdir
 ...........................
@@ -796,6 +851,7 @@ Debugging Performance
 I use two ways to debug slow performance:
 
  * Logging and profiling, if you have a particular reproducable use case
+ * Django Debug Toolbar to see which SQL statements took long in a http request.
  * Statistics collected on production environments. I use my own tool up to now: https://github.com/guettli/live-trace
 
 You provide the GUI for configuring the system. Then the customer (not you) uses this GUI
@@ -811,7 +867,7 @@ The code was bug free, but I made a mistake when I entered the values (from exce
 
 The customer was upset, because the configuration contained mistakes.
 
-I learned. Now I ask if it would be ok if the customer enters the mapping.
+I learned. Now I ask if it would be ok if I provide the GUI and the customer enters the configuration.
 In most cases the customer likes to do this.
 
 There is a big difference. The customer feels productive if he does something like this.
@@ -819,10 +875,6 @@ I hate it. I care for the database design and the code, but entering data with c
 from the Excel sheet ... No I don't like this. Results will be better if you like what you do :-)
 
 For detail lovers: No, it was not feasible to write a script which imported the excel sheet to the database. The excel sheet was not well structured.
-
-The term "configuration" has two meanings in the guideline. Under this heading "configuration" means that a
-customer can change the configuration and the configuration gets stored in a database. The term "configuration" in
-"Configuration-Management" has a different meaning.
 
 *give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime*
 
@@ -875,7 +927,7 @@ If you follow this guide you will get great performance since revalidation and E
 
 Avoid fiddling with ETag and If-Modified-Since http headers.
 
-But you have to care for one thing: If you cache for every, and you update your data, then you need to give your resource a new URL. That's easy:
+But you have to care for one thing: If you cache for ever, whenever you update your data, you need to give your resource a new URL. That's easy:
 
 http://example.com/.../data-which-gets-cached-for-every?v=123456789
 
@@ -911,15 +963,17 @@ Operation. The last two characters of DevOp.
 Configuration Management
 ........................
 
-Use a configuration management tool like Salt or Ansible. 
+Use a configuration management tool like Ansible. 
 
 Use CI here, too. Otherwise only few people dare to make changes.
 And this means the speed of incremental evolution to a more efficent
 way will decreases.
 
-Do not use RPM/DPKG to configure a system.
+I do not use RPM/DPKG to configure a system.
 
 Do you know why this is called "`file.absent <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.absent>`_" and not "file.remove"?
+
+`Google search for "Declarative vs Imperative" <https://www.google.com/search?q=Declarative+vs+Imperative>`_
 
 Change file vs put file
 .......................
@@ -927,8 +981,8 @@ Change file vs put file
 Often there are two ways to do configuration management:
 
 
-* change a part of a file: `replace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.replace>`_, `blockreplace <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.blockreplace>`_, `append <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.append>`_, `patch <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.patch>`_, 
-* put a whole file: `Manage file <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.managed>`_
+* change a part of a file: "replace", "append", "patch"
+* put a whole file under configuration management.
  
 You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
 
@@ -985,7 +1039,7 @@ I still do interactive logins to production remote-server (mostly via ssh). But 
 Sooner or later you will make a typo. See this article from github for a exciting report what happened during a denial of service: https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/ We are humans, and humans make mistakes. Automation helps to reduce the risk of data loss.
 
 
-If you are doing "ssh production-server ... vi /etc/..." or "... apt install": Configuration management is much better. For example salt-stack or ansible.
+If you are doing "ssh production-server ... vi /etc/..." or "... apt install": Configuration management is much better. For example ansible.
 
 If you are doing "ssh production-server .... less /var/log/...": No log-management yet? Get your logs to a central place.
 
@@ -994,16 +1048,16 @@ If you are doing "ssh production-server ... rm ...": Please ask yourself what yo
 Keep you country clean
 ......................
 
-There are two kind of files in the context of backup: Files which should be in the backup and temporary files which should not be in the backup. Keep you directories clean. In a directory there should be either only files which should be in the backup xor only files which should not be in the backup. This will make live easier for you. The configuration of your backup is easier and cleaning temporary files is easier and looking at the directory makes more fun since it is clean.
+There are two kind of files in the context of backup: Files which should be in the backup and temporary files which should not be in the backup. Keep you directories clean. In a directory there should be either only files which should be in the backup xor only files which should not be in the backup. This will make live easier for you. The configuration of your backup is easier and cleaning temporary files is easier and looking at the directory makes more joy since it is clean.
 
 
-Logging to files
-................
+Avoid logging to files
+......................
 
 I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
 Both concepts don't fit together. Sooner or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematically version of "every line". This gets really complicated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundred times and each time different ...
 
-In other words: Avoid logrotate. Logging is an endless stream.
+In other words: Avoid loggint to files and avoid logrotate. Logging is an endless stream.
 
 Use Systemd
 ...........
@@ -1021,10 +1075,9 @@ It is very likely that you will do it wrong, and this will be a big risk.
 
 Why? Because you will notice your fault if you try to recover your data. 
 
-**Use** a backup tool, even if you love to do programming. Configure it, but don't write it yourself.
+**Use** a backup tool, even if you love to do programming. **Configure** it, but don't write it yourself.
 
 
-The customer wants you to transfer data from database A to database B.
 
 Avoid re-inventing replication
 .............................. 
@@ -1050,7 +1103,7 @@ have solved this issue before.
 Don't set up a SMTP daemon
 ..........................
 
-If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. Use a tool like getmail (not fetchmail) which is a mail fetching client. You will have much more trouble if you set up an SMTP daemon.
+If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. You will have much more trouble if you set up an SMTP daemon.
 
 5. Networking
 -------------
@@ -1058,10 +1111,10 @@ If you can avoid it, then refuse to set up a SMTP daemon. If the application you
 No routing on servers
 .....................
 
-Imagine there are 20 servers in your network. Each server should have exactly one default gateway. Imagine there are two network routes. One route goes to a second internal network and the other route goes to the internet. There are two ways to solve this:
+Imagine there are 20 servers in your network. Imagine there are two network routes. One route goes to a second internal network and the other route goes to the internet. All 20 servers should be able to access both networks. There are two ways to solve this:
 
-* V1: Each of the 20 servers has the corresponding routing configuration.
-* V2: There is one default gateway for the 20 servers and the default gateway does the routing.
+* V1: Each of the 20 servers has the two routes configured.
+* V2: There is one default gateway for the 20 servers. Every server has one route. (The common term is "default gateway")
 
 Please choose V2. It is simpler, it is easier to understand, it is less error prone, it is more sane.
 
@@ -1077,7 +1130,7 @@ If you have trouble with a tcp connection, then use tcptraceroute. Again \*tcp\*
 Nagios Plugin API (0=ok, 1=warn ...)
 ....................................
 
-Writing Nagios checks is very simple. The exit status has this meaning:
+Writing Nagios like checks is very simple. The exit status has this meaning:
 
 * 0: ok
 * 1: warn
@@ -1099,14 +1152,13 @@ Checks are for operators and logs are for developeres.
 Since there are always some temporary network failures,
 checks help more than logs do.
 
-Exampe: yesterday night at 3:40 there was a temporary network
-failure and this results in log messages.
+Example: 
 
-At 3:45 the network failure was gone.
+#. yesterday night at 3:40 there was a temporary network failure and this results in log messages.
 
-But the log messages persists.
+#. At 3:45 the network failure was gone.
 
-You don't know: Is this message still valid?
+#. You look at the log message at 9:15. You don't know: Is this message still valid?
 
 Checks get executed again and again.
 
@@ -1144,13 +1196,15 @@ The human mind works completly different, not just bits and bytes. It has `Emoti
 
 Avoid to get a `Nerd https://en.wikipedia.org/wiki/Nerd`
 
+
 Here some hints:
 
-* I like `Nonviolent Communication <https://en.wikipedia.org/wiki/Nonviolent_Communication#Four_components>`_ (In short, use this sequence: Facts, feelings, needs, request)
-* Meet with "normal" people. With "normal" I mean people who do not do IT stuff.
+* Nerds like complaining. This book can help: "Rethinking Positive Thinking: Inside the New Science of Motivation" by Gabriele Oettingen. The method is called WOOP. 
+* Nerds like to think at their problems first. `Nonviolent Communication <https://en.wikipedia.org/wiki/Nonviolent_Communication#Four_components>`_ can help.
+* Meet with "normal" people. With "normal" I mean people who do not do IT stuff. 
+* Raise a family.
 * Do sport
 * Relax
-* Do not complain. Do something if you can. If you can't, then talk to friends. If they can't help, then cry and then seek new adventures.
 
 Avoid stress
 ............
@@ -1170,6 +1224,8 @@ Care for both: brain and body.
 Discussion, but no progress? V1, V2, V3, ...
 ............................................
 
+This and the following parts are about "Requirement Engineering".
+
 If a discussion brings not progress, then grab a pen. Start with V1. The letter V stands for "Solution Variant" or "One strategy of several to get to a goal". Find a term or short description of the first possible strategy. Write it down. Then: which other ways could be used? V2, V3, ... 
 
 Rember, there is always the last variant: Leave things like they are today and think about this again N days later.
@@ -1182,11 +1238,10 @@ In the morning, you wake up.
 
 * V1: Go to work now
 * V2: Do some more sleeping
-* V3: Care for your family
-* V4: Try to remember what you dreamed, write it down
-* V5: Do some sports
-* V6: Play piano
-* V7: Remember your goals, what is the next step?
+* V3: Try to remember what you dreamed, write it down
+* V4: Do some sports
+* V5: Play piano
+* V6: Recall your personal goals, what is the next step?
 * ...
 
 If you look at V1 in detail you get to a list of steps:
@@ -1204,26 +1259,16 @@ I think the first letter (V, S) helps if you are brainstorming.
 Avoid Office Documents or UML-tools
 ...................................
 
-Use a way to edit content (use cases, specs, ...) over the internet. An issue tracking system or wiki.
+Use a way to edit content (use cases, specs, ...) over the internet. Use an issue tracking system or wiki.
 
 Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps.
-Sequence diagrams are not needed. Just: first, second, third ...
+Sequence diagrams can be simplified to enumerations: first step, second step, third step ...
 
-`Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>`_ screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with you cell phone at the end.
-
-
-Communication with Customers: Tell customers what they should test
-..................................................................
-
-I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens.
-That's not satisfying since software developers want to hear that their work does help.
-If you (the developer) provide a checklist of things to test, then the likelihood to get feedback is bigger.
-
-It is wise to create this checklist for testing as early as possible. It tells the developer the desired result.
+`Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>`_ screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with your cell phone at the end.
 
 
-Communication with Customers: Define "done"
-...........................................
+Communication with Customers: Binary decision "todo list" or "do it later list"
+...............................................................................
 
 Define "done" with your customers. Humans like to be creative and if thing X gets changed,
 then they have fancy ideas how to change thing Y.
@@ -1232,6 +1277,18 @@ Be friendly and listen: Write these fancy ideas down on the "do later" list or w
 
 If you don't have a definition of done/ready, then you should not start to write source code.
 First define the goal, then choose a strategy to get to the goal.
+
+Focus on a simple working solution first. Add optional stuff to the "do later" list.
+
+Tell customers what they should test
+....................................
+
+I have seen it several times: Software gets developed. The customer was told to test and ... nothing happens.
+That's not satisfying since software developers want to hear that their work does help.
+If you (the developer) provide a checklist of things to test, then the likelihood to get feedback is bigger.
+
+It is wise to create this checklist for testing as early as possible. It tells the developer the desired result.
+
 
 Dare to say "Please wait, I want to take a note"
 ................................................
@@ -1291,7 +1348,7 @@ Imagine you are responsible for several servers and you want or should create gr
 Cut the bigger problem into smaller ones:
 
 * How to collect the data on one host
-* How to transport the data from the remote host to a central place?
+* How to transport the data from the host to a central place?
 * How to store the data in a central database?
 * How to generate the graphs?
 
@@ -1305,7 +1362,7 @@ I like these release notes:
 
 * https://www.postgresql.org/docs/devel/static/release.html The "Overview" links show the most important changes
 * https://docs.djangoproject.com/en/dev/releases/
-* Python ... no, since I am still using Python 2.7
+* Python
 
 
 Three Mail Accounts
@@ -1331,7 +1388,7 @@ Some month later you might be able to throw it in the garbage.
 
 Then wipe the dust.
 
-If you have not time do this, then there is something wrong. Slow down.
+If you have never time do this, then there is something wrong. Slow down.
 
 Highlander, "There can be only one"
 ...................................
@@ -1383,7 +1440,7 @@ Avoid overspecialization of a team mate. If a team mates has secret knowledge an
 else who has a clue: Talk. Try to reveal the things which only one person knows.
 Tell him about your concerns (Bus factor). Maybe talk to his boss.
 
-Colorful use case: There is an action which needs to be done roughly twice a year. For example
+Imagine there is an action which needs to be done roughly twice a year. For example
 setting up a new server. Up to now Bob did this everytime. Talk to you team mates. Explain that
 every action should be known to at least two people. In practice this means: The next time Bob won't do it.
 It needs to be done by someone else.
@@ -1394,11 +1451,6 @@ Get resonsible. React relaxed if nobody is listening or understanding your conce
 "The Best Path to Long-Term Change Is Slow, Simple and Boring."
 
 
-
-Solutions
-.........
-
-* Big risk of "find $TMPDIR": If the variable $TMPDIR  is not set, then the `find` command does scan and delete all directories! 
 
 Thank you
 .........
@@ -1411,5 +1463,6 @@ Thank you
 * All people who ask question and/or answers them at places like StackOverflow.
 * People I met during study at HTW-Dresden
 * My teammates at TBZ
+* https://chemnitzer.linux-tage.de/ All people involved in this great yearly event.
 
 .. Link in ReST: `text <http:....>`_
