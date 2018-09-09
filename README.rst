@@ -807,9 +807,16 @@ Idempotence is great
 
 Idempotence is great, since it ensures, that it does not do harm if the method is called twice.
 
+Errors (for example power outage) can happen in every millisecond. That's why you need to decide what you want:
+
+* if the power outage happened, some jobs do not get executed. Cronjobs work this way. 
+* if the power outage happened, some jobs do get executed twice to ensure they get done.
+
+
+Further reading: http://docs.celeryproject.org/en/latest/userguide/tasks.html (I don't use celery, but I like this part of the docs)
+
 https://en.wikipedia.org/wiki/Idempotence
 
-Further reading: http://docs.celeryproject.org/en/latest/userguide/tasks.html (although I don't use celery any more)
 
 File Locking is deprecated
 ..........................
@@ -839,7 +846,7 @@ Developers don't call mkdir
 Code runs in an environment. This environment was created with configuration management.
 This means: source code usualy does not call mkdir. With other words: Creating directories
 is the part of the configuration management. Setting up the environment and executing code in this environment are two distinct parts. If your software runs, the environment does already exist.
-Shell scripts calling `mkdir -p ...` are ugly monsters where these two distinct parts are not seperated.
+Code creating directories if they do not exist yet, should be cut into two parts. One is creating the environment and the second is the daily executing. These two distinct parts should be seperated.
 
 How to create directories? With automated configuration management (Ansible, Chef, ...) or during installation (RPM/DPKG)
 
@@ -975,8 +982,8 @@ Do you know why this is called "`file.absent <https://docs.saltstack.com/en/late
 
 `Google search for "Declarative vs Imperative" <https://www.google.com/search?q=Declarative+vs+Imperative>`_
 
-Change file vs put file
-.......................
+Config Management: Change file vs put file
+..........................................
 
 Often there are two ways to do configuration management:
 
@@ -1045,8 +1052,8 @@ If you are doing "ssh production-server .... less /var/log/...": No log-manageme
 
 If you are doing "ssh production-server ... rm ...": Please ask yourself what you are doing here. How can you automate this, to make this unneccessary in the future. 
 
-Keep you country clean
-......................
+Keep your directories clean
+...........................
 
 There are two kind of files in the context of backup: Files which should be in the backup and temporary files which should not be in the backup. Keep you directories clean. In a directory there should be either only files which should be in the backup xor only files which should not be in the backup. This will make live easier for you. The configuration of your backup is easier and cleaning temporary files is easier and looking at the directory makes more joy since it is clean.
 
@@ -1057,7 +1064,7 @@ Avoid logging to files
 I still do this, but I want to reduce it. Logs are endless streams. Files are a buch of bytes with fixed length.
 Both concepts don't fit together. Sooner or later your logs get rotated. Now you are in trouble if you want to run a log checker for every line in your logfile. I mean the mathematically version of "every line". This gets really complicated if you want to check every line. Rotating logfiles needs to be done sooner or later. But how to rotate the file, if a process still write to it? This is one problem, which was solved several hundred times and each time different ...
 
-In other words: Avoid loggint to files and avoid logrotate. Logging is an endless stream.
+In other words: Avoid logging to files and avoid logrotate. Logging is an endless stream.
 
 Use Systemd
 ...........
@@ -1188,7 +1195,7 @@ Avoid to get a nerd
 ...................
 
 
-If you do "talk"  with software to databases and APIs daily, your ability to communicate with humans might decrease.
+If you do "talk" with software to databases and APIs daily, your ability to communicate with humans might decrease.
 
 You might start to think like a computer (at least a bit). 
 
@@ -1267,12 +1274,12 @@ Sequence diagrams can be simplified to enumerations: first step, second step, th
 `Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>`_ screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with your cell phone at the end.
 
 
-Communication with Customers: Binary decision "todo list" or "do it later list"
+Communication with Customers: Binary decision "do list" or "do later list"
 ...............................................................................
 
 Define "done" with your customers. Humans like to be creative and if thing X gets changed,
 then they have fancy ideas how to change thing Y.
-Be friendly and listen: Write these fancy ideas down on the "do later" list or wiki page.
+Be friendly and listen: Write these fancy ideas down on the "do later list".
 
 
 If you don't have a definition of done/ready, then you should not start to write source code.
@@ -1321,6 +1328,12 @@ It is always possible to make things more complicated
 
 It is always possible to make things more complicated. The interesting adventure is to make things simpler and easier. 
 
+It helps to talk
+................
+
+Most software developers do not talk much. Otherwise they would not have choosen this job. If you think about something too long, then you get blind for the obvious and easy solution. It helps to talk.
+
+There is something called `Rubber duck debugging <https://en.wikipedia.org/wiki/Rubber_duck_debugging>`_. This might help, but talking to humans helps much more. If you find no solution in 30 minutes. Take a break. Do something different, talk to a team mate or friend, take a small walk outside.
 
 Be curious
 ..........
@@ -1341,7 +1354,7 @@ Often I just write the question, and don't write about the solution I have on my
 Cut bigger problems into smaller ones
 .....................................
 
-Here is one example to illustrate the guideline "Cut bigger problems into smaller ones".
+A lot of new comers have problems with this. Here is one example to illustrate the guideline "Cut bigger problems into smaller ones".
 
 Imagine you are responsible for several servers and you want or should create graphs of their disk/cpu usage.
 
