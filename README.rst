@@ -1410,9 +1410,14 @@ Write a diary
 
 I think it helps to write a diary. Sitting down and writing about the last days help you to reflect the things you did.
 I found out that late (age of 40). A diary is fun to read several months later. I try to do it at least once a week.
-I have three types of diaries: One on facebook readable for everyone. It contains things from my daily life,
-written in german. There is one on google-plus which contains IT topics
-(open source, python, linux, PostgreSQL), written in english and readable by everyone.
+I have three types of diaries.
+
+One on facebook readable for everyone. It contains things from my daily life,
+written in german. https://www.facebook.com/thomas.guttler.52
+
+
+There is one on google-plus which contains IT topics
+(open source, python, linux, PostgreSQL), written in english and readable by everyone. https://plus.google.com/112821159206665920618
 
 And there is a private which I maintain with Anki. Anki is a flash card app. The front side
 is the question and the back side is the answer. I use the first side for the date and one to three words,
