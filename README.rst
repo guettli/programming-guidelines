@@ -841,7 +841,7 @@ This means: source code usualy does not call mkdir. With other words: Creating d
 is the part of the configuration management. Setting up the environment and executing code in this environment are two distinct parts. If your software runs, the environment does already exist.
 Shell scripts calling `mkdir -p ...` are ugly monsters where these two distinct parts are not seperated.
 
-How to create directories? With automated configuration management (Salt, Ansible, Chef, ...) or during installation (RPM/DPKG)
+How to create directories? With automated configuration management (Ansible, Chef, ...) or during installation (RPM/DPKG)
 
 Exception: You create a temporary directory which is only needed for some seconds. But since switching from subprocess/shell calling to using libraries (see "Avoid calling command line tools") temporary files get used much less. More and more gets done in memory.
 
