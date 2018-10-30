@@ -836,7 +836,7 @@ Further reading about "task queues": https://www.fullstackpython.com/task-queues
 No nested directory trees
 .........................
 
-I you store files, then avoid nested directory trees. It is complicated and if you want to use a storage server like `S3 <https://en.wikipedia.org/wiki/Amazon_S3>`_ later, you are in trouble.
+If you store files, then avoid nested directory trees. It is complicated and if you want to use a storage server like `S3 <https://en.wikipedia.org/wiki/Amazon_S3>`_ later, you are in trouble.
 
 Most storage servers support containers and `blobs <https://en.wikipedia.org/wiki/Binary_large_object>`_ inside a container. Containers in containers are not supported, and that's good, since it makes the environment simpler.
 
@@ -1043,7 +1043,7 @@ SSH to production-server
 I still do interactive logins to production remote-server (mostly via ssh). But I want to reduce it. 
 
 
-Sooner or later you will make a typo. See this article from github for a exciting report what happened during a denial of service: https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/ We are humans, and humans make mistakes. Automation helps to reduce the risk of data loss.
+Sooner or later you will make a typo. See this article from GitLab for a exciting report what happened during a denial of service: https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/ We are humans, and humans make mistakes. Automation helps to reduce the risk of data loss.
 
 
 If you are doing "ssh production-server ... vi /etc/..." or "... apt install": Configuration management is much better. For example ansible.
