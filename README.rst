@@ -420,6 +420,9 @@ Avoid Threads and Async
 
 Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get things done. It's different in your spare time: Do what you want and what is fascinating for you.
 
+There is one tool and one concept that is rock solid, well known, easy to debug and available every and it is great for parallel execution. The tool is called "operating system" and the concept is called "process". Why re-invent it? You think starting a new process is "expensive" ("it is too slow")? 
+I think in most cases a pool of worker-processes has the same performance.
+
 Don't waste time doing it "generic and reusable" if you don't need to
 .....................................................................
 
@@ -941,7 +944,6 @@ http://example.com/.../data-which-gets-cached-for-every?v=123456789
 If the data of this URL gets changed, you need to update the v=123456789 to a new version.
 
 Related: https://developer.yahoo.com/performance/rules.html
-
 
 
 Avoid coding for one customer
