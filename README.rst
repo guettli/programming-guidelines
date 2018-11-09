@@ -309,6 +309,20 @@ https://wiki.ubuntu.com/DashAsBinSh
 
 I know that there are some edge cases where the bash is not available, but in most cases the time to get things done is far more important. Execution performance is not that important. First: get it done including automated tests.
 
+Server without a shell is possible
+..................................
+
+In the past, it was unbelievable: A unix/linux server which does not execute a shell while doing its daily work.
+The dream is true today.
+These steps do not need a shell: operating system boots. Systemd starts. Systemd spawn daemons. For example a web
+server. The web server spawns worker processes. A http request comes in and the worker process handles one web request
+after the other. In the past the boot process and the start/stop scripts were shell scripts. I am very happy that
+systemd exists.
+
+ 
+
+
+
 Avoid calling command line tools
 ................................
 
