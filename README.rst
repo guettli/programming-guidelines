@@ -724,7 +724,7 @@ Create global config table in your database. This table has exactly one row. Tha
 Testcode is conditionless
 .........................
 
-Testcode should not contain conditions (the keyword`if`). If you have loops (`for`, `while`) in your tests, then this looks strange, too.
+Testcode should not contain conditions (the keyword `if`). If you have loops (`for`, `while`) in your tests, then this looks strange, too.
 
 Tests should be straight forward:
 
@@ -743,7 +743,15 @@ Tests should be straight forward:
 Don't search the needle in a haystack. Inject dynamite and let it explode
 .........................................................................
 
-Imagine you have a huge code base which was written by a nerd which is gone since several months. Somewhere in the code a database row gets updated. This update should not happen, and you can't find the relevant source code line during the first minutes. You can reproduce this failure in a test environment. What can you do? You can start a debugger and jump through the lines which get executed. Yes, this works. But this can take long, it is like "Searching the needle in a haystack". Here is a different way: Add a constraint or trigger to your database which fires on the unwanted modification. Execute the code and BANG. you get the relevant code line with a nice stacktrace. This way you get the solution provided on a silver plattern with minimal effort :-)
+Imagine you have a huge code base which was written by a nerd which is gone since several months. 
+Somewhere in the code a database a row gets updated. This update should not happen, 
+and you can't find the relevant source code line during the first minutes. You can reproduce 
+this failure in a test environment. What can you do? You can start a debugger and jump through 
+the lines which get executed. Yes, this works. But this can take long, it is like 
+"Searching the needle in a haystack". Here is a different way: Add a constraint or trigger
+to your database which fires on the unwanted modification. Execute the code and BANG - 
+you get the relevant code line with a nice stacktrace. This way you get the solution 
+provided on a silver plattern with minimal effort :-)
 
 
 With other words: Don't waste time with searching.
@@ -762,7 +770,7 @@ Avoid magic or uncommon things
 * hard links in linux file systems.
 * file system ACLs (Access control lists). Try to use as little as possible chmod/chown.
 * git submodules (Please use configuration management, deployment tools, ...)
-* gtk/qt/tk/tkinter: Avoid to write a native GUI. Use Django and its great admin web interface. If you are forced to use a native gui, then use QT (for example via PySide)
+* gtk/qt/tk/tkinter: Avoid to write a native GUI. Use Django and its great admin web interface. If you are forced to use a native gui, then I would use QT (for example via PySide)
 
 Learn one programming language, not ten.
 ........................................
@@ -774,7 +782,7 @@ Yes, sometimes it helps to know the programming language C.
 
 My opinion: Learn Python, SQL and some JavaScript.
 
-Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument, long distance running, ...
+Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument, long distance running, famil
 
 Learn "git bisect"
 ..................
