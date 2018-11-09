@@ -787,7 +787,7 @@ Then learn other topics: Database, Configuration management, continuous integrat
 Learn "git bisect"
 ..................
 
-"git bisect" is a great tool to find the commit, which introduced an error. Unfortunately there it is not a one-liner up to now, but you can use it like this:
+"git bisect" is a great tool to find the commit, which introduced an error. Unfortunately it is not a one-liner up to now. You can use it like this:
 
 .. code-block:: shell
 
