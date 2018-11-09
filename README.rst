@@ -44,7 +44,7 @@ I type with ten fingers. It's like flying if learned it. Your eyes can stay on t
 
 I like lenovo keyboards with track point. If you want the track point to have more grip you can use sandpaper. Here are some images to illustrate what I use https://plus.google.com/108148237674350536526/posts/jF1Du1YwJwr?hl=de
 
-Use a clipboard manager like Diodon.
+Use a clipboard manager like Diodon (Linux) and CopyQ (for Windows).
 
 Avoid searching with your eyes. Search with the tools of your IDE. You should be able to use it "blind". You should be able to move the cursor to the matching position in your code without looking at your keyboard, without grabbing your mouse/touchpad/trackpoint and without looking up/down on your screen.
 
