@@ -873,7 +873,7 @@ In the past `File_Locking <https://en.wikipedia.org/wiki/File_locking>`_ was a v
 
 There will be chaos if there is no central dispatcher. 
 
-I like http://python-rq.org/ It is simple and robust.
+I like tools like http://python-rq.org/ It is simple and robust.
 
 BTW, the topic is called `Synchronization <https://en.wikipedia.org/wiki/Synchronization_(computer_science)>`_.
 
@@ -942,9 +942,9 @@ One method accepted a object with three different meanings types as first argume
 * case2: a string containing a file path. This file contained the html to work on.
 * case3: a file descriptor with a read() method.
  
-This looks convinient at the first sight. But in the long run it makes things complicated. This kind of guessing can always lead to false results. In my case the string was a accidently the name of an existing directory. In my case all calls to the library used case1 "a string containing html markup". This failed because of the existing directory :-(
+This looks convinient at the first sight. But in the long run it makes things complicated. This kind of guessing can always lead to false results. In my case I always used case1 (it contained a small html snippet). But, once the string was a accidently the name of an existing directory! This crashed, because the library thought this is was a file.... 
 
-STOP GUESSING.
+Conclusion: STOP GUESSING.
 
 In Python you can use classmethods for alternative constructors.
 
