@@ -623,7 +623,7 @@ Keep this time small. This is related to "care for new comers". If you need seve
 Passing around methods make things hard to debug
 ................................................
 
-Even in C you can pass around method-pointers. It's very common in JavaScript and sometimes it gets done in Python, too. It is hard to debug. IDE's can't resolve the code: "Find usages" don't work.  I try to avoid it. I prefer OOP (Inheritance) and avoid passing around methods or using them as variables.
+Even in C you can pass around method-pointers. It's very common in JavaScript and sometimes it gets done in Python, too. It is hard to debug. IDE's can't resolve the code: "Find usages" don't work.  I try to avoid it. I prefer OOP (Inheritance) and avoid passing around methods or treating them like variables.
 
 Software Design Patterns are overrated
 ......................................
@@ -670,6 +670,7 @@ Run the "surrounding tests". If do_foo() is inside the module "bar". Then run al
 Then commit+push. Let CI run all tests in background (don't waste time watching your unittests running and passing)
 
 
+
 For every method there is a corresponding test-method
 .....................................................
 
@@ -677,7 +678,7 @@ You implemented the great method foo() and you implement a corresponding method 
 It does not matter if you write foo() first, and then test_foo() or the other way round.
 But it makes sense to store both methods with one commit to one git repo.
 
-Several months later you discover a bug in your code. Or worse: our your customer discovers it.
+Several months later you discover a bug in your code. Or worse: your customer discovers it.
 
 If you fix foo() you need to extend test_foo() or write a new method test_foo_with_special_input(). Again both changes (production code and testing code) walk into the git repo like a pair of young lovers holding hands :-)
 
@@ -693,15 +694,15 @@ The "untestable" code needs to be cared of. Code is always testable, there is no
 Is config code or data?
 .......................
 
-This is a difficult question. At least at the beginning. For me most configuration is data, not code. That's why the config is in a database, not in a version control system.
+This is a difficult question. At least at the beginning. For me most configuration is data, not code. That's why the config is in a **database**, not in a text or source code file in a version control system.
 
-This has one major draw-back. All developers love their version control system. Most love git. At is such a secure place. Nothing can get lost or accidently modified. And if this would happen you can always revert to an old version. It is like heaven. Isn't it?
+This has one major draw-back. All developers love their version control system. Most love git. At is such a secure place. Nothing can get lost or accidently modified. And if a change was wrong, you can always revert to an old version. It is like heaven. Isn't it?
 
 No it is not. The customer can't change it. The customer needs to call you and you need to do stupid repeatable useless work. 
 
 For me configuration should be in the database. This way you can provide a GUI for the customer to change the config.
 
-Only the configuration and recipies for the configuration management is stored in git. But this is a different topic. If I speak about configuration management, then I speak mostly about configuring linux servers and networks. In my case this is nothing which my customer touches.
+The configuration and recipies for the configuration management is stored in git. But this is a different topic. If I speak about configuration management, then I speak mostly about configuring linux servers and networks. In my case this is nothing which my customer touches.
 
 
 ForeignKey from code to DB
