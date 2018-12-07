@@ -394,6 +394,18 @@ Version Control
 
 I like git.
 
+Avoid long living branches
+..........................
+
+Avoid long living branches in your git repos. The
+more time that passes, the less likely is that your work will ever get merged. For me two weeks are ok, but three weeks are too long.
+
+Not one branch per customer
+...........................
+
+Some people use git branches to store the individual settings for customers or installations. Don't do this.
+Create one git repo for every customer or installation.
+
 
 Time is too short to run all tests before commit+push
 .....................................................
