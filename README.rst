@@ -449,7 +449,7 @@ Avoid Threads and Async
 Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get things done. It's different in your spare time: Do what you want and what is fascinating for you.
 
 There is one tool and one concept that is rock solid, well known, easy to debug and available everywhere and it is great for parallel execution. The tool is called "operating system" and the concept is called "process". Why re-invent it? You think starting a new process is "expensive" ("it is too slow")? Just, do not start a new process for every small method you want to call in parallel. Use a `Task Queue <https://www.fullstackpython.com/task-queues.html>`_.
-Let this tool handle the complicated async stuff and keep your own code simple like runningin one process, one thread.
+Let this tool handle the complicated async stuff and keep your own code simple like running in one process with one thread. It is all about IPO: Input-Processing-Output.
 
 Don't waste time doing it "generic and reusable" if you don't need to
 .....................................................................
