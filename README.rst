@@ -386,7 +386,7 @@ I don't say that SQL is always the best solution. Of course http based APIs are 
 C is slow
 .........
 
-... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem done takes "ages". I avoid it, if possible. If Python gets to slow, I can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then clean up the code (simplify it). Then optimize.
+... looking at the time you need to get things implemented. Yes, the execution is fast, but the time to get the problem done takes "ages". I avoid C programming, if possible. If Python gets to slow, I can optimize the hotspots. But do this later. Don't start with the second step. First get it done and write tests. Then clean up the code (simplify it). Then optimize.
 
 
 Version Control
@@ -398,7 +398,7 @@ Avoid long living branches
 ..........................
 
 Avoid long living branches in your git repos. The
-more time that passes, the less likely is that your work will ever get merged. For me two weeks are ok, but three weeks are too long.
+more time that passes, the less likely is that your work will ever get merged. For me two weeks are ok, but five weeks are too long.
 
 Not one branch per customer
 ...........................
@@ -430,8 +430,7 @@ CI must not connect to the internet
 
 If you do automated testing you usualy have these steps: build then test.
 
-My guideline is to avoid internet access during both steps. During "build" dependencies
-get downloaded. Don't download them from the internet. Host your own repos for source code (git),
+My guideline (for commercial, closed source software) is to avoid internet access during both steps. During "build" dependencies get downloaded. Don't download them from the internet. Host your own repos for source code (git),
 system packages (rpm/dpkg) and your language (pip for python).
 
 
@@ -449,13 +448,13 @@ Avoid Threads and Async
 
 Threads and Async are fascinating. BUT: It's hard to debug. You will need much longer than you initially estimated. Avoid it, if you want to get things done. It's different in your spare time: Do what you want and what is fascinating for you.
 
-There is one tool and one concept that is rock solid, well known, easy to debug and available every and it is great for parallel execution. The tool is called "operating system" and the concept is called "process". Why re-invent it? You think starting a new process is "expensive" ("it is too slow")? 
-I think in most cases a pool of worker-processes has the same performance.
+There is one tool and one concept that is rock solid, well known, easy to debug and available everywhere and it is great for parallel execution. The tool is called "operating system" and the concept is called "process". Why re-invent it? You think starting a new process is "expensive" ("it is too slow")? Just, do not start a new process for every small method you want to call in parallel. Use a `Task Queue <https://www.fullstackpython.com/task-queues.html>`_.
+Let this tool handle the complicated async stuff and keep your own code simple like runningin one process, one thread.
 
 Don't waste time doing it "generic and reusable" if you don't need to
 .....................................................................
 
-If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments. First get the basics working, then tests and CI, then listen to the needs, wishes and dreams of your customers.
+If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments and make the customer happy. First get the basics working, then tests and CI, then listen to the new needs, wishes and dreams of your customers.
 
 If you are developing web or server applications, don't waste time for making your code working on Linux and MS-Windows. Focus on Linux.
 
@@ -510,7 +509,7 @@ Imagine you have a source code generator which takes DATA as input and creates S
 What is the difference between the input (DATA) and the output (SOURCE)? What do you gain?
 Even if you have some kind of artificial intelligence, you can't create new information if
 your only input is DATA. It is just a different syntax.
-Why not write a program which reads DATA and does the thing you want to do with SOURCE?
+Why not write a program which reads DATA and does the thing you want to do?
 
 For the current context I see only two different things: **source code** for humans and
 **generated code** for the machine.
@@ -518,7 +517,7 @@ For the current context I see only two different things: **source code** for hum
 If the TypeScript compiler creates JavaScript. Then the output is generated code
 since the created JavaScript source is intended for the interpreter only. Not for the human.
 
-With other words and my point of view: source code gets created by humans
+With other words: source code gets created by humans
 with the help of an editor or IDE.
 
 
@@ -643,6 +642,7 @@ Software Design Patterns are overrated
 If you need several pages in a book to explain a software design pattern, then it is too complicated.
 I think Software Design Patterns are overrated.
 
+Why are so many books about software design patterns and nearly no books about database design patterns?
 
 Time is too short for "git rebase" vs "git merge" discussions
 .............................................................
@@ -794,7 +794,7 @@ Yes, sometimes it helps to know the programming language C.
 
 My opinion: Learn Python, SQL and some JavaScript.
 
-Then learn other topics: Database, Configuration management, continuous integration, organizing, team work, learn to play a music instrument, long distance running, famil
+Then learn other topics: PostgreSQL, Configuration management, continuous integration, organizing, team work, learn to play a music instrument, long distance running, family
 
 Learn "git bisect"
 ..................
@@ -816,9 +816,9 @@ Learn "git bisect"
 Conditional Breakpoints
 .......................
 
-Imagine, you are able to reproduce a bug in a test. But you could not fix it up to now. If you want to create a conditional breakpoint to find the root of the problem, then you could be on the wrong track. Rewrite the code first, to make it more fine-grained debuggable and testable?
+Imagine, you are able to reproduce a bug in a test. But you could not fix it up to now. If you want to create a conditional breakpoint to find the root of the problem, then you could be on the wrong track. Rewrite the code first, to make it more fine-grained debuggable and testable.
 
-Write a test where a normal breakpoint is enough.
+Write a test where a normal (non-conditional) breakpoint is enough.
 
 It is very likely that this means you need to move the body of a loop into a new method.
 
@@ -906,7 +906,7 @@ This means: source code usualy does not call mkdir. With other words: Creating d
 is the part of the configuration management. Setting up the environment and executing code in this environment are two distinct parts. If your software runs, the environment does already exist.
 Code creating directories if they do not exist yet, should be cut into two parts. One is creating the environment and the second is the daily executing. These two distinct parts should be seperated.
 
-How to create directories? With automated configuration management (Ansible, Chef, ...) or during installation (RPM/DPKG)
+How to create directories if I should not do it with my software? With automated configuration management (Ansible, Chef, ...) or during installation (RPM/DPKG)
 
 Exception: You create a temporary directory which is only needed for some seconds. But since switching from subprocess/shell calling to using libraries (see "Avoid calling command line tools") temporary files get used much less. More and more gets done in memory.
 
@@ -1051,16 +1051,16 @@ You have far less trouble if you use "put a whole file". Example: Do not fiddle 
 
 
 
-Use http, avoid ftp/sftp/scp/rsync/smb
-......................................
+Use http, avoid ftp/sftp/scp/rsync/smb/mail
+...........................................
 
-Use http for data transfer. Avoid the old ways (ftp/sftp/scp/rsync/smb). 
+Use http for data transfer. Avoid the old ways (ftp/sftp/scp/rsync/smb/mail). 
 
 If you want to transfer files via http from shell/cron you can use: `tbzuploader <https://github.com/guettli/tbzuploader>`_.
 
 The next step is to avoid clever `inotify <https://en.wikipedia.org/wiki/Inotify>`_-daemons. You don't need this any more if you receive your data via http.
 
-Why? Because http can validate the data. If it is not valid, the data can be rejected. That's something you can't do with ftp/sftp/scp/rsync/smb.
+Why http? Because http can validate the data. If it is not valid, the data can be rejected. That's something you can't do with ftp/sftp/scp/rsync/smb/mail.
 
 Avoid Polling
 .............
@@ -1273,7 +1273,7 @@ Avoid stress
 ............
 
 Stress trigger your body’s “fight or flight” response. It pushes your blood into the muscles.
-That's great if you need to jump onto the side walk because a fast red race care would hit you.
+That's great if you need to jump onto the side walk because a fast red race car would hit you.
 But in your daily life this "fight or flight" response is hardly needed. You need the energy
 in your brain :-)
 
@@ -1337,6 +1337,7 @@ Define "done" with your customers. Humans like to be creative and if thing X get
 then they have fancy ideas how to change thing Y.
 Be friendly and listen: Write these fancy ideas down on the "do later list".
 
+If the customer have new ideas, let them decide: Should this be on the "do list" or the "do later list".
 
 If you don't have a definition of done/ready, then you should not start to write source code.
 First define the goal, then choose a strategy to get to the goal.
@@ -1394,7 +1395,7 @@ There is something called `Rubber duck debugging <https://en.wikipedia.org/wiki/
 Be curious
 ..........
 
-There is always something you don't have understood up to now. Ask questions, even if you think you now the answer.
+There is always something you don't have understood up to now. Ask questions, even if you think you know the answer.
 For one question, there are always several answers. If you know one answer,
 then it is likely that someone has a better answer.
 
@@ -1405,14 +1406,14 @@ I like:
 * https://serverfault.com/
 * And some mailing lists.
 
-Often I just write the question, and don't write about the solution I have on my mind. If you write about our solution, then the discussion is narrowed to a simple pro/contra your idea. Ask the question like a newbee.
+Often I just write the question, and don't write about the solution I have on my mind. If you write about our solution, then the discussion is narrowed to a simple pro/contra of your idea. Ask the question like a newbee.
 
 Cut bigger problems into smaller ones
 .....................................
 
 A lot of new comers have problems with this. Here is one example to illustrate the guideline "Cut bigger problems into smaller ones".
 
-Imagine you are responsible for several servers and you want or should create graphs of their disk/cpu usage.
+Imagine you are responsible for several servers and you should create graphs of their disk/cpu usage.
 
 Cut the bigger problem into smaller ones:
 
@@ -1427,12 +1428,14 @@ BTW, why not use the PostgreSQL feature "Logical Replication"?
 Read the Release Notes
 ......................
 
+Read the release notes of the tools you use daily.
+
 I like these release notes:
 
 * https://www.postgresql.org/docs/devel/static/release.html The "Overview" links show the most important changes
 * https://docs.djangoproject.com/en/dev/releases/
 * Python
-
+* PyCharm
 
 Three Mail Accounts
 ...................
@@ -1478,7 +1481,7 @@ Write a diary
 .............
 
 I think it helps to write a diary. Sitting down and writing about the last days help you to reflect the things you did.
-I found out that late (age of 40). A diary is fun to read several months later. I try to do it at least once a week.
+I helps you to focus on your goals. Do you have goals? I found out that late (age of 40). A diary is fun to read several months later. I try to do it at least once a week.
 I have three types of diaries.
 
 One on facebook readable for everyone. It contains things from my daily life,
@@ -1500,17 +1503,17 @@ From Wikipedia: The bus factor is a measurement of the risk resulting from infor
 
 `Bus factor <https://en.wikipedia.org/wiki/Bus_factor>`_
 
-Avoid to create secret knowledge which is only available to you or to someone else. Share knowledge.
+Avoid to create secret knowledge which is only available to you. Share knowledge.
 
 Avoid overspecialization of yourself. It will have drawbacks. Imagine there are some things which only you know.
 Sooner or later you want to go on holiday and you want a relaxed holiday. You don't want to be called
 on your mobile phone by your boss or a team mate. You want two weeks off without a single interrupt which
 is related to your work.
 
-I guess all people love it, if they are important. Everybody loves it, if someone needs them. You will get
+I guess all people love it, if they are important. Everybody loves it, if someone needs them. But you will get
 a burnout if no one else can do the things you do.
 
-Avoid overspecialization of a team mate. If a team mates has secret knowledge and there is no one
+Avoid overspecialization of a team mate, too. If a team mates has secret knowledge and there is no one
 else who has a clue: Talk. Try to reveal the things which only one person knows.
 Tell him about your concerns (Bus factor). Maybe talk to his boss.
 
@@ -1519,8 +1522,8 @@ setting up a new server. Up to now Bob did this everytime. Talk to you team mate
 every action should be known to at least two people. In practice this means: The next time Bob won't do it.
 It needs to be done by someone else.
 
-If you think "that's not my job, that's the
-job of the team leader" now, then I think it is time stop acting like a dumb sleeping sheep.
+If you read above sentences and think "that's not my job, that's the
+job of the team leader", then I think it is time stop acting like a dumb sleeping sheep.
 Get resonsible. React relaxed if nobody is listening or understanding your concerns.
 "The Best Path to Long-Term Change Is Slow, Simple and Boring."
 
