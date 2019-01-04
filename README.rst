@@ -1518,7 +1518,7 @@ else who has a clue: Talk. Try to reveal the things which only one person knows.
 Tell him about your concerns (Bus factor). Maybe talk to his boss.
 
 Imagine there is an action which needs to be done roughly twice a year. For example
-setting up a new server. Up to now Bob did this everytime. Talk to you team mates. Explain that
+setting up a new server. Up to now Bob did this everytime. Talk to your team mates. Explain that
 every action should be known to at least two people. In practice this means: The next time Bob won't do it.
 It needs to be done by someone else.
 
