@@ -1539,7 +1539,7 @@ Thank you
 * All people who contribute to open source software (Linux, Python, PostgreSQL, ...)
 * All people who ask question and/or answers them at places like StackOverflow.
 * People I met during study at HTW-Dresden
-* My teammates at TBZ
+* My teammates at `tbz-pariv <http://www.tbz-pariv.de/>`_.
 * https://chemnitzer.linux-tage.de/ All people involved in this great yearly event.
 
 .. Link in ReST: `text <http:....>`_
