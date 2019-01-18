@@ -1060,7 +1060,7 @@ If you want to transfer files via http from shell/cron you can use: `tbzuploader
 
 The next step is to avoid clever `inotify <https://en.wikipedia.org/wiki/Inotify>`_-daemons. You don't need this any more if you receive your data via http.
 
-Why http? Because http can validate the data. If it is not valid, the data can be rejected. That's something you can't do with ftp/sftp/scp/rsync/smb/mail.
+Why is http better? Because http can validate the data. If it is not valid, the data can be rejected. That's something you can't do with ftp/sftp/scp/rsync/smb/mail.
 
 Avoid Polling
 .............
