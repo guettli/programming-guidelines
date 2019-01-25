@@ -288,6 +288,7 @@ Reasons:
 * AFAIK you can't raise exceptions in shell scripts.
 * Shell-Scripts tend to call a lot of subprocesses. Every call to grep,head,tail,cut  creates a new process. This tends to get slow.
 * I do this "find ... | xargs" daily, but only while using the shell interactively. But what happends if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find .. | grep | xargs" does not work any more .... It is dirty and will never get clean.
+* Look at all the pitfalls: ` Bash Pitfalls <https://mywiki.wooledge.org/BashPitfalls>`_ My conclusion: I prefer to walk on solid ground, I don't write shell scripts any more.
 
 Even Crontab lines are dangerous. Look at this:
 
@@ -1541,5 +1542,6 @@ Thank you
 * People I met during study at HTW-Dresden
 * My teammates at `tbz-pariv <http://www.tbz-pariv.de/>`_.
 * https://chemnitzer.linux-tage.de/ All people involved in this great yearly event.
+* Ionel Cristian Mărieș for the link to bash pitfalls.
 
 .. Link in ReST: `text <http:....>`_
