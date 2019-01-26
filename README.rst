@@ -1325,7 +1325,9 @@ Avoid Office Documents or UML-tools
 
 Use a way to edit content (use cases, specs, ...) over the internet. Use an issue tracking system or wiki.
 
-Don't waste time with UML tools. Write down the high level use case, the cardinality and the steps.
+Don't waste time with UML tools. UML is like `esperanto <https://en.wikipedia.org/wiki/Esperanto>`_. It is (in theory) a great solution which solves a lot of problems. But somehow it does not work.
+
+Write down the high level use case, the cardinality and the steps.
 Sequence diagrams can be simplified to enumerations: first step, second step, third step ...
 
 `Sketch <https://en.wikipedia.org/wiki/Sketch_(drawing)>`_ screenshots you want to build with your team with a pen. I avoid any digital device for this, since up to now paper or a whiteboard are far more real. If you need the result in digital format, just take a picture with your cell phone at the end.
