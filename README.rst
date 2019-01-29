@@ -633,6 +633,20 @@ How much would you lose? How much time would you waste to set up your personal d
 
 Keep this time small. This is related to "care for new comers". If you need several hours to setup your development environment, then new team members would need even much more time.
 
+Setting up a new development environment should be easy
+.......................................................
+
+This happened to me several times: I wanted to improve some software. Up to now I only used the software,
+now I want to write a patch. If setting up a new development environment is too complicated or not documented,
+then I will resign and won't provide a patch. These steps need to be simple for people starting from scratch:
+
+* check out source from version control
+* check that all tests are working (before modifying something)
+* write patch and write test for patch
+* check that all tests are working (after modifying something)
+
+
+
 
 Passing around methods make things hard to debug
 ................................................
