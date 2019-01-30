@@ -65,6 +65,10 @@ Quote:
  
  Unlike just about everything else in life, "boring" is actually a positive attribute when it comes to software! We don’t want our programs to be spontaneous and interesting; we want them to stick to the script and predictably accomplish their business goals.
 
+Avoid redundancy
+................
+
+See heading.
 
 
 ####################################################################################################
