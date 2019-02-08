@@ -820,7 +820,7 @@ Then learn other topics: PostgreSQL, Configuration management, continuous integr
 Learn "git bisect"
 ..................
 
-"git bisect" is a great tool to find the commit, which introduced an error. Unfortunately it is not a one-liner up to now. You can use it like this:
+"git bisect" is a great tool in conjunction with unittests. It is easy to find the commit, which introduced an error. Unfortunately it is not a one-liner up to now. You can use it like this:
 
 .. code-block:: shell
 
@@ -925,7 +925,7 @@ Developers don't call mkdir
 Code runs in an environment. This environment was created with configuration management.
 This means: source code usualy does not call mkdir. With other words: Creating directories
 is the part of the configuration management. Setting up the environment and executing code in this environment are two distinct parts. If your software runs, the environment does already exist.
-Code creating directories if they do not exist yet, should be cut into two parts. One is creating the environment and the second is the daily executing. These two distinct parts should be seperated.
+Code creating directories if they do not exist yet, should be cut into two parts. One is creating the environment (gets executed only once) and the second is the daily executing. These two distinct parts should be seperated.
 
 How to create directories if I should not do it with my software? With automated configuration management (Ansible, Chef, ...) or during installation (RPM/DPKG)
 
@@ -938,7 +938,7 @@ I use two ways to debug slow performance:
 
  * Logging and profiling, if you have a particular reproducable use case
  * Django Debug Toolbar to see which SQL statements took long in a http request.
- * Statistics collected on production environments. I use my own tool up to now: https://github.com/guettli/live-trace
+ * Statistics collected on production environments. For Python:  https://github.com/uber/pyflame or https://github.com/benfred/py-spy
 
 You provide the GUI for configuring the system. Then the customer (not you) uses this GUI
 .........................................................................................
@@ -993,6 +993,25 @@ In Python you can use classmethods for alternative constructors.
   # case3
   with io.open('...') as fd:
       obj = MyClass.from_file_object(fd)
+
+Don't stop with "permission denied"
+...................................
+
+In most non trivial projects there are several reasons why the permission was denied.
+
+If you (the software developer) only return "permission denied", then the user/admin don't know the **reason**.
+
+If you add a reason, then it is more likely that the user/admin can help themselves.
+
+This means they don't call you, our a team mate, to solve this.
+
+Less interrupts for your and happy customers, it's easy.
+
+Or more general: Add enough information to error messages, to make it easier to understand the current situation.
+
+For example you can add hyperlinks to docs/wiki/issue-tracker in you errors messages. 
+
+
 
 OOP: Composition over inheritance
 .................................
