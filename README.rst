@@ -1511,6 +1511,19 @@ I like:
 
 Often I just write the question, and don't write about the solution I have on my mind. If you write about our solution, then the discussion is narrowed to a simple pro/contra of your idea. Ask the question like a newbee.
 
+Creativity Management
+.....................
+
+A lot of ideas come to my mind, if I am far away from a laptop or pc. For example if I cylce from home to office or back.
+
+I started with this way of creativity management some years go: I write a mail to myself.
+
+If I cycle home on a friday evening, I want to keep my mind relaxed and focused on my family. All work related thoughts should be far away. I don't want to "carry" around work-related thoughts on the weekend. On the road from office to home I might have an idea what to do (how to hunt a strange bug, how to implement a cool feature which needs only a very little effort and time to implement, ...). I stop (that is great advantage of riding a bike - I can stop almost always immidiatley, and take my mobile phone). Then I write a mail to my business adress and now I am sure: This idea won't get lost. And I am free to have a nice weekend with my family.
+
+The same happends when I drive from home to office: I have an idea related to my personal live? I stop and write a mail to my personal account.
+
+That's how most of this guide-line was created: Most items came to my mind during cycling, walking, listening to music or laying in bathtub. Short mail to myself, and some days later I take the mail which contains just a handfull of words and I formulate it.
+
 Cut bigger problems into smaller ones
 .....................................
 
