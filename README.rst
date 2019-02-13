@@ -731,6 +731,32 @@ method was completely re-written from scratch, then your test still will work: S
 
 If a helper-method was called during the processing (which some people check with assert_called_xxx()).... who cares? I don't, as long as the desired output gets created.
 
+Creating test data is much more important than you initial think
+................................................................
+
+Creating test data is very important. It can help you for several things:
+
+1: It can help you to create a re-usable application: Imagine you have one customer in the beginning. You do everything the way the customer wants it to be. But the real benefit of software is its re-usabilty. Your code wants to get executed in different environments, for more than one customer.
+
+2: It can help you to create presentation/demo systems
+
+3: It can help you in automated tests.
+
+Your tests should not run on real data from customers.
+
+If you create test data this should be automated. This way you are able to fill a new database with useful data.
+You should be able to create a demo system with one command (or one click).
+
+Write the creation of test data once and use it for both: presentions and automated tests.
+
+Do not use random data for testing. It just makes no sense: tests should be reproducable.
+
+If your application is multi-tenant (support multible clients), then you need a demo tenant. All automated tests should use this tenant.
+
+I don't see why a special library for creating test data is needed. If you use an ORM in your production code, then use the ORM to create your test data.
+
+In Python/Django I use cached-properties and MyModel.objects.update_or_create(...) to create the test data.
+
 
 This is untestable code
 .......................
