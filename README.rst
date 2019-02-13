@@ -1007,6 +1007,24 @@ For detail lovers: No, it was not feasible to write a script which imported the 
 
 *give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime*
 
+Better error messages
+.....................
+
+If you have worked with Windows95, then you must have seen them: Empty error messages with just a red icon and a button labeled "OK". You had no clue what was wrong. On the one hand it was great fun, on the other hand it was very sad, since you wasted your precious time.
+
+Do it better.
+
+Imagine user "foo" wants to access data (lets call it "pam") which you only can see, if you are in the group "baywatch". Unfortunately user "foo" is not in the group. You could show him the simple message "permission denied". And no further information.
+
+I don't like messages like this. They create extra work. The user will call the support and ask the question "Why am i not allowed to see the data?". The support needs to check the details.... and soon a half hour of two people is gone. 
+
+Provide better error messages: In this particular case be explicit and let the code produce a message like: "to access the data you need to be in one of the following groups: baywatch, admin, ...".
+
+
+Software security expert might disagree. I disagree their disagreement. Hiding the facts is just "Security through obscurity".
+
+
+
 Avoid clever guessing
 .....................
 
