@@ -722,12 +722,14 @@ If you are testing something, then remeber it is all about: Input-Processing-Out
 
 If your input is x you might want the output to be y.
 
-For me it does not make any sense to use the method (`assert_called_with() <https://docs.python.org/3/library/unittest.mock.html>`_ or the other "assert_called_???()" methods.)
+For me it does not make any sense to use the method  
+`assert_called() <https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock.assert_called>`_
+or the other assert_called_xxx() methods.
 
 You treat your code like a black box. You provide input, and you check the output. If something was refactored and the
 method was completely re-written from scratch, then your test still will work: Same input, same output. 
 
-But if a helper-method was called during the processing.... who cares? I don't, as long as the desired output gets created.
+If a helper-method was called during the processing (which some people check with assert_called_xxx()).... who cares? I don't, as long as the desired output gets created.
 
 
 This is untestable code
@@ -1601,3 +1603,6 @@ Thank you
 * Ionel Cristian Mărieș for the link to bash pitfalls.
 
 .. Link in ReST: `text <http:....>`_
+
+
+
