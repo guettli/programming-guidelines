@@ -1187,6 +1187,16 @@ Often there are two ways to do configuration management:
  
 You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
 
+Config Management: No need for custom RPMs/DPKGs
+................................................
+
+In the past it was common to create a custom RPM or Debian package to install a file on a server.
+
+For example a SSL cert.
+
+If you have a configuration management tool, then this extra container (RPM/DPKG) does not make much sense.
+
+
 Cron Jobs
 .........
 
