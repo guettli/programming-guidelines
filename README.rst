@@ -1123,6 +1123,36 @@ Misc
 4. Remote APIs
 --------------
 
+Use http, avoid ftp/sftp/scp/rsync/smb/mail
+...........................................
+
+Use http for data transfer. Avoid the old ways (ftp/sftp/scp/rsync/smb/mail). 
+
+If you want to transfer files via http from shell/cron you can use: `tbzuploader <https://github.com/guettli/tbzuploader>`_.
+
+The next step is to avoid clever `inotify <https://en.wikipedia.org/wiki/Inotify>`_-daemons. You don't need this any more if you receive your data via http.
+
+Why is http better? Because http can validate the data. If it is not valid, the data can be rejected. That's something you can't do with ftp/sftp/scp/rsync/smb/mail.
+
+Avoid Polling
+.............
+
+Polling means checking for new data again and again. Avoid it, if possible. Try to find a way to "listen" for changes. In most databases you can execute a trigger if new data arrives.
+
+Provide specific import directories, not one generic
+....................................................
+
+If you still receive files via ftp/scp since you have not switched to http-APIs yet, then be sure to provide specific input directories.
+
+In the past I recevied files in a directory called "import". Several third party systems sent data to this directory. It looks easy in the first place. But sooner or later there will be chaos since you need to now where the data came from. Was it from third party system FOO or was the data from third party system BAR? You can't distinguish any more if you profide only one import directory.
+
+Now we provide import-FOO, import-BAR, import-qwerty ...
+
+Don't set up a SMTP daemon
+..........................
+
+If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. You will have much more trouble if you set up an SMTP daemon.
+
 
 ####################################################################################################
 
@@ -1156,33 +1186,6 @@ Often there are two ways to do configuration management:
 * put a whole file under configuration management.
  
 You have far less trouble if you use "put a whole file". Example: Do not fiddle with the file `/etc/sudoers`. Put a whole file into `/etc/sudoers.d/`.
-
-
-
-Use http, avoid ftp/sftp/scp/rsync/smb/mail
-...........................................
-
-Use http for data transfer. Avoid the old ways (ftp/sftp/scp/rsync/smb/mail). 
-
-If you want to transfer files via http from shell/cron you can use: `tbzuploader <https://github.com/guettli/tbzuploader>`_.
-
-The next step is to avoid clever `inotify <https://en.wikipedia.org/wiki/Inotify>`_-daemons. You don't need this any more if you receive your data via http.
-
-Why is http better? Because http can validate the data. If it is not valid, the data can be rejected. That's something you can't do with ftp/sftp/scp/rsync/smb/mail.
-
-Avoid Polling
-.............
-
-Polling means checking for new data again and again. Avoid it, if possible. Try to find a way to "listen" for changes. In most databases you can execute a trigger if new data arrives.
-
-Provide specific import directories, not one generic
-....................................................
-
-If you still receive files via ftp/scp since you have not switched to http-APIs yet, then be sure to provide specific input directories.
-
-In the past I recevied files in a directory called "import". Several third party systems sent data to this directory. It looks easy in the first place. But sooner or later there will be chaos since you need to now where the data came from. Was it from third party system FOO or was the data from third party system BAR? You can't distinguish any more if you profide only one import directory.
-
-Now we provide import-FOO, import-BAR, import-qwerty ...
 
 Cron Jobs
 .........
@@ -1271,10 +1274,6 @@ replication yourself. This is not trival and experts with more knowledge than yo
 have solved this issue before.
 
 
-Don't set up a SMTP daemon
-..........................
-
-If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. You will have much more trouble if you set up an SMTP daemon.
 
 6. Networking
 -------------
