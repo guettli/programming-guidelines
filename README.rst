@@ -9,7 +9,7 @@ My personal programming guidelines. **Please provide feedback**, tell me what's 
 
 `3. Dev <#3-dev>`_
 
-`4. Remote APIs <#4-remote_apis>`_
+`4. Remote APIs <#4-remote-apis>`_
 
 `5. Op <#5-op>`_
 
