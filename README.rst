@@ -9,15 +9,17 @@ My personal programming guidelines. **Please provide feedback**, tell me what's 
 
 `3. Dev <#3-dev>`_
 
-`4. Op <#4-op>`_
+`4. Remote APIs <#4-remote_apis>`_
 
-`5. Networking <#5-networking>`_
+`5. Op <#4-op>`_
 
-`6. Monitoring <#6-monitoring>`_
+`6. Networking <#5-networking>`_
 
-`7. Communication with others <#7-communication-with-others>`_
+`7. Monitoring <#6-monitoring>`_
 
-`8. Epilog <#8-epilog>`_
+`8. Communication with others <#7-communication-with-others>`_
+
+`9. Epilog <#8-epilog>`_
 
 
 1. Introduction
@@ -1116,10 +1118,15 @@ Misc
 * `Release early, release often <https://en.wikipedia.org/wiki/Release_early,_release_often>`_
 * `Rough consensus and running code. <https://en.wikipedia.org/wiki/Rough_consensus>`_
 
+####################################################################################################
+
+4. Remote APIs
+--------------
+
 
 ####################################################################################################
 
-4. Op
+5. Op
 -----
 
 Operation. The last two characters of DevOp.
@@ -1269,7 +1276,7 @@ Don't set up a SMTP daemon
 
 If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. You will have much more trouble if you set up an SMTP daemon.
 
-5. Networking
+6. Networking
 -------------
 
 No routing on servers
@@ -1288,7 +1295,7 @@ traceroute won't help you
 If you have trouble with a tcp connection, then use tcptraceroute. Again \*tcp\*traceroute. It is the tool for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: normal traceroute uses UDP, not TCP.
 
 
-6. Monitoring
+7. Monitoring
 -------------
 
 Nagios Plugin API (0=ok, 1=warn ...)
@@ -1345,7 +1352,7 @@ of each frame in the stacktrace (a tool like sentry could be used), if real erro
 ####################################################################################################
 
 
-7. Communication with others
+8. Communication with others
 ----------------------------
 
 Avoid to get a nerd
@@ -1479,7 +1486,7 @@ and you are the only one who is not laughing. It is up to you how to react. Be p
 
 ####################################################################################################
 
-8. Epilog
+9. Epilog
 ---------
 
 It is always possible to make things more complicated
