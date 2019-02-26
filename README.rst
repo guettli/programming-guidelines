@@ -1135,7 +1135,7 @@ way will decreases.
 
 I do not use RPM/DPKG to configure a system.
 
-Do you know why this is called "`file.absent <https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html#salt.states.file.absent>`_" and not "file.remove"?
+Do you know why modern configuration management tools like Ansible use the term "`file.absent <https://docs.ansible.com/ansible/latest/modules/file_module.html>`_" and not "file.remove"?
 
 `Google search for "Declarative vs Imperative" <https://www.google.com/search?q=Declarative+vs+Imperative>`_
 
