@@ -659,6 +659,10 @@ Passing around methods make things hard to debug
 
 Even in C you can pass around method-pointers. It's very common in JavaScript and sometimes it gets done in Python, too. It is hard to debug. IDE's can't resolve the code: "Find usages" don't work.  I try to avoid it. I prefer OOP (Inheritance) and avoid passing around methods or treating them like variables.
 
+I don't like `Closures (wikipedia) <https://en.wikipedia.org/wiki/Closure_(computer_programming)>`_
+
+I like it simple: Input-Processing-Output.
+
 Software Design Patterns are overrated
 ......................................
 
