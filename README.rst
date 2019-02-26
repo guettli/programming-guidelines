@@ -11,15 +11,15 @@ My personal programming guidelines. **Please provide feedback**, tell me what's 
 
 `4. Remote APIs <#4-remote_apis>`_
 
-`5. Op <#4-op>`_
+`5. Op <#5-op>`_
 
-`6. Networking <#5-networking>`_
+`6. Networking <#6-networking>`_
 
-`7. Monitoring <#6-monitoring>`_
+`7. Monitoring <#7-monitoring>`_
 
-`8. Communication with others <#7-communication-with-others>`_
+`8. Communication with others <#8-communication-with-others>`_
 
-`9. Epilog <#8-epilog>`_
+`9. Epilog <#9-epilog>`_
 
 
 1. Introduction
