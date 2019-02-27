@@ -968,17 +968,17 @@ If you store files, then avoid nested directory trees. It is complicated and if 
 
 Most storage servers support containers and `blobs <https://en.wikipedia.org/wiki/Binary_large_object>`_ inside a container. Containers in containers are not supported, and that's good, since it makes the environment simpler.
 
-Developers don't call mkdir
-...........................
+Code doesn't call mkdir
+.......................
 
 Code runs in an environment. This environment was created with configuration management.
 This means: source code usualy does not call mkdir. With other words: Creating directories
 is the part of the configuration management. Setting up the environment and executing code in this environment are two distinct parts. If your software runs, the environment does already exist.
-Code creating directories if they do not exist yet, should be cut into two parts. One is creating the environment (gets executed only once) and the second is the daily executing. These two distinct parts should be seperated.
+Code creating directories if they do not exist yet, should be cut into two parts. One part is creating the environment (gets executed only once) and the second part is the daily executing (which is 100% sure that the environment is like it is. With other words: the code can trust the environmen that the directory exists). These two distinct parts should be seperated.
 
-How to create directories if I should not do it with my software? With automated configuration management (Ansible, Chef, ...) or during installation (RPM/DPKG)
+How to create directories if I should not do it with my software? With automated configuration management (Ansible, Chef, ...) or during installation (RPM/DPKG).
 
-Exception: You create a temporary directory which is only needed for some seconds. But since switching from subprocess/shell calling to using libraries (see "Avoid calling command line tools") temporary files get used much less. More and more gets done in memory.
+Exception: You create a temporary directory which is only needed for some seconds. But since switching from subprocess/shell calling to using libraries (see "Avoid calling command line tools") temporary files get used much less.
 
 Debugging Performance
 .....................
