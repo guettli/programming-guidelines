@@ -1570,6 +1570,27 @@ Cut the bigger problem into smaller ones:
 
 BTW, why not use the PostgreSQL feature "Logical Replication"?
 
+Go with the flow, not with the hype
+...................................
+
+Flow: With "flow" I mean "mainstream". And mainstream is according to oxford dictionary: "The ideas, attitudes, or activities that are shared by most people and regarded as normal or conventional."
+
+Hype: According to wikipedia: "Hype (derived from hyperbole) is promotion, especially promotion consisting of exaggerated claims."
+
+But how to distinguish between a flow and a hype?
+
+My answer: Stats or more verbose "statistics".
+
+How to get stats?
+
+I like StackOverflow Tag-Trend. For example, you can compare "python" and "java". Maybe you have been coding Java since several years. You heard of python once or twice. But is it "flow/mainstream" or is it "hype"? Since you only know you context and not every developer and every project in the world, you can't know the answer. Be upright to yourself: You are like a small ant. You walked severals paths in the past, but you don't have the helicopter view. 
+
+Check this graph: http://sotagtrends.com/?tags=[java,python] you will see: Python is not just a hype it is the flow.
+
+Do not trust one source. Take a look at google trends: https://trends.google.de/trends/explore?date=today%205-y&q=%2Fm%2F05z1_,%2Fm%2F07sbkfb
+
+Go with the flow, not with the hype. Check the stats, not just our daily context.
+
 
 Read the Release Notes
 ......................
