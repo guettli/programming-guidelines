@@ -165,6 +165,16 @@ Imagine there is be a a Meta-Programming-Language (AFAIK this does not exist) an
 
 My conclusion: Use all features PostgreSQL has. Don't make live more complicated than necessary and don't restrict yourself to use only portable SQL.
 
+Where to not use PostgreSQL?
+............................
+
+ * For embedded systems SQLite fits better
+ * TB-scale full text search systems.
+ * Caching or high performance job queues: Redis fits better.
+ * Go with the flow: If you are wearing the admin hat (instead of the dev hat), and you should install (instead of develop) a product, then try the default db (sometimes MySQL) first. 
+ 
+
+Source: PostgreSQL general mailing list: https://www.postgresql.org/message-id/5ded060e-866e-6c70-1754-349767234bbd%40thomas-guettler.de
 
 
 DB Constraints are great, but are sometimes a hint to redundancy
