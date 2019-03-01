@@ -168,7 +168,8 @@ My conclusion: Use all features PostgreSQL has. Don't make live more complicated
 Where to not use PostgreSQL?
 ............................
 
-* For embedded systems SQLite fits better
+* For embedded systems SQLite may fit better
+  * Prefer SQLite if there will only be one process accessing the database at a time.  As soon as there are multiple users/connections, you need to consider going elsewhere
 * TB-scale full text search systems.
 * Caching or high performance job queues: Redis fits better.
 * Go with the flow: If you are wearing the admin hat (instead of the dev hat), and you should install (instead of develop) a product, then try the default db (sometimes MySQL) first. 
@@ -196,7 +197,7 @@ Nested transactions ... sounds great. But stop: What is `ACID <https://en.wikipe
 * Isolation
 * Durability
 
-Database transactions are atomic. If the transaction was sucessful, then it is \*D\*urable.
+Database transactions are atomic. If the transaction was successful, then it is \*D\*urable.
 
 Imagine you have one outer-transaction, and two inner transaction.
 
@@ -212,7 +213,7 @@ My conclusion: Transactions do not nest
 
 Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atomic-in-django
 
-
+The "partial transaction" concept in PostgreSQL is called savepoints.  https://www.postgresql.org/docs/devel/sql-savepoint.html  They capture linear portions of a transaction's work.  Your use of them may be able to express a hierarchical expression of updates that may be preserved or rolled back, but the concept in PostgreSQL is not itself hierarchical.
 
 Roles vs Users+Groups
 .....................
