@@ -272,7 +272,7 @@ In most cases software does create, read, update, delete data. See `CRUD <https:
 
 The "update" part is the most difficult one.
 
-Sometimes CRD helps: Do not implement the update operation. Use delete+create. But be sure to use transactions to avoid data loss: "BEGIN; DELETE ...; INSERT; COMMIT;"
+Sometimes CRD helps: Do not implement the update operation. Use delete+create. But be sure to use transactions to avoid data loss: "BEGIN; DELETE ...; INSERT ...; COMMIT;"
 
 Translating to SQL terms:
 
