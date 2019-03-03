@@ -242,7 +242,8 @@ If you use the role model, then one FK is enough. Easier data structure, easier 
 Zen of Python
 .............
 
-`Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_
+
+`Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_ (Written by Tim Peters in the year 2004)
 
 * Beautiful is better than ugly.
 * Explicit is better than implicit.
