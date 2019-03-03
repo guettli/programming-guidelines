@@ -266,7 +266,7 @@ Zen of Python
 * If the implementation is easy to explain, it may be a good idea.
 * Namespaces are one honking great idea -- let's do more of those!
 
-In the year 2001 I knew these programming languages: Basic, Pascal, Assembler, C, C++, Prolog, Visual Basic, Java, JavaScript, tcl/tk, Perl.
+In the year 2001 I knew these programming languages: Basic, Pascal, Assembler, C, C++, Prolog, Lisp, Visual Basic, Java, JavaScript, tcl/tk, Perl.
 
 I was unhappy with all of them and looked for a new language. I narrowed down the languages I was interested in and there were two choices left. One was ruby, the other was python. I choose Python. It looked simpler, like executable pseudo-code. Since 2001 I use it nearly every work-day. I like it, and up to now no other language attracts me. 
 
