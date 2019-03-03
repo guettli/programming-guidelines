@@ -244,7 +244,7 @@ Zen of Python
 .............
 
 
-`Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_ (Written by Tim Peters in the year 2004)
+`Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_ (Written by Tim Peters in the year 1999)
 
 * Beautiful is better than ugly.
 * Explicit is better than implicit.
@@ -265,6 +265,14 @@ Zen of Python
 * If the implementation is hard to explain, it's a bad idea.
 * If the implementation is easy to explain, it may be a good idea.
 * Namespaces are one honking great idea -- let's do more of those!
+
+In the year 2001 I knew these programming languages: Basic, Pascal, Assembler, C, C++, Prolog, Visual Basic, Java, JavaScript, tcl/tk, Perl.
+
+I was unhappy with all of them and looked for a new language. I narrowed down the languages I was interested in and there were two choices left. One was ruby, the other was python. I choose Python. It looked simpler, like executable pseudo-code. Since 2001 I use it nearly every work-day. I like it, and up to now no other language attracts me. 
+
+I am not married with Pyhon. I am willing to change. But the next language needs to be better. Up to now I see no alternative.
+
+JavaScript has the big benefit, that it can be executed in the browser. But I don't like it. Why I don't like it? I don't know. Sometimes feelings are more important than facts.
 
 
 CRD
