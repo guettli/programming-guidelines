@@ -889,7 +889,30 @@ Avoid magic or uncommon things
 * hard links in linux file systems.
 * file system ACLs (Access control lists). Try to use as little as possible chmod/chown.
 * git submodules (Please use configuration management, deployment tools, ...)
-* gtk/qt/tk/tkinter: Avoid to write a native GUI. Use Django and its great admin web interface. If you are forced to use a native gui, then I would use QT (for example via PySide)
+
+Avoid writing a native GUI
+..........................
+
+Imagine you have developed web applications up to now. You have never developed a native gui before. Now a new potential customer has a use case and you think: This time a native GUI would be a good solution.
+
+Caution: slow down. Developing a native gui is much more work and needs much more time than you think.
+
+The edit, compile, run cycle is much longer. This will slow you down.
+
+If you develop a native GUI, you might need several mouse clicks until you reach the part where you improving the current code.
+And like all humans, you are not perfect, and you have a typo. The application crashes, and you need to do the edit, compile, run, five clicks cylce again... 
+
+Compare this to a web application: You do not need to do five clicks to reach the part where you improve the current code. You just hit ctrl-r and reload the page. The stateless http protocol makes this possible. I love it.
+
+
+Next argument: The native GUI community is tiny compared to web development. If you have a question, you have only a few people to talk to.
+
+
+I am at the Chemnitzer Linux Days yearly, and meat a lot of new comers there. Some people new to software development think: "I just want to develop a simple app for me. No need to run a web server. I want a real application running on my pc."
+
+My advice: use Python and Django. The things you learn have more value. The knowledge you gain can be used to build cool stuff. If you have a question, there is always someone who has an advice.
+
+See the TagTrend: http://sotagtrends.com/?tags=[gtk,qt,django]
 
 Learn one programming language, not ten.
 ........................................
