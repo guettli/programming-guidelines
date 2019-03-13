@@ -912,7 +912,7 @@ I am at the Chemnitzer Linux Days yearly, and meat a lot of new comers there. So
 
 My advice: use Python and Django. The things you learn have more value. The knowledge you gain can be used to build cool stuff. If you have a question, there is always someone who has an advice.
 
-See the TagTrend: http://sotagtrends.com/?tags=[gtk,qt,django]
+See the `TagTrend gtk, qt, django <http://sotagtrends.com/?tags=[gtk,qt,django]>`_
 
 Learn one programming language, not ten.
 ........................................
