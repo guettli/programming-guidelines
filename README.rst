@@ -549,6 +549,23 @@ since the created JavaScript source is intended for the interpreter only. Not fo
 With other words: source code gets created by humans
 with the help of an editor or IDE.
 
+Don't believe the "automatically create foo" hype
+.................................................
+
+If you are new to software development you are fascinated by the magic. You can create things. In this section I call
+the magic output "foo".
+
+Yes, you can automatically create foo with a script. Whatever "foo" is in your context: It has no value.
+
+Look at the basic IPO pattern: Input - Processing - Output (in this case "foo").
+
+Do not store "foo", the output of your script, in a database. Do not store "foo" in version control.
+
+It has no value since you can always create "foo" again. You just need the input and your script.
+
+You can store "foo" in a cache to improve performance. But do not store it permanently. Don't make backup of it.
+
+This section is just the more general view of "Source code generation is a stupid idea".
 
 
 Regex are great - But it's like eating rubish
