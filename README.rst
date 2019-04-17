@@ -435,6 +435,12 @@ Not one branch per customer
 Some people use git branches to store the individual settings for customers or installations. Don't do this.
 Create one git repo for every customer or installation.
 
+The best commits remove code
+............................
+
+For me, the best commits adds some lines to the docs, add some lines to tests and removes more lines than it adds to the production code.
+
+
 
 Time is too short to run all tests before commit+push
 .....................................................
