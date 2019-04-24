@@ -367,6 +367,19 @@ Is there a feeling like "too much work, too complicated"? Installing a library i
 
 Check the license of the library. If it is BSD, MIT or Apache like, then use the library.
 
+Avoid toilet paper programming
+..............................
+
+What is "toilet paper programming"? This is a pattern which was often used in the past: There is something wrong inside - something is smelling. Let's write a wrapper. Still something wrong? Let's write a second wrapper.....
+
+All these wrappers do not solve the underlaying issue.
+
+In the past there were less alternatives. And since you hand no choices, you were forced to use a particular tool. If this did not work the way you wanted it, you need to write a wrapper.
+
+Today you have much more alternatives. If tool x does not work work the way you want it to, you can use tool y.
+
+I am happy that the anti-pattern "toilet paper programming" gets used less often today. 
+
 Avoid GPL
 .........
 
