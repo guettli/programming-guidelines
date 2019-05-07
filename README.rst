@@ -1774,7 +1774,7 @@ Related things I wrote
 
 * `Deadends of Information Technology <https://github.com/guettli/deadends-of-it>`_
 * `Why I like Django and why I like SAP <https://github.com/guettli/why-i-like-django-and-sap>`_
-
+* `Leaving the autopilot <https://github.com/guettli/leaving-the-autopilot>`_
 
 
 Thank you
