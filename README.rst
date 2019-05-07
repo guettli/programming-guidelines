@@ -1769,6 +1769,12 @@ job of the team leader", then I think it is time stop acting like a dumb sleepin
 Get resonsible. React relaxed if nobody is listening or understanding your concerns.
 "The Best Path to Long-Term Change Is Slow, Simple and Boring."
 
+Related things I wrote
+......................
+
+* `Deadends of Information Technology <https://github.com/guettli/deadends-of-it>`_
+* `Why I like Django and why I like SAP <https://github.com/guettli/why-i-like-django-and-sap>`_
+
 
 
 Thank you
