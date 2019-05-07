@@ -746,6 +746,10 @@ red, green, refactor. More verbose: make the test fail, make the test pass, refa
 From bug to fix
 ...............
 
+First make your bug reproducible. If it is reproducible, then it is easy to fix it.
+
+Make it reproducible in a test.
+
 Imagine there is a bug in your method do_foo(). You see the mistake easily and you fix it. Done?
 
 I think you are not done yet. I try to follow this guideline:
@@ -813,7 +817,7 @@ You should be able to create a demo system with one command (or one click).
 
 Write the creation of test data once and use it for both: presentions and automated tests.
 
-Do not use random data for testing. It just makes no sense: tests should be reproducable.
+Do not use random data for testing. It just makes no sense: tests should be reproducible.
 
 If your application is multi-tenant (support multible clients), then you need a demo tenant. All automated tests should use this tenant.
 
