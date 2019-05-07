@@ -603,7 +603,9 @@ CSV is not a data format. It is an illness.
 
 If your customer sends you tabular data in Excel, read the excel directly. Do not convert it to CSV just because you think this is easier.
 
-Use a library like: https://pypi.python.org/pypi/xlrd
+If a customer wants you to send him CSV, ask if he can consume JSON.
+
+There are great libraries for reading and writing Excel. For example: `openpyxl <https://openpyxl.readthedocs.io/en/stable/>`_
 
 
 Give booleans a "positive" name
