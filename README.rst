@@ -312,7 +312,7 @@ Reasons:
 * If a error happens in a shell script, the interpreter steps silently to the next line. Yes I know you can use "set -e". But  you don't get a stacktrace. Without stacktrace you waste a lot of time to analyze why this error happened.
 * AFAIK you can't do object oriented programming in a shell. I like inheritance.
 * AFAIK you can't raise exceptions in shell scripts.
-* Shell-Scripts tend to call a lot of subprocesses. Every call to grep,head,tail,cut  creates a new process. This tends to get slow.
+* Shell-Scripts tend to call a lot of subprocesses. Every call to grep, head, tail, cut  creates a new process. This tends to get slow. I have seen shell scripts which start thousand processes per second. After re-writing them in Python they were 100 times faster und 100 times more readable.
 * I do this "find ... | xargs" daily, but only while using the shell interactively. But what happends if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find .. | grep | xargs" does not work any more .... It is dirty and will never get clean.
 * Look at all the pitfalls: ` Bash Pitfalls <https://mywiki.wooledge.org/BashPitfalls>`_ My conclusion: I prefer to walk on solid ground, I don't write shell scripts any more.
 
