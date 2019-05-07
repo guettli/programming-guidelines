@@ -574,7 +574,7 @@ Don't believe the "automatically create foo" hype
 If you are new to software development you are fascinated by the magic. You can create things. In this section I call
 the magic output "foo".
 
-Yes, you can automatically create foo with a script. Whatever "foo" is in your context: It has no value.
+Yes, you can automatically create foo with a script. Whatever "foo" is in your context: It has no value. It is worth nothing.
 
 Look at the basic IPO pattern: Input - Processing - Output (in this case "foo").
 
