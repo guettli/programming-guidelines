@@ -1416,7 +1416,7 @@ After writing and working with nagios checks for several years I think the evalu
 Checks vs Logs
 ..............
 
-Checks are for operators and logs are for developeres.
+Checks are for operators and logs are for developers.
 
 Since there are always some temporary network failures,
 checks help more than logs do.
