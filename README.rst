@@ -499,6 +499,8 @@ Threads and Async are fascinating. BUT: It's hard to debug. You will need much l
 There is one tool and one concept that is rock solid, well known, easy to debug and available everywhere and it is great for parallel execution. The tool is called "operating system" and the concept is called "process". Why re-invent it? You think starting a new process is "expensive" ("it is too slow")? Just, do not start a new process for every small method you want to call in parallel. Use a `Task Queue <https://www.fullstackpython.com/task-queues.html>`_.
 Let this tool handle the complicated async stuff and keep your own code simple like running in one process with one thread. It is all about IPO: Input-Processing-Output.
 
+There is a good reason to use async: The  `C10k Problem <https://en.wikipedia.org/wiki/C10k_problem>`_. BUT: I guess you don't have this problem. If you don't have this problem, then don't use technology which was invented to solve this issue :-)
+
 Don't waste time doing it "generic and reusable" if you don't need to
 .....................................................................
 
