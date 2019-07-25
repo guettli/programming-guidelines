@@ -821,7 +821,7 @@ Write the creation of test data once and use it for both: presentions and automa
 
 Do not use random data for testing. It just makes no sense: tests should be reproducible.
 
-If your application is multi-tenant (support multible clients), then you need a demo tenant. All automated tests should use this tenant.
+If your application is multi-tenant (support multiple customers in one system), then you need a demo tenant. All automated tests should use this tenant.
 
 I don't see why a special library for creating test data is needed. If you use an ORM in your production code, then use the ORM to create your test data.
 
