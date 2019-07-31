@@ -42,7 +42,9 @@ Relaxed focus on monitor
 
 Do not look at the keyboard while you type. Have a relaxed focus on your monitor.
 
-I type with ten fingers. It's like flying if learned it. Your eyes can stay on the rubbish you type, and you don't need to move your eyes down (to keyboard) and up (to monitor) several hundred times per day. This saves a lot of energy. Avoid to switch between mouse and keyboard too much. 
+I type with ten fingers. It's like flying if you learned it. Your eyes can stay on the rubbish you type, and you don't need to move your eyes down (to keyboard) and up (to monitor) several hundred times per day. This saves a lot of energy.
+
+Avoid to switch between mouse and keyboard too much. 
 
 I like lenovo keyboards with track point. If you want the track point to have more grip you can use sandpaper. Here are some images to illustrate what I use https://plus.google.com/108148237674350536526/posts/jF1Du1YwJwr?hl=de
 
