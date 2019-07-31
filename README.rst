@@ -1341,7 +1341,14 @@ Use Systemd
 
 It is available, don't reinvent. Don't do double-fork magic any more. Use a systemd service with Type=simple. See `Systemd makes many daemons obsolete <https://stackoverflow.com/a/30189540/633961>`_
 
+Don't use Systemd "instantiated units"
+......................................
 
+Systemd allows you to create template and create several services from this template. See: http://0pointer.de/blog/projects/instances.html
+
+First I thought this is great. But some months later I realized: It is better to have one source for templates: Your configuration management. If you want several almost equal services, then use templates in your configuration management.
+
+This makes it simpler.
 
 If you do coding to implement backup ...
 ........................................
