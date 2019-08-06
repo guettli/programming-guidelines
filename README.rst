@@ -1350,6 +1350,19 @@ First I thought this is great. But some months later I realized: It is better to
 
 This makes it simpler.
 
+etckeeper is handy
+..................
+
+The tool etckeeper stores changes in the /etc directory in a git repository. This does not make much sense for containers. But for servers which live several weeks it makes sense. You don't need to push the changes to a different location. It is very handy. Example:
+
+```
+cd /etc/apt
+git log .
+
+---> you see all git commits which changed files in the /etc/apt directory.
+```
+
+
 If you do coding to implement backup ...
 ........................................
 
