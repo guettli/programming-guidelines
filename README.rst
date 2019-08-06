@@ -970,7 +970,7 @@ Learn "git bisect"
     c8bed9b56861ea626833637e11a216555d7e7414 is the first bad commit
     Author: ...
 
-
+But if your pull-requests get tested before they get merged, then you hardly need "git bisect". 
 
 Conditional Breakpoints
 .......................
