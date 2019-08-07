@@ -1377,7 +1377,12 @@ The tool etckeeper stores changes in the /etc directory in a git repository. Thi
 
 But etckeeper is no backup tool. It is just a handy tool to see what has changed and when this change happened.
 
-We wrap it and dump additional information into /etc/etckeeper/extra before "git commit". We add: /var/spool/cron, output of hwinfo, lsblk, fdisk, pvdisplay, vgdisplay, lvdisplay, dpkg/rpm package list, postgres config.
+We wrap it and dump additional information into /etc/etckeeper/extra/ before "git commit". We add: /var/spool/cron, output of hwinfo, lsblk, fdisk, pvdisplay, vgdisplay, lvdisplay, dpkg/rpm package list, postgres config.
+
+Does it make sense to add the output of `df` into /etc/etckeeper/extra/ ?
+
+I think it makes no sense, since this changes daily. If no change was made to the configuration, then there should be no commit in /etc/.git.
+
 
 If you do coding to implement backup ...
 ........................................
