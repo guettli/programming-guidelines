@@ -1360,6 +1360,9 @@ The tool etckeeper stores changes in the /etc directory in a git repository. Thi
 
     ---> you see all git commits which changed files in the /etc/apt directory.
 
+But etckeeper is no backup tool. It is just a handy tool to see what has changed and when this change happened.
+
+We wrap it and dump additional information into /etc/etckeeper/extra before "git commit". We add: /var/spool/cron, output of hwinfo, lsblk, fdisk, pvdisplay, vgdisplay, lvdisplay, dpkg/rpm package list, postgres config.
 
 If you do coding to implement backup ...
 ........................................
