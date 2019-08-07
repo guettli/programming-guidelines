@@ -1211,6 +1211,21 @@ Misc
 * `Release early, release often <https://en.wikipedia.org/wiki/Release_early,_release_often>`_
 * `Rough consensus and running code. <https://en.wikipedia.org/wiki/Rough_consensus>`_
 
+Background tasks should preserving Buffer Cache State
+.....................................................
+
+You should know what this article talks about. But of course you don't need to recall every detail.
+
+https://insights.oetiker.ch/linux/fadvise/
+
+https://github.com/Feh/nocache
+
+Use case: you use `rsync` to backup a linux machine. The `rsync` process should not slow down the production environment. 
+
+By default linux thinks "A process just read file 'foo'. Let's keep the content in the buffer cache". But rsync runs in background and it does not touch the same file twice.
+
+It makes not sense to store the files which get read by `rsync` in the buffer cache. The buffer cache should be available for the production environment.
+
 ####################################################################################################
 
 4. Remote APIs
