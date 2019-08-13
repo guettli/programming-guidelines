@@ -603,7 +603,7 @@ Current Linux distributions ship with a grep versions which has the `-P` option 
 CSV - Comma-separated values
 ............................
 
-CSV is not a data format. It is an illness.
+CSV is not a data format. It is an illness. See the introduction at: https://docs.python.org/3/library/csv.html
 
 If your customer sends you tabular data in Excel, read the excel directly. Do not convert it to CSV just because you think this is easier.
 
