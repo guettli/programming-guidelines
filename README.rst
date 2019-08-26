@@ -919,6 +919,7 @@ Avoid magic or uncommon things
 * file system ACLs (Access control lists). Try to use as little as possible chmod/chown.
 * git submodules (Please use configuration management, deployment tools, ...)
 * `seek() <https://en.cppreference.com/w/c/io/fseek>`_. Stateless is better. If you use `seek()` the file position is a state. Sooner or later the position (state) will be wrong.
+* Scripts which get executed via OpenSSH `ForceCommand <http://man.openbsd.org/OpenBSD-current/man5/sshd_config.5#ForceCommand>`_ or "command" in .ssh/authorized_keys. SSH is not an API use http.
 
 Avoid writing a native GUI
 ..........................
