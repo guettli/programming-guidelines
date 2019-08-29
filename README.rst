@@ -517,10 +517,10 @@ Use a modern IDE
 Time for vi and emacs has passed. Use a modern IDE on modern hardware (SSD disk). For example PyCharm. I switched from Emacs to PyCharm in 2016. I used Emacs from 1997 until 2015 (18 years).
 
 
-Easy to read code: Use guard clauses
-....................................
+Easy to read code: Use guard clauses (early return)
+...................................................
 
-Guard clauses help to avoid indentation. It makes code easier to read and understand. See http://programmers.stackexchange.com/a/101043/129077
+Guard clauses (early return) help to avoid indentation. It makes code easier to read and understand. See http://programmers.stackexchange.com/a/101043/129077
 
 Example::
 
