@@ -591,8 +591,8 @@ You can store "foo" in a cache to improve performance. But do not store it perma
 This section is just the more general view of "Source code generation is a stupid idea".
 
 
-Regex are great - But it's like eating rubish
-.............................................
+Regex are great - But it's like eating rubbish
+..............................................
 
 Yes, I like regular expression. But slow down: What do I do, if I use a regex? I think it is "parsing". I remember to have read this some time ago: "Time is too short to rewrite parsers". Don't parse data! We live in the 21 century. Consume high level data structures like json, yaml or protcol buffers. If possible, refuse to accept CSV or custom text format as input data.
 
