@@ -330,7 +330,7 @@ Portable Shell Scripts
 
 I think writing portable shell scripts and avoiding bashism (shell scripts which use features which are only available in the bash) is a useless goal. It is wasting time. It feels productive, but it is not.
 
-I think there are two environments: You either have /bin/bash, then use it. Or you are in an embedded environment where only a simple busybox shell is available. But in most cases /bin/bash is available - use it.
+Avoid `#!/bin/sh`. The interpreter could be bash, dash or something else. See `Comparison of command shells <https://en.wikipedia.org/wiki/Comparison_of_command_shells>`_. Please be explicit. Use `#!/bin/your-favorite-shell`.
 
 If I look at this page (`DashAsBinSh <https://wiki.ubuntu.com/DashAsBinSh>`_), which explains how to port shell scripts to /bin/dash I would like to laugh, but I can't because I think it is sad that young and talented people waste their precious time which this nonsense.
 
