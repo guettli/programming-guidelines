@@ -332,7 +332,7 @@ I think writing portable shell scripts and avoiding bashism (shell scripts which
 
 Avoid `#!/bin/sh`. The interpreter could be bash, dash or something else. See `Comparison of command shells <https://en.wikipedia.org/wiki/Comparison_of_command_shells>`_. Please be explicit. Use `#!/bin/your-favorite-shell`.
 
-If I look at this page (`DashAsBinSh <https://wiki.ubuntu.com/DashAsBinSh>`_), which explains how to port shell scripts to /bin/dash I would like to laugh, but I can't because I think it is sad that young and talented people waste their precious time which this nonsense.
+If I look at this page (`DashAsBinSh <https://wiki.ubuntu.com/DashAsBinSh>`_), which explains how to port shell scripts to /bin/dash I would like to laugh, but I can't because I think it is sad that young and talented people waste their precious time which this nonsense. Since systemd gets used, the shell gets started less often (compared to the old system-V or BSD init). This architectural change brought improvement. And I think that using dash instead of bash brings no measurable benefit today.
 
 If you are not able to create a dependency to bash, then solve this issue. Use rpm/dpkg or configuration management to handle "my script foo.sh needs bash".
 
