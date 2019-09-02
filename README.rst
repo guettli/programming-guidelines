@@ -332,11 +332,9 @@ I think writing portable shell scripts and avoiding bashism (shell scripts which
 
 I think there are two environments: You either have /bin/bash, then use it. Or you are in an embedded environment where only a simple busybox shell is available. But in most cases /bin/bash is available - use it.
 
-If I look at this page, which explains how to port shell scripts to /bin/dash I would like to laugh, but I can't because I think it is sad that young and talented people waste their precious time which this nonsense.
+If I look at this page (`DashAsBinSh <https://wiki.ubuntu.com/DashAsBinSh>'_), which explains how to port shell scripts to /bin/dash I would like to laugh, but I can't because I think it is sad that young and talented people waste their precious time which this nonsense.
 
 If you are not able to create a dependency to bash, then solve this issue. Use rpm/dpkg or configuration management to handle "my script foo.sh needs bash".
-
-https://wiki.ubuntu.com/DashAsBinSh
 
 I know that there are some edge cases where the bash is not available, but in most cases the time to get things done is far more important. Execution performance is not that important. First: get it done including automated tests.
 
