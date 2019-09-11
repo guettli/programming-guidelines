@@ -197,29 +197,11 @@ Imagine you have one outer-transaction, and two inner transaction.
 
 Is the result of INNER1 durable or not?
 
-My conclusion: Transactions do not nest
+Conclusion: Transactions do not nest
 
 Related: http://stackoverflow.com/questions/39719567/not-nesting-version-of-atomic-in-django
 
 The "partial transaction" concept in PostgreSQL is called savepoints.  https://www.postgresql.org/docs/devel/sql-savepoint.html  They capture linear portions of a transaction's work.  Your use of them may be able to express a hierarchical expression of updates that may be preserved or rolled back, but the concept in PostgreSQL is not itself hierarchical.
-
-Roles vs Users+Groups
-.....................
-
-What is the difference between roles and groups?
-
-There are several verbose and philosophical explanations. I like the way PostgreSQL handles it.
-
-There is no more a distinction between a user and a group. A role can contain a role and a user is a role.
-
-This makes some things easier and I whish I had choosen the role model and not the user+group model which
-gets used by Django's auth app.
-
-Imagine you have an issue tracking system. If you have the user+group model and you want to give the responsibility
-of this issue to someone. You need two foreign keys if you use the user+group model: You can give the responsibility
-to a particular user or you can give the responsibility to a group. Two FKs.
-
-If you use the role model, then one FK is enough. Easier data structure, easier interface, less code, less bugs ...
 
 
 ####################################################################################################
