@@ -750,21 +750,6 @@ Several months later you discover a bug in your code. Or worse: your customer di
 
 If you fix foo() you need to extend test_foo() or write a new method test_foo_with_special_input(). Again both changes (production code and testing code) walk into the git repo like a pair of young lovers holding hands :-)
 
-Testing: Checking if a method was called or not makes no sense
-..............................................................
-
-If you are testing something, then remeber it is all about: Input-Processing-Output.
-
-If your input is x you might want the output to be y.
-
-For me it does not make any sense to use the method  
-`assert_called() <https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock.assert_called>`_
-or the other assert_called_xxx() methods.
-
-You treat your code like a black box. You provide input, and you check the output. If something was refactored and the
-method was completely re-written from scratch, then your test still will work: Same input, same output. 
-
-If a helper-method was called during the processing (which some people check with assert_called_xxx()).... who cares? I don't, as long as the desired output gets created.
 
 Creating test data is much more important than you initial think
 ................................................................
