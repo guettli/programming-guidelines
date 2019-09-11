@@ -110,15 +110,8 @@ https://en.wikipedia.org/wiki/Cardinality_(data_modeling)
 
 If this is new to you, I will give you two examples:
 
-One invoice has several invoice positions. For example you buy three books in one order,
-the invoice will have three invoice positions. This is a 1:N relationship. The invoice position is
-contained in exactly one invoice.
-
-If you look at tags, for example at the Question+Answer site stackoverflow: One question can be related to several
-tags/topics and of course a topic can be set on several questions. For example you have a strange UnicodeError in Python
-then you can set the tags "python" and "unicode" on your question. This is an N:M relationship.
-
-One more well know example of N:M is user and groups.
+* 1:N --> One invoice has several invoice positions. For example you buy three books in one order, the invoice will have three invoice positions. This is a 1:N relationship. The invoice position is contained in exactly one invoice.
+* N:M --> If you look at tags, for example at the Question+Answer site stackoverflow: One question can be related to several tags/topics and of course a topic can be set on several questions. For example you have a strange UnicodeError in Python then you can set the tags "python" and "unicode" on your question. This is an N:M relationship. One more well know example of N:M is user and groups.
 
 
 Conditionless Data Structures
@@ -173,19 +166,12 @@ Where to not use PostgreSQL?
 * For embedded systems SQLite may fit better
   * Prefer SQLite if there will only be one process accessing the database at a time.  As soon as there are multiple users/connections, you need to consider going elsewhere
 * TB-scale full text search systems.
+* Scientific number crunching: `hdf5 <https://en.wikipedia.org/wiki/Hierarchical_Data_Format>`_
 * Caching or high performance job queues: Redis fits better.
 * Go with the flow: If you are wearing the admin hat (instead of the dev hat), and you should install (instead of develop) a product, then try the default db (sometimes MySQL) first. 
  
 
 Source: PostgreSQL general mailing list: https://www.postgresql.org/message-id/5ded060e-866e-6c70-1754-349767234bbd%40thomas-guettler.de
-
-
-DB Constraints are great, but are sometimes a hint to redundancy
-................................................................
-
-Database constraints are great since you can fix the very important base of your fancy coding. But what does a constraint do? It ensures that data is valid. Sometimes it can be a hint that your data contains redundancy. If you need to keep column A and column B in sync, then why not put all information into one column? Then you don't need to keep both in sync. Maybe a simpler database layout would help and then you don't need a constraint. This pattern applies sometimes, not always. 
-
-Here is a good example which explains that if you avoid redundancy, you can avoid complicated constraints: http://dba.stackexchange.com/a/168130/5705
 
 Transactions do not nest
 ........................
