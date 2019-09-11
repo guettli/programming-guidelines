@@ -245,8 +245,8 @@ I am not married with Pyhon. I am willing to change. But the next language needs
 JavaScript has the big benefit, that it can be executed in the browser. But I don't like it. Why I don't like it? I don't know. Sometimes feelings are more important than facts.
 
 
-CRD
-...
+CRUD --> CRD
+............
 
 In most cases software does create, read, update, delete data. See `CRUD <https://en.wikipedia.org/wiki/Create,_read,_update_and_delete>`_
 
@@ -291,7 +291,8 @@ Even Crontab lines are dangerous. Look at this:
     @weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
 
 
-Do you spot the big risk? If TMPDIR is not set, then the `find` command will not fail. It will delete files in all sub directories!
+Do you spot the big risk? 
+
 
 Portable Shell Scripts
 ......................
@@ -306,6 +307,7 @@ If you are not able to create a dependency to bash, then solve this issue. Use r
 
 I know that there are some edge cases where the bash is not available, but in most cases the time to get things done is far more important. Execution performance is not that important. First: get it done including automated tests.
 
+
 Server without a shell is possible
 ..................................
 
@@ -317,9 +319,6 @@ after the other. In the past the boot process and the start/stop scripts were sh
 systemd exists.
 
  
-
-
-
 Avoid calling command line tools
 ................................
 
@@ -347,6 +346,10 @@ In the past there were less alternatives. And since you hand no choices, you wer
 Today you have much more alternatives. If tool x does not work work the way you want it to, you can use tool y.
 
 I am happy that the anti-pattern "toilet paper programming" gets used less often today. 
+
+Example: WxPython (GUI toolkit) wraps WxWindows wraps gtk wraps xlib. 
+
+Good news: the open source libraries are getting better and better. Today wrappers get used less often.
 
 Avoid GPL
 .........
@@ -452,12 +455,12 @@ system packages (rpm/dpkg) and your language (pip for python).
 
 
 
-Jenkins
-.......
+CI Config
+.........
 
-If you use Jenkins or an other GUI for continuous integration be sure to sure to keep it simple. Yes, modern tools like Jenkins can do a lot. With every new version they get even more turing complete (this was a joke, I hope you understood it). Please do speration of concerns. Jenkins is the GUI to start a job. Then the jobs runs, and then you can see the result of the job via Jenkins. If you do complex condition handling "if ... then ... else ..." inside Jenkins, then I think you are on the wrong track.
+CI tools (gitlab, travis, jenkins) usualy have a web gui. Keep the things you configure with the GUI simple. Yes, modern ci tools can do a lot. With every new version they get even more turing complete (this was a joke, I hope you understood it). Please do speration of concerns. The CI tool is the GUI to start a job. Then the jobs runs, and then you can see the result of the job in your browser. If you do configure condition handling "if ... then ... else ..." inside the web-gui, then I think you are on the wrong track.
 
-Jenkins calls a command line. To make it easy for debugging and development this job should be callable via the command line, too. With other word: Jenkins gets used to collect the arguments. Then a command line script gets called. Then Jenkins displays the result for you. I think it is wise to avoid a complex Jenkins setup. If you want to switch to a different tool (gitlab or travis), then this is easy if your logic is in scripts and not in jenkins configuration.
+The ci tool calls a command line. To make it easy for debugging and development this job should be callable via the command line, too. With other word: the web GUI gets used to collect the arguments. Then a command line script gets called. Then the web GUI displays the result for you. I think it is wise to avoid a complex CI config. If you want to switch to a different ci tool (example from jenkins to gitlab), then this is easy if your logic is in scripts and not in ci tool configuration.
 
 Avoid Threads and Async
 .......................
