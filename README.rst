@@ -559,6 +559,7 @@ You can store "foo" in a cache to improve performance. But do not store it perma
 
 This section is just the more general view of "Source code generation is a stupid idea".
 
+TODO: Example.
 
 Regex are great - But it's like eating rubbish
 ..............................................
@@ -673,9 +674,8 @@ Keep this time small. This is related to "care for new comers". If you need seve
 Setting up a new development environment should be easy
 .......................................................
 
-This happened to me several times: I wanted to improve some software. Up to now I only used the software,
-now I want to write a patch. If setting up a new development environment is too complicated or not documented,
-then I will resign and won't provide a patch. These steps need to be simple for people starting from scratch:
+This happened to me several times: I wanted to improve some open source software. Up to now I only used the software,
+now I want to write a patch. If setting up a new development environment and running the tests is too complicated or not documented, then I will resign and won't provide a patch. These steps need to be simple for people starting from scratch:
 
 * check out source from version control
 * check that all tests are working (before modifying something)
@@ -692,6 +692,8 @@ Even in C you can pass around method-pointers. It's very common in JavaScript an
 
 I don't like `Closures (wikipedia) <https://en.wikipedia.org/wiki/Closure_(computer_programming)>`_
 
+For simple use cases like a custom compare operator for sort methods are ok.
+
 I like it simple: Input-Processing-Output.
 
 Software Design Patterns are overrated
@@ -701,14 +703,6 @@ If you need several pages in a book to explain a software design pattern, then i
 I think Software Design Patterns are overrated.
 
 Why are so many books about software design patterns and nearly no books about database design patterns?
-
-Time is too short for "git rebase" vs "git merge" discussions
-.............................................................
-
-What's the net result of "git rebase" vs "git merge" discussion? The result is source code. Who cares how source code got into the current state? Me, but only sometimes. Archeology is interesting .... but more interesting is the future, since you can influence it.
-
-I hardly ever look at the graph of a git repository. But I love the "History for selection" feature of my favorite IDE. This way I can see the history of a part of the whole source code file.
-
 
 Test Driven Development
 .......................
