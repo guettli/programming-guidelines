@@ -520,6 +520,7 @@ Example::
 
 Look at the actual code which does something. I used five lines with `....` points for it. I think more indendation, makes the code more complex. The "return" simplifies the code. For me the second version is much easier to read.
          
+For Python there exists a "complexity checker": `Design checker <http://pylint.pycqa.org/en/latest/technical_reference/extensions.html#design-checker>`_.
 
 Source code generation is a stupid idea
 .......................................
