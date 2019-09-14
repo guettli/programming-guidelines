@@ -477,8 +477,9 @@ Don't waste time doing it "generic and reusable" if you don't need to
 
 If you are doing some kind of software project for the first time, then focus on getting it done. Don't waste time to do it perfect, reusable, fast or portable. You don't know the needs of the future today. One main goal: Try to make your code easy to understand without comments and make the customer happy. First get the basics working, then tests and CI, then listen to the new needs, wishes and dreams of your customers.
 
-If you are developing web or server applications, don't waste time for making your code working on Linux and MS-Windows. Focus on Linux.
+Example: If you are developing web or server applications, don't waste time for making your code working on Linux and MS-Windows. Focus on one platform.
 
+See `Minimum viable product <https://en.wikipedia.org/wiki/Minimum_viable_product>`_
 
 Use a modern IDE
 ................
@@ -1412,7 +1413,7 @@ After writing and working with nagios checks for several years I think the evalu
 Checks vs Logs
 ..............
 
-Checks are for operators and logs are for developers.
+Checks are mostly for operators and logs are mostly for developers.
 
 Since there are always some temporary network failures,
 checks help more than logs do.
