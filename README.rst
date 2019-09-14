@@ -1209,8 +1209,9 @@ Now we provide import-FOO, import-BAR, import-qwerty ...
 Don't set up a SMTP daemon
 ..........................
 
-If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP. You will have much more trouble if you set up an SMTP daemon.
+If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP and poll for new mail N seconds. Live is easier without being responsible for a SMTP server.
 
+I know this conflicts with the general guideline "avoid polling".
 
 ####################################################################################################
 
