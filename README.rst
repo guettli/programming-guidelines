@@ -1386,7 +1386,7 @@ Please choose V2. It is simpler, it is easier to understand, it is less error pr
 traceroute won't help you
 .........................
 
-If you have trouble with a tcp connection, then use tcptraceroute. Again \*tcp\*traceroute. It is the tool for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: normal traceroute uses UDP, not TCP.
+If you have trouble with a tcp connection, then use tcptraceroute. It can help to find the firewall which blocks your IP packages trying to get from host A to host B. Again \*tcp\*traceroute. It is the tool for tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason: normal traceroute uses UDP, not TCP.
 
 
 7. Monitoring
