@@ -1211,7 +1211,11 @@ Now we provide import-FOO, import-BAR, import-qwerty ...
 Don't set up a SMTP daemon
 ..........................
 
-If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP and poll for new mail N seconds. Live is easier without being responsible for a SMTP server.
+If you can avoid it, then refuse to set up a SMTP daemon. If the application you write should import mails, then do it by using POP3 or IMAP and poll for new mail N seconds. Setting up a SMTP daemon is easy, but being responsible for it is effort. Dealing with attacks, keeping an eye on security announces...  Live is easier without being responsible for a SMTP server.
+
+A SMTP daemon needs to run 24 hours a day. You get trouble if it is down. Or even worse: it is misconfigured and rejects all mails. These mails get lost and won't come back.
+
+If the getmail job is down or is misconfigured it just won't fetch mails. But it is unlikely that mails get lost.
 
 I know this conflicts with the general guideline "avoid polling".
 
