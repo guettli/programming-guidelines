@@ -210,6 +210,12 @@ The "partial transaction" concept in PostgreSQL is called savepoints.  https://w
 3. Dev
 ------
 
+Less code, less bugs
+....................
+
+* Not existing code is the best: Less code, less bugs
+* Code maintained by a reliable upstream (like Python, PostgreSQL, Django, Linux, Typescript, ...) is more reliable than own code.
+
 Zen of Python
 .............
 
