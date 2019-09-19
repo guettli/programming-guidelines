@@ -1247,6 +1247,22 @@ Do you know why modern configuration management tools like Ansible use the term 
 
 `Google search for "Declarative vs Imperative" <https://www.google.com/search?q=Declarative+vs+Imperative>`_
 
+The magic relad feature of Config Management is not needed any more
+...................................................................
+
+Config management tools have a magic reload feature. Imagine you update the configuration of a webserver. The config management
+tools can detect if a restart of a server is needed or not. For example: If the configuration of the web server was changed, then
+the webserver gets reloaded. If the configuration of the web server was not changed, then there is no need to restart it.
+
+I liked this feature in the past.
+
+Time has changed.
+
+See above for "From CRUD to CRD". Kubernetes is comming. You create containers, you run containers, you delete them. You don't update them any more.
+
+The magic reload feature is not needed any more.
+
+
 Config Management: Change file vs put file
 ..........................................
 
