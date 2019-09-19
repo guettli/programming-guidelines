@@ -1254,6 +1254,8 @@ Config management tools have a magic reload feature. Imagine you update the conf
 tools can detect if a restart of a server is needed or not. For example: If the configuration of the web server was changed, then
 the webserver gets reloaded. If the configuration of the web server was not changed, then there is no need to restart it. Great feature?
 
+Ansible Docs: `Handlers: Running Operations On Change <https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#handlers-running-operations-on-change>`_
+
 I liked this feature in the past.
 
 Time has changed.
@@ -1262,6 +1264,7 @@ See above for "From CRUD to CRD". Kubernetes is comming. You create containers, 
 
 The magic reload feature is not needed any more.
 
+Of course this change to stateless containers is does not happen from one day to the next. Statefull servers and the need to reload running services after an update will decrease.
 
 Config Management: Change file vs put file
 ..........................................
