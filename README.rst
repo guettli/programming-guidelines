@@ -1264,7 +1264,7 @@ See above for "From CRUD to CRD". Kubernetes is comming. You create containers, 
 
 The magic reload feature is not needed any more.
 
-Of course this change to stateless containers is does not happen from one day to the next. Statefull servers and the need to reload running services after an update will decrease.
+Of course this change from statefull servers to stateless containers does not happen from one day to the next. One thing is sure: Statefull servers and the need to reload running services after an update will decrease.
 
 Config Management: Change file vs put file
 ..........................................
