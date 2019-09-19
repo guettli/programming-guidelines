@@ -1247,12 +1247,12 @@ Do you know why modern configuration management tools like Ansible use the term 
 
 `Google search for "Declarative vs Imperative" <https://www.google.com/search?q=Declarative+vs+Imperative>`_
 
-The magic relad feature of Config Management is not needed any more
+The magic reload feature of Config Management is not needed any more
 ...................................................................
 
 Config management tools have a magic reload feature. Imagine you update the configuration of a webserver. The config management
 tools can detect if a restart of a server is needed or not. For example: If the configuration of the web server was changed, then
-the webserver gets reloaded. If the configuration of the web server was not changed, then there is no need to restart it.
+the webserver gets reloaded. If the configuration of the web server was not changed, then there is no need to restart it. Great feature?
 
 I liked this feature in the past.
 
