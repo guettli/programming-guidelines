@@ -528,8 +528,8 @@ Look at the actual code which does something. I used five lines with `....` poin
          
 For Python there exists a "complexity checker": `Design checker <http://pylint.pycqa.org/en/latest/technical_reference/extensions.html#design-checker>`_.
 
-Source code generation is a stupid idea
-.......................................
+Source code vs generated code
+.............................
 
 I guess every young programmer wants to write a tool which automatically creates source code.
 Stop! Please think about it again. What do you gain?
@@ -543,8 +543,12 @@ Why not write a program which reads DATA and does the thing you want to do?
 For the current context I see only two different things: **source code** for humans and
 **generated code** for the machine.
 
-If the TypeScript compiler creates JavaScript. Then the output is generated code
+Just because a file contains code of a programming language, this does not means that this file is source code.
+
+If the TypeScript compiler creates JavaScript, then the output is generated code
 since the created JavaScript source is intended for the interpreter only. Not for the human.
+If you create JavaScript with a keyboard and a text editor it is source code. Don't mix
+source code and generated code in one file.
 
 With other words: source code gets created by humans
 with the help of an editor or IDE.
