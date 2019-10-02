@@ -419,6 +419,11 @@ Avoid long living branches
 Avoid long living branches in your git repos. The
 more time that passes, the less likely is that your work will ever get merged. For me two weeks are ok, but five weeks are too long.
 
+Don't put generated code into version control
+.............................................
+
+Please read `Source code vs generated code`_. Generated code or binary data should not be in a git repository. It is possible, but strange.
+
 Not one branch per customer
 ...........................
 
