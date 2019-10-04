@@ -663,6 +663,7 @@ And that's great, if the user has more knowledge.
 Because this means you have less work. Less mails, less interrupts, 
 less phone calls :-)
 
+`Permalinks <https://en.wikipedia.org/wiki/Permalink>`_ are great.
 
 Care for newcomers
 ..................
