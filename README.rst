@@ -574,9 +574,9 @@ It has no value since you can always create "foo" again. You just need the input
 
 You can store "foo" in a cache to improve performance. But do not store it permanently. Don't make backup of it.
 
-This section is just the more general view of "Source code generation is a stupid idea".
+A term which is often a hint to this anti-pattern is "generator". Yes, you can generate a lot data. But this bloated data is just hot air with little value.
 
-TODO: Example.
+This section is just the more general view of `Source code vs generated code`_. 
 
 Regex are great - But it's like eating rubbish
 ..............................................
