@@ -100,6 +100,8 @@ I use PostgreSQL.
 
 I don't like NoSQL, except for caching.
 
+But maybe I just have not enough experience with NoSQL up to now.
+
 
 Cardinality
 ...........
