@@ -413,7 +413,7 @@ C is slow
 Version Control
 ...............
 
-I like git.
+For version control of software I use git. I think all other tool (svn, mercurial, cvs, darcs, bazaar) can be considered "dead". See [StackOverflow TagTrend](svn,mercurial,cvs,darcs,bazaar])
 
 Avoid long living branches
 ..........................
