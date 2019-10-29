@@ -1636,8 +1636,7 @@ and not "file.remove"?
 [Google search for "Declarative vs
 Imperative"](https://www.google.com/search?q=Declarative+vs+Imperative)
 
-The magic reload feature of Config Management is not needed any more
-...................................................................
+#### The magic reload feature of Config Management is not needed any more
 
 Config management tools have a magic reload feature. Imagine you update
 the configuration of a webserver. The config management tools can detect
@@ -2326,3 +2325,4 @@ Simple and Boring."
 -   <https://chemnitzer.linux-tage.de/> All people involved in this
     great yearly event.
 -   Ionel Cristian Mărieș for the link to bash pitfalls.
+-   Marco Bakera for hints (mailing-list python-de 2019)
