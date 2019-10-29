@@ -1,5 +1,4 @@
-Programming Guidelines
-======================
+# Programming Guidelines
 
 My personal programming guidelines. **Please provide feedback**, tell me
 what's wrong and what's missing and create a new issue here:
@@ -24,8 +23,7 @@ mail to <guettliml@thomas-guettler.de>
 
 [9. Epilog](#9-epilog)
 
-1. Introduction
----------------
+## 1. Introduction
 
 ### About this README
 
@@ -98,8 +96,7 @@ See heading.
 
 ------------------------------------------------------------------------
 
-2. Data structures
-------------------
+## 2. Data structures
 
 ### Introduction
 
@@ -282,8 +279,7 @@ rolled back, but the concept in PostgreSQL is not itself hierarchical.
 
 ------------------------------------------------------------------------
 
-3. Dev
-------
+## 3. Dev
 
 ### Less code, less bugs
 
@@ -1560,8 +1556,7 @@ environment.
 
 ------------------------------------------------------------------------
 
-4. Remote APIs
---------------
+## 4. Remote APIs
 
 ### Use http, avoid ftp/sftp/scp/rsync/smb/mail
 
@@ -1619,8 +1614,7 @@ I know this conflicts with the general guideline "avoid polling".
 
 ------------------------------------------------------------------------
 
-5. Op
------
+## 5. Op
 
 Operation. The last two characters of DevOp.
 
@@ -1832,8 +1826,7 @@ databases offer. Do not implement replication yourself. This is not
 trival and experts with more knowledge than you and me have solved this
 issue before.
 
-6. Networking
--------------
+## 6. Networking
 
 ### No routing on servers
 
@@ -1857,8 +1850,7 @@ get from host A to host B. Again \*tcp\*traceroute. It is the tool for
 tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason:
 normal traceroute uses UDP, not TCP.
 
-7. Monitoring
--------------
+## 7. Monitoring
 
 ### Nagios Plugin API (0=ok, 1=warn ...)
 
@@ -1918,8 +1910,7 @@ occur.
 
 ------------------------------------------------------------------------
 
-8. Communication with others
-----------------------------
+## 8. Communication with others
 
 ### Avoid to get a nerd
 
@@ -2072,8 +2063,7 @@ patient.
 
 ------------------------------------------------------------------------
 
-9. Epilog
----------
+## 9. Epilog
 
 ### It is always possible to make things more complicated
 
