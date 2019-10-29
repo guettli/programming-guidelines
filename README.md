@@ -338,7 +338,8 @@ In most cases software does create, read, update, delete data. See
 The "update" part is the most difficult one.
 
 Sometimes CRD helps: Do not implement the update operation. Use
-delete+create. But be sure to use transactions to avoid data loss:
+delete+create. But be sure to use transactions to avoid data loss, if your
+data stroage supports this:
 "BEGIN; DELETE ...; INSERT ...; COMMIT;"
 
 Translating to SQL terms:
@@ -358,6 +359,8 @@ to set up a container. But this gets done exactly once. There is one
 update from vanilla container to your custom container. But this is like
 "create". No updates will follow once the container was created. This
 makes it easier and more predictable.
+
+The same is true for operating on data-structures in memory. In most cases you should not alter the data structure which are iterating. Create a new data structure while iterating the input data. With other words: no in-place editing.
 
 ### No Shell Scripting
 
