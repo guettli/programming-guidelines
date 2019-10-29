@@ -2324,4 +2324,5 @@ Simple and Boring."
 -   <https://chemnitzer.linux-tage.de/> All people involved in this
     great yearly event.
 -   Ionel Cristian Mărieș for the link to bash pitfalls.
+-   Audiance at my presenstion at [Python User Group Leipzig 2019](https://www.meetup.com/de-DE/Leipzig-Python-User-Group/events/rbwmtpyzmbnb/)
 -   Marco Bakera for hints (mailing-list python-de 2019)
