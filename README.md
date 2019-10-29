@@ -344,12 +344,12 @@ data stroage supports this:
 
 Translating to SQL terms:
 
-  CRUD Term    SQL
-  ------------ ------------------------------------
-  create       insert into my\_table values (...)
-  read         select ... from my\_table
-  update       update my\_table set col1=...
-  delete       delete from my\_table where ...
+|  CRUD Term   |SQL                                |
+|  ------------|-----------------------------------|
+|  create      |insert into my\_table values (...) |
+|  read        |select ... from my\_table          |
+|  update      |update my\_table set col1=...      |
+|  delete      |delete from my\_table where ...    |
 
 Take a look at virtualization and containers ([Operating-system-level
 virtualization](https://en.wikipedia.org/wiki/Operating-system-level_virtualization)).
