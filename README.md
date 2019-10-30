@@ -1243,14 +1243,14 @@ Author: ...
 But if your pull-requests get tested before they get merged, then you
 hardly need "git bisect".
 
-### Conditional Breakpoints
+### Avoid Conditional Breakpoints
 
 Imagine, you are able to reproduce a bug in a test. But you could not
 fix it up to now. If you want to create a conditional breakpoint to find
 the root of the problem, then you could be on the wrong track. Rewrite
 the code first, to make it more fine-grained debuggable and testable.
 
-Write a test where a normal (non-conditional) breakpoint is enough.
+Modify the source and test where a normal (non-conditional) breakpoint is enough.
 
 It is very likely that this means you need to move the body of a loop
 into a new method.
@@ -1276,8 +1276,10 @@ def my_method__foo(foo):
     ...
 ```
 
-Now you can call my\_method\_foo() in a test, and you don't need a
-conditional breakpoint any more.
+Now you can call `my_method__foo()` in a test, and you don't need a
+conditional breakpoint any more. This helps you now (during debugging), but raises
+the overall value of the source code in the long run, too. Instead of few big monster methods
+you have more small and easy to understand methods which follow the simple input-processing-output model.
 
 ### Make a clear distinction between Authentication and Permission Checks
 
