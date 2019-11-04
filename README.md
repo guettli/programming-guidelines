@@ -1558,6 +1558,16 @@ It makes not sense to store the files which get read by rsync in the
 buffer cache. The buffer cache should be available for the production
 environment.
 
+### Avoid POSIX locale
+
+Avoid the [locale](https://en.wikipedia.org/wiki/Locale_(computer_software)). It causes your code do behave different in different environments. Your code might working during development and CI. But it might fail in production if there is a different locale active.
+
+It is broken by design: First you call `setlocal()` and after that methods do different things. That's stateful and confusing.
+
+It does not follow the simple input-processing-output model.
+
+I wasted too many hours with it. For example: [SAP PyRFC Bug #142](https://github.com/SAP/PyRFC/issues/142)
+
 ------------------------------------------------------------------------
 
 ## 4. Remote APIs
