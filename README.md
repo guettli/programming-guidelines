@@ -1568,6 +1568,13 @@ It does not follow the simple input-processing-output model.
 
 I wasted too many hours with it. For example: [SAP PyRFC Bug #142](https://github.com/SAP/PyRFC/issues/142)
 
+A library should always return the same output given the same input. The result should not
+be different for different locales.
+
+And the GUI? The user wants to use her/his favorite language. But native GUIs fade, and web GUIs come. And modern
+web GUIs don't use locale any more. Here you see "i18next vs locale" on [Stackoverflow tag trend](http://sotagtrends.com/?tags=[i18next,locale])
+
+
 ------------------------------------------------------------------------
 
 ## 4. Remote APIs
