@@ -1574,6 +1574,19 @@ be different for different locales.
 And the GUI? The user wants to use her/his favorite language. But native GUIs fade, and web GUIs come. And modern
 web GUIs don't use locale any more. Here you see "i18next vs locale" on [Stackoverflow tag trend](http://sotagtrends.com/?tags=[i18next,locale])
 
+### Datetime class vs "seconds since 1970"
+
+There are two ways to work with dates:
+
+* old: Seconds since 1970 (the [Unix Epoch](https://en.wikipedia.org/wiki/Unix_time))
+* new: Datatypes like [datetime](https://docs.python.org/3/library/datetime.html#datetime.datetime)
+
+If unsure use the new datatypes. Don't fiddle with seconds since 1970 any more.
+
+Exception: Since file systems store the mtime (modification time) in "seconds since 1970" and you only want the age of the file in seconds, then it is simpler to stick to the old way. Related: [getmtime() vs datetime.now()](https://stackoverflow.com/questions/58587891/getmtime-vs-datetime-now)
+
+
+
 
 ------------------------------------------------------------------------
 
