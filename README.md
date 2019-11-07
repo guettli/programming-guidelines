@@ -65,11 +65,15 @@ it. The solution is called clipboard manager. I use Diodon (Linux) and
 CopyQ (for Windows). I use ctrl+alt+v to open the list of last
 copy+paste texts.
 
+### Avoid searching with your eyes
+
 Avoid searching with your eyes. Search with the tools of your IDE. You
 should be able to use it "blind". You should be able to move the cursor
 to the matching position in your code without looking at your keyboard,
 without grabbing your mouse/touchpad/trackpoint and without looking
 up/down on your screen.
+
+Compare two files with a diff tool, otherwise you might get this ugly skeptical frown.
 
 ### KISS
 
