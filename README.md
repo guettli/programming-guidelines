@@ -946,13 +946,14 @@ debug. IDE's can't resolve the code: "Find usages" don't work. I try to
 avoid it. I prefer OOP (Inheritance) and avoid passing around methods or
 treating them like variables.
 
-I don't like [Closures
-(wikipedia)](https://en.wikipedia.org/wiki/Closure_(computer_programming))
+I don't like [Closures (wikipedia)](https://en.wikipedia.org/wiki/Closure_(computer_programming))
 
-For simple use cases like a custom compare operator for sort methods are
+For simple use cases like a custom compare operator for sort methods closures are
 ok.
 
 I like it simple: Input-Processing-Output.
+
+With "Input" being 100% data. Not a method.
 
 ### Software Design Patterns are overrated
 
