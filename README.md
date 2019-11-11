@@ -570,7 +570,7 @@ customer or installation.
 
 ### Don't put generated code into version control
 
-Please read [Source code vs generated code](source-code-vs-generated-code). Generated code or binary
+Please read [Source code vs generated code](#source-code-vs-generated-code). Generated code or binary
 data should not be in a git repository. It is possible, but strange.
 
 ### The best commits remove code
