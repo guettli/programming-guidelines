@@ -2219,15 +2219,19 @@ context.
 
 ### Read the Release Notes
 
-Read the release notes of the tools you use daily.
+Read the release notes and news of the tools you use daily. Looking there twice a year is enough.
 
 I like these release notes:
 
--   <https://www.postgresql.org/docs/devel/static/release.html> The
-    "Overview" links show the most important changes
--   <https://docs.djangoproject.com/en/dev/releases/>
--   Python
--   PyCharm
+- [PostgreSQL News](https://www.postgresql.org/about/newsarchive/)
+- [Django News](https://www.djangoproject.com/weblog/)
+- [What's new in Python](https://docs.python.org/3/whatsnew/index.html)
+- [CNCF Announcements](https://www.cncf.io/newsroom/announcements/)
+
+### Blogs I follow
+
+- [Google Cloud Blog](https://cloud.google.com/blog/)
+- [Google Testing Blog](https://testing.googleblog.com/)
 
 ### Three Mail Accounts
 
