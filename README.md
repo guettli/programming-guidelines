@@ -744,10 +744,11 @@ editor or IDE.
 ### Don't believe the "automatically create foo" hype
 
 If you are new to software development you are fascinated by the magic.
-You can create things. In this section I call the magic output "foo".
+You can create things! In this section I call the magic output "foo".
 
 Yes, you can automatically create foo with a script. Whatever "foo" is
-in your context: It has no value. It is worth nothing.
+in your context: It has no value. It is worth nothing. It is dust in the 
+wind like a web page. This output is only temporarily valuable. 
 
 Look at the basic IPO pattern: Input - Processing - Output (in this case
 "foo").
@@ -762,11 +763,13 @@ You can store "foo" in a cache to improve performance. But do not store
 it permanently. Don't make backup of it.
 
 A term which is often a hint to this anti-pattern is "generator". Yes,
-you can generate a lot data. But this bloated data is just hot air with
+you can generate a lot of data. But this bloated, generated data is just hot air with
 little value.
 
-This section is just the more general view of [Source code vs generated
-code]().
+DevOps who prefer "Op" to "Dev" tend to create configuration with a script.
+You can do this, but then create the config again daily. Do not edit
+the generated config by hand.
+
 
 ### Regex are great - But it's like eating rubbish
 
