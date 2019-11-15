@@ -2105,6 +2105,36 @@ a customer or a team mate which is not here right now ... and you are
 the only one who is not laughing. It is up to you how to react. Be
 patient.
 
+### Sometimes you just have to speak out a wish
+
+Anecdote: In the year 2019 I loved to use the Stackoverflow Tag Trend. I wanted to
+leave my current context (Python, Django, PostgreSQL Development) and learn new stuff.
+In the Javascript ecosystem there where so many tools available and it was difficult
+to see which tool was great two years ago, but won't be used today if you can start from 
+scratch. The Stackoverflow Tag Trend helped me to see what is hot and what was hot 
+some years ago. Working 16 years for the same company I was blinded by routine and missed
+a lot of changes outside my small IT context. 
+
+A lot of things which I learned during studing information technology in Dresden from 1996 to
+2001 was outdated. I wrote down these things on the [Deadends of IT](https://github.com/guettli/deadends-of-it) page.
+The  Stackoverflow Tag Trend worked well, but I had ideas to improve it:
+
+* [Tag aliases can be selected](https://github.com/robianmcd/tag-trends/issues/32)
+* I was missing [Link from tag to describition of tag](https://github.com/robianmcd/tag-trends/issues/34)
+* [URL could be simplified (no square brackets)](https://github.com/robianmcd/tag-trends/issues/33)
+* [It was down for some days](https://github.com/robianmcd/tag-trends/issues/31)
+
+After some weeks all my whishes where implemented by the author.
+
+Win-win: He could improve the usability and for it is more convenient now. I love it. Sometimes you just have to speak out a wish. I am not a native speaker. I think the term "make a wish" does not match. You need to tell the wish to the right person.
+
+
+
+
+
+
+
+
 ------------------------------------------------------------------------
 
 ## 9. Epilog
