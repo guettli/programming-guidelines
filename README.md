@@ -668,6 +668,8 @@ platform.
 See [Minimum viable
 product](https://en.wikipedia.org/wiki/Minimum_viable_product)
 
+Related Book: [The Lean Startup](http://theleanstartup.com/book)
+
 ### Use a modern IDE
 
 Time for vi and emacs has passed. Use a modern IDE on modern hardware
