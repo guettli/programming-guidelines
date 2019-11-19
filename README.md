@@ -821,21 +821,25 @@ hook and "False" as a red cross (meaning "it failed").
 
 ### Love your docs
 
-I have seen it several times on github: If I provide a hint that the
-docs could be improved, a lot of maintainers don't care much. Just look
+I have seen it several times on github. Just have a look
 at the README files on github. They starts with "Installing", then
 "Configuring" ... What is missing? An Introduction! Just some sentences
-what this great project is all about. Programmers love details. Dear
-programmers, learn to relax and look at the thing you create like a new
-comer. If you have this mind set "I do the important (programming)
+what this great project is all about. Programmers prefer the details to the big picture,
+the overview. 
+
+Dear programmers, learn to relax and look at the thing you create like a new
+comer. A new comers who know how to add two integers with his favorite programming
+language. What is missing to make him understand why the project/lib/tool is needed.
+
+If you have this mind set "I do the important (programming)
 stuff. Someone else can care for the docs", then your open source
 project won't be successful.
 
 If you write docs, then do it for new comers. Start with the
-introduction, define the important terms, then provide the simple use
+introduction, define the important terms, then provide the simple and straightforward use
 cases. Put details and special cases at the end.
 
-If you write broken software, you will get feedback soon.
+If your library gets used and you add a bug, you will get feedback soon.
 
 Tests fail or even worse customers will complain.
 
@@ -846,6 +850,8 @@ feedback. Unfortunately only few people take this serious and tell you
 that there is a mistake in your docs.
 
 How to solve this?
+
+You need to act.
 
 Let someone else read your docs.
 
