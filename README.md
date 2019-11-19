@@ -1658,7 +1658,7 @@ A SMTP daemon needs to run 24 hours a day. You get trouble if it is
 down. Or even worse: it is misconfigured and rejects all mails. These
 mails get lost and won't come back.
 
-If the getmail job is down or is misconfigured it just won't fetch
+If the [getmail](http://pyropus.ca/software/getmail/) job is down or is misconfigured it just won't fetch
 mails. But it is unlikely that mails get lost.
 
 I know this conflicts with the general guideline "avoid polling".
