@@ -1037,13 +1037,14 @@ holding hands :-)
 Creating test data is very important. It can help you for several
 things:
 
-1: It can help you to create a re-usable application: Imagine you have
-one customer in the beginning. You do everything the way the customer
-wants it to be. But the real benefit of software is its re-usabilty.
-Your code wants to get executed in different environments, for more than
-one customer.
+1: It can help you to create a re-usable application. If you have only
+one customer, it does not matter. But the real benefit of software is its re-usabilty.
+Your code wants to get executed by several customers. As soon as you have two or more 
+customers you need a neutral test environment which is no specific to one of your customers.
+It is a lot of work to create a neutral test environment, if you have not done it from
+day one. But the work only needs to be done once and helps in the long run.
 
-2: It can help you to create presentation/demo systems
+2: It can help you to create presentation/demo systems.
 
 3: It can help you in automated tests.
 
