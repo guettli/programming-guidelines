@@ -445,6 +445,11 @@ one web request after the other. In the past the boot process and the
 start/stop scripts were shell scripts. I am very happy that systemd
 exists.
 
+I am even more happy that modern environments don't need systemd.
+A container runs a service and the start/stop handling gets done
+by a container-orchestration system (for example 
+[Kubernetes](https://en.wikipedia.org/wiki/Kubernetes)).
+
 ### Avoid calling command line tools
 
 I try to avoid calling a command line tool, if a library is available.
