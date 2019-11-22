@@ -965,7 +965,9 @@ debug. IDE's can't resolve the code: "Find usages" don't work. I try to
 avoid it. I prefer OOP (Inheritance) and avoid passing around methods or
 treating them like variables.
 
-I don't like [Closures (wikipedia)](https://en.wikipedia.org/wiki/Closure_(computer_programming))
+I don't like [Closures (wikipedia)](https://en.wikipedia.org/wiki/Closure_(computer_programming)).
+Reason: Anonymous functions have no name. If you use a [Statistical Profiler](https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29#Statistical_profilers), you don't see
+immediately in which function the interpreter spent its time.
 
 For simple use cases like a custom compare operator for sort methods closures are
 ok.
