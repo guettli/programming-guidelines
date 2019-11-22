@@ -1612,6 +1612,14 @@ If unsure use the new datatypes. Don't fiddle with seconds since 1970 any more.
 Exception: Since file systems store the mtime (modification time) in "seconds since 1970" and you only want the age of the file in seconds, then it is simpler to stick to the old way. Related: [getmtime() vs datetime.now()](https://stackoverflow.com/questions/58587891/getmtime-vs-datetime-now)
 
 
+### Statistical Profiler
+
+Debugging and profiling is easy in a development environment. But how to debug a running production system?
+A [Statistical Profiler](https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29#Statistical_profilers) (or Sampling Profiler) is very cool. Every N millisecond the stacktrace of the processes gets dumped. This does not slow down your production environment at all. These dumps can reveal interesting fact. In which source code lines does the running application spend the most time?
+
+There are commercial tools and some open source tools.
+
+For Python there is [py-spy](https://github.com/benfred/py-spy) to dump the stacktraces. The dumps can get analyzed by [speedscope](https://github.com/jlfwong/speedscope).
 
 
 ------------------------------------------------------------------------
