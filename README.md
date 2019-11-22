@@ -1615,7 +1615,7 @@ Exception: Since file systems store the mtime (modification time) in "seconds si
 ### Statistical Profiler
 
 Debugging and profiling is easy in a development environment. But how to debug a running production system?
-A [Statistical Profiler](https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29#Statistical_profilers) (or Sampling Profiler) is very cool. Every N millisecond the stacktrace of the processes gets dumped. This does not slow down your production environment at all. These dumps can reveal interesting fact. In which source code lines does the running application spend the most time?
+A [Statistical Profiler](https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29#Statistical_profilers) (or Sampling Profiler) is very cool. Every N millisecond the stacktraces of the processes get dumped. This does not slow down your production environment at all. These dumps can reveal interesting fact. In which source code lines does the running application spend the most time?
 
 There are commercial tools and some open source tools.
 
