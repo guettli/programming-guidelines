@@ -1623,6 +1623,12 @@ There are commercial tools and some open source tools.
 
 For Python there is [py-spy](https://github.com/benfred/py-spy) to dump the stacktraces. The dumps can get analyzed by [speedscope](https://github.com/jlfwong/speedscope).
 
+### Use "master" for development
+
+You confuse new comers, if your development branch has a different name. If you call the development branch "master", then all introduction material at github does apply. And if you code is at github, all people can see that your project is still alive, since the master branch gets displayes per default.
+
+Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all the coding in the "development" branch. The master branch was not updated since three years. I thought this project was dead. The maintainer was upset because he recently pushed changes into this branch. See [issue #9](https://github.com/sergeyksv/tinelic/issues/9#issuecomment-558557925)
+
 
 ------------------------------------------------------------------------
 
