@@ -681,7 +681,7 @@ Related Book: [The Lean Startup](http://theleanstartup.com/book)
 Several month after writing above text I found this 
 
 [Google Codereview Guidelines "Complexity"](https://google.github.io/eng-practices/review/reviewer/looking-for.html#complexity)
-> ... Encourage developers to solve the problem they know needs to be solved now, not the problem that the developer speculates might need to be solved in the future. ....
+> A particular type of complexity is over-engineering, where developers have made the code more generic than it needs to be, or added functionality that isn’t presently needed by the system. Reviewers should be especially vigilant about over-engineering. Encourage developers to solve the problem they know needs to be solved now, not the problem that the developer speculates might need to be solved in the future. The future problem should be solved once it arrives and you can see its actual shape and requirements in the physical universe.
 
 ### Use a modern IDE
 
