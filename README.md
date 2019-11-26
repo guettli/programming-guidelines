@@ -678,6 +678,11 @@ product](https://en.wikipedia.org/wiki/Minimum_viable_product)
 
 Related Book: [The Lean Startup](http://theleanstartup.com/book)
 
+Several month after writing above text I found this 
+
+[Google Codereview Guidelines "Complexity"](https://google.github.io/eng-practices/review/reviewer/looking-for.html#complexity)
+> ... Encourage developers to solve the problem they know needs to be solved now, not the problem that the developer speculates might need to be solved in the future. ....
+
 ### Use a modern IDE
 
 Time for vi and emacs has passed. Use a modern IDE on modern hardware
