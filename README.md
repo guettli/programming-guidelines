@@ -660,6 +660,8 @@ Problem](https://en.wikipedia.org/wiki/C10k_problem). BUT: I guess you
 don't have this problem. If you don't have this problem, then don't use
 technology which was invented to solve this issue :-)
 
+Related part of the [Google Codereview Guidelines "Functionality"](https://google.github.io/eng-practices/review/reviewer/looking-for.html#functionality)
+
 ### Don't waste time doing it "generic and reusable" if you don't need to
 
 If you are doing some kind of software project for the first time, then
