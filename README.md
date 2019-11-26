@@ -1034,7 +1034,7 @@ which happens after you commit+push (you have a CI, haven't you?)
 Then commit+push. Let CI run all tests in background (don't waste time
 watching your unittests running and passing)
 
-### For every method there is a corresponding test-method
+### Tests and production code go hand in hand.
 
 You implemented the great method foo() and you implement a corresponding
 method called test\_foo(). It does not matter if you write foo() first,
@@ -1048,6 +1048,9 @@ If you fix foo() you need to extend test\_foo() or write a new method
 test\_foo\_with\_special\_input(). Again both changes (production code
 and testing code) walk into the git repo like a pair of young lovers
 holding hands :-)
+
+Related [Guideline of Google: Codereview "Tests"](
+https://google.github.io/eng-practices/review/reviewer/looking-for.html#tests)
 
 ### Creating test data is much more important than you initial think
 
