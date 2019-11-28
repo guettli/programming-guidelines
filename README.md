@@ -547,7 +547,7 @@ convenient. ORMs are great.
 
 Some (usualy elderly) developers fear that a ORM is slower than hand-crafted and optimized SQL. Maybe, maybe not.
 
-See [premature optimization is the root of all evil](#...)
+See [premature optimization is the root of all evil](#premature-optimization-is-the-root-of-all-evil)
 
 ### SQL is an API
 
