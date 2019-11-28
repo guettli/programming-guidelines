@@ -538,6 +538,10 @@ I was told to avoid redundancy.
 work much easier. Above heading is a stupid joke. Clever people use tools to make work simpler, more fun and more
 convenient. ORMs are great. 
 
+Some (usualy elderly) developers fear that a ORM is slower than hand-crafted and optimized SQL. Maybe, maybe not.
+
+See [premature optimization is the root of all evil](#...)
+
 ### SQL is an API
 
 If you have an database driven application and a third party tool wants
