@@ -532,6 +532,12 @@ That's redundant.
 
 I was told to avoid redundancy.
 
+### Real men don't use ORM
+
+[ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping) makes daily
+work much easier. Above heading is a stupid joke. Clever people use tools to make work simpler, more fun and more
+convenient. ORMs are great. 
+
 ### SQL is an API
 
 If you have an database driven application and a third party tool wants
