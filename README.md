@@ -375,9 +375,9 @@ The same is true for operating on data-structures in memory. In most cases you s
 
 ### Stateless
 
-When I was a student I was excited and fascinated by [CORBA (Common Object Request Broker Architecture)](https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture). I thought this is the future of machine to machine communication. Today I smile about how childish I was 19 years ago. CORBA is dead, stateless http has won.
+When I was a student I was excited and fascinated by [CORBA (Common Object Request Broker Architecture)](https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture). I thought this is the future of machine to machine communication. Today I smile about how childish I was 19 years ago. CORBA is dead, stateless [http](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) has won.
 
-Things are much easier and better to implement and predict if you just have one method call. One request and one response. You don't to have an open connection and a reference to a remote object which executes on a remote server.
+Things are much easier to implement and predict if you just have one method call. One request and one response. You don't have an open connection and a reference to a remote object which executes on a remote server.
 
 Look at all the dated protocols which are like a human conversation between a client and a server: SMTP, IMAP, FTP, ... Nobody wants the client and the server to have a chatty dialog like this: 
 
