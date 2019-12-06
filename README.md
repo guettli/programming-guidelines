@@ -394,9 +394,9 @@ Client: How many Mails are there in my Inbox?
 Server: ....
 ```
 
-With http you can cut the task into several smaller http requests. This gives the service the chance of delegating request-1 to server-a and request-2 to server-b. In the cloud environment containers get created and distroit in seconds. It is easier without long living connection.
+Of course roughly the same needs to be done with http. But http you can cut the task into several smaller http requests. This gives the service the chance of delegating request-1 to server-a and request-2 to server-b. In the cloud environment containers get created and destroyed in seconds. It is easier without long living connection.
 
-
+Stateless is like IPO: Input-Processing-Output.
 
 
 
