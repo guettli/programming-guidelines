@@ -384,7 +384,8 @@ Look at all the dated protocols which are like a human conversation between a cl
 ```
 Client: My name is Bob
 Server: Hi Bob, nice to meet you.
-Server: But are you really Bob. Please proof this to me. You can use method foo, bar, blu for authentication
+Server: But are you really Bob?
+Server: Please prove to me that you're Bob. You can use method foo, bar, blu for authentication
 Client: I choose method "blu"
 Server: Ok, then please tell send the magic blu token
 Client: Here it is xyuasdusd8.. I hope you like it.
