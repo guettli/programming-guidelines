@@ -373,6 +373,32 @@ makes it easier and more predictable.
 
 The same is true for operating on data-structures in memory. In most cases you should not alter the data structure which are iterating. Create a new data structure while iterating the input data. With other words: no in-place editing.
 
+### Stateless
+
+When I was a student I was excited and fascinated by [CORBA (Common Object Request Broker Architecture)](https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture). I thought this is the future of machine to machine communication. Today I smile about how childish I was 19 years ago. CORBA is dead, stateless http has won.
+
+Things are much easier and better to implement and predict if you just have one method call. One request and one response. You don't to have an open connection and a reference to a remote object which executes on a remote server.
+
+Look at all the dated protocols which are like a human conversation between a client and a server: SMTP, IMAP, FTP, ... Nobody wants the client and the server to have a chatty dialog like this: 
+
+```
+Client: My name is Bob
+Server: Hi Bob, nice to meet you.
+Server: But are you really Bob. Please proof this to me. You can use method foo, bar, blu for authentication
+Client: I choose method "blu"
+Server: Ok, then please tell send the magic blu token
+Client: Here it is xyuasdusd8.. I hope you like it.
+Server: Fine, I accept this. Now I trust you. Now I know you are Bob
+Client: How many Mails are there in my Inbox?
+Server: ....
+```
+
+With http you can cut the task into several smaller http requests. This gives the service the chance of delegating request-1 to server-a and request-2 to server-b. In the cloud environment containers get created and distroit in seconds. It is easier without long living connection.
+
+
+
+
+
 ### No Shell Scripting
 
 The shell is nice for interactive usage. But shell scripts are
