@@ -49,7 +49,8 @@ monitor.
 I type with ten fingers. It's like flying if you learned it. Your eyes
 can stay on the rubbish you type, and you don't need to move your eyes
 down (to keyboard) and up (to monitor) several hundred times per day.
-This saves a lot of energy.
+This saves a lot of energy. This is simple tool to help you to learn touch typing:
+[tipp10](https://www.tipp10.com/en/)
 
 Avoid to switch between mouse and keyboard too much.
 
