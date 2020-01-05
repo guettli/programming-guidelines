@@ -1011,6 +1011,7 @@ language. I would update an Englisch wiki page, since this would help a lot of p
 Don't get me wrong: Docs for applications you write should be in the language of your customers. Above text
 is about tech related docs.
 
+Again: Don't write tech-docs in non-english language
 
 ### Care for newcomers
 
