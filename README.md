@@ -994,9 +994,9 @@ The most solid guide was above link. Unfortunately above guide is outdated.
 
 Grrrrrr. Now I need to choose:
 
-1. V1: Should I update the outdated german guide? It is a wiki editable by everybody.
+* V1: Should I update the outdated german guide? It is a wiki editable by everybody.
 
-2. V2: I use a english guide, but they look not solid. 
+* V2: I use a english guide, but they look not solid. 
 
 Grrr. I don't like thinking.
 
