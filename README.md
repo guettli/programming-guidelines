@@ -972,6 +972,46 @@ have less work. Less mails, less interrupts, less phone calls :-)
 
 [Permalinks](https://en.wikipedia.org/wiki/Permalink) are great.
 
+###  Don't write tech-docs in non-english language
+
+General rule: don't waste time.
+
+It is feasible to write high level blog posts about tech topics in your favorite language.
+
+Sometimes it is easier to communicate the holistic view in your mother-tongue.
+
+But it is not feasible to write detailed tech stuff in a non-english language.
+
+Example:
+
+https://wiki.ubuntuusers.de/Installation_auf_externen_Speichermedien/
+
+I came across this page because I want to install Linux on an external hard disc.
+
+Unfortunately there seems to be no good English guide how to do this.
+
+The most solid guide was above link. Unfortunately above guide is outdated.
+
+Grrrrrr. Now I need to choose:
+
+1. V1: Should I update the outdated german guide? It is a wiki editable by everybody.
+
+2. V2: I use a english guide, but they look not solid. 
+
+Grrr. I don't like thinking.
+
+The people who created the German guide thought they help the world. They felt good
+while doing what they did. I think they wasted time. Automatic translations are quite
+good today. At least if you translate English to your favorite language.
+I won't update the outdated German guide in the wiki. This would help only very few people.
+Most people which want to install Linux on an external hard drive can either
+read English text or they know who to translate Englisch text to their favorite
+language. I would update an Englisch wiki page, since this would help a lot of people.
+
+Don't get me wrong: Docs for applications you write should be in the language of your customers. Above text
+is about tech related docs.
+
+
 ### Care for newcomers
 
 In the year 1997 I was very thankful that there was a hint "If unsure
