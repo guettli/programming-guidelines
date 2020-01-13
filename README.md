@@ -1429,6 +1429,8 @@ too similar to "Authentication".
 Related question:
 <https://softwareengineering.stackexchange.com/questions/362350/synonym-for-authorization/363690#363690>
 
+General guidelines: Avoid [Homonyms](https://en.wikipedia.org/wiki/Homonym)
+
 ### Idempotence is great
 
 Idempotence is great, since it ensures, that it does not do harm if the
