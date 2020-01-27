@@ -2243,6 +2243,10 @@ a customer or a team mate which is not here right now ... and you are
 the only one who is not laughing. It is up to you how to react. Be
 patient.
 
+Same for irony and sarcasm. You and your friends might think it is funny. New team members and
+other people won't understand you. It is not funny, it is childish.
+
+
 ### Sometimes you just have to speak out a wish
 
 Anecdote: In the year 2019 I loved to use the Stackoverflow Tag Trend. I wanted to
