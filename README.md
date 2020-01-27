@@ -2244,7 +2244,7 @@ the only one who is not laughing. It is up to you how to react. Be
 patient.
 
 Same for irony and sarcasm. You and your friends might think it is funny. New team members and
-other people won't understand you. It is not funny, it is childish.
+other people won't understand you. It is not funny, it is confusing and childish.
 
 
 ### Sometimes you just have to speak out a wish
