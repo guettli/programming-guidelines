@@ -2008,6 +2008,11 @@ databases offer. Do not implement replication yourself. This is not
 trival and experts with more knowledge than you and me have solved this
 issue before.
 
+### Master-Master Replication
+
+The real magic is Master-Master Replication. Here are some examples where it gets used:
+
+todo: add examples
 ## 6. Networking
 
 ### No routing on servers
