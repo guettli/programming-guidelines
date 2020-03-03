@@ -170,7 +170,7 @@ structure (without a nullable ForeignKey) makes implementing the GUI
 much easier.
 
 With other words: If there is no NULL in your data, then there will be
-no NullPointerException in your source code while processing the data
+less NullPointerException in your source code while processing the data
 :-)
 
 Less conditions, less bugs.
