@@ -165,7 +165,7 @@ Imagine you have a table "meeting" and a table "place". The table
 be not clear yet where the meeting will be. Most developers will make
 the ForeignKey optional (nullable). WAIT: This will create a condition
 in your data structure. There is a way easier solution: Create a place
-called "unknown". Use this as default, avoid nullable columns. This data
+called "unknown". Use this [senitel value](https://en.wikipedia.org/wiki/Sentinel_value) as default. This data
 structure (without a nullable ForeignKey) makes implementing the GUI
 much easier.
 
