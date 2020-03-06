@@ -1147,6 +1147,28 @@ holding hands :-)
 Related [Guideline of Google: Codereview "Tests"](
 https://google.github.io/eng-practices/review/reviewer/looking-for.html#tests)
 
+### aaa-tests
+
+You want to check your source code before commit it? Great initiative, you are on
+the right track. This source code checking is usualy called [Linting](https://en.wikipedia.org/wiki/Linting).
+
+Now you write a git pre-commit hook as shell script which does some magic and you are
+happy.
+
+I think this is draw-backs. You created second/redundant place where tests happend: In CI and in pre-commit hook.
+You invest your valuable time into the pre-commit hook, and finally it might not get called.
+If you work in a team it is likely that somebody does not use the pre-commit hook you created.
+
+That's why I suggest this: aaa-test. These test pass quick and check basic stuff. It is up to you
+how much want to do in these tests. Some basic linting, some basic unit-test, ... Then calls these
+tests during CI and can call them in your (optional) pre-commit hook. 
+
+
+
+
+
+
+
 ### Creating test data is much more important than you initial think
 
 Creating test data is very important. It can help you for several
