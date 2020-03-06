@@ -1166,6 +1166,9 @@ tests during CI and can call them in your (optional) pre-commit hook.
 If linting all files is too slow, you can optimize it to check only these files which were changed. 
 But this optimization should only happen in the pre-commit hook. Not in the CI.
 
+In Python you can execute tests by giving a part of the name. Example: `pytest -k aaa` executes all test containing "aaa". 
+This has the benefit that you can add a new test anywhere you like. You don't need to register this somewhere.
+And in CI these tests get executed just like every other test. No decorator or other fancy stuff is needed.
 
 
 
