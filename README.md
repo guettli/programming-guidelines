@@ -1152,7 +1152,7 @@ https://google.github.io/eng-practices/review/reviewer/looking-for.html#tests)
 You want to check your source code before commit it? Great initiative, you are on
 the right track. This source code checking is usualy called [Linting](https://en.wikipedia.org/wiki/Linting).
 
-Now you write a git pre-commit hook as shell script which does some magic and you are
+Now you write a git pre-commit hook as shell script which does some magic checking/linting and you are
 happy.
 
 I think this is draw-backs. You created second/redundant place where tests happend: In CI and in pre-commit hook.
