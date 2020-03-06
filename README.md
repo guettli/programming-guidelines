@@ -1163,7 +1163,8 @@ That's why I suggest this: aaa-test. These test pass quick and check basic stuff
 how much want to do in these tests. Some basic linting, some basic unit-test, ... Then calls these
 tests during CI and can call them in your (optional) pre-commit hook. 
 
-
+If linting all files is too slow, you can optimize it to check only these files which were changed. 
+But this optimization should only happen in the pre-commit hook. Not in the CI.
 
 
 
