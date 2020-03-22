@@ -210,6 +210,26 @@ then consider a constraint: If the character string in the column is not
 NULL, then the string must not be empty. This way ensure that there are
 is only one variant of "empty".
 
+### SQL: I prefer subqueries to joins
+
+I most cases, I use a ORM to access data, and don't write SQL by hand.
+
+If I do write SQL by hand, then I often prefer [SQL Subqueries](https://en.wikipedia.org/wiki/SQL_syntax#Subqueries)
+to SQL Joins. 
+
+Have a look at this example:
+```
+SELECT id, name
+FROM products
+WHERE category_id IN
+   (SELECT id
+    FROM categories
+    WHERE expired = True)
+```
+I can translate this to human language easily: Select all products, which
+belong to a category which has expired.
+
+
 ### Use all features PostgreSQL does offer
 
 If you want to store structured data, then PostgreSQL is a save default
