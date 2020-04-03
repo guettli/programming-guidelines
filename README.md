@@ -1109,7 +1109,7 @@ about database design patterns?
 
 ### OOP is overrated
 
-About [OOP (Object-oriented programming)](https://en.wikipedia.org/wiki/Object-oriented_programming)
+About OOP (Object-oriented programming)
 
 **Stateless** has won. OOP is stateful:
 
