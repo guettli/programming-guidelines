@@ -1114,8 +1114,8 @@ About OOP (Object-oriented programming)
 **Stateless** has won. OOP is stateful:
 
 1. Create an instance of a class
-2. call a method of this instance
-3. destruct the instance
+2. Call a method of this instance
+3. Destruct the instance
 
 Three steps vs one step.
 
