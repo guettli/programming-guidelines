@@ -1684,6 +1684,9 @@ If unsure, then choose "has a" and not "is a".
 
 ### Cache for ever or don't cache at all
 
+> [Two Hard Things](https://martinfowler.com/bliki/TwoHardThings.html): There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
+
+
 Avoid "maybe". If your http code returns a response you have two choices
 concering caching:
 
@@ -1693,17 +1696,20 @@ concering caching:
 If you follow this guide you will get great performance since
 revalidation and ETag magic is not needed.
 
-Avoid fiddling with ETag and If-Modified-Since http headers.
+I possible, avoid fiddling with ETag and If-Modified-Since http headers.
 
 But you have to care for one thing: If you cache for ever, whenever you
 update your data, you need to give your resource a new URL. That's easy:
 
-<http://example.com/>.../data-which-gets-cached-for-every?v=123456789
+For example: Instead of serving the file `/css/base.css` you serve `/css/base.27e20196a850.css`. The string "27e20..." is the md5 sum of the content of the file. Configure your webserver to serve this file with the appopriate "cache forever" headers, and you client will not ask for this file again. 
 
-If the data of this URL gets changed, you need to update the v=123456789
-to a new version.
 
-Related: <https://developer.yahoo.com/performance/rules.html>
+If you use django, you can use the [ManifestStaticFilesStorage](https://docs.djangoproject.com/en/3.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage)
+
+
+[Best Practices for Speeding Up Your Web Site (Yahoo)](https://developer.yahoo.com/performance/rules.html)
+
+Good introduction to caching: [Caching (Mozilla Foundation)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
 ### Avoid coding for one customer
 
@@ -1781,18 +1787,6 @@ For Python there is [py-spy](https://github.com/benfred/py-spy) to dump the stac
 You confuse new comers, if your development branch has a different name. If you call the development branch "master", then all introduction material at github does apply. And if you code is at github, all people can see that your project is still alive, since the master branch gets displayes per default.
 
 Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all the coding in the "development" branch. The master branch was not updated since three years. I thought this project was dead. The maintainer was upset because he recently pushed changes into this branch. See [issue #9](https://github.com/sergeyksv/tinelic/issues/9#issuecomment-558557925)
-
-#### Caching
-
-[Two Hard Things](https://martinfowler.com/bliki/TwoHardThings.html): There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
-
-Good introduction to caching: [Caching (Mozilla Foundation)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
-
-My hint: Make applications fast and your live easy: Use "cache forever". This avoids the error-prone cache invalidation and improves the speed since network round trips get avoided.
-
-For example: Instead of serving the file `/css/base.css` you serve `/css/base.27e20196a850.css`. The string "27e20..." is the md5 sum of the content of the file. Configure your webserver to serve this file with the appopriate "cache forever" headers, and you client will not ask for this file again. Related: [Best Practices for Speeding Up Your Web Site (Yahoo)](https://developer.yahoo.com/performance/rules.html)
-
-If you use django, you can use the [ManifestStaticFilesStorage](https://docs.djangoproject.com/en/3.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage)
 
 ------------------------------------------------------------------------
 
