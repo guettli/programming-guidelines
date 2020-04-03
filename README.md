@@ -1107,6 +1107,20 @@ are overrated.
 Why are so many books about software design patterns and nearly no books
 about database design patterns?
 
+### OOP is overrated
+
+About [OOP (Object-oriented programming)](https://en.wikipedia.org/wiki/Object-oriented_programming)
+
+**Stateless** has won. OOP is stateful:
+
+1. Create an instance of a class
+2. call a method of this instance
+3. destruct the instance
+
+Three steps vs one step.
+
+OOP is great for implementing an [ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping). But implemeting this should be done by people who have more experience than I have :-)
+
 ### Test Driven Development
 
 red, green, refactor. More verbose: make the test fail, make the test
