@@ -592,9 +592,9 @@ all users which satisfy the needed conditions.
 Now you have two implementations. The first "if user.is\_admin then
 return True" and one which uses set operations (SQL).
 
-That's redundant.
+For example PostgREST (ReST API for PostgreSQL) uses the row-level security for permission
+checking: [PostgREST row-level permissions](http://postgrest.org/en/v6.0/auth.html#roles-for-each-web-user)
 
-I was told to avoid redundancy.
 
 ### Real men don't use ORM
 
