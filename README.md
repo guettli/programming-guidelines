@@ -917,8 +917,11 @@ what this great project is all about. Programmers prefer the details to the big 
 the overview. 
 
 Dear programmers, learn to relax and look at the thing you create like a new
-comer. A new comers who know how to add two integers with his favorite programming
-language. What is missing to make him understand why the project/lib/tool is needed.
+comer. Imagine a new comer who know how to add two integers with his favorite programming
+language. What is missing to make him understand why the project/lib/tool is needed?
+
+First you need to convince him that this project is worth a try, then if he knows
+the "why?", then explain how to install it.
 
 If you have this mind set "I do the important (programming)
 stuff. Someone else can care for the docs", then your open source
