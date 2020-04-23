@@ -994,7 +994,7 @@ And that's great, if the user has more knowledge. Because this means you
 have less work. Less mails, less interrupts, less phone calls :-)
 
 This even applies to public discussion forums. Don't write too much. Create great docs and answer questions by
-providing links to the docs. And include the question if this answers the question of the user.
+providing links to the docs. And be polite and include the question if this answers the question of the user.
 
 [Permalinks](https://en.wikipedia.org/wiki/Permalink) are great, since they provide a single source of truth.
 
