@@ -636,11 +636,13 @@ needs and it is likely that he wants new features not faster execution.
 
 Higher level languages have a better "zero to [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)" speed.
 
-### Version Control
+### Version Control: git
 
 For version control of software I use git. I think all other tool (svn,
 mercurial, cvs, darcs, bazaar) can be considered "dead". See
-\[StackOverflow TagTrend\](svn,mercurial,cvs,darcs,bazaar\])
+[StackOverflow TagTrend](http://sotagtrends.com/?tags=git+svn+mercurial+cvs+darcs+bazaar)
+
+
 
 ### Avoid long living branches
 
@@ -648,6 +650,8 @@ Avoid long living branches in your git repos. The more time that passes,
 the less likely is that your work will ever get merged. For me two weeks
 are ok, but five weeks are too long.
 
+Ten lines of improvement which get pushed to master today have much more value
+than 1000 of lines which are in branch which will never get pushed to master.
 
 ### Not one branch per customer
 
