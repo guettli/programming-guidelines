@@ -1311,6 +1311,9 @@ if ....:
     issue.responsible_group=Group.objects.get(name='Leaders')
 ```
 
+`Group` is a class and referes to a table with the same name. Each group has a name. There
+is one group (one row) with the name "Leaders".
+
 Above code is dirty because 'Leaders' is like a ForeignKey from code to
 a database row.
 
