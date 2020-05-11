@@ -1269,8 +1269,7 @@ MyModel.objects.update\_or\_create(...) to create the test data.
 If you are new to software testing, then you might think ... "some parts
 of my code are *untestable*".
 
-I don't think so. I guess your software uses the IPO pattern:
-<https://en.wikipedia.org/wiki/IPO_model> Input, Processing, Output. The
+I don't think so. I guess your software uses the [IPO pattern](https://en.wikipedia.org/wiki/IPO_model): Input, Processing, Output. The
 question is: How to feed the input for testing to my code? Mocking,
 virtualization and automation are your friends.
 
