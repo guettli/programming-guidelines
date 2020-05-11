@@ -590,12 +590,10 @@ permission.
 Now you write SQL (or use your ORM) to create a queryset which returns
 all users which satisfy the needed conditions.
 
-Now you have two implementations. The first "if user.is\_admin then
-return True" and one which uses set operations (SQL).
-
-For example PostgREST (ReST API for PostgreSQL) uses the row-level security for permission
-checking: [PostgREST row-level permissions](http://postgrest.org/en/v6.0/auth.html#roles-for-each-web-user)
-
+Now you have two implementations. The first `if user.is_admin then
+return True` and one which uses set operations (SQL). This is redudant and looking
+for trouble. Sooner or later your permission checks get more complex and then 
+one implementation will get out of sync.
 
 ### Real men don't use ORM
 
@@ -630,7 +628,10 @@ execution is fast, but the time to get the problem done takes "ages". I
 avoid C programming, if possible. If Python gets to slow, I can optimize
 the hotspots. But do this later. Don't start with the second step. First
 get it done and write tests. Then clean up the code (simplify it). Then
-optimize.
+.... What is the next step? Optimize? On most cases the customer has new
+needs and it is likely that he wants new features not faster execution.
+
+Higher level languages have a better "zero to [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)" speed.
 
 ### Version Control
 
