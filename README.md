@@ -557,10 +557,8 @@ less often today.
 
 Example: WxPython (GUI toolkit) wraps WxWindows wraps gtk wraps xlib.
 
-Good news: the open source libraries are getting better and better.
-Today wrappers get used less often.
+There are still some places where toilet paper wrappers need to get coded again and again.
 
-There are still some places where toilet paper wrappers need to coded again and again.
 For example JSON does not support datetime, timedelta and binary data. See [Let's fix JS](https://github.com/guettli/lets-fix-js). Speak to the upstream, to whoever is responsible for this, even if you think they are way too big, and you way too small.
 
 ### Avoid GPL
