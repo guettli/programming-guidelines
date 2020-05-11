@@ -509,10 +509,10 @@ one web request after the other. In the past the boot process and the
 start/stop scripts were shell scripts. I am very happy that systemd
 exists.
 
-I am even more happy that modern environments don't need systemd.
-A container runs a service and the start/stop handling gets done
-by a container-orchestration system (for example 
-[Kubernetes](https://en.wikipedia.org/wiki/Kubernetes)).
+But time has changed. Today applications run in containers. Containers
+don't need systemd. In [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes) containers
+get started and stopped, not services. There is no need for a daemon starting and
+stopping services, since this gets done on a higher level.
 
 ### Avoid calling command line tools
 
