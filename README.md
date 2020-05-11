@@ -1325,8 +1325,8 @@ row. That's the global config. There you can create column called
 
 ### Testcode is conditionless
 
-Testcode should not contain conditions (the keyword if). If you have
-loops (for, while) in your tests, then this looks strange, too.
+Testcode should not contain conditions (the keyword `if`). If you have
+loops (`for`, `while`) in your tests, then this looks strange, too.
 
 Tests should be straight forward:
 
