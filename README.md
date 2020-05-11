@@ -1189,9 +1189,6 @@ Then run all tests for module "bar" (I use py.test -k bar). But if this
 would take more then three minutes, then leave the testing to the CI
 which happens after you commit+push (you have a CI, haven't you?)
 
-Then commit+push. Let CI run all tests in background (don't waste time
-watching your unittests running and passing)
-
 ### Tests and production code go hand in hand.
 
 You implemented the great method foo() and you implement a corresponding
