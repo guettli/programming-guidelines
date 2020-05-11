@@ -561,14 +561,14 @@ There are still some places where toilet paper wrappers need to get coded again 
 
 For example JSON does not support datetime, timedelta and binary data. See [Let's fix JS](https://github.com/guettli/lets-fix-js). Speak to the upstream, to whoever is responsible for this, even if you think they are way too big, and you way too small.
 
-### Avoid GPL
+### If unsure use MIT or Apache-2 License
+
+The MIT and Apache Licenses are simple and short.
 
 The GPL license is much too long. I tried to read it twice, but I felt
 asleep. I don't like things which I don't understand.
 
 Next argument: The GPL license is viral.
-
-Avoid the GPL.
 
 ### Loop in DB, not in your code
 
