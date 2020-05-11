@@ -1207,7 +1207,7 @@ holding hands :-)
 Related [Guideline of Google: Codereview "Tests"](
 https://google.github.io/eng-practices/review/reviewer/looking-for.html#tests)
 
-### aaa-tests
+### aaa-tests (smoke tests)
 
 You want to check your source code before commit? Great initiative, you are on
 the right track. This source code checking is usualy called [Linting](https://en.wikipedia.org/wiki/Linting).
@@ -1223,17 +1223,13 @@ That's why I suggest this: aaa-test. These test pass quick and check basic stuff
 how much want to do in these tests. Some basic linting, some basic unit-test, ... Then calls these
 tests during CI and can call them in your (optional) pre-commit hook. 
 
-If linting all files is too slow, you can optimize it to check only these files which were changed. 
-But this optimization should only happen in the pre-commit hook. Not in the CI.
+Some call this "smoke tests".
 
-In Python you can execute tests by giving a part of the name. Example: `pytest -k aaa` executes all test containing "aaa". 
+In most development environments you can execute tests by giving a part of the name. Example: `pytest -k aaa` executes all test containing "aaa". 
 This has the benefit that you can add a new test anywhere you like. You don't need to register this somewhere.
-And in CI these tests get executed just like every other test. No decorator or other fancy stuff is needed.
 
 
-
-
-### Creating test data is much more important than you initial think
+### Creating test data is much more important than you initialy think
 
 Creating test data is very important. It can help you for several
 things:
