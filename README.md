@@ -1299,7 +1299,7 @@ a GUI for the customer to change the config.
 The configuration and recipies for the configuration management is
 stored in git. But this is a different topic. If I speak about
 configuration management, then I speak mostly about configuring linux
-servers and networks (aka [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code). In my case this is nothing which my customer
+servers and networks (aka [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)). In my case this is nothing which my customer
 touches.
 
 ### ForeignKey from code to DB
