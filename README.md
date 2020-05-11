@@ -519,7 +519,7 @@ stopping services, since this gets done on a higher level.
 I try to avoid calling a command line tool, if a library is available.
 
 Example: You want to know how long a process is running (with Python).
-Yes, you could call ps -p YOUR\_PID -o lstart= with the subprocess
+Yes, you could call `ps -p YOUR\_PID -o lstart=` with the subprocess
 library. This works.
 
 But why not use a library like
@@ -532,6 +532,9 @@ library is easy, do it.
 
 Check the license of the library. If it is BSD, MIT or Apache like, then
 use the library.
+
+Calling a subprocess is slow, especially if it gets done often you will notice
+the difference soon. 
 
 ### Avoid toilet paper programming (wrapping)
 
