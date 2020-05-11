@@ -675,7 +675,7 @@ tests and removes more lines than it adds to the production code.
 
 If the guideline of your team is: "Run all tests before commit+push",
 then there is something wrong. Time is too short to watch tests running!
-Run only the tests of the code you touched (py.test -k my\_keyword).
+Run only the tests of the code you touched `py.test -k my_keyword`.
 
 It's the job of automated CI (Continuous Integration) to run all tests.
 That's not your job.
@@ -691,16 +691,20 @@ to pypi: <https://github.com/guettli/github-travis-bumpversion-pypi>
 
 All I need to do is to commit. All other steps are automated :-)
 
-### CI must not connect to the internet
+### Tests should work offline
 
-If you do automated testing you usualy have these steps: build then
-test.
+Imagine a developer sits in a train and has an unreliable network connection.
 
-My guideline (for commercial, closed source software) is to avoid
-internet access during both steps. During "build" dependencies get
-downloaded. Don't download them from the internet. Host your own repos
-for source code (git), system packages (rpm/dpkg) and your language (pip
-for python).
+Nevertheless I want that all tests can get executed.
+
+For simple unit-tests which don't need a server this is easy.
+
+But if you test needs a http-server, a database (PostgreSQL, MySQL),
+a key-value DB (redis), ... What can you do?
+
+Automation is the solution. You can use a tool like Ansible to set up
+the needed environment.
+
 
 ### CI Config
 
