@@ -611,6 +611,9 @@ If you have an database driven application and a third party tool wants
 to send data to the application, then sometimes the easiest solution is
 to give the third party access to the database.
 
+You can create a special database user which has only access to one table.
+That's easy.
+
 Nitpickers will disagree: If the database schema changes, then the
 communication between both systems will break. Of course that's true.
 But in most cases this will be the same if you use a "real" API. If
