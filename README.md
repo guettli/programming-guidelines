@@ -656,8 +656,10 @@ than 1000 of lines which are in branch which will never get pushed to master.
 ### Not one branch per customer
 
 Some people use git branches to store the individual settings for
-customers or installations. Don't do this. Create one git repo for every
-customer or installation.
+customers or installations. Don't do this. 
+
+Creating one git repo for every customer or installation is strange, too. This might work if you have 
+less than 50 customers. But this won't work for 3000 customers.
 
 ### Don't put generated code into version control
 
