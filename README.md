@@ -959,12 +959,12 @@ My solution: resubmission: Read the text again 30 days later.
 
 ### Canonical docs
 
-Look at the question concerning ssh options at the Q+A site serverfault.
+Look at the question concerning OpenSSH (aka `ssh`) options at the Q+A site serverfault.
 There is a lot of guessing. Something is wrong. Nobody knows where the
-canonical docs are. Easy linking to specific configuration is not
+canonical upstream docs are. Easy linking to specific configuration is not
 possible. What happens? Redudant docs. Many blog posts try to explain
-stuff.... Don't write blog posts, improve the upstreams docs. Talk with
-the developers. Open an issue in the issue tracker if you think there is
+stuff.... Don't write blog posts, instead improve the upstreams docs. Talk with
+the core developers. Open an issue in the issue tracker if you think there is
 something missing in the docs.
 
 Open an issue if the docs start with the hairy details and don't start
@@ -978,6 +978,13 @@ related secrets. On the other hand it is redundant and since a lot of
 users take their knowledge from this resource, the canonical upstream
 docs get less love. First determine where the canonical upstream docs
 are. Then communicate with the maintainers. Avoid redundant docs.
+
+With other words: Blog posts are nice, but they are like dust in
+the wind. They explain a snapshot. Three months later they are outdated.
+It makes more sense to add one missing sentance to the upstream docs,
+then to create a blog post explaining something which is not explained
+in the docs. At least in the open source world. Since it is more likely
+that you are able to influence the upstream docs.
 
 ### Do not send long instructions to customers via mail
 
