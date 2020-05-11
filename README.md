@@ -1257,10 +1257,6 @@ and automated tests.
 Do not use random data for testing. It just makes no sense: tests should
 be reproducible.
 
-If your application is multi-tenant (support multiple customers in one
-system), then you need a demo tenant. All automated tests should use
-this tenant.
-
 I don't see why a special library for creating test data is needed. If
 you use an ORM in your production code, then use the ORM to create your
 test data.
