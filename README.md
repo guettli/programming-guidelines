@@ -913,6 +913,10 @@ If a customer wants you to send him CSV, ask if he can consume JSON.
 There are great libraries for reading and writing Excel. For example:
 [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
 
+Other alternatives to CSV:
+
+* [zarr](https://zarr.readthedocs.io/en/stable/)
+
 ### Give booleans a "positive" name
 
 I once gave a DB column the name "failed". It was a boolean indicating
