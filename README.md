@@ -916,6 +916,7 @@ There are great libraries for reading and writing Excel. For example:
 Other alternatives to CSV:
 
 * [zarr](https://zarr.readthedocs.io/en/stable/)
+* [jsonlines](http://jsonlines.org/)
 
 ### Give booleans a "positive" name
 
