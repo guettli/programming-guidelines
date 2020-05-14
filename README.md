@@ -878,6 +878,7 @@ DevOps who prefer "Op" to "Dev" tend to create configuration with a script.
 You can do this, but then create the config again daily. Do not edit
 the generated config by hand.
 
+Related: [Single source of truth](https://en.wikipedia.org/wiki/Single_source_of_truth)
 
 ### Regex are great - But it's like eating rubbish
 
