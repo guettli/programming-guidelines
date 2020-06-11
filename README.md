@@ -94,6 +94,8 @@ Quote:
     programs to be spontaneous and interesting; we want them to stick to
     the script and predictably accomplish their business goals.
 
+Example: [Pure Functions](https://en.wikipedia.org/wiki/Pure_function) are great. They are stateless, their output can be cached for ever, they are easy to test.
+
 ### Avoid redundancy
 
 See heading.
@@ -1122,7 +1124,7 @@ Even in C you can pass around method-pointers. It's very common in
 JavaScript and sometimes it gets done in Python, too. It is hard to
 debug. IDE's can't resolve the code: "Find usages" don't work. I try to
 avoid it. I prefer OOP (Inheritance) and avoid passing around methods or
-treating them like variables.
+treating methods like variables.
 
 I don't like [Closures (wikipedia)](https://en.wikipedia.org/wiki/Closure_(computer_programming)).
 Reason: Anonymous functions have no name. If you use a [Statistical Profiler](https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29#Statistical_profilers), you don't see
