@@ -1288,6 +1288,35 @@ there is no untestable code. Maybe your knowledge of testing is limited
 up to now. Finding untestable code and making it testable is the
 beginning of an interesting adventure.
 
+### Flaky Tests
+
+Tests are never flaky. If the same code ran fine on yesterday, and it the same code
+fails today, then the test itself is stable. 
+
+The environment if flaky. Some small in bit in the environment is different today.
+
+Maybe the servers are under more load today, which results in slower responses, which
+results in timeouts.
+
+Maybe it fails because there is a new test which executes before the flaky test and which
+modifies the database.
+
+Maybe a shared ressource contains different data today.
+
+...
+
+The bigger your environment, the more more likely you have flaky tests.
+
+This is the way to avoid flaky tests:
+
+* Keep your test simple. Try to write stateless methods which receive one few input.
+* keep the environment simple. If you can avoid Selenium, then avoid it. Jest and jsdom are more predictable
+* Avoid shared ressources. Tests should have their on database, their own cache, ...
+* ...
+
+
+
+
 ### Is config code or data?
 
 This is a difficult question. At least at the beginning. For me most
