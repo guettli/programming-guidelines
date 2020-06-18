@@ -583,29 +583,35 @@ then I guess there is just the matching index missing up to now.
 Imagine you have three models (users, groups and permissions) as tables
 in a relational database system.
 
-Most systems do the permission checking via source code. Example: if
-user.is\_admin then return True
+Most systems do the permission checking via source code. Example: `if
+user.is_admin then return True`. 
 
-Sooner or later you need the reverse: Show all users which have a given
-permission.
+Sooner or later you need the list of items: Show all items which the
+current user may see.
 
 Now you write SQL (or use your ORM) to create a queryset which returns
-all users which satisfy the needed conditions.
+all items which satisfy the needed conditions.
 
 Now you have two implementations. The first `if user.is_admin then
 return True` and one which uses set operations (SQL). This is redudant and looking
 for trouble. Sooner or later your permission checks get more complex and then 
 one implementation will get out of sync.
 
-### Real men don't use ORM
+That's why I think: do permission checking via SQL
+
+### Real men use ORM
 
 [ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping) makes daily
 work much easier. Above heading is a stupid joke. Clever people use tools to make work simpler, more fun and more
 convenient. ORMs are great. 
 
-Some (usualy elderly) developers fear that a ORM is slower than hand-crafted and optimized SQL. Maybe, maybe not.
+Some (usualy elderly) developers fear that a ORM is slower than hand-crafted and optimized SQL. Maybe
+there are corner cases where this prejudice is true. But that's not a reason to avoid ORMs. Just use them,
+and if you hit a corner case, then use raw SQL.
 
 See [premature optimization is the root of all evil](#premature-optimization-is-the-root-of-all-evil)
+
+Make your live easy, use ORM.
 
 ### SQL is an API
 
