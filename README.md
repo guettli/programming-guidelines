@@ -1166,6 +1166,31 @@ Three steps vs one step.
 
 OOP is great for implementing an [ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping). But implemeting this should be done by people who have more experience than I have :-)
 
+### "Dependency injection" is just "Configuration"
+
+For me the term [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and the corresponding Wikipedia article are way too complicated.
+
+For me it is just "Configuration". But some people don't like it simple, they prefer bloated theory.
+
+From Wikipedia "Dependency injection"
+
+> In the following Java example, the Client class contains a Service member variable that is initialized by the Client 
+> constructor. The client controls which implementation of service is used and controls its construction.
+> In this situation, the client is said to have a hard-coded dependency on ExampleService.
+
+Now have a look at these docs [Database Settings](https://docs.djangoproject.com/en/3.0/ref/settings/#databases)
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
+```
+
+That's all: Instead of hard-coded dependencies you provide a way to configure your software.
+
 ### Test Driven Development
 
 red, green, refactor. More verbose: make the test fail, make the test
