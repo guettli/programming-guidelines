@@ -1320,7 +1320,9 @@ This is the way to avoid flaky tests:
 * Avoid shared ressources. Tests should have their on database, their own cache, ...
 * ...
 
+### Hermetic Testing
 
+This blog from [Google Testing Blog "Hermetic Servers"](https://testing.googleblog.com/2012/10/hermetic-servers.html) explains it in depth: End-to-End tests are fastesr and less flaky if the run a single server (maybe via localhost).
 
 
 ### Is config code or data?
