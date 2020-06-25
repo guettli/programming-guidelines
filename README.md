@@ -2411,6 +2411,10 @@ patient.
 Same for irony and sarcasm. You and your friends might think it is funny. New team members and
 other people won't understand you. It is not funny, it is confusing and childish.
 
+### Avoid bike-shedding
+
+Avoid [bike-shedding]. Please read the "Example" in the Wikipedia article. It is fun.
+After you read this, you will see it happen again and again.
 
 ### Sometimes you just have to speak out a wish
 
