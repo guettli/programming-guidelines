@@ -1444,6 +1444,7 @@ help, since it is missing important information. And you have no clue
 where this warning comes from. You can use this solution:
 <http://stackoverflow.com/a/43232091/633961>
 
+
 ### Avoid magic or uncommon things
 
 -   hard links in linux file systems.
@@ -1893,6 +1894,54 @@ For Python there is [py-spy](https://github.com/benfred/py-spy) to dump the stac
 You confuse new comers, if your development branch has a different name. If you call the development branch "master", then all introduction material at github does apply. And if you code is at github, all people can see that your project is still alive, since the master branch gets displayes per default.
 
 Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all the coding in the "development" branch. The master branch was not updated since three years. I thought this project was dead. The maintainer was upset because he recently pushed changes into this branch. See [issue #9](https://github.com/sergeyksv/tinelic/issues/9#issuecomment-558557925)
+
+------------------------------------------------------------------------
+
+## 4. CI/CD
+
+Continuous Integration, Continuous Deployment
+
+Continuous Integration, Continuous Deployment
+
+### Canary release
+
+
+> Canary release is a technique to reduce the risk of introducing a new software version in production by 
+> slowly rolling out the change to a small subset of users before rolling it out to the entire 
+> infrastructure and making it available to everybody.
+
+Source: [martinfowler.com](https://martinfowler.com/bliki/CanaryRelease.html)
+
+Imagine you have two versions: 
+
+* Version A (the stable mainstream version)
+* Version B (the version containing a new feature)
+
+
+There are three ways you can implement the switch between the versions:
+
+* Via routing: You have one system and several servers. Some servers use version A, some version B. A router decides which server should handle the request
+* Via system: You have several systems (for example a system for each customer). You can update the system of one customer to version B, while the other customers use version A.
+* Via code: The source code contains both implementations. According to some condition either code version A or code version B gets executed. You usualy use a feature-flag for this. This feature-flag can be set per user (or per customer).
+
+For example you updating an internal tool, but you don't want to interrupt the work of all developers.
+
+You can implement canary releasing in an early adaptors list like this:
+
+```
+if user in ['thomas', 'peter', 'hugo', ....]:
+    #### new way
+else:
+    #### old way
+```
+
+This way you ensure to don't annoy collegues with your great new, but not yet mature features.
+
+
+
+
+
+
 
 ------------------------------------------------------------------------
 
