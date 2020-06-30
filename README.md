@@ -1921,12 +1921,12 @@ Imagine you have two versions:
 There are three ways you can implement the switch between the versions:
 
 * Via routing: You have one system and several servers. Some servers use version A, some version B. A router decides which server should handle the request
-* Via system: You have several systems (for example a system for each customer). You can update the system of one customer to version B, while the other customers use version A.
+* Via system: You have several systems (for example one system for each customer). You can update the system of one customer to version B, while the other customers use version A.
 * Via code: The source code contains both implementations. According to some condition either code version A or code version B gets executed. You usualy use a feature-flag for this. This feature-flag can be set per user (or per customer).
 
 For example you updating an internal tool, but you don't want to interrupt the work of all developers.
 
-You can implement canary releasing in an early adaptors list like this:
+Since it is just for internal tooling, you can implement canary releasing in an early adaptors list like this:
 
 ```
 if user in ['thomas', 'peter', 'hugo', ....]:
@@ -1937,9 +1937,17 @@ else:
 
 This way you ensure to don't annoy collegues with your great new, but not yet mature features.
 
+Example 2: You can use a mixture of "via system" and "via code". I guess you have some system-wide configuration
+in your database. Then you can deploy the same source code to all systems and use code like this:
 
+```
+if system_config.feature_flag_foo:
+    ### new way
+else:
+    ### old way
+```
 
-
+I like the "via code" way, because this simplifies your CI/CD. You only have one current version which gets deployed to all places. Of course this gets a bit more difficult if your change requires a database schema update.
 
 
 
