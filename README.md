@@ -1017,6 +1017,22 @@ then to create a blog post explaining something which is not explained
 in the docs. At least in the open source world. Since it is more likely
 that you are able to influence the upstream docs.
 
+### One central glossary: One page per term
+
+> There are only two hard things in Computer Science: cache invalidation and naming things.
+> -- Phil Karlton
+
+[Martin Fowler](https://martinfowler.com/bliki/TwoHardThings.html)
+
+My best practice to solve the "naming things" challenge
+
+* Define your terms, your terminology. For small projects a glossary is enough, but for bigger projects every term should have its own page. It should be easy to create a hyperlink to this term. That's why I prefer the "one term, one page" approach. Creating hyperlinks into a page (https://..../...#foo) are possible but less fun.
+* The defined terms should not differ too much from the spoken words (or the words used in your chat/mail messages). If there is a difference, then alter the written definition. 
+* Someone should be responsible for the docs. "Everybody is responsible for it" does not work.
+* Encourage and motivate people again and again to speak up if the docs are outdated.
+
+More about this topic from me: [Intranets](https://github.com/guettli/intranets)
+
 ### Do not send long instructions to customers via mail
 
 If you send long instructions to customers via mail, then these docs in
