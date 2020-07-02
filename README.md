@@ -1170,7 +1170,7 @@ OOP is great for implementing an [ORM (Object-relational mapping)](https://en.wi
 
 For me the term [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and the corresponding Wikipedia article are way too complicated.
 
-For me it is just "Configuration". But some people don't like it simple, they prefer bloated theory.
+For me it is just "Configuration". But some people don't like it simple, they prefer .... (I removed this since it was provocative. Feel free to add you favorite terms here)
 
 From Wikipedia "Dependency injection"
 
