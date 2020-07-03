@@ -326,7 +326,7 @@ Or the customer wants to update the schema on its own.
 
 What can you do now?
 
-One solution is the [Entity–attribute–value model](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model)
+One solution is EAV: The [Entity–attribute–value model](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model)
 
 
 ------------------------------------------------------------------------
