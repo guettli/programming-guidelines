@@ -310,6 +310,25 @@ linear portions of a transaction's work. Your use of them may be able to
 express a hierarchical expression of updates that may be preserved or
 rolled back, but the concept in PostgreSQL is not itself hierarchical.
 
+### My customer wants to extend the data schema ....
+
+Imagine you created some kind of issue-tracking system. Up to now you provide attribues like "subject", "description", "datetime created",
+"datetime last-modified", "tags", "related issues", "priority", ...
+
+Now the customer wants to add some new attributes to issues. It would be quite easy to you to update
+the database schema and update the code.
+
+Maybe you are lucky and you have 100 customers. Then you would like to prefer to spend your time
+improving the core product. You don't want to spent too much time for the features which
+only one customer wants.
+
+Or the customer wants to update the schema on its own. 
+
+What can you do now?
+
+One solution is the [Entity–attribute–value model](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model)
+
+
 ------------------------------------------------------------------------
 
 ## 3. Dev
