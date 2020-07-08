@@ -1384,6 +1384,26 @@ This is the way to avoid flaky tests:
 
 This blog from [Google Testing Blog "Hermetic Servers"](https://testing.googleblog.com/2012/10/hermetic-servers.html) explains it in depth: End-to-End tests are fastesr and less flaky if the run a single server (maybe via localhost).
 
+### Unit-Tests may use the ORM.
+
+Imagine you use a framework which provides you a nice ORM to create, read, update and delete your data.
+
+Now you write some backend-methods on top of this ORM.
+
+And on top of your methods you might provide an HTTP API.
+
+Imagine you have a class `Ticket` which has a method called `resolve()`. Of course
+this method uses the ORM.
+
+You want to write a unit-test for this method.
+
+A purist argue: I only want to unit-test the method, I must not use the ORM since blablabla.
+
+I understand what the purist wants. But I want to get things done. I want to make
+customers happy, not unit-test purists.
+
+For me it is 100% ok if unit-tests use ORM.
+
 
 ### Is config code or data?
 
