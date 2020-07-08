@@ -1404,6 +1404,8 @@ customers happy, not unit-test purists.
 
 For me it is 100% ok if unit-tests use ORM.
 
+With other words: Only mock away things which take too long or ressources
+which are not available (and should not be available (like a mail server)).
 
 ### Is config code or data?
 
