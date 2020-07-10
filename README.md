@@ -343,6 +343,8 @@ If you doing something from scratch, then create some slides paint it roughly, a
 text what should happen if someone pushes the button. Again, use expressive colors, so that it easy to see what is ideation and
 what is existing GUI.
 
+You don't need expencive tools like Figma or InVision for this. Especially if I create something new, I like to do it on paper with pencil and crayons.
+
 Of course above hints make no sense if you write a device driver which has no graphical user interface.
 
 
