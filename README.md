@@ -333,6 +333,19 @@ One solution is EAV: The [Entity–attribute–value model](https://en.wikipedia
 
 ## 3. Dev
 
+### Mockups help
+
+Start with painting. A [Mockup](https://en.wikipedia.org/wiki/Mockup#Software_engineering) helps.
+
+If you improve an existing application, then take a screenshot and then paint in it with expressive colors. I like #ff00ff.
+
+If you doing something from scratch, then create some slides paint it roughly, add numbers to buttons and add a little
+text what should happen if someone pushes the button. Again, use expressive colors, so that it easy to see what is ideation and
+what is existing GUI.
+
+Of course above hints make no sense if you write a device driver which has no graphical user interface.
+
+
 ### Less code, less bugs
 
 -   Not existing code is the best: Less code, less bugs
