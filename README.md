@@ -1407,8 +1407,7 @@ Now you write some backend-methods on top of this ORM.
 
 And on top of your methods you might provide an HTTP API.
 
-Imagine you have a class `Ticket` which has a method called `resolve()`. Of course
-this method uses the ORM.
+Imagine you have a class `Ticket` which has a method called `resolve()`. This method uses the ORM.
 
 You want to write a unit-test for this method.
 
@@ -1417,10 +1416,10 @@ A purist argue: I only want to unit-test the method, I must not use the ORM sinc
 I understand what the purist wants. But I want to get things done. I want to make
 customers happy, not unit-test purists.
 
-For me it is 100% ok if unit-tests use ORM.
+For me it is 100% ok if unit-tests use the ORM.
 
-With other words: Only mock away things which take too long or ressources
-which are not available (and should not be available (like a mail server)).
+With other words: Only mock away things which take too long or things which need ressources
+which are not available.
 
 ### Is config code or data?
 
