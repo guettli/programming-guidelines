@@ -328,10 +328,9 @@ What can you do now?
 
 One solution is EAV: The [Entity–attribute–value model](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model)
 
-
 ------------------------------------------------------------------------
 
-## 3. Dev
+## X. UI
 
 ### Mockups help
 
@@ -346,6 +345,15 @@ what is existing GUI.
 You don't need expencive tools like Figma or InVision for this. Especially if I create something new, I like to do it on paper with pencil and crayons.
 
 Of course above hints make no sense if you write a device driver which has no graphical user interface.
+
+### Faceted search
+
+You should know this term: [Faceted search](https://en.wikipedia.org/wiki/Faceted_search)
+
+
+------------------------------------------------------------------------
+
+## 3. Dev
 
 
 ### Less code, less bugs
