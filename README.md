@@ -2828,6 +2828,10 @@ Simple and Boring."
 -   [Leaving the
     autopilot](https://github.com/guettli/leaving-the-autopilot)
 
+### Related
+
+- [Hacker-Laws](https://github.com/dwmkerr/hacker-laws)
+
 ### Thank you
 
 -   Robert C. Martin for the book "Clean Coder"
