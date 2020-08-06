@@ -1111,11 +1111,11 @@ https://wiki.ubuntuusers.de/Installation_auf_externen_Speichermedien/
 
 I came across this page because I want to install Linux on an external hard disc.
 
-Unfortunately there seems to be no good English guide how to do this.
+Unfortunately there seemed to be no good English guide how to do this.
 
-The most solid guide was above link. Unfortunately above guide is outdated.
+The most solid guide I found during the first minutes was above link. Unfortunately above guide was outdated.
 
-Grrrrrr. Now I need to choose:
+Grrrrrr. Now I needed to choose:
 
 * V1: Should I update the outdated german guide? It is a wiki editable by everybody.
 
@@ -1134,7 +1134,7 @@ language. I would update an Englisch wiki page, since this would help a lot of p
 Don't get me wrong: Docs for applications you write should be in the language of your customers. Above text
 is about tech related docs.
 
-Again: Don't write tech-docs in non-english language
+My conclusion: Don't write tech-docs in non-english language
 
 ### Care for newcomers
 
