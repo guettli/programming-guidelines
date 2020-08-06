@@ -1032,7 +1032,7 @@ My solution: resubmission: Read the text again 30 days later.
 
 ### Canonical docs
 
-Look at the question concerning OpenSSH (aka `ssh`) options at the Q+A site serverfault.
+Look at the question concerning OpenSSH options at the Q+A site [serverfault.com](https://serverfault.com/).
 There is a lot of guessing. Something is wrong. Nobody knows where the
 canonical upstream docs are. Easy linking to specific configuration is not
 possible. What happens? Redudant docs. Many blog posts try to explain
@@ -1058,6 +1058,11 @@ It makes more sense to add one missing sentance to the upstream docs,
 then to create a blog post explaining something which is not explained
 in the docs. At least in the open source world. Since it is more likely
 that you are able to influence the upstream docs.
+
+Related: [Single Source of Truth (Wikipedia)](https://en.wikipedia.org/wiki/Single_source_of_truth)
+
+Related: [Canonical URL](https://en.wikipedia.org/wiki/Canonicalization#URL)
+
 
 ### One central glossary: One page per term
 
