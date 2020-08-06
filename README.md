@@ -1063,6 +1063,7 @@ Related: [Single Source of Truth (Wikipedia)](https://en.wikipedia.org/wiki/Sing
 
 Related: [Canonical URL](https://en.wikipedia.org/wiki/Canonicalization#URL)
 
+Related: ["Don't repeat yourself" vs "We enjoy typing"](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself#DRY_vs_WET_solutions)
 
 ### One central glossary: One page per term
 
