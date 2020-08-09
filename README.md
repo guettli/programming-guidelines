@@ -2316,7 +2316,7 @@ todo: add examples
 
 It makes sense to have some rough numbers for rough estimates.
 
-USB-2: 1.5 GByte per minute (rsync). 3.6 GByte per minute (theory)
+USB-2: 1.9 GByte per minute (rsync from PC to external hard disk). 3.6 GByte per minute (theory)
 
 Office: Download: 200 Mbit/s, Upload: 20 Mbit/s
 
