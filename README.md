@@ -2311,6 +2311,19 @@ issue before.
 The real magic is Master-Master Replication. Here are some examples where it gets used:
 
 todo: add examples
+
+### Data transfer rates
+
+It makes sense to have some rough numbers for rough estimates.
+
+USB-2: 1.5 GByte per minute (rsync). 3.6 GByte per minute (theory)
+
+Office: Download: 200 Mbit/s, Upload: 20 Mbit/s
+
+Home: Download 60 Mbit/s, Upload 12 Mbit/s, Latency 10 ms
+
+Related: [List of interface bit rates](https://en.wikipedia.org/wiki/List_of_interface_bit_rates)
+
 ## 6. Networking
 
 ### No routing on servers
