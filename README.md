@@ -1832,6 +1832,9 @@ The root cause is unclear. I would like to know more. I want to know why it fail
 Debugging this would be much easier if `file_put_contents()` would throw
 an exception on failure instead of returning `false`.
 
+The [man page of errno](https://man7.org/linux/man-pages/man3/errno.3.html) lists all the common errors which can happen.
+It would really help me if I would know if it is EDQUOT (Disk quota exceeded), ENAMETOOLONG (Filename too long), ENOSPC (No space left on device) ...
+
 Next issue with returning "false" on error: I guess there are several calls to `file_put_contents()` which don't check the return
 value and silently don't realize that something failed.
 
