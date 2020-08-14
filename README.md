@@ -1807,6 +1807,37 @@ in one of the following groups: baywatch, admin, ...".
 Software security expert might disagree. I disagree their disagreement.
 Hiding the facts is just "Security through obscurity".
 
+### "false" means failure... The root cause is gone.
+
+In the early days, when the C programming language was predominant, it was common for the return value of a method call to specify
+whether the call was successful or not.
+
+I run a [Nextcloud](https://nextcloud.com/) server, but
+the synchronisation fails for some files. In the logs I see that GenericFileException()
+gets thrown. Let's have a look at these lines. 
+
+```
+if ($this->view->file_put_contents($this->path, $data) === false) {
+    throw new GenericFileException('file_put_contents failed');
+}
+```
+
+I try to find the implementation of `file_put_contents()` and see that it
+is implemented 19 times! There several different backends (ObjectStore, Local, DAV, ...)
+
+The error message is completely meaningless: "file_put_contents failed".
+
+The root cause is unclear. I would like to know more. I want to know why it failed.
+
+Debugging this would be much easier if `file_put_contents()` would throw
+an exception on failure instead of returning `false`.
+
+Next issue with returning "false" on error: I guess there are several calls to `file_put_contents()` which don't check the return
+value and silently don't realize that something failed.
+
+Guideline: Use exceptions to signal that something went wrong.
+
+
 ### Avoid clever guessing
 
 These days I needed to debug a well known Python library. It works fine,
