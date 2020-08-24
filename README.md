@@ -2634,7 +2634,19 @@ Win-win: He could improve the usability and for me is more convenient now. I lov
 
 
 
+### Self-Service instead of Communication
 
+Setting up a simple workflow (maybe inside a chat tool) is easy. For example: the sales person wants
+a new demo system for a potential customer. He writes a message into a special chat channel and
+someone with more technical background creates the demo system. Fine, isn't it?
+
+Yes, this chat based workflow is doable and it is better than direct messages to individuals.
+
+Nevertheless **self-service** is better. Wouldn't it be great if setting up a new demo system
+is simple and can be done by a sales person who has no deep technical knowledge?
+
+Communication is important, but daily tasks should get automated so that the one who wants something
+can help himself.
 
 
 
