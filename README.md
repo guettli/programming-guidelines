@@ -2648,6 +2648,16 @@ is simple and can be done by a sales person who has no deep technical knowledge?
 Communication is important, but daily tasks should get automated so that the one who wants something
 can help himself.
 
+### Architectural Decision Records
+
+Architectural Decision Records (ADR) help to explain the "why?" if new team members don't understand the current state.
+
+Template:
+
+> In the context of <use case/user story u>, facing <concern c> we decided for <option o> and neglected <other options>, to achieve <system qualities/desired consequences>, accepting <downside d/undesired consequences>, because <additional rationale>.
+
+Source: [adr.github.io](https://adr.github.io/)
+
 
 
 
