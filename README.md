@@ -906,7 +906,8 @@ You can create things! In this section I call the magic output "foo".
 
 Yes, you can automatically create foo with a script. Whatever "foo" is
 in your context: It has no value. It is worth nothing. It is dust in the 
-wind like a web page. This output is only temporarily valuable. 
+wind like a web page which displays the current time. 
+This output is only temporarily valuable. 
 
 Look at the basic IPO pattern: Input - Processing - Output (in this case
 "foo").
