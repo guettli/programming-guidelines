@@ -2563,7 +2563,7 @@ Some customers only want to know the important changes. Some say that
 they want to know every change, but then never look at it.
 
 If you are working in a modern SaaS environment where you are able to
-releas often, then you should provide a ChangeLog, but don't take it too serious.
+release often, then you should provide a ChangeLog, but don't take it too serious for GUI changes.
 
 Example: I see small changes in the GUI of GSuite weekly. I guess they don't have
 a public ChangeLog, and I think it is not needed, too. 
@@ -2573,6 +2573,10 @@ That's important. Maybe the GUI changed, maybe not. It is like in the game chess
 You look at the board and you face the question what to do next. It does not matter
 which chess piece was moved before. You see the board and now it is your turn.
 The past does not matter in this context.
+
+Things are different if you provide a public API. This must not change without clear communication.
+Changes to public APIs should be announced several months in advance.
+
 
 Things are different if you are working in an environment which has more constraints
 (Medical devices, Banking, Insurance, ...), then you don't need my advice, since
