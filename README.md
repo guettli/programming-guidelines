@@ -2554,7 +2554,31 @@ this, since up to now paper or a whiteboard are far more real. If you
 need the result in digital format, just take a picture with your cell
 phone at the end.
 
-### Communication with Customers: Binary decision "do list" or "do later list"
+### Public ChangeLog
+
+The public ChangeLog will never be perfect.
+
+It is in the nature of things. Some customers want to know every small change.
+Some customers only want to know the important changes. Some say that
+they want to know every change, but then never look at it.
+
+If you are working in a modern SaaS environment where you are able to
+releas often, then you should provide a ChangeLog, but don't take it too serious.
+
+Example: I see small changes in the GUI of GSuite weekly. I guess they don't have
+a public ChangeLog, and I think it is not needed, too. 
+
+A GUI should be self-explanatory.
+That's important. Maybe the GUI changed, maybe not. It is like in the game chess: 
+You look at the board and you face the question what to do next. It does not matter
+which chess piece was moved before. You see the board and now it is your turn.
+The past does not matter in this context.
+
+Things are different if you are working in an environment which has more constraints
+(Medical devices, Banking, Insurance, ...), then you don't need my advice, since
+you get told what to do.
+
+### Communication with Customers: Binary decision "next" or "later" lists.
 
 Define "done" with your customers. Humans like to be creative and if
 thing X gets changed, then they have fancy ideas how to change thing Y.
