@@ -111,6 +111,18 @@ Quote:
 
 Example: [Pure Functions](https://en.wikipedia.org/wiki/Pure_function) are great. They are stateless, their output can be cached for ever, they are easy to test.
 
+### Increase the obviousness
+
+But it is not only about code. It is about the experience of all stakeholders: Users, sales people, support hotline, developers, ....
+
+It is hard work to keep it simple. 
+
+One think I love to do: "Increase the obviousness". 
+
+One tool to get there: Use a central wiki (without spaces), and
+define terms. Related text from me: [Documentation in Intranets: My point of view](https://github.com/guettli/intranets)
+
+
 ### Avoid redundancy
 
 See heading.
