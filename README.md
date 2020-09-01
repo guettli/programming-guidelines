@@ -76,6 +76,21 @@ up/down on your screen.
 
 Compare two files with a diff tool, otherwise you might get this ugly skeptical frown.
 
+How often per day do you search for the mouse cursor on your screen?
+Support your eyes by increasing the cursor size. If you use Ubuntu,
+you can do it via [Universal Access / Cursor Size](https://askubuntu.com/questions/1266951/increase-mouse-cursor-size-on-ubuntu-20-04/1266961#1266961)
+
+### Increase font size
+
+During daily work you often jump from one information snippet to the next
+information snippet.
+
+When was the last time you read a text with more than 20 sentences?
+
+I think from time to time you should do so. Slow down, focus on one
+text and read slowly. It helps to increase the font-size. `ctrl-+` is
+your friend.
+
 ### KISS
 
 Keep it simple and stupid. The most boring and most obvious solution is
