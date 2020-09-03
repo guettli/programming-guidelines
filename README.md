@@ -2503,8 +2503,8 @@ Here some hints:
 -   Meet with "normal" people. With "normal" I mean people who do not do
     IT stuff.
 -   Raise a family.
--   Do sport
--   Relax
+-   Do sport. Physical health is important.
+-   Relax. Creativity raises if there is no input (no noise, no visible motion, ...)
 
 ### Avoid stress
 
@@ -2845,10 +2845,22 @@ I like these release notes:
 - [What's new in Python](https://docs.python.org/3/whatsnew/index.html)
 - [CNCF Announcements](https://www.cncf.io/newsroom/announcements/)
 
-### Blogs I follow
+### Do you want your job to be exciting?
 
-- [Google Cloud Blog](https://cloud.google.com/blog/)
-- [Google Testing Blog](https://testing.googleblog.com/)
+If your job is exciting, then it will be exhausting.
+
+This is again the "boring" topic, which was on of the first topics of this text.
+
+Urgency gives you a feeling of importance. But that's a [bias](https://en.wikipedia.org/wiki/Bias). Your emotions
+are playing tricks on you. Important things are not urgent.
+
+If you receive messages constantly (Mail, Chat, WhatsApp, Facebook, ...)
+then you are not able to focus. My guide: switch off notifications and check
+for messages only twice a day.
+
+Focus on your boring todo-list which will bring you to your fancy goal.
+Meet in small groups regularly. Before closing a meeting create
+a small list of "who does what until when".
 
 ### Three Mail Accounts
 
