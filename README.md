@@ -2757,6 +2757,29 @@ have on my mind. If you write about our solution, then the discussion is
 narrowed to a simple pro/contra of your idea. Ask the question like a
 newbee.
 
+### Sponsored Content in IT
+
+Why does someone write an article on medium.com? Why does someone create content
+which is free?
+
+There can be thousand reasons.
+
+Some writeres have good intentions. Some just do it to earn money by advertise something.
+
+There are a lot of arcticles about AWS, Kubernetes, Azure, Docker, ElasticSearch, Graphana, Jamstack, Scrum and other topics. Do you
+think they all got written by volunteers which eat and breath IT topics?
+
+Some authors share their knowledge since they like to share knowledge.
+
+Sponsored Content is everywhere: Web, Facebook, Instagram, Youtube, Medium ...
+
+Maybe it is even on Stackoverflow.
+
+I would like to pay for hgh quality news and articles, but so far I have not found a channel that
+ offers a rich and broad spectrum.
+
+
+
 ### Creativity Management
 
 A lot of ideas come to my mind, if I am far away from a laptop or pc.
