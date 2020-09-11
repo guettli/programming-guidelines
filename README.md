@@ -2662,8 +2662,16 @@ other people won't understand you. It is not funny, it is confusing and childish
 
 ### Avoid bike-shedding
 
-Avoid [bike-shedding]. Please read the "Example" in the Wikipedia article. It is fun.
+Avoid [bike-shedding](https://exceptionnotfound.net/bikeshedding-the-daily-software-anti-pattern/). Please read this link. It is fun.
 After you read this, you will see it happen again and again.
+
+### S/N
+
+[S/N](https://en.wikipedia.org/wiki/Signal-to-noise_ratio) means "Signal-to-noise ratio". It is a measure used in science and engineering that compares the level of a desired signal to the level of background noise. But it can be used for reflecting on his own input, too.
+
+How many useless news do I receive daily? Is there a way to improve S/N?
+
+What is in my circle of influence, what not?
 
 ### Sometimes you just have to speak out a wish
 
