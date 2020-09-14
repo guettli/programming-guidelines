@@ -646,7 +646,7 @@ The MIT and Apache Licenses are simple and short.
 Some license are much too long. I tried to read the GPL twice, but I felt
 asleep. I don't like things which I don't understand.
 
-Next argument: The GPL and AGPL licenses are viral. If you want
+Next argument: The GPL and AGPL licenses are [viral](https://en.wikipedia.org/wiki/Viral_license). If you want
 to create a commercial product, you can't use this.
 
 For me "freedom" means no constraints. That's why I prefer
