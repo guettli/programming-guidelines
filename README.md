@@ -639,14 +639,21 @@ There are still some places where toilet paper wrappers need to get coded again 
 
 For example JSON does not support datetime, timedelta and binary data. See [Let's fix JS](https://github.com/guettli/lets-fix-js). Speak to the upstream, to whoever is responsible for this, even if you think they are way too big, and you way too small.
 
-### If unsure use MIT or Apache-2 License
+### If unsure use MIT or Apache License
 
 The MIT and Apache Licenses are simple and short.
 
-The GPL license is much too long. I tried to read it twice, but I felt
+Some license are much too long. I tried to read the GPL twice, but I felt
 asleep. I don't like things which I don't understand.
 
-Next argument: The GPL license is viral.
+Next argument: The GPL and AGPL licenses are viral. If you want
+to create a commercial product, you can't use this.
+
+For me "freedom" means no constraints. That's why I prefer
+the Apache License, since GPL and AGPL have the constraint
+that you must open your source, too.
+
+See [Why we ban the AGPL](https://www.theregister.com/2011/03/31/google_on_open_source_licenses/)
 
 ### Loop in DB, not in your code
 
