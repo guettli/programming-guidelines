@@ -377,6 +377,9 @@ Of course above hints make no sense if you write a device driver which has no gr
 
 You should know this term: [Faceted search](https://en.wikipedia.org/wiki/Faceted_search)
 
+### FTUE
+
+[First-time user experience](https://en.wikipedia.org/wiki/First-time_user_experience) is very important. Does a user who has never used the application before understand it immideately? 
 
 ------------------------------------------------------------------------
 
