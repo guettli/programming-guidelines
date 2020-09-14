@@ -381,6 +381,10 @@ You should know this term: [Faceted search](https://en.wikipedia.org/wiki/Facete
 
 [First-time user experience](https://en.wikipedia.org/wiki/First-time_user_experience) is very important. Does a user who has never used the application before understand it immideately? 
 
+### Don't make me think
+
+[Don't make me think](https://en.wikipedia.org/wiki/Don%27t_Make_Me_Think) is the title of a book. I don't think it is necessary to read it. Just remember this title and try to create user interfaces which area easy to understand.
+
 ------------------------------------------------------------------------
 
 ## 3. Dev
