@@ -1983,6 +1983,20 @@ If you use django, you can use the [ManifestStaticFilesStorage](https://docs.dja
 
 Good introduction to caching: [Caching (Mozilla Foundation)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
+### CDN for private data?
+
+You might think a unguessable URLs are enough to protect data. Only people with the URL can access it.
+
+No, it is very likely that your customers don't like this. The URL could be shared easily. 
+
+You might argue that unguessable URLs are fine, since an evil user could
+download and upload the content, but this is a different case.
+
+My rule of thumb: Put only public data on a CDN.
+
+Nginx and Apache have this feature called [X-Sendfile](https://www.nginx.com/resources/wiki/start/topics/examples/xsendfile/). This
+handy, since you can do authentication and permission checking in your application and tell the webserver to serve the blob data.
+
 ### Avoid coding for one customer
 
 Try to avoid to write software just for one customer. If you write code
