@@ -1443,7 +1443,7 @@ The bigger your environment, the more more likely you have flaky tests.
 This is the way to avoid flaky tests:
 
 * Keep your test simple. Try to write stateless methods which receive one few input.
-* keep the environment simple. If you can avoid Selenium, then avoid it. Jest and jsdom are more predictable
+* keep the environment simple. If you can avoid Selenium, then avoid it. This will save you time.
 * Avoid shared ressources. Tests should have their on database, their own cache, ...
 * ...
 
