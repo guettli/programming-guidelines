@@ -2952,6 +2952,43 @@ Then wipe the dust.
 If you have never time do this, then there is something wrong. Slow
 down.
 
+### Thrive for consistency
+
+Imagine your software product is like a CMS. A user can edit pages. The product keeps 
+versions of this page, so that the editor can revert to an older version.
+
+Imagine the button to access the history is labeld "History".
+
+Terminology is more important than you think.
+
+If the internal docs have the heading "Page versioning", then you know
+that these docs explain the button labeled "History".
+
+But that's not consistent. 
+
+Imagine this story: A young and new developer wants to learn more about this feature. The
+developers searches in the internal docs with the keyword "history". This results
+in wasting some minutes of the developers precious time. Sure, the developer will find
+the docs sooner or later, but it is not clean. But this is just the first part of the story.
+The second part is that the new developer will get demotivated in having clean docs.
+
+I don't want to call this "Page History" vs "Page Versioning" a problem. It is a spirit.
+
+Usually there are "thousand" places where a term gets used. In above example there will
+be files, classes, methods, data structures containing this name. Changing the label of
+the button is easy. Changing docs, files, classes, methods, epics, data structures is hard.
+
+Sometimes it is too much effort to reflect a new wording in the GUI in all places. With "all"
+I mean the places in the GUI and all the non-user visible places which are only visible for the
+department developing the software.
+
+Consitency on the GUI is a must. Consitency in the other places makes sense.
+
+Sometimes is makes sense. It depends.
+
+The spirit of the future lies in your hand. You are always able to influence the upcoming
+months.
+
 ### Highlander, "There can be only one"
 
 "Highlander" is a 1986 British-American adventure action fantasy film
