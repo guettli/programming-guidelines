@@ -385,6 +385,12 @@ You should know this term: [Faceted search](https://en.wikipedia.org/wiki/Facete
 
 [Don't make me think](https://en.wikipedia.org/wiki/Don%27t_Make_Me_Think) is the title of a book. I don't think it is necessary to read it. Just remember this title and try to create user interfaces which area easy to understand.
 
+### SEO
+
+I think the best docs about search engine optimization are from the company which creates the currently most popular internet search engine:
+
+[developers.google.com/search](https://developers.google.com/search)
+
 ------------------------------------------------------------------------
 
 ## 3. Dev
