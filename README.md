@@ -3068,12 +3068,7 @@ Simple and Boring."
 
 ### Related things I wrote
 
--   [Deadends of Information
-    Technology](https://github.com/guettli/deadends-of-it)
--   [Why I like Django and why I like
-    SAP](https://github.com/guettli/why-i-like-django-and-sap)
--   [Leaving the
-    autopilot](https://github.com/guettli/leaving-the-autopilot)
+See [Thomas doing working out loud](https://github.com/guettli/wol)
 
 ### Related
 
