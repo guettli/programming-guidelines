@@ -1727,10 +1727,10 @@ use celery, but I like this part of the docs)
 
 ### File Locking is deprecated
 
-In the past [File\_Locking](https://en.wikipedia.org/wiki/File_locking)
+In the past [File Locking](https://en.wikipedia.org/wiki/File_locking)
 was a very interesting and adventurous topic. Sometimes it worked,
 sometimes not, and you got interesting edge cases to solve again and
-again. It was fun. Only hard core experts know the difference between
+again. It was fun, especially on NFS (Network file System). Only hard core experts know the difference between
 fcntl, flock and lockf.
 
 .... But on the other hand: It's too complicated, too many edge cases,
@@ -1738,7 +1738,7 @@ too much wasting time.
 
 There will be chaos if there is no central dispatcher.
 
-I like tools like <http://python-rq.org/> It is simple and robust.
+I like tools like <http://python-rq.org/>. It is simple and robust.
 
 BTW, the topic is called
 [Synchronization](https://en.wikipedia.org/wiki/Synchronization_(computer_science)).
