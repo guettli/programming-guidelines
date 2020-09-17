@@ -1535,13 +1535,6 @@ Tests should be straight forward:
 > 2.  Run the code which operates on the data structures
 > 3.  Ensure that the output is like you want it to.
 
-``` {.sourceCode .python}
-class MyTest(unittest.TestCase):
-    def test_foo(self):
-        foo=Foo()
-        self.assertEqual(42, foo.find_answer())
-```
-
 ### Don't search the needle in a haystack. Inject dynamite and let it explode
 
 Imagine you have a huge code base which was written by a nerd which is
