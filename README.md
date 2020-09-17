@@ -395,6 +395,14 @@ I think the best docs about search engine optimization are from the company whic
 
 ## 3. Dev
 
+### Input-Processing-Output
+
+There are thousand programming languages and thousand ways to exchange data. But finally it is one concept:
+
+[Input-Processing-Output](https://en.wikipedia.org/wiki/IPO_model)
+
+If you tell your navigation system of your car "Please show me the route to Casablance Pub, Leipzig" or if you write your first programm which adds two integers and prints the result.
+
 
 ### Less code, less bugs
 
