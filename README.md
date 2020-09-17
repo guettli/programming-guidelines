@@ -2721,7 +2721,8 @@ The  Stackoverflow Tag Trend worked well, but I had ideas to improve it:
 
 After some weeks all my whishes where implemented by the author.
 
-Win-win: He could improve the usability and for me is more convenient now. I love it. Sometimes you just have to speak out a wish. I am not a native speaker. I think the term "make a wish" does not match. You need to tell the wish to the right person.
+Win-win: He could improve the usability and for me is more convenient now. I love it. Sometimes you just have to speak out a wish. 
+You just need to tell your wish to the right person in a friendly way.
 
 
 
