@@ -292,7 +292,7 @@ portable SQL.
 -   TB-scale full text search systems.
 -   Scientific number crunching:
     [hdf5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format)
--   Caching or high performance job queues: Redis fits better.
+-   Caching: Redis fits better
 -   Go with the flow: If you are wearing the admin hat (instead of the
     dev hat), and you should install (instead of develop) a product,
     then try the default db (sometimes MySQL) first.
@@ -1739,6 +1739,7 @@ too much wasting time.
 There will be chaos if there is no central dispatcher.
 
 I like tools like <http://python-rq.org/>. It is simple and robust.
+But the next time I create something like this, I will try [django-pg-queue](https://github.com/SweetProcess/django-pg-queue)
 
 BTW, the topic is called
 [Synchronization](https://en.wikipedia.org/wiki/Synchronization_(computer_science)).
