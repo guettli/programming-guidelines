@@ -2766,7 +2766,7 @@ Source: [adr.github.io](https://adr.github.io/)
 ### It is always possible to make things more complicated
 
 It is always possible to make things more complicated. The interesting
-adventure is to make things simpler and easier.
+adventure is to make things simpler, easier and more obvious.
 
 ### It helps to talk
 
