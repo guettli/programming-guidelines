@@ -603,7 +603,7 @@ stopping services, since this gets done on a higher level.
 I try to avoid calling a command line tool, if a library is available.
 
 Example: You want to know how long a process is running (with Python).
-Yes, you could call `ps -p YOUR\_PID -o lstart=` with the subprocess
+Yes, you could call `ps -p YOUR_PID -o lstart=` with the subprocess
 library. This works.
 
 But why not use a library like
@@ -618,7 +618,12 @@ Check the license of the library. If it is BSD, MIT or Apache like, then
 use the library.
 
 Calling a subprocess is slow, especially if it gets done often you will notice
-the difference soon. 
+the difference soon.
+
+That's one reason I dislike shell scripting. Calling `grep`, `cut`, `sed` again and
+again wastes a lot of CPU time. You can see this with the command line tool `top`.
+If the `sy` value is high, then your server is busy starting new processes. A library is
+way more efficient, since you don't start new processes again and again.
 
 ### Avoid toilet paper programming (wrapping)
 
