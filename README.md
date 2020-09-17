@@ -403,13 +403,35 @@ There are thousand programming languages and thousand ways to exchange data. But
 
 If you tell your navigation system of your car "Please show me the route to Casablance Pub, Leipzig" or if you write your first programm which adds two integers and prints the result.
 
-
 ### Less code, less bugs
 
 -   Not existing code is the best: Less code, less bugs
 -   Code maintained by a reliable upstream (like Python, PostgreSQL,
     Django, Linux, Node.js, Typescript, ...) is more reliable than own
     code.
+
+### Less ressources, less bugs
+
+There are several way to give data to a method.
+
+Let's have a look at this simple method call: `my_method(some_string)`
+
+You might think there is only of variable which gets accessed by the method?
+
+Let's find more ways this method could get input:
+
+* Environment variables: Maybe setting LANG=de_DE influences the output?
+* Filesystem: Maybe the existance or content of a file in the local file system influences the method.
+* `my_method()` could access a database, storage or a cache to read additional data
+* Maybe there is a global variable which contains a value which was set by a previous call to `my_method()`
+* Maybe the datetime influences the method. Maybe the method creates a different output at full moon.
+* ...
+
+AFAIK there is no clear name which distinguishes between explicit and implicit input.
+
+You can't avoid implicit input, and it is 100% ok if it is obvious. If your method
+should return the data of the user with the id 12345, then your code needs to access
+the database.
 
 ### Zen of Python
 
