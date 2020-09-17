@@ -433,6 +433,12 @@ You can't avoid implicit input, and it is 100% ok if it is obvious. If your meth
 should return the data of the user with the id 12345, then your code needs to access
 the database.
 
+If the same code works in one environment, but not in a different environment, and you don't know why,
+then this tool might help: [dumpenv](https://github.com/guettli/dumpenv) it writes the environment to
+a list of files, which you can compare with your favorite diff tool (e.g. Meld).
+
+
+
 ### Zen of Python
 
 [Zen of Python](https://www.python.org/dev/peps/pep-0020/) (Written by
