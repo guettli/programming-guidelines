@@ -791,6 +791,13 @@ are ok, but five weeks are too long.
 Ten lines of improvement which get pushed to master today have much more value
 than 1000 of lines which are in branch which will never get pushed to master.
 
+Trunk based development goes further. Here you hardly work with branches.
+
+> ... each developer divides their own work into small batches and merges that 
+> work into trunk at least once (and potentially several times) a day.
+
+See [Google DevOp Guide "Trunk based development"](https://cloud.google.com/solutions/devops/devops-tech-trunk-based-development)
+
 ### Not one branch per customer
 
 Some people use git branches to store the individual settings for
