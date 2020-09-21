@@ -1489,14 +1489,15 @@ The bigger your environment, the more more likely you have flaky tests.
 
 This is the way to avoid flaky tests:
 
-* Keep your test simple. Try to write stateless methods which receive one few input.
+* Keep your test simple. Try to write stateless methods which receive only few input.
 * keep the environment simple. If you can avoid Selenium, then avoid it. This will save you time.
 * Avoid shared ressources. Tests should have their on database, their own cache, ...
 * ...
 
 ### Hermetic Testing
 
-This blog from [Google Testing Blog "Hermetic Servers"](https://testing.googleblog.com/2012/10/hermetic-servers.html) explains it in depth: End-to-End tests are fastesr and less flaky if the run a single server (maybe via localhost).
+This blog from [Google Testing Blog "Hermetic Servers"](https://testing.googleblog.com/2012/10/hermetic-servers.html) explains it in depth: 
+End-to-End tests are faster and less flaky if they run on localhost and don't need other ressources.
 
 ### Unit-Tests may use the ORM.
 
