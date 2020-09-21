@@ -650,7 +650,7 @@ Why do you want to avoid a third party library?
 Is there a feeling like "too much work, too complicated"? Installing a
 library is easy, do it.
 
-Check the license of the library. If it is BSD, MIT or Apache like, then
+Check the license of the library. If it is BSD, MIT, LGPL or Apache like, then
 use the library.
 
 Calling a subprocess is slow, especially if it gets done often you will notice
@@ -686,9 +686,10 @@ There are still some places where toilet paper wrappers need to get coded again 
 
 For example JSON does not support datetime, timedelta and binary data. See [Let's fix JS](https://github.com/guettli/lets-fix-js). Speak to the upstream, to whoever is responsible for this, even if you think they are way too big, and you way too small.
 
-### If unsure use MIT or Apache License
+### If unsure use MIT License
 
-The MIT and Apache Licenses are simple and short.
+The [MIT License](https://en.wikipedia.org/wiki/MIT_License) is simple and short. Most projects
+at github use it.
 
 Some license are much too long. I tried to read the GPL twice, but I felt
 asleep. I don't like things which I don't understand.
@@ -697,7 +698,7 @@ Next argument: The GPL and AGPL licenses are [viral](https://en.wikipedia.org/wi
 to create a commercial product, you can't use this.
 
 For me "freedom" means no constraints. That's why I prefer
-the Apache License, since GPL and AGPL have the constraint
+the MIT License, since GPL and AGPL have the constraint
 that you must open your source, too.
 
 See [Why we ban the AGPL](https://www.theregister.com/2011/03/31/google_on_open_source_licenses/)
