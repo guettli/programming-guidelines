@@ -595,7 +595,7 @@ I think writing portable shell scripts and avoiding bashism (shell
 scripts which use features which are only available in the bash) is a
 useless goal. It is wasting time. It feels productive, but it is not.
 
-Avoid \#!/bin/sh. The interpreter could be bash, dash or something else.
+Avoid \#!/bin/sh. The interpreter could be bash, dash, busybox or something else.
 See [Comparison of command
 shells](https://en.wikipedia.org/wiki/Comparison_of_command_shells).
 Please be explicit. Use \#!/bin/your-favorite-shell.
@@ -607,13 +607,15 @@ because I think it is sad that young and talented people waste their
 precious time which this nonsense. Since systemd gets used, the shell
 gets started less often (compared to the old system-V or BSD init). This
 architectural change brought improvement. And I think that using dash
-instead of bash brings no measurable benefit today.
+instead of bash brings no measurable benefit today. If you want it
+minimal, then use Alpine Linux with Busybox.
 
 If you are not able to create a dependency to bash, then solve this
 issue. Use rpm/dpkg or configuration management to handle "my script
 foo.sh needs bash".
 
-I know that there are some edge cases where the bash is not available,
+I know that there are some edge cases where the bash is not available
+(for example a container image based on Alpine Linux),
 but in most cases the time to get things done is far more important.
 Execution performance is not that important. First: get it done
 including automated tests.
