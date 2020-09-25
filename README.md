@@ -2174,6 +2174,15 @@ else:
 I like the "via code" way, because this simplifies your CI/CD. You only have one current version which gets deployed to all places. Of course this gets a bit more difficult if your change requires a database schema update.
 
 
+### Less conditions, less code, less bugs
+
+I don't know if this is a fake or real, but I guess it is true. In [this article from a former Oracle developer](https://news.ycombinator.com/item?id=18442941)
+you can read the reason why developing on the huge code base is hard. It is not the size, it is the amount of flags.
+
+Flags are nice, but they introduce compexity. Every flag is a condition. It changes the environment and the simple Input-Processing-Output method
+does not work any more. You have the explicit input and the indirect input from the environment.
+
+If you can avoid conditions, then do it. Conditionless is the goal.
 
 ------------------------------------------------------------------------
 
