@@ -1076,10 +1076,13 @@ hook and "False" as a red cross (meaning "it failed").
 ### Love your docs
 
 I have seen it several times on github. Just have a look
-at the README files on github. They starts with "Installing", then
-"Configuring" ... What is missing? An Introduction! Just some sentences
+at the README files on github. They starts with "Installing", "Configuring", then "Special Cases"... 
+
+What is missing? An introduction! Just some sentences
 what this great project is all about. Programmers prefer the details to the big picture,
 the overview. 
+
+But "Project simple-foo simplifies foo" is not enough. What is "foo"?
 
 Dear programmers, learn to relax and look at the thing you create like a new
 comer. Imagine a new comer who know how to add two integers with his favorite programming
