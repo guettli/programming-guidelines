@@ -2987,6 +2987,9 @@ I have three mail accounts:
 -   work related mails
 -   mailing lists
 
+Maybe you love your job. But your job is not your family. It is a kind of mental hygiene to
+keep this seperated.
+
 ### Clean up your desk
 
 Don't forget to clean your desk. I don't write this here because I do it
@@ -3028,7 +3031,7 @@ I don't want to call this "Page History" vs "Page Versioning" a problem. It is a
 
 Usually there are "thousand" places where a term gets used. In above example there will
 be files, classes, methods, data structures containing this name. Changing the label of
-the button is easy. Changing docs, files, classes, methods, epics, data structures is hard.
+the button is easy. Changing files, classes, methods, data structures is hard.
 
 Sometimes it is too much effort to reflect a new wording in the GUI in all places. With "all"
 I mean the places in the GUI and all the non-user visible places which are only visible for the
