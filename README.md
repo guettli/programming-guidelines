@@ -2962,6 +2962,10 @@ I like these release notes:
 - [What's new in Python](https://docs.python.org/3/whatsnew/index.html)
 - [CNCF Announcements](https://www.cncf.io/newsroom/announcements/)
 
+### Newsletters
+
+* [Google Webmaster Central Blog](https://webmasters.googleblog.com/)
+
 ### Do you want your job to be exciting?
 
 If your job is exciting, then it will be exhausting.
