@@ -155,7 +155,7 @@ Use a tool to get schema migrations done (for example django).
 
 I use PostgreSQL.
 
-I don't like NoSQL, except for caching.
+I don't like NoSQL, except for caching (simple key-value DB).
 
 But maybe I just have not enough experience with NoSQL up to now.
 
@@ -2004,6 +2004,14 @@ If unsure, then choose "has a" and not "is a".
 
 ### Cache for ever or don't cache at all
 
+Caching is like a fale friend or a drug. It makes you happy today, but
+in the long run it brings you headache.
+
+Caching is easy, but cache invalidation is hard.
+
+That's why the pattern "cache for every" is handy: You don't need
+to invalidate anything.
+
 > [Two Hard Things](https://martinfowler.com/bliki/TwoHardThings.html): There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
 
 
@@ -2030,6 +2038,12 @@ If you use django, you can use the [ManifestStaticFilesStorage](https://docs.dja
 [Best Practices for Speeding Up Your Web Site (Yahoo)](https://developer.yahoo.com/performance/rules.html)
 
 Good introduction to caching: [Caching (Mozilla Foundation)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
+
+### Robust Cache-Invalidation
+
+A database index is like caching: Redundant data gets created to achieve faster lookups.
+
+If possible, use this robust caching and cache-invalidation provided by databases instead of creating your own implementation.
 
 ### CDN for private data?
 
