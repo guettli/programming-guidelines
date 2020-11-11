@@ -2373,6 +2373,23 @@ If you are doing "ssh production-server ... rm ...": Please ask yourself
 what you are doing here. How can you automate this, to make this
 unneccessary in the future.
 
+### VPS vs Kubernetes vs PaaS
+
+There are several ways to execute your code and make your application available to the public.
+
+VPS: Virtual private Server. These are cheap, you can get one for 3 Euro per month.
+Benefit: You can install and configure it right the way you want it to be.
+Drawback: You need knowledge about Linux.
+
+Kubernetes: This is the current hype. It's great for huge data centers... but ...
+do you have a huge data center?
+
+PaaS: Plattform as a Service. For example provided by Heroku, Google, Amazon. They try
+to make your life easier. Pro: easy to use. Con: more expensive.
+
+My hint: if unsure use PaaS. If you want to learn the basics of running a server, then use a VPS.
+
+
 ### Keep your directories clean
 
 There are two kind of files in the context of backup: Files which should
