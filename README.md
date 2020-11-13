@@ -2418,6 +2418,8 @@ an endless stream.
 Of course somewhere on the hard disk data gets stored in files. But it is highly
 recommended to use a tool where don't fiddle with files daily.
 
+See [12factor App: #11 Treat logs as event streams](https://12factor.net/logs)
+
 ### Use Systemd
 
 It is available, don't reinvent. Don't do double-fork magic any more.
