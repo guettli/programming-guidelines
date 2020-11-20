@@ -3098,6 +3098,10 @@ enemy? But this works. If you get angry, you waste energy and you start
 to think like a wild and stupid animal. Even if you have made a mistake
 or lost some how, no reason not to walk upright.
 
+There are some romours about "real programmers" and what they do. I think "real programmers"
+use vi and are terrible slow because of the tunnel vision created by too much testosterone.
+Smart developers have friends to talk to.
+
 ### Don't waste your time with cheap hardeware
 
 Some people love the [Raspberry
