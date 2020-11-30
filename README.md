@@ -548,6 +548,31 @@ In above case (IMAP protocol) the EXPUNGE is like a COMMIT in relational databas
 
 Stateless is like IPO: Input-Processing-Output.
 
+### Functions should return values, not Promises.
+
+Espescially in JavaScript code, functions often return [Promises](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+I don't like this. I want a method to do what it should do in a synchronious way and then return some value.
+
+If I want to a method to be executed asynchronously, then I can use a Promise. But I don't want the function to decide "async or sync?".
+
+I want to decide this, and I want the default to be "synchronous execution".
+
+Pseudo Code (synchronous):
+```
+response = fetch('https://example.com')
+my_json = response.json()
+```
+
+JavaScript (asynchronously)
+```
+const my_json = async () => {
+    const response = await fetch('https://example.com');
+    return response.json();
+}
+```
+
+The second code snippet is way more complicated. 
 
 
 ### No Shell Scripting
