@@ -576,6 +576,12 @@ const my_json = async () => {
 
 The second code snippet is way more complicated. 
 
+I think this can be compared to hyperlinks on web pages. The default is to follow the
+hyperlink (synchronous). If the user wants to open the hyperlink in a new tab (asynchronous), 
+then this decision should
+be done by the user, not by the one who created this hyperlink.
+
+
 
 ### No Shell Scripting
 
