@@ -550,7 +550,7 @@ Stateless is like IPO: Input-Processing-Output.
 
 ### Functions should return values, Not Promises.
 
-Espescially in JavaScript, functions often return [Promises](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Especially in JavaScript, functions often return [Promises](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 The `Promise` represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
