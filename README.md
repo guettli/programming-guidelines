@@ -2627,6 +2627,35 @@ Logs should contain the stacktrace and the local variables of each frame
 in the stacktrace (a tool like sentry could be used), if real errors
 occur.
 
+
+## ???. Web-Development
+
+### HTML and CSS over JS
+
+See [Bootstrap 5 "HTML and CSS over JS"](https://v5.getbootstrap.com/docs/5.0/extend/approach/#html-and-css-over-js)
+
+### Use VanillaJS
+
+VanillaJS is very cool framework. By the way, it is a joke. VanillaJS means "Use Javascript without a framework".
+
+Some think modern web applications need to use React or Vue. I don't think so. It is perfectly fine to send [html-over-the-wire](https://github.com/guettli/html-over-the-wire) and add some JS if needed.
+
+### Validate Forms on the Server
+
+You need to validate your form on the server anyway. So why implement it on the client-side? I think that in most cases it is perfectly fine
+to validate forms only on the server and not on the client.
+
+
+### A simple homepage? SSG!
+
+If you create a simple homepage (without the need for a database), then a SSG (Static Site Generator) might be enough. A CMS is not needed.
+
+See [Liste of Static Site Generators](https://github.com/guettli/static-site-generators)
+
+
+
+
+
 ------------------------------------------------------------------------
 
 ## 8. Communication with others
