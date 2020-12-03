@@ -279,9 +279,16 @@ make sense to say "My code must be portable, you must use META, you must
 not use implementation specific stuff!"?. No, I think it would make no
 sense.
 
-My conclusion: Use all features PostgreSQL has. Don't make live more
+My conclusion: Use all features PostgreSQL has. Don't make your live more
 complicated than necessary and don't restrict yourself to use only
 portable SQL.
+
+Great features PG has, which I might not know yet:
+
+* [Insert/Update/Delete Trigger](https://www.postgresql.org/docs/current/sql-createtrigger.html)
+* "SELECT FOR UPDATE .... SKIP LOCKED" gives you the perfect fundation for a task-queue. For example [Procrastinate](https://github.com/peopledoc/procrastinate)
+* [PGAdmin](https://www.pgadmin.org/) nice GUI to configure your databases.
+* [Fulltext Search](https://www.postgresql.org/docs/current/textsearch.html)
 
 ### Where to not use PostgreSQL?
 
@@ -2476,6 +2483,10 @@ configuration management.
 This makes it simpler.
 
 ### etckeeper is handy
+
+If you are using Kubernetes, then this makes no sense. But if you
+are running services in a Linux server, then you want to know
+what has changed.
 
 The tool etckeeper stores changes in the /etc directory in a git
 repository. This does not make much sense for containers. But for
