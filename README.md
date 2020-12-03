@@ -1562,6 +1562,10 @@ which are not available (e.g. a SMTP server).
 
 ### Is config code or data?
 
+The heading "Is config code or data?" could be phrased "config: DB or git?", too.
+
+Where should configuration be stored?
+
 This is a difficult question. At least at the beginning. For me most
 configuration is data, not code. That's why the config is in a
 **database**, not in a text or source code file in a version control
