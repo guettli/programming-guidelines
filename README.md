@@ -290,6 +290,9 @@ Great features PG has, which you might not know yet:
 * [PGAdmin](https://www.pgadmin.org/) nice GUI to configure your databases.
 * [Fulltext Search](https://www.postgresql.org/docs/current/textsearch.html)
 
+There is just one hint: Avoid to store binary data in PostgreSQL. A S3 
+service like [minio](https://min.io/) is a better choice.
+
 ### Where to not use PostgreSQL?
 
 -   For embedded systems SQLite may fit better
