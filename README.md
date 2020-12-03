@@ -283,7 +283,7 @@ My conclusion: Use all features PostgreSQL has. Don't make your live more
 complicated than necessary and don't restrict yourself to use only
 portable SQL.
 
-Great features PG has, which I might not know yet:
+Great features PG has, which you might not know yet:
 
 * [Insert/Update/Delete Trigger](https://www.postgresql.org/docs/current/sql-createtrigger.html)
 * "SELECT FOR UPDATE .... SKIP LOCKED" gives you the perfect fundation for a task-queue. For example [Procrastinate](https://github.com/peopledoc/procrastinate)
