@@ -146,18 +146,24 @@ developer of the Linux kernel and the version control system git)
 
 ### Relational Database
 
-I know SQL is..... It is either obivious or incomprehensible. Yes, it is
+I know SQL is..... It is either obivious or incomprehensible. And, yes, it is
 boring.
 
 A relational database is a rock solid data storage. Use it.
 
-Use a tool to get schema migrations done (for example django).
+When I studied computer science, I disliked SQL. I thought it was an
+outdated solution. I tried to store data in files in XML format, used
+in memory Berkley-DB, I used an object-oriented database written in Python (ZODB),
+I used NoSQL .... And finally I realized that boring SQL is the best solution
+for most cases.
 
 I use PostgreSQL.
 
 I don't like NoSQL, except for caching (simple key-value DB).
 
-But maybe I just have not enough experience with NoSQL up to now.
+The [PostgreSQL Documentation](https://www.postgresql.org/docs/current/index.html) contains
+an introduction to SQL and is easy to read.
+
 
 ### Cardinality
 
