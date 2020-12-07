@@ -1407,8 +1407,8 @@ My rule of thumb: Less indentation, means less complexity, means better code.
 
 Two things are simplified: The second version does not need a class or inheritance. Nice, since less code means less bugs.
 
-In the second example the method `smpt_connection()` is not an instancemethod of a class, it just an unbound method. If a tests
-asks for a parameter with this name, then pytest gives the method the result of this method.
+In the second example the method `smpt_connection()` is not an instancemethod of a class, it just an unbound method. If a test
+asks for a parameter with this name, then pytest gives the test the result of this method.
 
 And look at the assertion: `self.assertEqual(response_code, 250)` vs `assert response_code == 250`. Namespaces
 introduced by dots are great (`assertEqual` is in the namespace of `self`). But if one level is enough, than
