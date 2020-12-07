@@ -1370,6 +1370,52 @@ Three steps vs one step.
 
 OOP is great for implementing an [ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping). But implemeting this should be done by people who have more experience than I have :-)
 
+Here is code which uses the well-known jUnit style:
+```
+# OOP way
+import unittest
+
+
+class TestSMTP(unittest.TestCase):
+    def smtp_connection(self):
+        import smtplib
+        return smtplib.SMTP("smtp.gmail.com", 587, timeout=5)
+    
+    def test_helo(self):
+        response_code, msg = self.smtp_connection().ehlo()
+        self.assertEqual(response_code, 250)
+```
+
+The non-object-oriented way:
+```
+# pytest way
+import pytest
+
+
+@pytest.fixture
+def smtp_connection():
+    import smtplib
+    return smtplib.SMTP("smtp.gmail.com", 587, timeout=5)
+
+
+def test_ehlo(smtp_connection):
+    response_code, msg = smtp_connection.ehlo()
+    assert response_code == 250
+```
+
+My rule of thumb: Less indentation, means less complexity, means better code.
+
+Two things are simplified: The second version does not need a class or inheritance. Nice, since less code means less bugs.
+
+In the second example the method `smpt_connection()` is not an instancemethod of a class, it just an unbound method. If a tests
+asks for a parameter with this name, then pytest gives the method the result of this method.
+
+And look at the assertion: `self.assertEqual(response_code, 250)` vs `assert response_code == 250`. Namespaces
+introduced by dots are great (`assertEqual` is in the namespace of `self`). But if one level is enough, than
+this is even better.
+
+Of course this is opinionated, and it is 100% ok if you prefer the OOP-way and not the shorter solution.
+
 ### "Dependency injection" is just "Configuration"
 
 For me the term [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and the corresponding Wikipedia article are way too complicated.
