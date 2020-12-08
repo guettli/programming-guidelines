@@ -1766,12 +1766,21 @@ question, there is always someone who has an advice.
 See the [TagTrend gtk, qt,
 django](http://sotagtrends.com/?tags=%5Bgtk,qt,django%5D)
 
+### Avoid to write native Apps
+
+Developing a mobile friendly web application is much easier than writing a 
+native app. If you can avoid it, then avoid to write a native app.
+
+The development and release process is much slower.
+
+Of course the age of [Progressive Web Apps](https://web.dev/progressive-web-apps/) has just begun.
+A lot of things are not possible in a web app up to now. Just be warned, that this road is
+slow and in the long run deprecated, since the environments for PWAs is getting better every year.
+
 ### Learn one programming language, not ten.
 
 Most young developers think you need to learn many programming languages
 to be a good developer.
-
-Yes, sometimes it helps to know the programming language C.
 
 My opinion: Learn Python, SQL and some JavaScript.
 
