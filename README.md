@@ -1318,6 +1318,13 @@ Keep this time small. This is related to "care for new comers". If you
 need several hours to setup your development environment, then new team
 members would need even much more time.
 
+Although I use PyCharm and VSCode, the introduction of [Gitpod](https://www.gitpod.io/) gets it to the point:
+
+> Gitpod does to Dev Environments what Docker did to Servers. Today we are emotionally attached (for better or worse) to our dev environments, give them names & massage them over time. They are pets - similar to servers before docker took advantage of namespaces and cgroups in Linux and turned these nice puppies into cattle. 
+> With Gitpod it is the same - we treat dev environments as automated resources you can spin up when you need them and close down (and forget about) when you are done with your task. Dev environments become fully automated and ephemeral. Only then you are always ready-to-code - immediately creative, immediately productive with the click of a button and without any friction.
+
+
+
 ### Setting up a new development environment should be easy
 
 This happened to me several times: I wanted to improve some open source
