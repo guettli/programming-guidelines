@@ -2508,6 +2508,10 @@ in the backup. This will make live easier for you. The configuration of
 your backup is easier and cleaning temporary files is easier and looking
 at the directory makes more joy since it is clean.
 
+And overall, storing data in directories and files is outdated. If you
+start from scratch, then put structured data in a database and binary data in a S3
+compatible server.
+
 ### Avoid logging to files
 
 I still do this, but I want to reduce it. Logs are endless streams.
