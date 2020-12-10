@@ -2316,6 +2316,22 @@ does not work any more. You have the explicit input and the indirect input from 
 
 If you can avoid conditions, then do it. Conditionless is the goal.
 
+### Live at head
+
+[Semantic Versioning (SemVer)](https://semver.org/) is well-known because it promises stability. But why do applications like Google Chrome or Firefox just push the first number? At the moment I use Chromium 87.0.4280.88, and soon I will use Version 88.x.y.z.
+
+Chrome is not a software library, but nevertheless where does LTS (long-term support) make sense?
+
+There is only one future. Which version of Gmail do you use? 
+
+Bridges, streets and houses need to be stable. The stabilty of the overall infrastructure is important. And therefore we see a steady
+reconstruction of bridges, streets, houses and supply channels.
+
+And software? Some assosciate with stability "peace of mind", I assosciate with stability a graveyard.
+
+If you still think Semantic Versioning is useful, then please read [Philosophy of Abseil](https://abseil.io/about/philosophy)
+
+
 ------------------------------------------------------------------------
 
 ## 4. Remote APIs
