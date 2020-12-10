@@ -2331,6 +2331,7 @@ And software? Some assosciate with stability "peace of mind", I assosciate with 
 
 If you still think Semantic Versioning is useful, then please read [Philosophy of Abseil](https://abseil.io/about/philosophy)
 
+Related: [Does SemVer work?](https://books.google.de/books?id=V3TTDwAAQBAJ&pg=PA445&dq=does%20semver%20work) [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/)
 
 ------------------------------------------------------------------------
 
