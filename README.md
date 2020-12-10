@@ -371,6 +371,30 @@ What can you do now?
 
 One solution is EAV: The [Entity–attribute–value model](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model)
 
+### Why I don't want to work with MongoDB
+
+> MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. ([Wikipedia](https://en.wikipedia.org/wiki/MongoDB))
+
+One document in a collection can differ in their structure. For example all most all documents in a collection have an integer value on the attribute "foo", but for unknown reasons one document has a float instead an integer. Grrr.
+
+What does the solution look like?
+
+```
+return try {
+    this.getLong(key)
+  } catch (e: ClassCastException) {
+    if (this[key] is Double) this.getDouble(key).toLong() else null
+  }
+```
+
+No! I want a clear schema where all values in a column are of the same type.
+
+Of course my wish has a draw-back: If you want to upgrade a table in a production relational database, you might have a downtime, because the database needs some
+minutes to convert all rows to the new schema. But at least in my context this was never a big problem up to now.
+
+Related: [StackOverflow "class java.lang.Double cannot be cast to class java.lang.Long"](https://stackoverflow.com/questions/65141475/mongodb-class-java-lang-double-cannot-be-cast-to-class-java-lang-long)
+
+
 ------------------------------------------------------------------------
 
 ## X. UI
