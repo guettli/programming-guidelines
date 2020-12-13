@@ -2875,6 +2875,10 @@ I think the first letter (V, S) helps if you are brainstorming.
 This can help if you or your team is stuck in [Analysis paralysis](https://en.wikipedia.org/wiki/Analysis_paralysis) (aka "overthinking" if
 you are on your own, or endless discussions if there is a team).
 
+Getting out of thinking/talking into writing and "naming solutions" helps to get an actionable plan.
+
+In a professional environment these notes about the options and the decision can get used as entry in the "Decision Log".
+
 ### Avoid Office Documents or UML-tools
 
 Use a way to edit content (use cases, specs, ...) over the internet. Use
