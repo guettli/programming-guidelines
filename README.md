@@ -2872,6 +2872,9 @@ If you look at V1 in detail you get to a list of steps:
 
 I think the first letter (V, S) helps if you are brainstorming.
 
+This can help if you or your team is stuck in [Analysis paralysis](https://en.wikipedia.org/wiki/Analysis_paralysis) (aka "overthinking" if
+you are on your own, or endless discussions if there is a team).
+
 ### Avoid Office Documents or UML-tools
 
 Use a way to edit content (use cases, specs, ...) over the internet. Use
