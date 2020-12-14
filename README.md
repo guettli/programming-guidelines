@@ -1,7 +1,7 @@
 # Programming Guidelines
 
-My personal programming guidelines. **Please provide feedback**, tell me
-what's wrong and what's missing and create a new issue here:
+My opinionated programming guidelines. **Please provide feedback**, tell me
+what's wrong, what's missing, and please create a new issue here:
 <https://github.com/guettli/programming-guidelines/issues> or write me a
 mail to <guettliml@thomas-guettler.de>
 
@@ -27,10 +27,9 @@ mail to <guettliml@thomas-guettler.de>
 
 ### About this README
 
-I was born 1976. I started coding with basic and assembler when I was
+I was born in 1976. I started coding with basic and assembler when I was
 13. Later turbo pascal. From 1996-2001 I studied computer science at
-HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP
-and finally Python.
+HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP, and finally Python.
 
 Sometimes I see young and talented programmers wasting time. There are
 two ways to learn: Make mistakes yourself, or read from the mistakes
@@ -41,7 +40,7 @@ help you, to avoid these mistakes.
 
 It's my personal opinion and feeling. No facts, no single truth.
 
-### Relaxed focus on monitor
+### Relaxed focus on your monitor
 
 Do not look at the keyboard while you type. Have a relaxed focus on your
 monitor.
@@ -49,20 +48,20 @@ monitor.
 I type with ten fingers. It's like flying if you learned it. Your eyes
 can stay on the rubbish you type, and you don't need to move your eyes
 down (to keyboard) and up (to monitor) several hundred times per day.
-This saves a lot of energy. This is simple tool to help you to learn touch typing:
+This saves a lot of energy. This is a simple tool to help you to learn touch typing:
 [tipp10](https://www.tipp10.com/en/)
 
-Avoid to switch between mouse and keyboard too much.
+Avoid switching between mouse and keyboard too much.
 
-I like lenovo keyboards with track point. If you want the track point to
-have more grip you can use sandpaper. Here is an images to illustrate
+I like Lenovo keyboards with track point. If you want the track point to
+have more grip you can use sandpaper. Here is an image to illustrate
 what I use [sandpaper-sticked-on-track-point.jpg](https://raw.githubusercontent.com/guettli/programming-guidelines/master/sandpaper-sticked-on-track-point.jpg)
 
 Once I was fascinated by the copy+paste history of Emacs and PyCharm.
 But then I thought to myself: "I want more. I am hungry. I want a
-copy+paste history not only in one application, I want it for the whole
-desktop". The solution is very simple, but somehow only few people use
-it. The solution is called clipboard manager. I use Diodon (Linux) and
+copy+paste history not only in one application, but I also want it for the whole
+desktop". The solution is very simple, but somehow only a few people use
+it. The solution is called a clipboard manager. I use Diodon (Linux) and
 CopyQ (for Windows). I use ctrl+alt+v to open the list of last
 copy+paste texts.
 
@@ -71,10 +70,10 @@ copy+paste texts.
 Avoid searching with your eyes. Search with the tools of your IDE. You
 should be able to use it "blind". You should be able to move the cursor
 to the matching position in your code without looking at your keyboard,
-without grabbing your mouse/touchpad/trackpoint and without looking
+without grabbing your mouse/touchpad/TrackPoint and without looking
 up/down on your screen.
 
-Compare two files with a diff tool, otherwise you might get this ugly skeptical frown.
+Compare two files with a diff tool, otherwise, you might get this ugly skeptical frown.
 
 How often per day do you search for the mouse cursor on your screen?
 Support your eyes by increasing the cursor size. If you use Ubuntu,
@@ -82,13 +81,13 @@ you can do it via [Universal Access / Cursor Size](https://askubuntu.com/questio
 
 ### Increase font size
 
-During daily work you often jump from one information snippet to the next
+During daily work, you often jump from one information snippet to the next
 information snippet.
 
 When was the last time you read a text with more than 20 sentences?
 
 I think from time to time you should do so. Slow down, focus on one
-text and read slowly. It helps to increase the font-size. `ctrl-+` is
+text, and read slowly. It helps to increase the font-size. `ctrl-+` is
 your friend.
 
 ### KISS
@@ -104,20 +103,18 @@ Quote:
 
 :   The Virtue of Boring
 
-    Unlike just about everything else in life, "boring" is actually a
-    positive attribute when it comes to software! We don’t want our
-    programs to be spontaneous and interesting; we want them to stick to
-    the script and predictably accomplish their business goals.
+    Unlike just about everything else in life, "boring" is a
+    positive attribute when it comes to software! We don’t want our programs to be spontaneous and interesting; we want them to stick to the script and predictably accomplish their business goals.
 
-Example: [Pure Functions](https://en.wikipedia.org/wiki/Pure_function) are great. They are stateless, their output can be cached for ever, they are easy to test.
+Example: [Pure Functions](https://en.wikipedia.org/wiki/Pure_function) are great. They are stateless, their output can be cached forever, they are easy to test.
 
 ### Increase the obviousness
 
-But it is not only about code. It is about the experience of all stakeholders: Users, sales people, support hotline, developers, ....
+But it is not only about code. It is about the experience of all stakeholders: Users, salespeople, support hotline, developers,...
 
 It is hard work to keep it simple. 
 
-One think I love to do: "Increase the obviousness". 
+One thing I love to do: "Increase the obviousness". 
 
 One tool to get there: Use a central wiki (without spaces), and
 define terms. Related text from me: [Documentation in Intranets: My point of view](https://github.com/guettli/intranets)
@@ -132,7 +129,7 @@ See heading.
 The famous quote "premature optimization is the root of all evil." is true.
 You can read more about this here [When to optimize](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize).
 
-First get a [MVP (minimum valuable product)](https://en.wikipedia.org/wiki/Minimum_viable_product) to your customer, and then listen to their feedback. Care for their needs, not for your own vision of a super performant application.
+First, get a [MVP (minimum valuable product)](https://en.wikipedia.org/wiki/Minimum_viable_product) to your customer, and then listen to their feedback. Care for their needs, not for your vision of a super performant application.
 
 ------------------------------------------------------------------------
 
@@ -146,15 +143,15 @@ developer of the Linux kernel and the version control system git)
 
 ### Relational Database
 
-I know SQL is..... It is either obivious or incomprehensible. And, yes, it is
+I know SQL is..... It is either obvious or incomprehensible. And, yes, it is
 boring.
 
-A relational database is a rock solid data storage. Use it.
+A relational database is a rock-solid data storage. Use it.
 
 When I studied computer science, I disliked SQL. I thought it was an
 outdated solution. I tried to store data in files in XML format, used
 in memory Berkley-DB, I used an object-oriented database written in Python (ZODB),
-I used NoSQL .... And finally I realized that boring SQL is the best solution
+I used NoSQL .... And finally, I realized that boring SQL is the best solution
 for most cases.
 
 I use PostgreSQL.
@@ -177,16 +174,13 @@ conditions (IFs) to handle nullable columns/attributes.
 
 If this is new to you, I will give you two examples:
 
--   1:N --&gt; One invoice has several invoice positions. For example
-    you buy three books in one order, the invoice will have three
-    invoice positions. This is a 1:N relationship. The invoice position
-    is contained in exactly one invoice.
+-   1:N --&gt; One invoice has several invoice positions. For example,
+    you buy three books in one order, the invoice will have three invoice positions. This is a 1:N relationship. The invoice position is contained in exactly one invoice.
 -   N:M --&gt; If you look at tags, for example at the Question+Answer
-    site stackoverflow: One question can be related to several
+    site StackOverflow: One question can be related to several
     tags/topics and of course a topic can be set on several questions.
-    For example you have a strange UnicodeError in Python then you can
-    set the tags "python" and "unicode" on your question. This is an N:M
-    relationship. One more well know example of N:M is user and groups.
+    For example, you have a strange UnicodeError in Python then you can set the tags "python" and "unicode" on your question. This is an N:M
+    relationship. One well know example of N:M is user and groups.
 
 ### Conditionless Data Structures
 
@@ -196,7 +190,7 @@ the input/output of your data will be much easier.
 ### Avoid nullable Foreign Keys
 
 Imagine you have a table "meeting" and a table "place". The table
-"meeting" has a ForeignKey to table "place". In the beginning it might
+"meeting" has a ForeignKey to table "place". In the beginning, it might
 be not clear yet where the meeting will be. Most developers will make
 the ForeignKey optional (nullable). WAIT: This will create a condition
 in your data structure. There is a way easier solution: Create a place
@@ -204,28 +198,28 @@ called "unknown". Use this [senitel value](https://en.wikipedia.org/wiki/Sentine
 structure (without a nullable ForeignKey) makes implementing the GUI
 much easier.
 
-With other words: If there is no NULL in your data, then there will be
+In other words: If there is no NULL in your data, then there will be
 less NullPointerException in your source code while processing the data
 :-)
 
-Less conditions, less bugs.
+Fewer conditions, fewer bugs.
 
 ### Avoid nullable boolean columns
 
-\[True, False, Unknown\] is not a nullable Bollean Column.
+\[True, False, Unknown\] is not a nullable Boolean Column.
 
-If you want to store a data in a SQL database which has three states
+If you want to store data in a SQL database that has three states
 (True, False, Unknown), then you might think a nullable boolean column
 (here "my\_column") is the right choice. But I think it is not. Do you
 think the SQL statement "select \* from my\_table where my\_column = %s"
 works? No, it won't work since "select \* from my\_table where
-my\_column = NULL" will never ever return a single line. If you don't
+my\_column = NULL" will never return a single line. If you don't
 believe me, read: [Effect of NULL in WHERE clauses
 (Wikipedia)](https://en.wikipedia.org/wiki/Null_(SQL)#Effect_of_Unknown_in_WHERE_clauses).
 If you like typing, you can work-around this in your application, but I
-prefer straight forward solutions with only few conditions.
+prefer straightforward solutions with only a few conditions.
 
-If you want to store True, False, Unknown: Use text, integer or a new
+If you want to store True, False, Unknown: Use text, integer, or a new
 table and a foreign key.
 
 ### Avoid nullable characters columns
@@ -236,18 +230,17 @@ express "empty":
 -   NULL
 -   empty string
 
-Avoid it if possible. In most cases you just need one variant of
-"empty". Simplest solution: avoid that a column holding character data
-types is allowed to be null.
+Avoid it if possible. In most cases, you just need one variant of
+"empty". Simplest solution: avoid that a column holding character data is allowed to be null.
 
-If you really think the character column should be allowed to be NULL,
+If you think the character column should be allowed to be NULL,
 then consider a constraint: If the character string in the column is not
 NULL, then the string must not be empty. This way ensure that there are
 is only one variant of "empty".
 
 ### SQL: I prefer subqueries to joins
 
-I most cases, I use a ORM to access data, and don't write SQL by hand.
+I most cases, I use an ORM to access data and don't write SQL by hand.
 
 If I do write SQL by hand, then I often prefer [SQL Subqueries](https://en.wikipedia.org/wiki/SQL_syntax#Subqueries)
 to SQL Joins. 
@@ -262,7 +255,7 @@ WHERE category_id IN
     WHERE expired = True)
 ```
 I can translate this to human language easily: Select all products, which
-belong to a category which has expired.
+belong to a category that has expired.
 
 
 ### Use all features PostgreSQL does offer
@@ -270,48 +263,47 @@ belong to a category which has expired.
 If you want to store structured data, then PostgreSQL is a save default
 choice. It fits in most cases. Use all features PostgreSQL does offer.
 Don't constrain yourself to use only the portable SQL features. It's ok
-if your code does work only with PostgreSQL and no other database, if
-this will solve your current needs. If there is the need to support
+if your code does work only with PostgreSQL and no other database if
+this will solve your current needs. If there is a need to support
 other databases in the future, then handle this problem in the future,
 not today. PostgreSQL is great, and you waste time if you don't use its
 features.
 
-Imagine there is be a a Meta-Programming-Language META (AFAIK this does
+Imagine there is a Meta-Programming-Language META (AFAIK this does
 not exist) and it is an official standard created by the ISO (like SQL).
-You can compile this Meta-Programming-Language to Java, Python, C and
+You can compile this Meta-Programming-Language to Java, Python, C, and
 other languages. But this Meta-Programming-Language would only support
-70% of all features of the underlaying programming languages. Would it
+70% of all features of the underlying programming languages. Would it
 make sense to say "My code must be portable, you must use META, you must
-not use implementation specific stuff!"?. No, I think it would make no
+not use implementation-specific stuff!"?. No, I think it would make no
 sense.
 
-My conclusion: Use all features PostgreSQL has. Don't make your live more
+My conclusion: Use all features PostgreSQL has. Don't make your life more
 complicated than necessary and don't restrict yourself to use only
 portable SQL.
 
 Great features PG has, which you might not know yet:
 
 * [Insert/Update/Delete Trigger](https://www.postgresql.org/docs/current/sql-createtrigger.html)
-* "SELECT FOR UPDATE .... SKIP LOCKED" gives you the perfect fundation for a task-queue. For example [Procrastinate](https://github.com/peopledoc/procrastinate)
+* "SELECT FOR UPDATE .... SKIP LOCKED" gives you the perfect foundation for a task-queue. For example [Procrastinate](https://github.com/peopledoc/procrastinate)
 * [PGAdmin](https://www.pgadmin.org/) nice GUI to configure your databases.
 * [Fulltext Search](https://www.postgresql.org/docs/current/textsearch.html)
 
-There is just one hint: Avoid to store binary data in PostgreSQL. A S3 
+There is just one hint: Avoid storing binary data in PostgreSQL. An S3 
 service like [minio](https://min.io/) is a better choice.
 
 ### Where to not use PostgreSQL?
 
 -   For embedded systems SQLite may fit better
-    \* Prefer SQLite if there will only be one process accessing the
-    database at a time. As soon as there are multiple users/connections,
+    \* Prefer SQLite if there will only be one process accessing the database at a time. As soon as there are multiple users/connections,
     you need to consider going elsewhere
--   TB-scale full text search systems.
+-   TB-scale full-text search systems.
 -   Scientific number crunching:
     [hdf5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format)
 -   Caching: Redis fits better
 -   Go with the flow: If you are wearing the admin hat (instead of the
-    dev hat), and you should install (instead of develop) a product,
-    then try the default db (sometimes MySQL) first.
+    dev hat), and you should install (instead of developing) a product,
+    then try the default DB (sometimes MySQL) first.
 
 Source: PostgreSQL general mailing list:
 <https://www.postgresql.org/message-id/5ded060e-866e-6c70-1754-349767234bbd%40thomas-guettler.de>
@@ -330,9 +322,9 @@ Nested transactions ... sounds great. But stop: What is
 -   Durability
 
 Database transactions are atomic. If the transaction was successful,
-then it is \*D\*urable.
+then it is **D**urable.
 
-Imagine you have one outer-transaction, and two inner transaction.
+Imagine you have one outer-transaction and two inner transactions.
 
 1.  Transaction OUTER starts
 2.  Transaction INNER1 starts
@@ -353,16 +345,16 @@ linear portions of a transaction's work. Your use of them may be able to
 express a hierarchical expression of updates that may be preserved or
 rolled back, but the concept in PostgreSQL is not itself hierarchical.
 
-### My customer wants to extend the data schema ....
+### My customer wants to extend the data schema...
 
-Imagine you created some kind of issue-tracking system. Up to now you provide attribues like "subject", "description", "datetime created",
+Imagine you created some kind of issue-tracking system. Up to now you provide attributes like "subject", "description", "datetime created",
 "datetime last-modified", "tags", "related issues", "priority", ...
 
-Now the customer wants to add some new attributes to issues. It would be quite easy to you to update
+Now the customer wants to add some new attributes to issues. It would be quite easy for you to update
 the database schema and update the code.
 
 Maybe you are lucky and you have 100 customers. Then you would like to prefer to spend your time
-improving the core product. You don't want to spent too much time for the features which
+improving the core product. You don't want to spent too much time on the features which
 only one customer wants.
 
 Or the customer wants to update the schema on its own. 
@@ -375,7 +367,7 @@ One solution is EAV: The [Entity–attribute–value model](https://en.wikipedia
 
 > MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. ([Wikipedia](https://en.wikipedia.org/wiki/MongoDB))
 
-One document in a collection can differ in their structure. For example all most all documents in a collection have an integer value on the attribute "foo", but for unknown reasons one document has a float instead an integer. Grrr.
+One document in a collection can differ in its structure. For example, most all documents in a collection have an integer value on the attribute "foo", but for unknown reasons, one document has a float instead of an integer. Grrr.
 
 What does the solution look like?
 
@@ -389,8 +381,8 @@ return try {
 
 No! I want a clear schema where all values in a column are of the same type.
 
-Of course my wish has a draw-back: If you want to upgrade a table in a production relational database, you might have a downtime, because the database needs some
-minutes to convert all rows to the new schema. But at least in my context this was never a big problem up to now.
+Of course, my wish has a draw-back: If you want to upgrade a table in a production relational database, you might have downtime, because the database needs some
+minutes to convert all rows to the new schema. But at least in my context, this was never a big problem up to now.
 
 Related: [StackOverflow "class java.lang.Double cannot be cast to class java.lang.Long"](https://stackoverflow.com/questions/65141475/mongodb-class-java-lang-double-cannot-be-cast-to-class-java-lang-long)
 
