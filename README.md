@@ -1771,32 +1771,33 @@ question, there is always someone who has an useful advice.
 See the [TagTrend gtk, qt,
 django](http://sotagtrends.com/?tags=%5Bgtk,qt,django%5D)
 
-### Avoid to write native Apps
 
-Developing a mobile friendly web application is much easier than writing a 
-native app. If you can avoid it, then avoid to write a native app.
+### Avoid writing native Apps
+
+Developing a mobile-friendly web application is much easier than writing a 
+native app. If you can avoid it, then avoid writing a native app.
 
 The development and release process is much slower.
 
-Of course the age of [Progressive Web Apps](https://web.dev/progressive-web-apps/) has just begun.
+Of course, the age of [Progressive Web Apps](https://web.dev/progressive-web-apps/) has just begun.
 A lot of things are not possible in a web app up to now. Just be warned, that this road is
-slow and in the long run deprecated, since the environments for PWAs is getting better every year.
+slow and in the long run deprecated, since the environments for PWAs are getting better every year.
 
 ### Learn one programming language, not ten.
 
 Most young developers think you need to learn many programming languages
 to be a good developer.
 
-My opinion: Learn Python, SQL and some JavaScript.
+My opinion: Learn Python, SQL, and some JavaScript.
 
 Then learn other topics: PostgreSQL, Configuration management,
-continuous integration, organizing, team work, learn to play a music
-instrument, long distance running, family
+continuous-integration, organizing, teamwork, learn to play a musical
+instrument, long-distance running, family
 
 ### Learn "git bisect"
 
-"git bisect" is a great tool in conjunction with unittests. It is easy
-to find the commit, which introduced an error. Unfortunately it is not a
+"git bisect" is a great tool in conjunction with unit tests. It is easy
+to find the commit, which introduced an error. Unfortunately, it is not a
 one-liner up to now. You can use it like this:
 
 ``` {.sourceCode .shell}
@@ -1814,14 +1815,14 @@ hardly need "git bisect".
 
 ### Avoid Conditional Breakpoints
 
-Imagine, you are able to reproduce a bug in a test. But you could not
+Imagine, you can reproduce a bug in a test. But you could not
 fix it up to now. If you want to create a conditional breakpoint to find
 the root of the problem, then you could be on the wrong track. Rewrite
 the code first, to make it more fine-grained debuggable and testable.
 
 Modify the source and test where a normal (non-conditional) breakpoint is enough.
 
-It is very likely that this means you need to move the body of a loop
+This likely means you need to move the body of a loop
 into a new method.
 
 ``` {.sourceCode .}
@@ -1846,9 +1847,9 @@ def my_method__foo(foo):
 ```
 
 Now you can call `my_method__foo()` in a test, and you don't need a
-conditional breakpoint any more. This helps you now (during debugging), but raises
-the overall value of the source code in the long run, too. Instead of few big monster methods
-you have more small and easy to understand methods which follow the simple input-processing-output model.
+conditional breakpoint anymore. This helps you now (during debugging), but raises
+the overall value of the source code in the long run, too. Instead of a few big monster methods,
+you have more small and easy to understand methods that follow the simple input-processing-output model.
 
 ### Make a clear distinction between Authentication and Permission Checks
 
@@ -1859,7 +1860,7 @@ just someone who pretends to be Bob?
 
 **Permission Checks** Is Bob allowed to do action "foo"? Here we already
 trust that the user is Bob and not someone else. I use the term
-"Permission Checks" on purpuse since the synonym "Authorization" sounds
+"Permission Checks" on purpose since the synonym "Authorization" sounds
 too similar to "Authentication".
 
 Related question:
@@ -1869,8 +1870,8 @@ General guidelines: Avoid [Homonyms](https://en.wikipedia.org/wiki/Homonym)
 
 ### Idempotence is great
 
-Idempotence is great, since it ensures, that it does not do harm if the
-method is called twice.
+Idempotence is great, since it ensures, that it does not harm if
+the method is called twice.
 
 Errors (for example power outage) can happen in every millisecond.
 That's why you need to decide what you want:
@@ -1891,8 +1892,8 @@ use celery, but I like this part of the docs)
 In the past [File Locking](https://en.wikipedia.org/wiki/File_locking)
 was a very interesting and adventurous topic. Sometimes it worked,
 sometimes not, and you got interesting edge cases to solve again and
-again. It was fun, especially on NFS (Network file System). Only hard core experts know the difference between
-fcntl, flock and lockf.
+again. It was fun, especially on NFS (Network File System). Only hardcore experts know the difference between
+fcntl, flock, and lockf.
 
 .... But on the other hand: It's too complicated, too many edge cases,
 too much wasting time.
@@ -1916,28 +1917,27 @@ and if you want to use a storage server like
 
 Most storage servers support containers and
 [blobs](https://en.wikipedia.org/wiki/Binary_large_object) inside a
-container. Containers in containers are not supported, and that's good,
+container. Containers in containers are not supported, and that's good
 since it makes the environment simpler.
 
 ### Code doesn't call mkdir
 
 Code runs in an environment. This environment was created with
-configuration management. This means: source code usualy does not call
-mkdir. With other words: Creating directories is the part of the
-configuration management. Setting up the environment and executing code
+configuration management. This means: source code usually does not call
+mkdir. In other words: Creating directories is part of configuration management. Setting up the environment and executing code
 in this environment are two distinct parts. If your software runs, the
 environment does already exist. Code creating directories if they do not
-exist yet, should be cut into two parts. One part is creating the
+exist yet should be cut into two parts. One part is creating the
 environment (gets executed only once) and the second part is the daily
-executing (which is 100% sure that the environment is like it is. With
-other words: the code can trust the environmen that the directory
-exists). These two distinct parts should be seperated.
+executing (which is 100% sure that the environment is like it is. In
+other words: the code can trust the environment that the directory
+exists). These two distinct parts should be separated.
 
 How to create directories if I should not do it with my software? With
 automated configuration management (Ansible, Chef, ...) or during
 installation (RPM/DPKG).
 
-Exception: You create a temporary directory which is only needed for
+Exception: You create a temporary directory that is only needed for
 some seconds. But since switching from subprocess/shell calling to using
 libraries (see "Avoid calling command line tools") temporary files get
 used much less.
@@ -1946,10 +1946,10 @@ used much less.
 
 I use two ways to debug slow performance:
 
-> -   Logging and profiling, if you have a particular reproducable use
+> -   Logging and profiling, if you have a particular reproducible use
 >     case
 > -   Django Debug Toolbar to see which SQL statements took long in a
->     http request.
+>     HTTP request.
 > -   Statistics collected on production environments. For Python:
 >     <https://github.com/uber/pyflame> or
 >     <https://github.com/benfred/py-spy>
@@ -1957,19 +1957,19 @@ I use two ways to debug slow performance:
 ### You provide the GUI for configuring the system. Then the customer (not you) uses this GUI
 
 I developed a workflow system for a customer. The customer gave me an
-excel sheet with steps, transitions and groups.
+excel sheet with steps, transitions, and groups.
 
 The coding was the difficult part.
 
 Then I configured the system according to the excel sheet.
 
-The code was bug free, but I made a mistake when I entered the values
-(from excel to the new web based workflow GUI).
+The code was bug-free, but I made a mistake when I entered the values
+(from excel to the new web-based workflow GUI).
 
-The customer was upset, because the configuration contained mistakes.
+The customer was upset because the configuration contained mistakes.
 
 I learned. Now I ask if it would be ok if I provide the GUI and the
-customer enters the configuration. In most cases the customer likes to
+customer enters the configuration. In most cases, the customer likes to
 do this.
 
 There is a big difference. The customer feels productive if he does
@@ -1977,12 +1977,14 @@ something like this. I hate it. I care for the database design and the
 code, but entering data with copy+paste from the Excel sheet ... No I
 don't like this. Results will be better if you like what you do :-)
 
-For detail lovers: No, it was not feasible to write a script which
+For detail lovers: No, it was not feasible to write a script that
 imported the excel sheet to the database. The excel sheet was not well
 structured.
 
 *give a man a fish and you feed him for a day; teach a man to fish and
 you feed him for a lifetime*
+
+
 
 ### Better error messages
 
