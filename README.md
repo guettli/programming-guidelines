@@ -2938,14 +2938,14 @@ don't fool yourself. You will only remember 4 of 5 issues. Dare to say
 "please wait, I want to take a note". This way you can care for all
 issues, which results in happy customers.
 
+
 ### Avoid Gossip
 
-Gossip creates an atmosphere which promotes negativity (bad karma).
-Avoid to make jokes about other team mates or customers. Yes, there are
-people who do strange stuff and who have strange attitudes. Making jokes
+Gossip creates an atmosphere that promotes negativity (bad karma).
+Avoid making jokes about other teammates or customers. Yes, some people do strange stuff and have strange attitudes. Making jokes
 about them makes everything worse. Please be aware that this guideline
 has a major drawback. Sometimes all people around you are laughing about
-a customer or a team mate which is not here right now ... and you are
+a customer or a teammate which is not here right now ... and you are
 the only one who is not laughing. It is up to you how to react. Be
 patient.
 
@@ -2959,7 +2959,7 @@ After you read this, you will see it happen again and again.
 
 ### S/N
 
-[S/N](https://en.wikipedia.org/wiki/Signal-to-noise_ratio) means "Signal-to-noise ratio". It is a measure used in science and engineering that compares the level of a desired signal to the level of background noise. But it can be used for reflecting on his own input, too.
+[S/N](https://en.wikipedia.org/wiki/Signal-to-noise_ratio) means "Signal-to-noise ratio". It is a measure used in science and engineering that compares the level of the desired signal to the level of background noise. But it can be used for reflecting on his input, too.
 
 How many useless news do I receive daily? Is there a way to improve S/N?
 
@@ -2969,22 +2969,20 @@ What is in my circle of influence, what not?
 
 Anecdote: In the year 2019 I loved to use the Stackoverflow Tag Trend. I wanted to
 leave my current context (Python, Django, PostgreSQL Development) and learn new stuff.
-In the Javascript ecosystem there where so many tools available and it was difficult
-to see which tool was great two years ago, but won't be used today if you can start from 
-scratch. The Stackoverflow Tag Trend helped me to see what is hot and what was hot 
-some years ago. Working 16 years for the same company I was blinded by routine and missed
+In the Javascript ecosystem, there were so many tools available and it was difficult
+to see which tool was great two years ago, but won't be used today if you can start from scratch. The Stackoverflow Tag Trend helped me to see what is hot and what was hot some years ago. Working 16 years for the same company I was blinded by routine and missed
 a lot of changes outside my small IT context. 
 
-A lot of things which I learned during studing information technology in Dresden from 1996 to
+A lot of things which I learned during studying information technology in Dresden from 1996 to
 2001 was outdated. I wrote down these things on the [Deadends of IT](https://github.com/guettli/deadends-of-it) page.
 The  Stackoverflow Tag Trend worked well, but I had ideas to improve it:
 
 * [Tag aliases can be selected](https://github.com/robianmcd/tag-trends/issues/32)
-* I was missing [Link from tag to describition of tag](https://github.com/robianmcd/tag-trends/issues/34)
+* I was missing [Link from tag to the description of tag](https://github.com/robianmcd/tag-trends/issues/34)
 * [URL could be simplified (no square brackets)](https://github.com/robianmcd/tag-trends/issues/33)
 * [It was down for some days](https://github.com/robianmcd/tag-trends/issues/31)
 
-After some weeks all my whishes where implemented by the author.
+After some weeks all my wishes were implemented by the author.
 
 Win-win: He could improve the usability and for me is more convenient now. I love it. Sometimes you just have to speak out a wish. 
 You just need to tell your wish to the right person in a friendly way.
@@ -2993,14 +2991,14 @@ You just need to tell your wish to the right person in a friendly way.
 
 ### Self-Service instead of Communication
 
-Setting up a simple workflow (maybe inside a chat tool) is easy. For example: the sales person wants
+Setting up a simple workflow (maybe inside a chat tool) is easy. For example, the salesperson wants
 a new demo system for a potential customer. He writes a message into a special chat channel and
 someone with more technical background creates the demo system. Fine, isn't it?
 
-Yes, this chat based workflow is doable and it is better than direct messages to individuals.
+Yes, this chat-based workflow is doable and it is better than direct messages to individuals.
 
 Nevertheless **self-service** is better. Wouldn't it be great if setting up a new demo system
-is simple and can be done by a sales person who has no deep technical knowledge?
+is simple and can be done by a salesperson who has no deep technical knowledge?
 
 Communication is important, but daily tasks should get automated so that the one who wants something
 can help himself.
@@ -3025,19 +3023,19 @@ Source: [adr.github.io](https://adr.github.io/)
 ### It is always possible to make things more complicated
 
 It is always possible to make things more complicated. The interesting
-adventure is to make things simpler, easier and more obvious.
+adventure is to make things simpler, easier, and more obvious.
 
 ### It helps to talk
 
-Most software developers do not talk much. Otherwise they would not have
-choosen this job. If you think about something too long, then you get
-blind for the obvious and easy solution. It helps to talk.
+Most software developers do not talk much. Otherwise, they would not have
+chosen this job. If you think about something too long, then you get
+blind to the obvious and easy solution. It helps to talk.
 
 There is something called [Rubber duck
 debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging). This
 might help, but talking to humans helps much more. If you find no
 solution in 30 minutes. Take a break. Do something different, talk to a
-team mate or friend, take a small walk outside.
+teammate or friend, take a small walk outside.
 
 ### Be curious
 
@@ -3053,69 +3051,68 @@ I like:
 -   <https://serverfault.com/>
 -   And some mailing lists.
 
-Often I just write the question, and don't write about the solution I
+Often I just write the question and don't write about the solution I
 have on my mind. If you write about our solution, then the discussion is
 narrowed to a simple pro/contra of your idea. Ask the question like a
-newbee.
+newbie.
 
 ### Sponsored Content in IT
 
 Why does someone write an article on medium.com? Why does someone create content
 which is free?
 
-There can be thousand reasons.
+There can be a thousand reasons.
 
-Some writeres have good intentions. Some just do it to earn money by advertise something.
+Some writers have good intentions. Some just do it to earn money by advertising something.
 
-There are a lot of arcticles about AWS, Kubernetes, Azure, Docker, ElasticSearch, Graphana, Jamstack, Scrum and other topics. Do you
-think they all got written by volunteers which eat and breath IT topics?
+There are a lot of articles about AWS, Kubernetes, Azure, Docker, ElasticSearch, Graphana, Jamstack, Scrum, and other topics. Do you
+think they all got written by volunteers who eat and breathe IT topics?
 
-Some authors share their knowledge since they like to share knowledge.
+Some authors share their knowledge since they like to share their knowledge.
 
 Sponsored Content is everywhere: Web, Facebook, Instagram, Youtube, Medium ...
 
 Maybe it is even on Stackoverflow.
 
-I would like to pay for hgh quality news and articles, but so far I have not found a channel that
- offers a rich and broad spectrum.
+I would like to pay for high-quality news and articles, but so far I have not found a channel that
+ offers a rich and broad-spectrum.
 
 
 
 ### Creativity Management
 
-A lot of ideas come to my mind, if I am far away from a laptop or pc.
-For example if I cylce from home to office or back.
+A lot of ideas come to my mind if I am far away from a laptop or pc.
+For example, if I cycle from home to the office or back.
 
 I started with this way of creativity management some years go: I write
 a mail to myself.
 
-If I cycle home on a friday evening, I want to keep my mind relaxed and
-focused on my family. All work related thoughts should be far away. I
+If I cycle home on a Friday evening, I want to keep my mind relaxed and
+focused on my family. All work-related thoughts should be far away. I
 don't want to "carry" around work-related thoughts on the weekend. On
 the road from office to home I might have an idea what to do (how to
 hunt a strange bug, how to implement a cool feature which needs only a
-very little effort and time to implement, ...). I stop (that is great
-advantage of riding a bike - I can stop almost always immidiatley, and
-take my mobile phone). Then I write a mail to my business adress and now
+very little effort and time to implement, ...). I stop (that is the great
+advantage of riding a bike - I can stop almost always immediately, and
+take my mobile phone). Then I write a mail to my business address and now
 I am sure: This idea won't get lost. And I am free to have a nice
 weekend with my family.
 
-The same happends when I drive from home to office: I have an idea
-related to my personal live? I stop and write a mail to my personal
-account.
+The same happens when I drive from home to the office: I have an idea
+related to my personal life? I stop and write a mail to my account.
 
 That's how most of this guide-line was created: Most items came to my
-mind during cycling, walking, listening to music or laying in bathtub.
-Short mail to myself, and some days later I take the mail which contains
-just a handfull of words and I formulate it.
+mind during cycling, walking, listening to music, or laying in the bathtub.
+A short mail to myself, and some days later I take the mail which contains
+just a handful of words and I formulate it.
 
 ### Cut bigger problems into smaller ones
 
-A lot of new comers have problems with this. Here is one example to
+A lot of newcomers have problems with this. Here is one example to
 illustrate the guideline "Cut bigger problems into smaller ones".
 
 Imagine you are responsible for several servers and you should create
-graphs of their disk/cpu usage.
+graphs of their disk/CPU usage.
 
 Cut the bigger problem into smaller ones:
 
@@ -3128,29 +3125,29 @@ BTW, why not use the PostgreSQL feature "Logical Replication"?
 
 ### Go with the flow, not with the hype
 
-Flow: With "flow" I mean "mainstream". And mainstream is according to
+Flow: With "flow" I mean "mainstream". And the mainstream is according to
 oxford dictionary: "The ideas, attitudes, or activities that are shared
 by most people and regarded as normal or conventional."
 
-Hype: According to wikipedia: "Hype (derived from hyperbole) is
+Hype: According to Wikipedia: "Hype (derived from hyperbole) is
 promotion, especially promotion consisting of exaggerated claims."
 
-But how to distinguish between a flow and a hype?
+But how to distinguish between a flow and hype?
 
 My answer: Stats or more verbose "statistics".
 
 How to get stats?
 
 I like StackOverflow Tag-Trend. For example, you can compare "python"
-and "java". Maybe you have been coding Java since several years. You
+and "java". Maybe you have been coding Java for several years. You
 heard of python once or twice. But is it "flow/mainstream" or is it
-"hype"? Since you only know you context and not every developer and
+"hype"? Since you only know your context and not every developer and
 every project in the world, you can't know the answer. Be upright to
-yourself: You are like a small ant. You walked severals paths in the
+yourself: You are like a small ant. You walked several paths in the
 past, but you don't have the helicopter view.
 
 Check this graph: <http://sotagtrends.com/?tags>=\[java,python\] you
-will see: Python is not just a hype it is the flow.
+will see: Python is not just hyped it is the flow.
 
 Do not trust one source. Take a look at google trends:
 <https://trends.google.de/trends/explore?date=today%205-y&q=%2Fm%2F05z1_,%2Fm%2F07sbkfb>
@@ -3177,7 +3174,7 @@ I like these release notes:
 
 If your job is exciting, then it will be exhausting.
 
-This is again the "boring" topic, which was on of the first topics of this text.
+This is again the "boring" topic, which was one of the first topics of this text.
 
 Urgency gives you a feeling of importance. But that's a [bias](https://en.wikipedia.org/wiki/Bias). Your emotions
 are playing tricks on you. Important things are not urgent.
@@ -3195,22 +3192,22 @@ a small list of "who does what until when".
 I have three mail accounts:
 
 -   personal mails (family, friends, ...)
--   work related mails
+-   work-related mails
 -   mailing lists
 
 Maybe you love your job. But your job is not your family. It is a kind of mental hygiene to
-keep this seperated.
+keep this separated.
 
 ### Clean up your desk
 
 Don't forget to clean your desk. I don't write this here because I do it
-often and with joy. No, excat the opposite. I write it down since I want
+often and with joy. No, exactly the opposite. I write it down since I want
 to push myself.
 
 Don't look at all these things on your desk at once. Start on the left
 side take the first thing. Where is the best place for this thing single
 thing? Unsure? Why not throw it in the trash can? If you are unsure put
-it at least in box behind a closed cabinet door. Some month later you
+it at least in a box behind a closed cabinet door. Some month later you
 might be able to throw it in the garbage.
 
 Then wipe the dust.
@@ -3223,7 +3220,7 @@ down.
 Imagine your software product is like a CMS. A user can edit pages. The product keeps 
 versions of this page, so that the editor can revert to an older version.
 
-Imagine the button to access the history is labeld "History".
+Imagine the button to access history is labeled "History".
 
 Terminology is more important than you think.
 
@@ -3233,14 +3230,14 @@ that these docs explain the button labeled "History".
 But that's not consistent. 
 
 Imagine this story: A young and new developer wants to learn more about this feature. The
-developers searches in the internal docs with the keyword "history". This results
-in wasting some minutes of the developers precious time. Sure, the developer will find
+developers search in the internal docs with the keyword "history". This results
+in wasting some minutes of the developer's precious time. Sure, the developer will find
 the docs sooner or later, but it is not clean. But this is just the first part of the story.
 The second part is that the new developer will get demotivated in having clean docs.
 
 I don't want to call this "Page History" vs "Page Versioning" a problem. It is a spirit.
 
-Usually there are "thousand" places where a term gets used. In above example there will
+Usually, there are "thousand" places where a term gets used. In the above example, there will
 be files, classes, methods, data structures containing this name. Changing the label of
 the button is easy. Changing files, classes, methods, data structures is hard.
 
@@ -3248,9 +3245,9 @@ Sometimes it is too much effort to reflect a new wording in the GUI in all place
 I mean the places in the GUI and all the non-user visible places which are only visible for the
 department developing the software.
 
-Consitency on the GUI is a must. Consitency in the other places makes sense.
+Consistency on the GUI is a must. Consistency in other places makes sense.
 
-Sometimes is makes sense. It depends.
+Sometimes it makes sense. It depends.
 
 The spirit of the future lies in your hand. You are always able to influence the upcoming
 months.
@@ -3258,25 +3255,25 @@ months.
 ### Highlander, "There can be only one"
 
 "Highlander" is a 1986 British-American adventure action fantasy film
-with tagline "There can be only one". Thinking like this narrows your
-mind. There can be several thousand. Look how successfull ants and bees
+with the tagline "There can be only one". Thinking like this narrows your
+mind. There can be several thousand. Look at how successful ants and bees
 work. If someone is better or faster, then smile. Give applaud and say
 "wow".
 
 [Don't be evil.](https://en.wikipedia.org/wiki/Don%27t_be_evil) Don't
-waste time and mental energie. Applauding if the competitor is better,
+waste time and mental energy. Applauding if the competitor is better,
 was new to me in 2017. I was at Rothenbaum and attended the German Open
 (Tennis). The coach of one player was applauding every time the opponent
 made a good shot. I was astonished. Why was the coach applauding the
 enemy? But this works. If you get angry, you waste energy and you start
 to think like a wild and stupid animal. Even if you have made a mistake
-or lost some how, no reason not to walk upright.
+or lost somehow, no reason not to walk upright.
 
-There are some romours about "real programmers" and what they do. I think "real programmers"
+There are some rumors about "real programmers" and what they do. I think "real programmers"
 use vi and are terrible slow because of the tunnel vision created by too much testosterone.
 Smart developers have friends to talk to.
 
-### Don't waste your time with cheap hardeware
+### Don't waste your time with cheap hardware
 
 Some people love the [Raspberry
 Pi](https://en.wikipedia.org/wiki/Raspberry_Pi). I don't like it. It
@@ -3287,22 +3284,21 @@ performance. I don't like waiting.
 ### Write a diary
 
 I think it helps to write a diary. Sitting down and writing about the
-last days help you to reflect the things you did. I helps you to focus
+last days help you to reflect on the things you did. It helps you to focus
 on your goals. Do you have goals? I found out that late (age of 40). A
 diary is fun to read several months later. I try to do it at least once
 a week. I have three types of diaries.
 
-One on facebook readable for everyone. It contains things from my daily
+One on Facebook readable for everyone. It contains things from my daily
 life, written in german. <https://www.facebook.com/thomas.guttler.52>
 
 There is one on google-plus which contains IT topics (open source,
-python, linux, PostgreSQL), written in english and readable by everyone.
+python, Linux, PostgreSQL), written in English and readable by everyone.
 <https://plus.google.com/112821159206665920618>
 
-And there is a private which I maintain with Anki. Anki is a flash card
-app. The front side is the question and the back side is the answer. I
-use the first side for the date and one to three words, and the back
-side contains the text. This way I can ask myself what was on my mind
+And there is a private which I maintain with Anki. Anki is a flashcard
+app. The front side is the question and the backside is the answer. I
+use the first side for the date and one to three words, and the backside contains the text. This way I can ask myself what was on my mind
 these days. But all this should be fun, not a burden.
 
 ### The Bus factor
@@ -3312,33 +3308,33 @@ from information and capabilities not being shared among team members
 
 [Bus factor](https://en.wikipedia.org/wiki/Bus_factor)
 
-Avoid to create secret knowledge which is only available to you. Share
+Avoid creating secret knowledge that is only available to you. Share
 knowledge.
 
 Avoid overspecialization of yourself. It will have drawbacks. Imagine
 there are some things which only you know. Sooner or later you want to
 go on holiday and you want a relaxed holiday. You don't want to be
-called on your mobile phone by your boss or a team mate. You want two
-weeks off without a single interrupt which is related to your work.
+called on your mobile phone by your boss or a teammate. You want two
+weeks off without a single interruption that is related to your work.
 
-I guess all people love it, if they are important. Everybody loves it,
-if someone needs them. But you will get a burnout if no one else can do
+I guess all people love it if they are important. Everybody loves it
+if someone needs them. But you will get burnout if no one else can do
 the things you do.
 
-Avoid overspecialization of a team mate, too. If a team mates has secret
+Avoid overspecialization of a teammate, too. If a teammate has secret
 knowledge and there is no one else who has a clue: Talk. Try to reveal
 the things which only one person knows. Tell him about your concerns
 (Bus factor). Maybe talk to his boss.
 
-Imagine there is an action which needs to be done roughly twice a year.
-For example setting up a new server. Up to now Bob did this everytime.
-Talk to your team mates. Explain that every action should be known to at
-least two people. In practice this means: The next time Bob won't do it.
+Imagine there is an action that needs to be done roughly twice a year.
+For example, setting up a new server. Up to now, Bob did this every time.
+Talk to your teammates. Explain that every action should be known to at
+least two people. In practice, this means the next time Bob won't do it.
 It needs to be done by someone else.
 
-If you read above sentences and think "that's not my job, that's the job
-of the team leader", then I think it is time stop acting like a dumb
-sleeping sheep. Get resonsible. React relaxed if nobody is listening or
+If you read the above sentences and think "that's not my job, that's the job
+of the team leader", then I think it is time to stop acting like a dumb
+sleeping sheep. Get responsible. React relaxed if nobody is listening or
 understanding your concerns. "The Best Path to Long-Term Change Is Slow,
 Simple and Boring."
 
@@ -3353,21 +3349,20 @@ See [Thomas doing working out loud](https://github.com/guettli/wol)
 ### Thank you
 
 -   Robert C. Martin for the book "Clean Coder"
--   Malcolm Tredinnick. Only few people listened like he did. With
+-   Malcolm Tredinnick. Only a few people listened as he did. With
     "listen" I mean "trying to understand the conversation partner".
 -   Linus Torvalds for the quote "Bad programmers worry about the code.
-    Good programmers worry about data structures and their
-    relationships.".
+    Good programmers worry about data structures and their relationships.".
 -   Bill Gates for the quote "I choose a lazy person to do a hard job.
     Because a lazy person will find an easy way to do it."
--   All people who contribute to open source software (Linux, Python,
+-   All people who contribute to open-source software (Linux, Python,
     PostgreSQL, ...)
--   All people who ask question and/or answers them at places like
+-   All people who ask questions and/or answers them at places like
     StackOverflow.
 -   People I met during study at HTW-Dresden
 -   My teammates at [tbz-pariv](http://www.tbz-pariv.de/).
 -   <https://chemnitzer.linux-tage.de/> All people involved in this
     great yearly event.
 -   Ionel Cristian Mărieș for the link to bash pitfalls.
--   Audiance at my presenstion at [Python User Group Leipzig 2019](https://www.meetup.com/de-DE/Leipzig-Python-User-Group/events/rbwmtpyzmbnb/)
+-   Audience at my presentation at [Python User Group Leipzig 2019](https://www.meetup.com/de-DE/Leipzig-Python-User-Group/events/rbwmtpyzmbnb/)
 -   Marco Bakera for hints (mailing-list python-de 2019)
