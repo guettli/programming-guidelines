@@ -2766,24 +2766,24 @@ See [Liste of Static Site Generators](https://github.com/guettli/static-site-gen
 
 ## 8. Communication with others
 
-### Avoid to get a nerd
+### Avoid getting a nerd
 
 If you do "talk" with software to databases and APIs daily, your ability
 to communicate with humans might decrease.
 
 You might start to think like a computer (at least a bit).
 
-The human mind works completly different, not just bits and bytes. It
+The human mind works completely differently, not just bits and bytes. It
 has [Emotions](https://en.wikipedia.org/wiki/Emotion)
 
-Avoid to get a Nerd https://en.wikipedia.org/wiki/Nerd
+Avoid getting a Nerd https://en.wikipedia.org/wiki/Nerd
 
 Here some hints:
 
 -   Nerds like complaining. This book can help: "Rethinking Positive
     Thinking: Inside the New Science of Motivation" by Gabriele
     Oettingen. The method is called WOOP.
--   Nerds like to think at their problems first. [Nonviolent
+-   Nerds like to think about their problems first. [Nonviolent
     Communication](https://en.wikipedia.org/wiki/Nonviolent_Communication#Four_components)
     can help.
 -   Meet with "normal" people. With "normal" I mean people who do not do
@@ -2794,15 +2794,14 @@ Here some hints:
 
 ### Avoid stress
 
-Stress trigger your body’s “fight or flight” response. It pushes your
-blood into the muscles. That's great if you need to jump onto the side
-walk because a fast red race car would hit you. But in your daily life
+Stress triggers your body’s “fight or flight” response. It pushes your
+blood into the muscles. That's great if you need to jump onto the sidewalk because a fast red race car would hit you. But in your daily life,
 this "fight or flight" response is hardly needed. You need the energy in
 your brain :-)
 
 Avoid stress, relax daily.
 
-On the other hand stress is fun: I like tennis and long distance
+On the other hand, stress is fun: I like tennis and long-distance
 running.
 
 Care for both: brain and body.
@@ -2821,7 +2820,7 @@ Rember, there is always the last variant: Leave things like they are
 today and think about this again N days later.
 
 If you have found several solution variants, then look at them in
-detail. Most of the time it is useful to define the need sequence of
+detail. Most of the time it is useful to define the needed sequence of
 steps. You can use the letter "S" for this: S1, S2, S3 ...
 
 A simple example:
@@ -2839,11 +2838,11 @@ In the morning, you wake up.
 If you look at V1 in detail you get to a list of steps:
 
 -   S1: get up
--   S2: make bed
+-   S2: make the bed
 -   S3: wash yourself
--   S4: put on clothings
+-   S4: get dressed
 -   S5: eat
--   S6: take bike and ride to work
+-   S6: take the bike and ride to work
 
 I think the first letter (V, S) helps if you are brainstorming.
 
@@ -2852,7 +2851,7 @@ you are on your own, or endless discussions if there is a team).
 
 Getting out of thinking/talking into writing and "naming solutions" helps to get an actionable plan.
 
-In a professional environment these notes about the options and the decision can get used as entry in the "Decision Log".
+In a professional environment, these notes about the options and the decision can get used as an entry in the "Decision Log".
 
 ### Avoid Office Documents or UML-tools
 
@@ -2861,16 +2860,16 @@ an issue tracking system or wiki.
 
 Don't waste time with UML tools. UML is like
 [esperanto](https://en.wikipedia.org/wiki/Esperanto). It is (in theory)
-a great solution which solves a lot of problems. But somehow it does not
+a great solution that solves a lot of problems. But somehow it does not
 work.
 
-Write down the high level use case, the cardinality and the steps.
+Write down the high-level use case, the cardinality, and the steps.
 Sequence diagrams can be simplified to enumerations: first step, second
 step, third step ...
 
 [Sketch](https://en.wikipedia.org/wiki/Sketch_(drawing)) screenshots you
 want to build with your team with a pen. I avoid any digital device for
-this, since up to now paper or a whiteboard are far more real. If you
+this since up to now paper or a whiteboard is far more real. If you
 need the result in digital format, just take a picture with your cell
 phone at the end.
 
@@ -2882,15 +2881,15 @@ It is in the nature of things. Some customers want to know every small change.
 Some customers only want to know the important changes. Some say that
 they want to know every change, but then never look at it.
 
-If you are working in a modern SaaS environment where you are able to
-release often, then you should provide a ChangeLog, but don't take it too serious for GUI changes.
+If you are working in a modern SaaS environment where you can
+release often, then you should provide a ChangeLog, but don't take it too seriously for GUI changes.
 
 Example: I see small changes in the GUI of GSuite weekly. I guess they don't have
 a public ChangeLog, and I think it is not needed, too. 
 
 A GUI should be self-explanatory.
 That's important. Maybe the GUI changed, maybe not. It is like in the game chess: 
-You look at the board and you face the question what to do next. It does not matter
+You look at the board and you face the question of what to do next. It does not matter
 which chess piece was moved before. You see the board and now it is your turn.
 The past does not matter in this context.
 
@@ -2898,22 +2897,22 @@ Things are different if you provide a public API. This must not change without c
 Changes to public APIs should be announced several months in advance.
 
 
-Things are different if you are working in an environment which has more constraints
+Things are different if you are working in an environment that has more constraints
 (Medical devices, Banking, Insurance, ...), then you don't need my advice, since
 you get told what to do.
 
 ### Communication with Customers: Binary decision "next" or "later" lists.
 
 Define "done" with your customers. Humans like to be creative and if
-thing X gets changed, then they have fancy ideas how to change thing Y.
+thing X gets changed, then they have fancy ideas about how to change thing Y.
 Be friendly and listen: Write these fancy ideas down on the "do later
 list".
 
-If the customer have new ideas, let them decide: Should this be on the
+If the customer has new ideas, let them decide: Should this be on the
 "do list" or the "do later list".
 
 If you don't have a definition of done/ready, then you should not start
-to write source code. First define the goal, then choose a strategy to
+to write source code. First, define the goal, then choose a strategy to
 get to the goal.
 
 Focus on a simple working solution first. Add optional stuff to the "do
