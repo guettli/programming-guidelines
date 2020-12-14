@@ -1010,8 +1010,8 @@ Example:
         ....
 
 Look at the actual code which does something. I used five lines with
-.... points for it. I think more indendation, makes the code more
-complex. The "return" simplifies the code. For me the second version is
+.... points for it. I think more indentation, makes the code more
+complex. The "return" simplifies the code. For me, the second version is
 much easier to read.
 
 For Python there exists a "complexity checker": [Design
@@ -1019,17 +1019,17 @@ checker](http://pylint.pycqa.org/en/latest/technical_reference/extensions.html#d
 
 ### Source code vs generated code
 
-I guess every young programmer wants to write a tool which automatically
+I guess every young programmer wants to write a tool that automatically
 creates source code. Stop! Please think about it again. What do you
 gain? Don't confuse data and code. Imagine you have a source code
-generator which takes DATA as input and creates SOURCE as output. What
+generator that takes DATA as input and creates SOURCE as output. What
 is the difference between the input (DATA) and the output (SOURCE)? What
 do you gain? Even if you have some kind of artificial intelligence, you
 can't create new information if your only input is DATA. It is just a
 different syntax. Why not write a program which reads DATA and does the
 thing you want to do?
 
-For the current context I see only two different things: **source code**
+For the current context, I see only two different things: **source code**
 for humans and **generated code** for the machine.
 
 Just because a file contains code of a programming language, this does
@@ -1037,21 +1037,20 @@ not means that this file is source code.
 
 If the TypeScript compiler creates JavaScript, then the output is
 generated code since the created JavaScript source is intended for the
-interpreter only. Not for the human. If you create JavaScript with a
+interpreter only. Not for humans. If you create JavaScript with a
 keyboard and a text editor it is source code. Don't mix source code and
 generated code in one file.
 
-With other words: source code gets created by humans with the help of an
+In other words: source code gets created by humans with the help of an
 editor or IDE.
 
 ### Don't believe the "automatically create foo" hype
 
 If you are new to software development you are fascinated by the magic.
-You can create things! In this section I call the magic output "foo".
+You can create things! In this section, I call the magic output "foo".
 
 Yes, you can automatically create foo with a script. Whatever "foo" is
-in your context: It has no value. It is worth nothing. It is dust in the 
-wind like a web page which displays the current time. 
+in your context: It has no value. It is worth nothing. It is dust in the wind like a web page that displays the current time. 
 This output is only temporarily valuable. 
 
 Look at the basic IPO pattern: Input - Processing - Output (in this case
@@ -1064,33 +1063,33 @@ It has no value since you can always create "foo" again. You just need
 the input and your script.
 
 You can store "foo" in a cache to improve performance. But do not store
-it permanently. Don't make backup of it.
+it permanently. Don't make a backup of it.
 
-A term which is often a hint to this anti-pattern is "generator". Yes,
+A term that is often a hint to this anti-pattern is "generator". Yes,
 you can generate a lot of data. But this bloated, generated data is just hot air with
 little value.
 
-DevOps who prefer "Op" to "Dev" tend to create configuration with a script.
-You can do this, but then create the config again daily. Do not edit
+DevOps who prefer "Op" to "Dev" tend to create a configuration with a script.
+You can do this but then create the config again daily. Do not edit
 the generated config by hand.
 
 Related: [Single source of truth](https://en.wikipedia.org/wiki/Single_source_of_truth)
 
 ### Regex are great - But it's like eating rubbish
 
-Yes, I like regular expression. But slow down: What do I do, if I use a
+Yes, I like a regular expression. But slow down: What do I do, if I use a
 regex? I think it is "parsing". I remember to have read this some time
 ago: "Time is too short to rewrite parsers". Don't parse data! We live
-in the 21 century. Consume high level data structures like json, yaml or
-protcol buffers. If possible, refuse to accept CSV or custom text format
+in the 21 century. Consume high-level data structures like JSON, YAML, or
+protocol buffers. If possible, refuse to accept CSV or custom text format
 as input data.
 
-From time to time you need to do text processing. Unfortunately there
+From time to time you need to do text processing. Unfortunately, there
 are several regex flavors. My guide-line: Use PCRE. They are available
-in Python, Postfix and many other tools. Don't waste time with other
-regex flavors, if PCRE are available.
+in Python, Postfix, and many other tools. Don't waste time with other
+regex flavors, if PCRE is available.
 
-Current Linux distributions ship with a grep versions which has the -P
+Current Linux distributions ship with a grep version which has the -P
 option to enable PCRE. AFAIK this is the only way to grep for special
 characters like the binary null: [How to grep for special
 character](https://superuser.com/a/612336/95878)
@@ -1118,10 +1117,10 @@ Other alternatives to CSV:
 
 I once gave a DB column the name "failed". It was a boolean indicating
 if the transmission of data to the next system was successful. The
-output as table in the GUI looked confusing for humans. The column
+output as a table in the GUI looked confusing for humans. The column
 heading was "failed". What should be visible in the cell for failed
 rows? Boolean usually get translated to "Yes/No" or "True/False". But if
-the human brain reads "Yes" or "True" it initially things "all right".
+the human brain reads "Yes" or "True" it initially thinks "all right".
 But in this case "Yes" meant "Yes, it failed". The next time I will call
 the column "was\_successful", then "Yes" means "Yes, it was successful".
 Some GUI toolkits render "True" as a green (meaning "everything is ok")
@@ -1129,28 +1128,27 @@ hook and "False" as a red cross (meaning "it failed").
 
 ### Love your docs
 
-I have seen it several times on github. Just have a look
-at the README files on github. They starts with "Installing", "Configuring", then "Special Cases"... 
+I have seen it several times on Github. Just have a look
+at the README files on GitHub. They start with "Installing", "Configuring", then "Special Cases"... 
 
 What is missing? An introduction! Just some sentences
-what this great project is all about. Programmers prefer the details to the big picture,
+about what this great project is all about. Programmers prefer the details to the big picture,
 the overview. 
 
 But "Project simple-foo simplifies foo" is not enough. What is "foo"?
 
-Dear programmers, learn to relax and look at the thing you create like a new
-comer. Imagine a new comer who know how to add two integers with his favorite programming
+Dear programmers, learn to relax and look at the thing you create like a newcomer. Imagine a newcomer who knows how to add two integers with his favorite programming
 language. What is missing to make him understand why the project/lib/tool is needed?
 
-First you need to convince him that this project is worth a try, then if he knows
+First, you need to convince him that this project is worth a try, then if he knows
 the "why?", then explain how to install it.
 
-If you have this mind set "I do the important (programming)
+If you have this mindset "I do the important (programming)
 stuff. Someone else can care for the docs", then your open source
 project won't be successful.
 
-If you write docs, then do it for new comers. Start with the
-introduction, define the important terms, then provide the simple and straightforward use
+If you write docs, then do it for newcomers. Start with the
+introduction, define the important terms, then provide simple and straightforward use
 cases. Put details and special cases at the end.
 
 If your library gets used and you add a bug, you will get feedback soon.
@@ -1160,7 +1158,7 @@ Tests fail or even worse customers will complain.
 But if you write broken docs, no one will complain.
 
 Even if someone reads your mistake, it is unlikely that you get
-feedback. Unfortunately only few people take this serious and tell you
+feedback. Unfortunately, only a few people take this seriously and tell you
 that there is a mistake in your docs.
 
 How to solve this?
@@ -1172,10 +1170,10 @@ Let someone else read your docs.
 The quality of feedback you get depends on the type of person you ask to
 read your docs.
 
-If it is a programmer, it is likely that he does not read your docs
+If it is a programmer, likely, he does not read your docs
 carefully. Most software developers do not care for orthography and it
-is hard for them to read the docs like a new comer. They already know
-what's writen there, and they will say "it is ok".
+is hard for them to read the docs like a newcomer. They already know
+what's written there, and they will say "it is ok".
 
 My solution: resubmission: Read the text again 30 days later.
 
@@ -1183,30 +1181,29 @@ My solution: resubmission: Read the text again 30 days later.
 
 Look at the question concerning OpenSSH options at the Q+A site [serverfault.com](https://serverfault.com/).
 There is a lot of guessing. Something is wrong. Nobody knows where the
-canonical upstream docs are. Easy linking to specific configuration is not
-possible. What happens? Redudant docs. Many blog posts try to explain
-stuff.... Don't write blog posts, instead improve the upstreams docs. Talk with
-the core developers. Open an issue in the issue tracker if you think there is
-something missing in the docs.
+canonical upstream docs are. Easy linking to a specific configuration is not
+possible. What happens? Redundant docs. Many blog posts try to explain
+stuff... Don't write blog posts, instead, you should improve the upstreams docs. Talk with
+the core developers. Open an issue in the issue tracker if you think something is missing in the docs.
 
 Open an issue if the docs start with the hairy details and don't start
 with an introduction/overview. Developers don't realize this, since they
 need to deal with the hairy details daily. Don't be shy: Help them to
-see the world through the eyes of a new comer.
+see the world through the eyes of a newcomer.
 
 I am unsure if I should love or hate "wiki.archlinux.org". On the one
-hand I found there valuable information about systemd and other linux
-related secrets. On the other hand it is redundant and since a lot of
+hand, I found there valuable information about systemd and other Linux
+related secrets. On the other hand, it is redundant and since a lot of
 users take their knowledge from this resource, the canonical upstream
-docs get less love. First determine where the canonical upstream docs
+docs get less love. First, determine where the canonical upstream docs
 are. Then communicate with the maintainers. Avoid redundant docs.
 
-With other words: Blog posts are nice, but they are like dust in
+In other words: Blog posts are nice, but they are like dust in
 the wind. They explain a snapshot. Three months later they are outdated.
-It makes more sense to add one missing sentance to the upstream docs,
+It makes more sense to add one missing sentence to the upstream docs,
 then to create a blog post explaining something which is not explained
-in the docs. At least in the open source world. Since it is more likely
-that you are able to influence the upstream docs.
+in the docs. At least in the open-source world. Since it is more likely
+that you can influence the upstream docs.
 
 Related: [Single Source of Truth (Wikipedia)](https://en.wikipedia.org/wiki/Single_source_of_truth)
 
@@ -1223,10 +1220,10 @@ Related: ["Don't repeat yourself" vs "We enjoy typing"](https://en.wikipedia.org
 
 My best practice to solve the "naming things" challenge
 
-* Define your terms, your terminology. For small projects a glossary is enough, but for bigger projects every term should have its own page. It should be easy to create a hyperlink to this term. That's why I prefer the "one term, one page" approach. Creating hyperlinks into a page (https://..../...#foo) are possible but less fun.
+* Define your terms, your terminology. For small projects, a glossary is enough, but for bigger projects, every term should have its page. It should be easy to create a hyperlink to this term. That's why I prefer the "one term, one-page" approach. Creating hyperlinks into a page (https://..../...#foo) are possible but less fun.
 * The defined terms should not differ too much from the spoken words (or the words used in your chat/mail messages). If there is a difference, then alter the written definition. 
 * Someone should be responsible for the docs. "Everybody is responsible for it" does not work.
-* Encourage and motivate people again and again to speak up if the docs are outdated.
+* Encourage and motivate people, again and again, to speak up if the docs are outdated.
 
 More about this topic from me: [Intranets](https://github.com/guettli/intranets)
 
@@ -1239,10 +1236,10 @@ knows the hidden magic.
 Publish your docs in your app. Send your customer a link to the online
 docs.
 
-Despite all myth: There are users who read the docs.
+Despite all myths: Some users read the docs!
 
-And that's great, if the user has more knowledge. Because this means you
-have less work. Less mails, less interrupts, less phone calls :-)
+And that's great if the user has more knowledge. Because this means you
+have less work. Fewer emails, fewer interrupts, fewer phone calls :-)
 
 This even applies to public discussion forums. Don't write too much. Create great docs and answer questions by
 providing links to the docs. And be polite and include the question if this answers the question of the user.
@@ -1250,15 +1247,15 @@ providing links to the docs. And be polite and include the question if this answ
 [Permalinks](https://en.wikipedia.org/wiki/Permalink) are great, since they provide a single source of truth.
 
 
-###  Don't write tech-docs in non-english language
+###  Don't write tech-docs in a non-English language
 
 General rule: don't waste time.
 
-It is feasible to write high level blog posts about tech topics in your favorite language.
+It is feasible to write high-level blog posts about tech topics in your favorite language.
 
 Sometimes it is easier to communicate the holistic view in your mother-tongue.
 
-But it is not feasible to write detailed tech stuff in a non-english language.
+But it is not feasible to write detailed tech stuff in a non-English language.
 
 Example:
 
@@ -1266,15 +1263,15 @@ https://wiki.ubuntuusers.de/Installation_auf_externen_Speichermedien/
 
 I came across this page because I want to install Linux on an external hard disc.
 
-Unfortunately there seemed to be no good English guide how to do this.
+Unfortunately, there seemed to be no good English guide on how to do this.
 
-The most solid guide I found during the first minutes was above link. Unfortunately above guide was outdated.
+The most solid guide I found during the first minutes was the above link. Unfortunately, the above guide was outdated.
 
 Grrrrrr. Now I needed to choose:
 
 * V1: Should I update the outdated german guide? It is a wiki editable by everybody.
 
-* V2: I use a english guide, but they look not solid. 
+* V2: I use an English guide, but they look not solid. 
 
 Grrr. I don't like thinking.
 
@@ -1283,13 +1280,13 @@ while doing what they did. I think they wasted time. Automatic translations are 
 good today. At least if you translate English to your favorite language.
 I won't update the outdated German guide in the wiki. This would help only very few people.
 Most people which want to install Linux on an external hard drive can either
-read English text or they know who to translate Englisch text to their favorite
-language. I would update an Englisch wiki page, since this would help a lot of people.
+read English text or they know who to translate English text to their favorite
+language. I would update an Englisch wiki page since this would help a lot of people.
 
 Don't get me wrong: Docs for applications you write should be in the language of your customers. Above text
-is about tech related docs.
+is about tech-related docs.
 
-My conclusion: Don't write tech-docs in non-english language
+My conclusion: Don't write tech-docs in a non-English language
 
 ### Care for newcomers
 
