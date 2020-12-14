@@ -395,15 +395,15 @@ Related: [StackOverflow "class java.lang.Double cannot be cast to class java.lan
 
 Start with painting. A [Mockup](https://en.wikipedia.org/wiki/Mockup#Software_engineering) helps.
 
-If you improve an existing application, then take a screenshot and then paint in it with expressive colors. I like #ff00ff.
+If you improve an existing application, then take a screenshot and then paint it with expressive colors. I like #ff00ff.
 
 If you doing something from scratch, then create some slides paint it roughly, add numbers to buttons and add a little
-text what should happen if someone pushes the button. Again, use expressive colors, so that it easy to see what is ideation and
+text on what should happen if someone pushes the button. Again, use expressive colors, so that it easy to see what is ideation and
 what is existing GUI.
 
-You don't need expencive tools like Figma or InVision for this. Especially if I create something new, I like to do it on paper with pencil and crayons.
+You don't need expensive tools like Figma or InVision for this. Especially if I create something new, I like to do it on paper with a pencil and crayons.
 
-Of course above hints make no sense if you write a device driver which has no graphical user interface.
+Of course, the above hints make no sense if you write a device driver that has no graphical user interface.
 
 ### Faceted search
 
@@ -411,11 +411,11 @@ You should know this term: [Faceted search](https://en.wikipedia.org/wiki/Facete
 
 ### FTUE
 
-[First-time user experience](https://en.wikipedia.org/wiki/First-time_user_experience) is very important. Does a user who has never used the application before understand it immideately? 
+[First-time user experience](https://en.wikipedia.org/wiki/First-time_user_experience) is very important. Does a user who has never used the application before understanding it immediately? 
 
 ### Don't make me think
 
-[Don't make me think](https://en.wikipedia.org/wiki/Don%27t_Make_Me_Think) is the title of a book. I don't think it is necessary to read it. Just remember this title and try to create user interfaces which area easy to understand.
+[Don't make me think](https://en.wikipedia.org/wiki/Don%27t_Make_Me_Think) is the title of a book. I don't think it is necessary to read it. Just remember this title and try to create user interfaces that are easy to understand.
 
 ### SEO
 
@@ -429,22 +429,21 @@ I think the best docs about search engine optimization are from the company whic
 
 ### Input-Processing-Output
 
-There are thousand programming languages and thousand ways to exchange data. But finally it is one concept:
+There are thousands of programming languages and thousands of ways to exchange data. But finally, it is one concept:
 
 [Input-Processing-Output](https://en.wikipedia.org/wiki/IPO_model)
 
-If you tell your navigation system of your car "Please show me the route to Casablance Pub, Leipzig" or if you write your first programm which adds two integers and prints the result.
+If you tell your navigation system of your car "Please show me the route to Casablance Pub, Leipzig" or if you write your first program which adds two integers and prints the result.
 
-### Less code, less bugs
+### Less code, fewer bugs
 
--   Not existing code is the best: Less code, less bugs
+-   Not existing code is the best: Less code, fewer bugs
 -   Code maintained by a reliable upstream (like Python, PostgreSQL,
-    Django, Linux, Node.js, Typescript, ...) is more reliable than own
-    code.
+    Django, Linux, Node.js, Typescript, ...) is more reliable than my code.
 
-### Less ressources, less bugs
+### fewer resources, fewer bugs
 
-There are several way to give data to a method.
+There are several ways to give data to a method.
 
 Let's have a look at this simple method call: `my_method(some_string)`
 
@@ -453,19 +452,19 @@ You might think there is only of variable which gets accessed by the method?
 Let's find more ways this method could get input:
 
 * Environment variables: Maybe setting LANG=de_DE influences the output?
-* Filesystem: Maybe the existance or content of a file in the local file system influences the method.
-* `my_method()` could access a database, storage or a cache to read additional data
-* Maybe there is a global variable which contains a value which was set by a previous call to `my_method()`
-* Maybe the datetime influences the method. Maybe the method creates a different output at full moon.
+* Filesystem: Maybe the existence or content of a file in the local file system influences the method.
+* `my_method()` could access a database, storage, or a cache to read additional data
+* Maybe there is a global variable that contains a value that was set by a previous call to `my_method()`
+* Maybe the date influences the method. Maybe the method creates a different output at a full moon.
 * ...
 
-AFAIK there is no clear name which distinguishes between explicit and implicit input.
+AFAIK there is no clear name that distinguishes between explicit and implicit input.
 
 You can't avoid implicit input, and it is 100% ok if it is obvious. If your method
 should return the data of the user with the id 12345, then your code needs to access
 the database.
 
-If the same code works in one environment, but not in a different environment, and you don't know why,
+If the same code works in one environment, but not in a different environment, and you don't know why
 then this tool might help: [dumpenv](https://github.com/guettli/dumpenv) it writes the environment to
 a list of files, which you can compare with your favorite diff tool (e.g. Meld).
 
@@ -488,8 +487,7 @@ Tim Peters in the year 1999)
 -   Errors should never pass silently.
 -   Unless explicitly silenced.
 -   In the face of ambiguity, refuse the temptation to guess.
--   There should be one-- and preferably only one --obvious way to do
-    it.
+-   There should be one-- and preferably only one --obvious way to do it.
 -   Although that way may not be obvious at first unless you're Dutch.
 -   Now is better than never.
 -   Although never is often better than *right* now.
@@ -497,33 +495,33 @@ Tim Peters in the year 1999)
 -   If the implementation is easy to explain, it may be a good idea.
 -   Namespaces are one honking great idea -- let's do more of those!
 
-In the year 2001 I knew these programming languages: Basic, Pascal,
-Assembler, C, C++, Prolog, Lisp, Visual Basic, Java, JavaScript, tcl/tk,
+In the year 2001, I knew these programming languages: Basic, Pascal,
+Assembler, C, C++, Prolog, Lisp, Visual Basic, Java, JavaScript, Tcl/Tk,
 Perl.
 
 I was unhappy with all of them and looked for a new language. I narrowed
-down the languages I was interested in and there were two choices left.
-One was ruby, the other was python. I choose Python. It looked simpler,
+down the languages, I was interested in and there were two choices left.
+One was ruby, the other was Python. I choose Python. It looked simpler,
 like executable pseudo-code. Since 2001 I use it nearly every work-day.
-I like it, and up to now no other language attracts me.
+I like it, and up to now, no other language attracts me.
 
-I am not married with Pyhon. I am willing to change. But the next
-language needs to be better. Up to now I see no alternative.
+I am not married to Python. I am willing to change. But the next
+language needs to be better. Up to now, I see no alternative.
 
-JavaScript has the big benefit, that it can be executed in the browser.
+JavaScript has a big benefit, that it can be executed in the browser.
 But I don't like it. Why I don't like it? I don't know. Sometimes
 feelings are more important than facts.
 
 ### CRUD --&gt; CRD
 
-In most cases software does create, read, update, delete data. See
+In most cases, the software does create, read, update, delete data. See
 [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 
 The "update" part is the most difficult one.
 
 Sometimes CRD helps: Do not implement the update operation. Use
 delete+create. But be sure to use transactions to avoid data loss, if your
-data stroage supports this:
+data storage supports this:
 "BEGIN; DELETE ...; INSERT ...; COMMIT;"
 
 Translating to SQL terms:
@@ -540,11 +538,11 @@ virtualization](https://en.wikipedia.org/wiki/Operating-system-level_virtualizat
 There CRD gets used, not CRUD. Containers get created, then they
 execute, then they get deleted. You might use configuration management
 to set up a container. But this gets done exactly once. There is one
-update from vanilla container to your custom container. But this is like
+update from the vanilla container to your custom container. But this is like
 "create". No updates will follow once the container was created. This
 makes it easier and more predictable.
 
-The same is true for operating on data-structures in memory. In most cases you should not alter the data structure which are iterating. Create a new data structure while iterating the input data. With other words: no in-place editing.
+The same is true for operating on data-structures in memory. In most cases, you should not alter the data structure which is iterating. Create a new data structure while iterating the input data. In other words: no in-place editing.
 
 ### Stateless
 
