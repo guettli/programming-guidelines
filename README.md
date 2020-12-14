@@ -1990,26 +1990,26 @@ you feed him for a lifetime*
 
 If you have worked with Windows95, then you must have seen them: Empty
 error messages with just a red icon and a button labeled "OK". You had
-no clue what was wrong. On the one hand it was great fun, on the other
-hand it was very sad, since you wasted your precious time.
+no clue what was wrong. On the one hand, it was great fun, on the other
+hand, it was very sad since you wasted your precious time.
 
 Do it better.
 
-Imagine user "foo" wants to access data (lets call it "pam") which you
-only can see, if you are in the group "baywatch". Unfortunately user
+Imagine user "foo" wants to access data (let's call it "pam") which you
+only can see if you are in the group "Baywatch". Unfortunately, user
 "foo" is not in the group. You could show him the simple message
 "permission denied". And no further information.
 
 I don't like messages like this. They create extra work. The user will
-call the support and ask the question "Why am i not allowed to see the
-data?". The support needs to check the details.... and soon a half hour
+call the support and ask the question "Why am I not allowed to see the
+data?". The support needs to check the details.... and soon a half-hour
 of two people is gone.
 
 Provide better error messages: In this particular case be explicit and
 let the code produce a message like: "to access the data you need to be
-in one of the following groups: baywatch, admin, ...".
+in one of the following groups: Baywatch, Admin, ...".
 
-Software security expert might disagree. I disagree their disagreement.
+Software security experts might disagree. I disagree with their disagreement.
 Hiding the facts is just "Security through obscurity".
 
 ### "false" means failure... The root cause is gone.
@@ -2018,7 +2018,7 @@ In the early days, when the C programming language was predominant, it was commo
 whether the call was successful or not.
 
 I run a [Nextcloud](https://nextcloud.com/) server, but
-the synchronisation fails for some files. In the logs I see that GenericFileException()
+the synchronization fails for some files. In the logs, I see that GenericFileException()
 gets thrown. Let's have a look at these lines. 
 
 ```
@@ -2038,9 +2038,9 @@ Debugging this would be much easier if `file_put_contents()` would throw
 an exception on failure instead of returning `false`.
 
 The [man page of errno](https://man7.org/linux/man-pages/man3/errno.3.html) lists all the common errors which can happen.
-It would really help me if I would know if it is EDQUOT (Disk quota exceeded), ENAMETOOLONG (Filename too long), ENOSPC (No space left on device) ...
+It would help me if I would know if it is EDQUOT (Disk quota exceeded), ENAMETOOLONG (Filename too long), ENOSPC (No space left on device) ...
 
-How would above application code look like, if `file_put_contents()` would raise an exception instead of returning `false`?
+How would the above application code look like, if `file_put_contents()` would raise an exception instead of returning `false`?
 
 It would be much simpler:
 
@@ -2056,27 +2056,27 @@ Guideline: Use exceptions to signal that something went wrong.
 
 ### Avoid clever guessing
 
-These days I needed to debug a well known Python library. It works fine,
-but you don't want to look under hood.
+These days I needed to debug a well-known Python library. It works fine,
+but you don't want to look under the hood.
 
-One method accepted a object with three different meanings types as
-first argument:
+One method accepted an object with three different meanings types as
+the first argument:
 
--   case1: a string containing html markup
--   case2: a string containing a file path. This file contained the html
+-   case1: a string containing HTML markup
+-   case2: a string containing a file path. This file contained the HTML
     to work on.
 -   case3: a file descriptor with a read() method.
 
-This looks convinient at the first sight. But in the long run it makes
+This looks convenient at the first sight. But in the long run, it makes
 things complicated. This kind of guessing can always lead to false
-results. In my case I always used case1 (it contained a small html
-snippet). But, once the string was a accidently the name of an existing
+results. In my case, I always used case1 (it contained a small HTML
+snippet). But, once the string was accidentally the name of an existing
 directory! This crashed, because the library thought this is was a
-file....
+file...
 
 Conclusion: STOP GUESSING.
 
-In Python you can use classmethods for alternative constructors.
+In Python, you can use classmethods for alternative constructors.
 
 ``` {.sourceCode .}
 # case 1
@@ -2092,23 +2092,23 @@ with io.open('...') as fd:
 
 ### Don't stop with "permission denied"
 
-In most non trivial projects there are several reasons why the
+In most non-trivial projects there are several reasons why the
 permission was denied.
 
 If you (the software developer) only return "permission denied", then
-the user/admin don't know the **reason**.
+the user/admin doesn't know the **reason**.
 
 If you add a reason, then it is more likely that the user/admin can help
 themselves.
 
-This means they don't call you, our a team mate, to solve this.
+This means they don't call you, our teammate, to solve this.
 
-Less interrupts for your and happy customers, it's easy.
+Fewer interruptions for your and happy customers, it's easy.
 
 Or more general: Add enough information to error messages, to make it
 easier to understand the current situation.
 
-For example you can add hyperlinks to docs/wiki/issue-tracker in you
+For example, you can add hyperlinks to docs/wiki/issue-tracker in you
 errors messages.
 
 ### OOP: Composition over inheritance
@@ -2117,10 +2117,10 @@ If unsure, then choose "has a" and not "is a".
 
 <https://en.wikipedia.org/wiki/Composition_over_inheritance>
 
-### Cache for ever or don't cache at all
+### Cache forever or don't cache at all
 
-Caching is like a fale friend or a drug. It makes you happy today, but
-in the long run it brings you headache.
+Caching is like a false friend or a drug. It makes you happy today, but
+in the long run, it brings you a headache.
 
 Caching is easy, but cache invalidation is hard.
 
@@ -2130,43 +2130,43 @@ to invalidate anything.
 > [Two Hard Things](https://martinfowler.com/bliki/TwoHardThings.html): There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
 
 
-Avoid "maybe". If your http code returns a response you have two choices
-concering caching:
+Avoid "maybe". If your HTTP code returns a response you have two choices
+concerning caching:
 
--   the web client should cache this response for ever.
+-   the web client should cache this response forever.
 -   the web client should not cache this response at all.
 
 If you follow this guide you will get great performance since
 revalidation and ETag magic is not needed.
 
-I possible, avoid fiddling with ETag and If-Modified-Since http headers.
+I possible, avoid fiddling with ETag and If-Modified-Since HTTP headers.
 
-But you have to care for one thing: If you cache for ever, whenever you
+But you have to care for one thing: If you cache forever, whenever you
 update your data, you need to give your resource a new URL. That's easy:
 
-For example: Instead of serving the file `/css/base.css` you serve `/css/base.27e20196a850.css`. The string "27e20..." is the md5 sum of the content of the file. Configure your webserver to serve this file with the appopriate "cache forever" headers, and you client will not ask for this file again. 
+For example: Instead of serving the file `/css/base.css` you serve `/css/base.27e20196a850.css`. The string "27e20..." is the md5 sum of the content of the file. Configure your webserver to serve this file with the appropriate "cache forever" headers, and your client will not ask for this file again. 
 
 
-If you use django, you can use the [ManifestStaticFilesStorage](https://docs.djangoproject.com/en/3.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage)
+If you use Django, you can use the [ManifestStaticFilesStorage](https://docs.djangoproject.com/en/3.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage)
 
 
 [Best Practices for Speeding Up Your Web Site (Yahoo)](https://developer.yahoo.com/performance/rules.html)
 
-Good introduction to caching: [Caching (Mozilla Foundation)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
+A good introduction to caching: [Caching (Mozilla Foundation)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
 ### Robust Cache-Invalidation
 
 A database index is like caching: Redundant data gets created to achieve faster lookups.
 
-If possible, use this robust caching and cache-invalidation provided by databases instead of creating your own implementation.
+If possible, use this robust caching and cache-invalidation provided by databases instead of creating your implementation.
 
 ### CDN for private data?
 
-You might think a unguessable URLs are enough to protect data. Only people with the URL can access it.
+You might think unguessable URLs are enough to protect data. Only people with the URL can access it.
 
-No, it is very likely that your customers don't like this. The URL could be shared easily. 
+No, likely, your customers don't like this. The URL could be shared easily. 
 
-You might argue that unguessable URLs are fine, since an evil user could
+You might argue that unguessable URLs are fine since an evil user could
 download and upload the content, but this is a different case.
 
 My rule of thumb: Put only public data on a CDN.
@@ -2176,9 +2176,9 @@ handy, since you can do authentication and permission checking in your applicati
 
 ### Avoid coding for one customer
 
-Try to avoid to write software just for one customer. If you write code
+Try to avoid writing software just for one customer. If you write code
 for one customer, you miss the great benefit of software: You can write
-it once and make several customers happy. Of course every business
+it once and make several customers happy. Of course, every business
 starts small. But try to create a re-usable product soon.
 
 ### Misc
@@ -2188,23 +2188,23 @@ starts small. But try to create a re-usable product soon.
 -   [Rough consensus and running
     code.](https://en.wikipedia.org/wiki/Rough_consensus)
 
-### Background tasks should preserving Buffer Cache State
+### Background tasks should preserve Buffer Cache State
 
-You should know what this article talks about. But of course you don't
+You should know what this article talks about. But of course, you don't
 need to recall every detail.
 
 <https://insights.oetiker.ch/linux/fadvise/>
 
 <https://github.com/Feh/nocache>
 
-Use case: you use rsync to backup a linux machine. The rsync process
+Use case: you use rsync to backup a Linux machine. The rsync process
 should not slow down the production environment.
 
-By default linux thinks "A process just read file 'foo'. Let's keep the
-content in the buffer cache". But rsync runs in background and it does
+By default Linux thinks "A process just read file 'foo'. Let's keep the
+content in the buffer cache". But rsync runs in the background and it does
 not touch the same file twice.
 
-It makes not sense to store the files which get read by rsync in the
+It makes no sense to store the files which get read by rsync in the
 buffer cache. The buffer cache should be available for the production
 environment.
 
