@@ -2403,8 +2403,8 @@ Operation. The last two characters of DevOp.
 
 Use a configuration management tool like Ansible.
 
-Use CI here, too. Otherwise only few people dare to make changes. And
-this means the speed of incremental evolution to a more efficent way
+Use CI here, too. Otherwise, only a few people dare to make changes. And
+this means the speed of incremental evolution to a more efficient way
 will decreases.
 
 I do not use RPM/DPKG to configure a system.
@@ -2417,13 +2417,13 @@ and not "file.remove"?
 [Google search for "Declarative vs
 Imperative"](https://www.google.com/search?q=Declarative+vs+Imperative)
 
-#### The magic reload feature of Config Management is not needed any more
+#### The magic reload feature of Config Management is not needed anymore
 
-Config management tools have a magic reload feature. Imagine you update
+Config management tools have magic reload feature. Imagine you update
 the configuration of a webserver. The config management tools can detect
 if a restart of a server is needed or not. For example: If the
-configuration of the web server was changed, then the webserver gets
-reloaded. If the configuration of the web server was not changed, then
+configuration of the webserver was changed, then the webserver gets
+reloaded. If the configuration of the webserver was not changed, then
 there is no need to restart it. Great feature?
 
 Ansible Docs: [Handlers: Running Operations On
@@ -2433,14 +2433,14 @@ I liked this feature in the past.
 
 Time has changed.
 
-See above for "From CRUD to CRD". Kubernetes is comming. You create
+See above for "From CRUD to CRD". Kubernetes is coming. You create
 containers, you run containers, you delete them. You don't update them
-any more.
+anymore.
 
-The magic reload feature is not needed any more.
+The magic reload feature is not needed anymore.
 
-Of course this change from statefull servers to stateless containers
-does not happen from one day to the next. One thing is sure: Statefull
+Of course, this change from stateful servers to stateless containers
+does not happen from one day to the next. One thing is sure: Stateful
 servers and the need to reload running services after an update will
 decrease.
 
@@ -2457,10 +2457,10 @@ fiddle with the file /etc/sudoers. Put a whole file into
 
 ### Config Management: No need for custom RPMs/DPKGs
 
-In the past it was common to create a custom RPM or Debian package to
+In the past, it was common to create a custom RPM or Debian package to
 install a file on a server.
 
-For example a SSL cert.
+For example an SSL cert.
 
 If you have a configuration management tool, then this extra container
 (RPM/DPKG) does not make much sense.
@@ -2468,31 +2468,31 @@ If you have a configuration management tool, then this extra container
 ### Cron Jobs
 
 A server exists to serve. If the server does not receive requests, why
-should the server do something? This results into my rule of thumb:
+should the server do something? This results in my rule of thumb:
 Avoid cron jobs.
 
-Sometimes you need to have a cron job for house keeping stuff.
+Sometimes you need to have a cron job for housekeeping.
 
 Keep cron jobs simple.
 
-In general there are two ways to configure the arguments of a cron job:
+In general, there are two ways to configure the arguments of a cron job:
 
 -   the command line arguments which are part of the crontab line
 -   additional source of configuration: config files or config from a
     database
 
 Avoid mixing these two ways of configuring a cron job. I prefer to
-configure the cron job via the later of both ways. This keeps the cron
-job simple. My guide line: Do not configure the cron job via optional
-command line arguments. Only use required arguments.
+configure the cron job via the latter of both ways. This keeps the cron
+job simple. My guideline: Do not configure the cron job via optional
+command-line arguments. Only use the required arguments.
 
 ### SSH to production-server
 
 I still do interactive logins to production remote-server (mostly via
 ssh). But I want to reduce it.
 
-Sooner or later you will make a typo. See this article from GitLab for a
-exciting report what happened during a denial of service:
+Sooner or later you will make a typo. See this article from GitLab for an
+exciting report on what happened during a denial of service:
 <https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/>
 We are humans, and humans make mistakes. Automation helps to reduce the
 risk of data loss.
@@ -2505,20 +2505,20 @@ log-management yet? Get your logs to a central place.
 
 If you are doing "ssh production-server ... rm ...": Please ask yourself
 what you are doing here. How can you automate this, to make this
-unneccessary in the future.
+unnecessary in the future?
 
 ### VPS vs Kubernetes vs PaaS
 
 There are several ways to execute your code and make your application available to the public.
 
-VPS: Virtual private Server. These are cheap, you can get one for 3 Euro per month.
+VPS: Virtual Private Server. These are cheap, you can get one for 3 Euro per month.
 Benefit: You can install and configure it right the way you want it to be.
 Drawback: You need knowledge about Linux.
 
 Kubernetes: This is the current hype. It's great for huge data centers... but ...
 do you have a huge data center?
 
-PaaS: Plattform as a Service. For example provided by Heroku, Google, Amazon. They try
+PaaS: Plattform as a Service. For the example provided by Heroku, Google, Amazon. They try
 to make your life easier. Pro: easy to use. Con: more expensive.
 
 My hint: if unsure use PaaS. If you want to learn the basics of running a server, then use a VPS.
@@ -2526,47 +2526,47 @@ My hint: if unsure use PaaS. If you want to learn the basics of running a server
 
 ### Keep your directories clean
 
-There are two kind of files in the context of backup: Files which should
+There are two kinds of files in the context of backup: Files that should
 be in the backup and temporary files which should not be in the backup.
-Keep you directories clean. In a directory there should be either only
+Keep your directories clean. In a directory, there should be either only
 files which should be in the backup xor only files which should not be
-in the backup. This will make live easier for you. The configuration of
+in the backup. This will make life easier for you. The configuration of
 your backup is easier and cleaning temporary files is easier and looking
 at the directory makes more joy since it is clean.
 
 And overall, storing data in directories and files is outdated. If you
-start from scratch, then put structured data in a database and binary data in a S3
+start from scratch, then put structured data in a database and binary data in an S3
 compatible server.
 
 ### Avoid logging to files
 
 I still do this, but I want to reduce it. Logs are endless streams.
-Files are a buch of bytes with fixed length. Both concepts don't fit
+Files are a bunch of bytes with a fixed length. Both concepts don't fit
 together. Sooner or later your logs get rotated. Now you are in trouble
-if you want to run a log checker for every line in your logfile. I mean
-the mathematically version of "every line". This gets really complicated
-if you want to check every line. Rotating logfiles needs to be done
-sooner or later. But how to rotate the file, if a process still write to
+if you want to run a log checker for every line in your log file. I mean
+the mathematical version of "every line". This gets complicated
+if you want to check every line. Rotating log files needs to be done
+sooner or later. But how to rotate the file, if a process still writes to
 it? This is one problem, which was solved several hundred times and each
 time different ...
 
 In other words: Avoid logging to files and avoid logrotate. Logging is
 an endless stream.
 
-Of course somewhere on the hard disk data gets stored in files. But it is highly
-recommended to use a tool where don't fiddle with files daily.
+Of course, somewhere on the hard disk data gets stored in files. But it is highly
+recommended using a tool where don't fiddle with files daily.
 
 See [12factor App: #11 Treat logs as event streams](https://12factor.net/logs)
 
 ### Use Systemd
 
-It is available, don't reinvent. Don't do double-fork magic any more.
+It is available, don't reinvent it. Don't do double-fork magic anymore.
 Use a systemd service with Type=simple. See [Systemd makes many daemons
 obsolete](https://stackoverflow.com/a/30189540/633961)
 
 ### Don't use Systemd "instantiated units"
 
-Systemd allows you to create template and create several services from
+Systemd allows you to create a template and create several services from
 this template. See: <http://0pointer.de/blog/projects/instances.html>
 
 First I thought this is great. But some months later I realized: It is
@@ -2580,11 +2580,11 @@ This makes it simpler.
 
 If you are using Kubernetes, then this makes no sense. But if you
 are running services in a Linux server, then you want to know
-what has changed.
+what has changed?
 
 The tool etckeeper stores changes in the /etc directory in a git
 repository. This does not make much sense for containers. But for
-servers which live several weeks it makes sense. You don't need to push
+servers that live several weeks, it makes sense. You don't need to push
 the changes to a different location. It is very handy. Example:
 
     cd /etc/apt
@@ -2600,9 +2600,9 @@ before "git commit". We add: /var/spool/cron, output of hwinfo, lsblk,
 fdisk, pvdisplay, vgdisplay, lvdisplay, dpkg/rpm package list, postgres
 config.
 
-Does it make sense to add the output of df into /etc/etckeeper/extra/ ?
+Does it make sense to add the output of df into /etc/etckeeper/extra/?
 
-I think it makes no sense, since this changes daily. If no change was
+I think it makes no sense since this changes daily. If no change was
 made to the configuration, then there should be no commit in /etc/.git.
 
 ### If you do coding to implement backup ...
