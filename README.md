@@ -2610,7 +2610,7 @@ made to the configuration, then there should be no commit in /etc/.git.
 If you do coding/programming to implement your backup of data, then you
 are on the wrong track.
 
-It is very likely that you will do it wrong, and this will be a big
+You will likely do it wrong, and this will be a big
 risk.
 
 Why? Because you will notice your fault if you try to recover your data.
@@ -2626,14 +2626,14 @@ You should transfer data from database A to database B. Every time there
 is an update in database A, data should get copied to database B.
 
 Slow down: What you are doing is replication. Replication creates
-redundancy and redundancy needs to be avoided.
+redundancy and redundancy need to be avoided.
 
 Why do you want redundancy in your data storage? The only reasons I can
-think of are speed/performance and faul-toleranz (like DNS/LDAP).
+think of are speed/performance and fault-tolerant (like DNS/LDAP).
 
-If replication is really needed, then take the replication tools the
+If replication is needed, then take the replication tools the
 databases offer. Do not implement replication yourself. This is not
-trival and experts with more knowledge than you and me have solved this
+trivial and experts with more knowledge than you and me have solved this
 issue before.
 
 ### Master-Master Replication
@@ -2663,19 +2663,18 @@ network routes. One route goes to a second internal network and the
 other route goes to the internet. All 20 servers should be able to
 access both networks. There are two ways to solve this:
 
--   V1: Each of the 20 servers has the two routes configured.
--   V2: There is one default gateway for the 20 servers. Every server
-    has one route. (The common term is "default gateway")
+-   V1: Each of the 20 servers have the two routes configured.
+-   V2: There is one default gateway for the 20 servers. Every server has one route. (The common term is "default gateway")
 
 Please choose V2. It is simpler, it is easier to understand, it is less
-error prone, it is more sane.
+error-prone, it is saner.
 
 ### traceroute won't help you
 
-If you have trouble with a tcp connection, then use tcptraceroute. It
+If you have trouble with a TCP connection, then use tcptraceroute. It
 can help to find the firewall which blocks your IP packages trying to
 get from host A to host B. Again \*tcp\*traceroute. It is the tool for
-tcp connection tests (http, https, ssh, smtp, pop3, imap, ...). Reason:
+TCP connection tests (HTTP, HTTPS, ssh, SMTP, pop3, IMAP, ...). Reason:
 normal traceroute uses UDP, not TCP.
 
 ## 7. Monitoring
@@ -2691,18 +2690,18 @@ meaning:
 -   3: unknown
 
 Is this KISS (keep it simple and stupid)? Yes, I think it is **simple**.
-You can write a nagios plugin with any language you like. Often less
-then ten lines of source code are enough to implement a nagios check.
+You can write a Nagios plugin with any language you like. Often less
+then ten lines of source code are enough to implement a Nagios check.
 
-But on the other hand it is not **stupid**. The checks does two things:
+But on the other hand, it is not **stupid**. The checks do two things:
 It collects some numbers (for example "How much disk space is left") and
 it does evaluate and judge ("only N MByte left, I think this is a
 warning"). That's not stupid this is some kind of intelligence.
 
-After writing and working with nagios checks for several years I think
+After writing and working with Nagios checks for several years I think
 the evaluation of the data should not be done inside the check. Some
 data-collector should collect data. Then a different tool should
-evaluate the data and judge if this ok, warn or error.
+evaluate the data and judge if this ok, warn, or error.
 
 ### Checks vs Logs
 
@@ -2713,27 +2712,25 @@ than logs do.
 
 Example:
 
-1.  yesterday night at 3:40 there was a temporary network failure and
-    this results in log messages.
+1.  yesterday night at 3:40 there was a temporary network failure and this results in log messages.
 2.  At 3:45 the network failure was gone.
-3.  You look at the log message at 9:15. You don't know: Is this message
-    still valid?
+3.  You look at the log message at 9:15. You don't know: Is this message still valid?
 
 Checks get executed again and again.
 
 If a check fails at 3:41 it will be ok some minutes later.
 
-Then you know immidiately that there was **temporary** failure.
+Then you know immediately that there was **temporary** failure.
 
 Logs are important for developers for debugging.
 
-But in this case, the developer can't do anything usefull. Temporary
+But in this case, the developer can't do anything useful. Temporary
 network failures happen again and again. That's live. Looking at the log
 which was created by a temporary network failure wastes the time of the
 developer.
 
-Logs should contain the stacktrace and the local variables of each frame
-in the stacktrace (a tool like sentry could be used), if real errors
+Logs should contain the stack trace and the local variables of each frame
+in the stack trace (a tool like sentry could be used), if real errors
 occur.
 
 
@@ -2745,7 +2742,7 @@ See [Bootstrap 5 "HTML and CSS over JS"](https://v5.getbootstrap.com/docs/5.0/ex
 
 ### Use VanillaJS
 
-VanillaJS is very cool framework. By the way, it is a joke. VanillaJS means "Use Javascript without a framework".
+VanillaJS is a very cool framework. By the way, it is a joke. VanillaJS means "Use Javascript without a framework".
 
 Some think modern web applications need to use React or Vue. I don't think so. It is perfectly fine to send [html-over-the-wire](https://github.com/guettli/html-over-the-wire) and add some JS if needed.
 
@@ -2757,7 +2754,7 @@ to validate forms only on the server and not on the client.
 
 ### A simple homepage? SSG!
 
-If you create a simple homepage (without the need for a database), then a SSG (Static Site Generator) might be enough. A CMS is not needed.
+If you create a simple homepage (without the need for a database), then an SSG (Static Site Generator) might be enough. A CMS is not needed.
 
 See [Liste of Static Site Generators](https://github.com/guettli/static-site-generators)
 
