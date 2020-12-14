@@ -2208,11 +2208,12 @@ It makes no sense to store the files which get read by rsync in the
 buffer cache. The buffer cache should be available for the production
 environment.
 
+
 ### Avoid POSIX locale
 
-Avoid the [locale](https://en.wikipedia.org/wiki/Locale_(computer_software)). It causes your code do behave different in different environments. Your code might working during development and CI. But it might fail in production if there is a different locale active.
+Avoid the [locale](https://en.wikipedia.org/wiki/Locale_(computer_software)). It causes your code to behave differently in different environments. Your code might be working during development and CI. But it might fail in production if there is a different locale active.
 
-It is broken by design: First you call `setlocal()` and after that methods do different things. That's stateful and confusing.
+It is broken by design: First, you call `setlocal()` and after that methods do different things. That's stateful and confusing.
 
 It does not follow the simple input-processing-output model.
 
@@ -2222,7 +2223,7 @@ A library should always return the same output given the same input. The result 
 be different for different locales.
 
 And the GUI? The user wants to use her/his favorite language. But native GUIs fade, and web GUIs come. And modern
-web GUIs don't use locale any more. Here you see "i18next vs locale" on [Stackoverflow tag trend](http://sotagtrends.com/?tags=[i18next,locale])
+web GUIs don't use locale anymore. Here you see "i18next vs locale" on [Stackoverflow tag trend](http://sotagtrends.com/?tags=[i18next,locale])
 
 ### Datetime class vs "seconds since 1970"
 
@@ -2231,25 +2232,25 @@ There are two ways to work with dates:
 * old: Seconds since 1970 (the [Unix Epoch](https://en.wikipedia.org/wiki/Unix_time))
 * new: Datatypes like [datetime](https://docs.python.org/3/library/datetime.html#datetime.datetime)
 
-If unsure use the new datatypes. Don't fiddle with seconds since 1970 any more.
+If unsure use the new datatypes. Don't fiddle with seconds since 1970 anymore.
 
 Exception: Since file systems store the mtime (modification time) in "seconds since 1970" and you only want the age of the file in seconds, then it is simpler to stick to the old way. Related: [getmtime() vs datetime.now()](https://stackoverflow.com/questions/58587891/getmtime-vs-datetime-now)
 
 
 ### Statistical Profiler
 
-Debugging and profiling is easy in a development environment. But how to debug a running production system?
-A [Statistical Profiler](https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29#Statistical_profilers) (or Sampling Profiler) is very cool. Every N millisecond the stacktraces of the processes get dumped. This does not slow down your production environment at all. These dumps can reveal interesting facts. In which source code lines does the running application spend the most time?
+Debugging and profiling are easy in a development environment. But how to debug a running production system?
+A [Statistical Profiler](https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29#Statistical_profilers) (or Sampling Profiler) is very cool. Every N millisecond the stack traces of the processes get dumped. This does not slow down your production environment at all. These dumps can reveal interesting facts. In which source code lines does the running application spend the most time?
 
-There are commercial tools and some open source tools.
+There are commercial tools and some open-source tools.
 
-For Python there is [py-spy](https://github.com/benfred/py-spy) to dump the stacktraces. The dumps can get analyzed by [speedscope](https://github.com/jlfwong/speedscope).
+For Python, there is [py-spy](https://github.com/benfred/py-spy) to dump the stack traces. The dumps can get analyzed by [speedscope](https://github.com/jlfwong/speedscope).
 
 ### Use "master" for development
 
-You confuse new comers, if your development branch has a different name. If you call the development branch "master", then all introduction material at github does apply. And if you code is at github, all people can see that your project is still alive, since the master branch gets displayes per default.
+You confuse newcomers if your development branch has a different name. If you call the development branch "master", then all introduction material at Github does apply. And if your code is at Github, all people can see that your project is still alive, since the master branch gets displayed per default.
 
-Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all the coding in the "development" branch. The master branch was not updated since three years. I thought this project was dead. The maintainer was upset because he recently pushed changes into this branch. See [issue #9](https://github.com/sergeyksv/tinelic/issues/9#issuecomment-558557925)
+Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all the coding in the "development" branch. The master branch was not updated for three years. I thought this project was dead. The maintainer was upset because he recently pushed changes into this branch. See [issue #9](https://github.com/sergeyksv/tinelic/issues/9#issuecomment-558557925)
 
 ------------------------------------------------------------------------
 
@@ -2278,9 +2279,9 @@ There are three ways you can implement the switch between the versions:
 
 * Via routing: You have one system and several servers. Some servers use version A, some version B. A router decides which server should handle the request
 * Via system: You have several systems (for example one system for each customer). You can update the system of one customer to version B, while the other customers use version A.
-* Via code: The source code contains both implementations. According to some condition either code version A or code version B gets executed. You usualy use a feature-flag for this. This feature-flag can be set per user (or per customer).
+* Via code: The source code contains both implementations. According to some conditions either code version A or code version B gets executed. You usually use a feature-flag for this. This feature-flag can be set per user (or per customer).
 
-For example you updating an internal tool, but you don't want to interrupt the work of all developers.
+For example, you updating an internal tool, but you don't want to interrupt the work of all developers.
 
 Since it is just for internal tooling, you can implement canary releasing in an early adaptors list like this:
 
@@ -2291,7 +2292,7 @@ else:
     #### old way
 ```
 
-This way you ensure to don't annoy collegues with your great new, but not yet mature features.
+This way you ensure to don't annoy colleagues with your great new, but not yet mature features.
 
 Example 2: You can use a mixture of "via system" and "via code". I guess you have some system-wide configuration
 in your database. Then you can deploy the same source code to all systems and use code like this:
@@ -2303,16 +2304,16 @@ else:
     ### old way
 ```
 
-I like the "via code" way, because this simplifies your CI/CD. You only have one current version which gets deployed to all places. Of course this gets a bit more difficult if your change requires a database schema update.
+I like the "via code" way because this simplifies your CI/CD. You only have one current version which gets deployed to all places. Of course, this gets a bit more difficult if your change requires a database schema update.
 
 
-### Less conditions, less code, less bugs
+### fewer conditions, less code, fewer bugs
 
-I don't know if this is a fake or real, but I guess it is true. In [this article from a former Oracle developer](https://news.ycombinator.com/item?id=18442941)
-you can read the reason why developing on the huge code base is hard. It is not the size, it is the amount of flags.
+I don't know if this is fake or real, but I guess it is true. In [this article from a former Oracle developer](https://news.ycombinator.com/item?id=18442941)
+you can read the reason why developing on the huge codebase is hard. It is not the size, it is the number of flags.
 
-Flags are nice, but they introduce compexity. Every flag is a condition. It changes the environment and the simple Input-Processing-Output method
-does not work any more. You have the explicit input and the indirect input from the environment.
+Flags are nice, but they introduce complexity. Every flag is a condition. It changes the environment and the simple Input-Processing-Output method
+does not work anymore. You have the explicit input and the indirect input from the environment.
 
 If you can avoid conditions, then do it. Conditionless is the goal.
 
@@ -2320,14 +2321,14 @@ If you can avoid conditions, then do it. Conditionless is the goal.
 
 [Semantic Versioning (SemVer)](https://semver.org/) is well-known because it promises stability. But why do applications like Google Chrome or Firefox just push the first number? At the moment I use Chromium 87.0.4280.88, and soon I will use Version 88.x.y.z.
 
-Chrome is not a software library, but nevertheless where does LTS (long-term support) make sense?
+Chrome is not a software library, but where does LTS (long-term support) make sense?
 
 There is only one future. Which version of Gmail do you use? 
 
-Bridges, streets and houses need to be stable. The stabilty of the overall infrastructure is important. And therefore we see a steady
-reconstruction of bridges, streets, houses and supply channels.
+Bridges, streets, and houses need to be stable. The stability of the overall infrastructure is important. And therefore we see a steady
+reconstruction of bridges, streets, houses, and supply channels.
 
-And software? Some assosciate with stability "peace of mind", I assosciate with stability a graveyard.
+And software? Some associate with stability "peace of mind", I associate with stability a graveyard.
 
 If you still think Semantic Versioning is useful, then please read [Philosophy of Abseil](https://abseil.io/about/philosophy)
 
@@ -2342,54 +2343,55 @@ Related: [Does SemVer work?](https://books.google.de/books?id=V3TTDwAAQBAJ&pg=PA
 Use http for data transfer. Avoid the old ways
 (ftp/sftp/scp/rsync/smb/mail).
 
-If you want to transfer files via http from shell/cron you can use:
+If you want to transfer files via HTTP from shell/cron you can use:
 [tbzuploader](https://github.com/guettli/tbzuploader).
 
 The next step is to avoid clever
 [inotify](https://en.wikipedia.org/wiki/Inotify)-daemons. You don't need
-this any more if you receive your data via http.
+this anymore if you receive your data via HTTP.
 
-Why is http better? Because http can validate the data. If it is not
+Why is HTTP better? Because HTTP can validate the data. If it is not
 valid, the data can be rejected. That's something you can't do with
-ftp/sftp/scp/rsync/smb/mail.
+FTP/sFTP/SCP/rsync/smb/mail.
 
 ### Avoid Polling
 
 Polling means checking for new data again and again. Avoid it, if
-possible. Try to find a way to "listen" for changes. In most databases
+possible. Try to find a way to "listen" for changes. In most databases,
 you can execute a trigger if new data arrives.
 
 ### Provide specific import directories, not one generic
 
-If you still receive files via ftp/scp since you have not switched to
-http-APIs yet, then be sure to provide specific input directories.
+If you still receive files via FTP/SCP since you have not switched to
+HTTP-APIs yet, then be sure to provide specific input directories.
 
-In the past I recevied files in a directory called "import". Several
-third party systems sent data to this directory. It looks easy in the
+In the past, I received files in a directory called "import". Several
+third-party systems sent data to this directory. It looks easy in the
 first place. But sooner or later there will be chaos since you need to
-now where the data came from. Was it from third party system FOO or was
-the data from third party system BAR? You can't distinguish any more if
-you profide only one import directory.
+know where the data came from. Was it from third party system FOO or was
+the data from the third party system BAR? You can't distinguish anymore if
+you provide only one import directory.
 
 Now we provide import-FOO, import-BAR, import-qwerty ...
 
-### Don't set up a SMTP daemon
+### Don't set up an SMTP daemon
 
-If you can avoid it, then refuse to set up a SMTP daemon. If the
+If you can avoid it, then refuse to set up an SMTP daemon. If the
 application you write should import mails, then do it by using POP3 or
-IMAP and poll for new mail N seconds. Setting up a SMTP daemon is easy,
+IMAP and poll for new mail N seconds. Setting up an SMTP daemon is easy,
 but being responsible for it is effort. Dealing with attacks, keeping an
 eye on security announces... Live is easier without being responsible
-for a SMTP server.
+for an SMTP server.
 
-A SMTP daemon needs to run 24 hours a day. You get trouble if it is
+An SMTP daemon needs to run 24 hours a day. You get into trouble if it is
 down. Or even worse: it is misconfigured and rejects all mails. These
-mails get lost and won't come back.
+emails get lost and won't come back.
 
 If the [getmail](http://pyropus.ca/software/getmail/) job is down or is misconfigured it just won't fetch
 mails. But it is unlikely that mails get lost.
 
 I know this conflicts with the general guideline "avoid polling".
+
 
 ------------------------------------------------------------------------
 
