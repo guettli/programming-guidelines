@@ -1604,83 +1604,83 @@ This is the way to avoid flaky tests:
 
 ### Hermetic Testing
 
-This blog from [Google Testing Blog "Hermetic Servers"](https://testing.googleblog.com/2012/10/hermetic-servers.html) explains it in depth: 
-End-to-End tests are faster and less flaky if they run on localhost and don't need other ressources.
+This blog from [Google Testing Blog "Hermetic Servers"](https://testing.googleblog.com/2012/10/hermetic-servers.html) explains it in-depth: 
+End-to-End tests are faster and less flaky if they run on localhost and don't need other resources.
 
 ### Unit-Tests may use the ORM.
 
-Imagine you use a framework which provides you a nice ORM to create, read, update and delete your data.
+Imagine you use a framework that provides you a nice ORM to create, read, update, and delete your data.
 
 Now you write some backend-methods on top of this ORM.
 
-And on top of your methods you might provide an HTTP API.
+And on top of your methods, you might provide an HTTP API.
 
 Imagine you have a class `Ticket` which has a method called `resolve()`. This method uses the ORM.
 
 You want to write a unit-test for this method.
 
-A purist argue: I only want to unit-test the method, I must not use the ORM since blablabla.
+A purist argues: I only want to unit-test the method, I must not use the ORM since blablabla.
 
 I understand what the purist wants. But I want to get things done. I want to make
 customers happy, not unit-test purists.
 
-For me it is 100% ok if unit-tests use the ORM.
+For me, it is 100% ok if unit-tests use the ORM.
 
-With other words: Only mock away things which take too long or things which need ressources
-which are not available (e.g. a SMTP server).
+In other words: Only mock away things that take too long or things that need resources
+which are not available (e.g. an SMTP server).
 
 ### Is config code or data?
 
-The heading "Is config code or data?" could be phrased "config: DB or git?", too.
+The heading "Is config code or data?" could be phrased as "config: DB or git?", too.
 
 Where should configuration be stored?
 
-This is a difficult question. At least at the beginning. For me most
+This is a difficult question. At least at the beginning. For me, most
 configuration is data, not code. That's why the config is in a
 **database**, not in a text or source code file in a version control
 system.
 
-This has one major draw-back. All developers love their version control
-system. Most love git. It is such a secure place. Nothing can get lost
-or accidently modified. And if a change was wrong, you can always revert
+This has one major drawback. All developers love their version control
+system. Most developers love git. It is such a secure place. Nothing can get lost
+or accidentally modified. And if a change was wrong, you can always revert
 to an old version. It is like heaven. Isn't it?
 
-No it is not. The customer can't change it. The customer needs to call
+No, it is not. The customer can't change it. The customer needs to call
 you and you need to do stupid repeatable useless work.
 
-For me configuration should be in the database. This way you can provide
+For me, the configuration should be in the database. This way you can provide
 a GUI for the customer to change the config.
 
-The configuration and recipies for the configuration management is
+The configuration and recipes for the configuration management are
 stored in git. But this is a different topic. If I speak about
-configuration management, then I speak mostly about configuring linux
-servers and networks (aka [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)). In my case this is nothing which my customer
+configuration management, then I speak mostly about configuring Linux
+servers and networks (aka [Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)). In my case, this is nothing which my customer
 touches.
 
 ### ForeignKey from code to DB
 
-This code uses the ORM of django
+This code uses the ORM of Django
 
 ``` {.sourceCode .python}
 if ....:
     issue.responsible_group=Group.objects.get(name='Leaders')
 ```
 
-`Group` is a class and referes to a table with the same name. Each group has a name. There
+`Group` is a class and refers to a table with the same name. Each group has a name. There
 is one group (one row) with the name "Leaders".
 
-Above code is dirty because 'Leaders' is like a ForeignKey from code to
+The above code is dirty because 'Leaders' is like a ForeignKey from code to
 a database row.
 
 How to avoid this?
 
-Create global config table in your database. This table has exactly one
-row. That's the global config. There you can create column called
+Create a global config table in your database. This table has exactly one
+row. That's the global config. There you can create a column called
 "Leaders" and there you store the ForeignKey to the matching group.
 
 ### Testcode is conditionless
 
-Testcode should not contain conditions (the keyword `if`). If you have
+Test code should not contain conditions (the keyword `if`). If you have
 loops (`for`, `while`) in your tests, then this looks strange, too.
 
 Tests should be straight forward:
@@ -1691,22 +1691,22 @@ Tests should be straight forward:
 
 ### Don't search the needle in a haystack. Inject dynamite and let it explode
 
-Imagine you have a huge code base which was written by a nerd which is
-gone since several months. Somewhere in the code a database a row gets
+Imagine you have a huge codebase that was written by a nerd who is
+gone for several months. Somewhere in the code, a row in the database gets
 updated. This update should not happen, and you can't find the relevant
 source code line during the first minutes. You can reproduce this
 failure in a test environment. What can you do? You can start a debugger
 and jump through the lines which get executed. Yes, this works. But this
-can take long, it is like "Searching the needle in a haystack". Here is
+can take longer, it is like "Searching the needle in a haystack". Here is
 a different way: Add a constraint or trigger to your database which
 fires on the unwanted modification. Execute the code and BANG - you get
-the relevant code line with a nice stacktrace. This way you get the
-solution provided on a silver plattern with minimal effort :-)
+the relevant code line with a nice stack trace. This way you get the
+solution provided on a silver platter with minimal effort :-)
 
-With other words: Don't waste time with searching.
+In other words: Don't waste time searching.
 
 Sometimes you can't use a database constraint to find the relevant
-stacktrace, but often there are other ways.....
+stack trace, but often there are other ways.....
 
 If you can't use a database constraint, maybe this helps: Raise
 Exception on unwanted syscall
@@ -1715,7 +1715,7 @@ Exception on unwanted syscall
 If you want to find the line where unwanted output in stdout gets
 emitted: <http://stackoverflow.com/a/43210881/633961>
 
-If you have a library which logs a warning, but the warning does not
+If you have a library that logs a warning, but the warning does not
 help, since it is missing important information. And you have no clue
 where this warning comes from. You can use this solution:
 <http://stackoverflow.com/a/43232091/633961>
@@ -1723,14 +1723,12 @@ where this warning comes from. You can use this solution:
 
 ### Avoid magic or uncommon things
 
--   hard links in linux file systems.
+-   hard links in Linux file systems.
 -   file system ACLs (Access control lists). Try to use as little as
     possible chmod/chown.
 -   git submodules (Please use configuration management, deployment
     tools, ...)
--   [seek()](https://en.cppreference.com/w/c/io/fseek). Stateless is
-    better. If you use seek() the file position is a state. Sooner or
-    later the position (state) will be wrong.
+-   [seek()](https://en.cppreference.com/w/c/io/fseek). Stateless is better. If you use seek() the file position is a state. Sooner or later the position (state) will be wrong.
 -   Scripts which get executed via OpenSSH
     [ForceCommand](http://man.openbsd.org/OpenBSD-current/man5/sshd_config.5#ForceCommand)
     or "command" in .ssh/authorized\_keys. SSH is not an API use http.
@@ -1738,10 +1736,10 @@ where this warning comes from. You can use this solution:
 ### Avoid writing a native GUI
 
 Imagine you have developed web applications up to now. You have never
-developed a native gui before. Now a new potential customer has a use
+developed a native GUI before. Now a new potential customer has a use
 case and you think: This time a native GUI would be a good solution.
 
-Caution: slow down. Developing a native gui is much more work and needs
+Caution: slow down. Developing a native GUI is much more work and needs
 much more time than you think.
 
 The edit, compile, run cycle is much longer. This will slow you down.
@@ -1749,26 +1747,26 @@ The edit, compile, run cycle is much longer. This will slow you down.
 If you develop a native GUI, you might need several mouse clicks until
 you reach the part where you improving the current code. And like all
 humans, you are not perfect, and you have a typo. The application
-crashes, and you need to do the edit, compile, run, five clicks cylce
+crashes, and you need to do the edit, compile, run, five clicks cycle
 again...
 
 Compare this to a web application: You do not need to do five clicks to
 reach the part where you improve the current code. You just hit ctrl-r
-and reload the page. The stateless http protocol makes this possible. I
+and reload the page. The stateless HTTP protocol makes this possible. I
 love it.
 
 Next argument: The native GUI community is tiny compared to web
 development. If you have a question, you have only a few people to talk
 to.
 
-I am at the Chemnitzer Linux Days yearly, and meat a lot of new comers
+I am at the Chemnitzer Linux Days yearly and meet a lot of newcomers
 there. Some people new to software development think: "I just want to
 develop a simple app for me. No need to run a web server. I want a real
 application running on my pc."
 
 My advice: use Python and Django. The things you learn have more value.
 The knowledge you gain can be used to build cool stuff. If you have a
-question, there is always someone who has an advice.
+question, there is always someone who has an useful advice.
 
 See the [TagTrend gtk, qt,
 django](http://sotagtrends.com/?tags=%5Bgtk,qt,django%5D)
