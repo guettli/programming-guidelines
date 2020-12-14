@@ -742,13 +742,14 @@ There are still some places where toilet paper wrappers need to get coded again 
 
 For example, JSON does not support datetime, timedelta, and binary data. See [Let's fix JS](https://github.com/guettli/lets-fix-js). Speak to the upstream, to whoever is responsible for this, even if you think they are way too big, and you are way too small.
 
+
 ### If unsure use MIT License
 
 The [MIT License](https://en.wikipedia.org/wiki/MIT_License) is simple and short. Most projects
-at github use it.
+at Github use it.
 
-Some license are much too long. I tried to read the GPL twice, but I felt
-asleep. I don't like things which I don't understand.
+Some licenses are much too long. I tried to read the GPL twice, but I fell
+asleep. I don't like things that I don't understand.
 
 Next argument: The GPL and AGPL licenses are [viral](https://en.wikipedia.org/wiki/Viral_license). If you want
 to create a commercial product, you can't use this.
@@ -761,13 +762,13 @@ See [Why we ban the AGPL](https://www.theregister.com/2011/03/31/google_on_open_
 
 ### Loop in DB, not in your code
 
-Do the filtering in the database. In most cases it is faster then the
+Do the filtering in the database. In most cases, it is faster than the
 loops in your programming language. And if the DB is not fast enough,
 then I guess there is just the matching index missing up to now.
 
 ### Do permission checking via SQL
 
-Imagine you have three models (users, groups and permissions) as tables
+Imagine you have three models (users, groups, and permissions) as tables
 in a relational database system.
 
 Most systems do the permission checking via source code. Example: `if
@@ -776,46 +777,45 @@ user.is_admin then return True`.
 Sooner or later you need the list of items: Show all items which the
 current user may see.
 
-Now you write SQL (or use your ORM) to create a queryset which returns
+Now you write SQL (or use your ORM) to create a queryset that returns
 all items which satisfy the needed conditions.
 
 Now you have two implementations. The first `if user.is_admin then
-return True` and one which uses set operations (SQL). This is redudant and looking
-for trouble. Sooner or later your permission checks get more complex and then 
-one implementation will get out of sync.
+return True` and one which uses set operations (SQL). This is redundant and looking
+for trouble. Sooner or later your permission checks get more complex and then one implementation will get out of sync.
 
 That's why I think: do permission checking via SQL
 
 ### Real men use ORM
 
 [ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping) makes daily
-work much easier. Above heading is a stupid joke. Clever people use tools to make work simpler, more fun and more
+work much easier. The above heading is a stupid joke. Clever people use tools to make work simpler, more fun, and more
 convenient. ORMs are great. 
 
-Some (usualy elderly) developers fear that a ORM is slower than hand-crafted and optimized SQL. Maybe
+Some (usually elderly) developers fear that an ORM is slower than hand-crafted and optimized SQL. Maybe
 there are corner cases where this prejudice is true. But that's not a reason to avoid ORMs. Just use them,
 and if you hit a corner case, then use raw SQL.
 
 See [premature optimization is the root of all evil](#premature-optimization-is-the-root-of-all-evil)
 
-Make your live easy, use ORM.
+Make your life easy, use ORM.
 
 ### SQL is an API
 
-If you have an database driven application and a third party tool wants
+If you have a database-driven application and a third party tool wants
 to send data to the application, then sometimes the easiest solution is
 to give the third party access to the database.
 
-You can create a special database user which has only access to one table.
+You can create a special database user that has only access to one table.
 That's easy.
 
 Nitpickers will disagree: If the database schema changes, then the
-communication between both systems will break. Of course that's true.
-But in most cases this will be the same if you use a "real" API. If
+communication between both systems will break. Of course, that's true.
+But in most cases, this will be the same if you use a "real" API. If
 there is a change to the data structure, then the API needs to be
 changed, too.
 
-I don't say that SQL is always the best solution. Of course http based
+I don't say that SQL is always the best solution. Of course, HTTP based
 APIs are better in general. But in some use cases doing more is not
 needed.
 
@@ -823,35 +823,35 @@ needed.
 
 ... looking at the time you need to get things implemented. Yes, the
 execution is fast, but the time to get the problem done takes "ages". I
-avoid C programming, if possible. If Python gets to slow, I can optimize
-the hotspots. But do this later. Don't start with the second step. First
+avoid C programming, if possible. If Python gets too slow, I can optimize
+the hotspots. But do this later. Don't start with the second step. First,
 get it done and write tests. Then clean up the code (simplify it). Then
-.... What is the next step? Optimize? On most cases the customer has new
-needs and it is likely that he wants new features not faster execution.
+.... What is the next step? Optimize? In most cases, the customer has new
+needs and he likely wants new features not faster execution.
 
-Higher level languages have a better "zero to [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)" speed.
+Higher-level languages have a better "zero to [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)" speed.
 
 ### Version Control: git
 
-For version control of software I use git. I think all other tool (svn,
-mercurial, cvs, darcs, bazaar) can be considered "dead". See
+For version control of software, I use git. I think all other tools (svn,
+mercurial, CVS, darcs, bazaar) can be considered "dead". See
 [StackOverflow TagTrend](http://sotagtrends.com/?tags=git+svn+mercurial+cvs+darcs+bazaar)
 
 
 
-### Avoid long living branches
+### Avoid long-living branches
 
-Avoid long living branches in your git repos. The more time that passes,
+Avoid long-living branches in your git repos. The more time that passes,
 the less likely is that your work will ever get merged. For me two weeks
 are ok, but five weeks are too long.
 
-Ten lines of improvement which get pushed to master today have much more value
-than 1000 of lines which are in branch which will never get pushed to master.
+Ten lines of improvement that get pushed to master today have much more value
+than 1000 lines which are in a branch which will never get pushed to master.
 
 Trunk based development goes further. Here you hardly work with branches.
 
-> ... each developer divides their own work into small batches and merges that 
-> work into trunk at least once (and potentially several times) a day.
+> ... each developer divides their work into small batches and merges that 
+> work into the trunk at least once (and potentially several times) a day.
 
 See [Google DevOp Guide "Trunk based development"](https://cloud.google.com/solutions/devops/devops-tech-trunk-based-development)
 
@@ -859,11 +859,11 @@ See [Google DevOp Guide "Trunk based development"](https://cloud.google.com/solu
 ### Don't put generated code into version control
 
 Please read [Source code vs generated code](#source-code-vs-generated-code). Generated code or binary
-data should not be in a git repository. It is possible, but strange.
+data should not be in a git repository. It is possible but strange.
 
 ### The best commits remove code
 
-For me, the best commits adds some lines to the docs, add some lines to
+For me, the best commits add some lines to the docs, add some lines to
 tests and removes more lines than it adds to the production code.
 
 ### Time is too short to run all tests before commit+push
@@ -881,21 +881,21 @@ Use continuous integration. Only tested code is allowed to get deployed.
 This needs to be automated. Humans make more errors than automated
 processes.
 
-I documented how to set up github commit, travis CI, bumpversion, Upload
-to pypi: <https://github.com/guettli/github-travis-bumpversion-pypi>
+I documented how to set up Github commit, Travis CI, bumpversion, Upload
+to PyPI: <https://github.com/guettli/github-travis-bumpversion-pypi>
 
 All I need to do is to commit. All other steps are automated :-)
 
 ### Tests should work offline
 
-Imagine a developer sits in a train and has an unreliable network connection.
+Imagine a developer sits on a train and has an unreliable network connection.
 
-Nevertheless I want that all tests can get executed.
+Nevertheless, I want that all tests can get executed.
 
-For simple unit-tests which don't need a server this is easy.
+For simple unit-tests that don't need a server, this is easy.
 
-But if you test needs a http-server, a database (PostgreSQL, MySQL),
-a key-value DB (redis), ... What can you do?
+But if your test needs an HTTP-server, a database (PostgreSQL, MySQL),
+a key-value DB (Redis), ... What can you do?
 
 Automation is the solution. You can use a tool like Ansible to set up
 the needed environment.
@@ -903,21 +903,21 @@ the needed environment.
 
 ### CI Config
 
-CI tools (gitlab, travis, jenkins) usualy have a web gui. Keep the
+CI tools (GitLab, Travis, Jenkins) usually have a web GUI. Keep the
 things you configure with the GUI simple. Yes, modern ci tools can do a
-lot. With every new version they get even more turing complete (this was
-a joke, I hope you understood it). Please do speration of concerns. The
-CI tool is the GUI to start a job. Then the jobs runs, and then you can
+lot. With every new version, they get even more [turing complete](https://en.wikipedia.org/wiki/Turing_completeness) (this was
+a joke, I hope you understood it). Please do separation of concerns. The
+CI tool is the GUI to start a job. Then the jobs run, and then you can
 see the result of the job in your browser. If you do configure condition
-handling "if ... then ... else ..." inside the web-gui, then I think you
+handling "if ... then ... else ..." inside the web-GUI, then I think you
 are on the wrong track.
 
 The ci tool calls a command line. To make it easy for debugging and
-development this job should be callable via the command line, too. With
-other word: the web GUI gets used to collect the arguments. Then a
-command line script gets called. Then the web GUI displays the result
+development this job should be callable via the command line, too. In
+other words: the web GUI gets used to collect the arguments. Then a
+command-line script gets called. Then the web GUI displays the result
 for you. I think it is wise to avoid a complex CI config. If you want to
-switch to a different ci tool (example from jenkins to gitlab), then
+switch to a different ci tool (example from Jenkins to GitLab), then
 this is easy if your logic is in scripts and not in ci tool
 configuration.
 
@@ -929,13 +929,13 @@ get things done. It's different in your spare time: Do what you want and
 what is fascinating for you.
 
 There is one tool and one concept that is rock solid, well known, easy
-to debug and available everywhere and it is great for parallel
+to debug, and available everywhere and it is great for parallel
 execution. The tool is called "operating system" and the concept is
-called "process". Why re-invent it? You think starting a new process is
+called "process". Why re-invent it? Do you think starting a new process is
 "expensive" ("it is too slow")? Just, do not start a new process for
 every small method you want to call in parallel. Use a [Task
 Queue](https://www.fullstackpython.com/task-queues.html). Let this tool
-handle the complicated async stuff and keep your own code simple like
+handle the complicated async stuff and keep your code simple like
 running in one process with one thread. It is all about IPO:
 Input-Processing-Output.
 
@@ -944,19 +944,19 @@ Problem](https://en.wikipedia.org/wiki/C10k_problem). BUT: I guess you
 don't have this problem. If you don't have this problem, then don't use
 technology which was invented to solve this issue :-)
 
-Related part of the [Google Codereview Guidelines "Functionality"](https://google.github.io/eng-practices/review/reviewer/looking-for.html#functionality)
+The related part of the [Google Codereview Guidelines "Functionality"](https://google.github.io/eng-practices/review/reviewer/looking-for.html#functionality)
 
 ### Don't waste time doing it "generic and reusable" if you don't need to
 
 If you are doing some kind of software project for the first time, then
-focus on getting it done. Don't waste time to do it perfect, reusable,
-fast or portable. You don't know the needs of the future today. One main
+focus on getting it done. Don't waste time to do it perfectly, reusable,
+fast, or portable. You don't know the needs of the future today. One main
 goal: Try to make your code easy to understand without comments and make
-the customer happy. First get the basics working, then tests and CI,
-then listen to the new needs, wishes and dreams of your customers.
+the customer happy. First, get the basics working, then tests and CI,
+then listen to the new needs, wishes, and dreams of your customers.
 
 Example: If you are developing web or server applications, don't waste
-time for making your code working on Linux and MS-Windows. Focus on one
+time making your code working on Linux and MS-Windows. Focus on one
 platform.
 
 See [Minimum viable
@@ -964,7 +964,7 @@ product](https://en.wikipedia.org/wiki/Minimum_viable_product)
 
 Related Book: [The Lean Startup](http://theleanstartup.com/book)
 
-Several month after writing above text I found this 
+Several months after writing the above text I found this 
 
 [Google Codereview Guidelines "Complexity"](https://google.github.io/eng-practices/review/reviewer/looking-for.html#complexity)
 > A particular type of complexity is over-engineering, where developers have made the code more generic than it needs to be, or added functionality that isn’t presently needed by the system. Reviewers should be especially vigilant about over-engineering. Encourage developers to solve the problem they know needs to be solved now, not the problem that the developer speculates might need to be solved in the future. The future problem should be solved once it arrives and you can see its actual shape and requirements in the physical universe.
