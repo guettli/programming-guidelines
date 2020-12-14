@@ -1290,21 +1290,21 @@ My conclusion: Don't write tech-docs in a non-English language
 
 ### Care for newcomers
 
-In the year 1997 I was very thankful that there was a hint "If unsure
-choose ..." when I needed to compile a linux kernel. In these days you
-need to answer dozens question before you could compile the invention of
+In the year 1997, I was very thankful that there was a hint "If unsure
+choose ..." when I needed to compile a Linux kernel. These days you
+need to answer dozens of question before you could compile the invention of
 Linus Torvalds.
 
-I had no clue what most questions where about. But this small advice "If
+I had no clue what most questions were about. But this small advice "If
 unsure choose ..." helped me get it done.
 
-If you are managing a project: Care for new comers. Provide them with
-guide lines. But don't reinvent docs. Provide links to the relevant
+If you are managing a project: Care for newcomers. Provide them with
+guidelines. But don't reinvent docs. Provide links to the relevant
 upstream docs, if you just use a piece of software.
 
 ### Keep custom IDE configuration small
 
-Imangine you lost your PC and you lost your development environment:
+Imagine you lost your PC and you lost your development environment:
 
 -   IDE configuration
 -   Test data
@@ -1316,14 +1316,13 @@ deployment workflow.
 How much would you lose? How much time would you waste to set up your
 personal development environment again?
 
-Keep this time small. This is related to "care for new comers". If you
-need several hours to setup your development environment, then new team
-members would need even much more time.
+Keep this time small. This is related to "care for newcomers". If you
+need several hours to set up your development environment, then a new team member would need even much more time.
 
 Although I use PyCharm and VSCode, the introduction of [Gitpod](https://www.gitpod.io/) gets it to the point:
 
 > Gitpod does to Dev Environments what Docker did to Servers. Today we are emotionally attached (for better or worse) to our dev environments, give them names & massage them over time. They are pets - similar to servers before docker took advantage of namespaces and cgroups in Linux and turned these nice puppies into cattle. 
-> With Gitpod it is the same - we treat dev environments as automated resources you can spin up when you need them and close down (and forget about) when you are done with your task. Dev environments become fully automated and ephemeral. Only then you are always ready-to-code - immediately creative, immediately productive with the click of a button and without any friction.
+> With Gitpod it is the same - we treat dev environments as automated resources you can spin up when you need them and close down (and forget about) when you are done with your task. Dev environments become fully automated and ephemeral. Only then you are always ready-to-code - immediately creative, immediately productive with the click of a button, and without any friction.
 
 
 
@@ -1336,21 +1335,21 @@ is too complicated or not documented, then I will resign and won't
 provide a patch. These steps need to be simple for people starting from
 scratch:
 
--   check out source from version control
+-   check out the source from version control
 -   check that all tests are working (before modifying something)
--   write patch and write test for patch
+-   write a patch and write a test for your patch
 -   check that all tests are working (after modifying something)
 
 ### Passing around methods make things hard to debug
 
-Even in C you can pass around method-pointers. It's very common in
+Even in C, you can pass around method-pointers. It's very common in
 JavaScript and sometimes it gets done in Python, too. It is hard to
 debug. IDE's can't resolve the code: "Find usages" don't work. I try to
 avoid it. I prefer OOP (Inheritance) and avoid passing around methods or
 treating methods like variables.
 
 But maybe this is just my strong backend related roots. I have never
-coded in a big modern JavaScript based environment.
+coded in a big modern JavaScript-based environment.
 
 I like it simple: Input-Processing-Output.
 
@@ -1377,9 +1376,9 @@ About OOP (Object-oriented programming)
 
 Three steps vs one step.
 
-OOP is great for implementing an [ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping). But implemeting this should be done by people who have more experience than I have :-)
+OOP is great for implementing an [ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping). But implementing this should be done by people who have more experience than I have :-)
 
-Here is code which uses the well-known jUnit style:
+Here is code that uses the well-known jUnit style:
 ```
 # OOP way
 import unittest
@@ -1414,22 +1413,22 @@ def test_ehlo(smtp_connection):
 
 My rule of thumb: Less indentation, means less complexity, means better code.
 
-Two things are simplified: The second version does not need a class or inheritance. Nice, since less code means less bugs.
+Two things are simplified: The second version does not need a class or inheritance. Nice, since less code means fewer bugs.
 
 In the second example the method `smpt_connection()` is not an instancemethod of a class, it just an unbound method. If a test
 asks for a parameter with this name, then pytest gives the test the result of this method.
 
 And look at the assertion: `self.assertEqual(response_code, 250)` vs `assert response_code == 250`. Namespaces
-introduced by dots are great (`assertEqual` is in the namespace of `self`). But if one level is enough, than
+introduced by dots are great (`assertEqual` is in the namespace of `self`). But if one level is enough, then
 this is even better.
 
-Of course this is opinionated, and it is 100% ok if you prefer the OOP-way and not the shorter solution.
+Of course, this is opinionated, and it is 100% ok if you prefer the OOP-way and not the shorter solution.
 
 ### "Dependency injection" is just "Configuration"
 
-For me the term [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and the corresponding Wikipedia article are way too complicated.
+For me, the term [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and the corresponding Wikipedia article are way too complicated.
 
-For me it is just "Configuration". But some people don't like it simple, they prefer .... (I removed this since it was provocative. Feel free to add you favorite terms here)
+For me, it is just "Configuration". But some people don't like it simple, they prefer .... (I removed this since it was provocative. Feel free to add your favorite terms here)
 
 From Wikipedia "Dependency injection"
 
@@ -1448,16 +1447,16 @@ DATABASES = {
 }
 ```
 
-That's all: Instead of hard-coded dependencies you provide a way to configure your software.
+That's all: Instead of hard-coded dependencies, you provide a way to configure your software.
 
-### Test Driven Development
+### Test-Driven Development
 
 red, green, refactor. More verbose: make the test fail, make the test
 pass, refactor (simplify) code.
 
 ### From bug to fix
 
-First make your bug reproducible. If it is reproducible, then it is easy
+First, make your bug reproducible. If it is reproducible, then it is easy
 to fix it.
 
 Make it reproducible in a test.
@@ -1478,15 +1477,15 @@ here.
 
 Make the test fail (red)
 
-Fix the code. Test is green now.
+Fix the code. The test is green now.
 
 Slow down. Take a sip of tea. Look at your changes ("git diff" in your
-preferend IDE). Is there a way to simplify your patch? If yes, simplify
+preferred IDE). Is there a way to simplify your patch? If yes, simplify
 it.
 
 Run the "surrounding tests". If do\_foo() is inside the module "bar".
 Then run all tests for module "bar" (I use py.test -k bar). But if this
-would take more then three minutes, then leave the testing to the CI
+would take more than three minutes, then leave the testing to the CI
 which happens after you commit+push (you have a CI, haven't you?)
 
 ### Tests and production code go hand in hand.
@@ -1509,36 +1508,36 @@ https://google.github.io/eng-practices/review/reviewer/looking-for.html#tests)
 
 ### aaa-tests (smoke tests)
 
-You want to check your source code before commit? Great initiative, you are on
-the right track. This source code checking is usualy called [Linting](https://en.wikipedia.org/wiki/Linting).
+Do you want to check your source code before commit? Great initiative, you are on
+the right track. This source code checking is usually called [Linting](https://en.wikipedia.org/wiki/Linting).
 
-Now you write a [git pre-commit hook](https://git-scm.com/docs/githooks#_pre_commit) as shell script which does some magic checking/linting and you are
+Now you write a [git pre-commit hook](https://git-scm.com/docs/githooks#_pre_commit) as a shell script which does some magic checking/linting and you are
 happy.
 
 I think this has a draw-back. You created a second/redundant place where tests happen: In CI and in pre-commit hook.
-You invest your valuable time into the pre-commit hook, and finally it might not get called.
-If you work in a team it is likely that somebody does not use the pre-commit hook you created.
+You invest your valuable time into the pre-commit hook, and finally, it might not get called.
+If you work in a team, likely, somebody does not use the pre-commit hook you created.
 
-That's why I suggest this: aaa-test. These test pass quick and check basic stuff. It is up to you
+That's why I suggest this: aaa-test. These tests pass quickly and check basic stuff. It is up to you
 how much want to do in these tests. Some basic linting, some basic unit-test, ... Then calls these
 tests during CI and can call them in your (optional) pre-commit hook. 
 
-Some call this "smoke tests".
+Some call these "smoke tests".
 
-In most development environments you can execute tests by giving a part of the name. Example: `pytest -k aaa` executes all test containing "aaa". 
+In most development environments you can execute tests by giving a part of the name. Example: `pytest -k aaa` executes all tests containing "aaa". 
 This has the benefit that you can add a new test anywhere you like. You don't need to register this somewhere.
 
 
-### Creating test data is much more important than you initialy think
+### Creating test data is much more important than you initially think
 
-Creating test data is very important. It can help you for several
+Creating test data is very important. It can help you with several
 things:
 
 1: It can help you to create a re-usable application. If you have only
-one customer, it does not matter. But the real benefit of software is its re-usabilty.
+one customer, it does not matter. But the real benefit of software is its re-usability.
 Your code wants to get executed by several customers. As soon as you have two or more 
-customers you need a neutral test environment which is no specific to one of your customers.
-It is a lot of work to create a neutral test environment, if you have not done it from
+customers you need a neutral test environment that is no specific to one of your customers.
+It is a lot of work to create a neutral test environment if you have not done it from
 day one. But the work only needs to be done once and helps in the long run.
 
 2: It can help you to create presentation/demo systems.
@@ -1547,8 +1546,7 @@ day one. But the work only needs to be done once and helps in the long run.
 
 Your tests should not run on real data from customers.
 
-If you create test data this should be automated. This way you are able
-to fill a new database with useful data. You should be able to create a
+If you create test data this should be automated. This way you can fill a new database with useful data. You should be able to create a
 demo system with one command (or one click).
 
 Write the creation of test data once and use it for both: presentions
@@ -1571,37 +1569,37 @@ of my code are *untestable*".
 
 I don't think so. I guess your software uses the [IPO pattern](https://en.wikipedia.org/wiki/IPO_model): Input, Processing, Output. The
 question is: How to feed the input for testing to my code? Mocking,
-virtualization and automation are your friends.
+virtualization, and automation are your friends.
 
-The "untestable" code needs to be cared of. Code is always testable,
+The "untestable" code needs to be cared for. Code is always testable,
 there is no untestable code. Maybe your knowledge of testing is limited
 up to now. Finding untestable code and making it testable is the
 beginning of an interesting adventure.
 
 ### Flaky Tests
 
-Tests are never flaky. If the same code ran fine on yesterday, and it the same code
+Tests are never flaky. If the same code ran fine yesterday, and it the same code
 fails today, then the test itself is stable. 
 
-The environment if flaky. Some small in bit in the environment is different today.
+The environment is flaky. Some small bit in the environment is different today.
 
 Maybe the servers are under more load today, which results in slower responses, which
 results in timeouts.
 
-Maybe it fails because there is a new test which executes before the flaky test and which
+Maybe it fails because there is a new test that executes before the flaky test and which
 modifies the database.
 
-Maybe a shared ressource contains different data today.
+Maybe a shared resource contains different data today.
 
 ...
 
-The bigger your environment, the more more likely you have flaky tests.
+The bigger your environment, the more likely you have flaky tests.
 
 This is the way to avoid flaky tests:
 
-* Keep your test simple. Try to write stateless methods which receive only few input.
+* Keep your test simple. Try to write stateless methods that receive only a few input.
 * keep the environment simple. If you can avoid Selenium, then avoid it. This will save you time.
-* Avoid shared ressources. Tests should have their on database, their own cache, ...
+* Avoid shared resources. Tests should have their own database, their own cache, ...
 * ...
 
 ### Hermetic Testing
