@@ -559,11 +559,11 @@ Server: But are you really Bob?
 Server: Please prove to me that you're Bob. You can use method foo, bar, blu for authentication
 Client: I choose method "blu"
 Server: Ok, then please tell send the magic blu token
-Client: Here it is xyuasdusd8.. I hope you like it.
+Client: Here it is xyuasdusd8... I hope you like it.
 Server: Fine, I accept this. Now I trust you. Now I know you are Bob
 Client: Please show me the first message
 Server: here it is:
-Server: ....
+Server:...
 Client: looks like spam. Please delete this message
 Server: Now I know that you want to delete this message. 
 Server: But won't delete it now. Please send me EXPUNGE to execute the delete.
@@ -572,9 +572,9 @@ Client: EXPUNGE
 ...
 ```
 
-Of course roughly the same needs to be done with http. But http you can cut the task into several smaller http requests. This gives the service the chance of delegating request-1 to server-a and request-2 to server-b. In the cloud environment containers get created and destroyed in seconds. It is easier without long living connection.
+Of course roughly the same needs to be done with HTTP. But HTTP you can cut the task into several smaller HTTP requests. This gives the service the chance of delegating request-1 to server-a and request-2 to server-b. In the cloud, environment containers get created and destroyed in seconds. It is easier without a long-living connection.
 
-In above case (IMAP protocol) the EXPUNGE is like a COMMIT in relational databases.It is very handy to have a transactional database to implement a service. But it makes no sense to expose the transaction to the client.
+In the above case (IMAP protocol) the EXPUNGE is like a COMMIT in relational databases. It is very handy to have a transactional database to implement a service. But it makes no sense to expose the transaction to the client.
 
 Stateless is like IPO: Input-Processing-Output.
 
@@ -617,33 +617,24 @@ be done by the user, not by the one who created this hyperlink.
 
 The shell is nice for interactive usage. But shell scripts are
 unreliable: Most scripts fail if filenames contain whitespaces.
-Shell-Gurus know how to work around this. But quoting can get really
-complicated. I use the shell for interactive stuff daily. But I stopped
+Shell-Gurus know how to work around this. But quoting can get complicated. I use the shell for interactive stuff daily. But I stopped
 writing shell scripts.
 
 Reasons:
 
--   If a error happens in a shell script, the interpreter steps silently
-    to the next line. Yes I know you can use "set -e". But you don't get
-    a stacktrace. Without stacktrace you waste a lot of time to analyze
-    why this error happened.
--   AFAIK you can't do object oriented programming in a shell. I like
+-   If an error happens in a shell script, the interpreter steps silently to the next line. Yes, I know you can use "set -e". But you don't get a stack trace. Without a stack trace, you waste a lot of time analyzing why this error happened.
+-   AFAIK you can't do object-oriented programming in a shell. I like
     inheritance.
 -   AFAIK you can't raise exceptions in shell scripts.
--   Shell-Scripts tend to call a lot of subprocesses. Every call to
-    grep, head, tail, cut creates a new process. This tends to get slow.
-    I have seen shell scripts which start thousand processes per second.
-    After re-writing them in Python they were 100 times faster und 100
+-   Shell-Scripts tend to call a lot of subprocesses. Every call to grep, head, tail, cut creates a new process. This tends to get slow.
+    I have seen shell scripts that start thousands of processes per second.
+    After re-writing them in Python they were 100 times faster and 100
     times more readable.
--   I do this "find ... | xargs" daily, but only while using the shell
-    interactively. But what happends if a filename contains a newline
-    character? Yes, I know "find ... -print0 | xargs -r0", but now "find
-    .. | grep | xargs" does not work any more .... It is dirty and will
-    never get clean.
+-   I do this "find ... | xargs" daily, but only while using the shell interactively. But what happens if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find
+    .. | grep | xargs" does not work anymore... It is dirty and will never get clean.
 -   Look at all the pitfalls: [Bash
     Pitfalls](https://mywiki.wooledge.org/BashPitfalls) My conclusion: I
-    prefer to walk on solid ground, I don't write shell scripts any
-    more.
+    prefer to walk on solid ground, I don't write shell scripts anymore.
 
 Even Crontab lines are dangerous. Look at this:
 
@@ -655,10 +646,10 @@ Do you spot the big risk?
 ### Portable Shell Scripts
 
 I think writing portable shell scripts and avoiding bashism (shell
-scripts which use features which are only available in the bash) is a
+scripts that use features that are only available in the bash) is a
 useless goal. It is wasting time. It feels productive, but it is not.
 
-Avoid \#!/bin/sh. The interpreter could be bash, dash, busybox or something else.
+Avoid \#!/bin/sh. The interpreter could be bash, dash, busybox, or something else.
 See [Comparison of command
 shells](https://en.wikipedia.org/wiki/Comparison_of_command_shells).
 Please be explicit. Use \#!/bin/your-favorite-shell.
@@ -678,30 +669,30 @@ issue. Use rpm/dpkg or configuration management to handle "my script
 foo.sh needs bash".
 
 I know that there are some edge cases where the bash is not available
-(for example a container image based on Alpine Linux),
-but in most cases the time to get things done is far more important.
+(for example, a container image based on Alpine Linux),
+but in most cases, the time to get things done is far more important.
 Execution performance is not that important. First: get it done
 including automated tests.
 
 ### Server without a shell is possible
 
-In the past, it was unbelievable: A unix/linux server which does not
+In the past, it was unbelievable: A Unix/Linux server that does not
 execute a shell while doing its daily work. The dream is true today.
 These steps do not need a shell: operating system boots. Systemd starts.
 Systemd spawn daemons. For example a web server. The web server spawns
-worker processes. A http request comes in and the worker process handles
-one web request after the other. In the past the boot process and the
+worker processes. An HTTP request comes in and the worker process handles
+one web request after the other. In the past, the boot process and the
 start/stop scripts were shell scripts. I am very happy that systemd
 exists.
 
 But time has changed. Today applications run in containers. Containers
 don't need systemd. In [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes) containers
 get started and stopped, not services. There is no need for a daemon starting and
-stopping services, since this gets done on a higher level.
+stopping services since this gets done on a higher level.
 
-### Avoid calling command line tools
+### Avoid calling command-line tools
 
-I try to avoid calling a command line tool, if a library is available.
+I try to avoid calling a command-line tool if a library is available.
 
 Example: You want to know how long a process is running (with Python).
 Yes, you could call `ps -p YOUR_PID -o lstart=` with the subprocess
@@ -710,12 +701,12 @@ library. This works.
 But why not use a library like
 [psutil](https://pypi.python.org/pypi/psutil)?
 
-Why do you want to avoid a third party library?
+Why do you want to avoid a third-party library?
 
 Is there a feeling like "too much work, too complicated"? Installing a
 library is easy, do it.
 
-Check the license of the library. If it is BSD, MIT, LGPL or Apache like, then
+Check the license of the library. If it is BSD, MIT, LGPL, or Apache like, then
 use the library.
 
 Calling a subprocess is slow, especially if it gets done often you will notice
@@ -733,14 +724,14 @@ used in the past: There is something wrong inside - something is
 smelling. Let's write a wrapper. Still something wrong? Let's write a
 second wrapper.....
 
-All these wrappers do not solve the underlaying issue.
+All these wrappers do not solve the underlying issue.
 
-In the past there were less alternatives. And since you hand no choices,
+In the past, there were fewer alternatives. And since you had no choices,
 you were forced to use a particular tool. If this did not work the way
 you wanted it, you need to write a wrapper.
 
-Today you have much more alternatives. If tool x does not work work the
-way you want it to, you can use tool y.
+Today you have many more alternatives. If tool x does not work
+the way you want it to, you can use tool y.
 
 I am happy that the anti-pattern "toilet paper programming" gets used
 less often today.
@@ -749,7 +740,7 @@ Example: WxPython (GUI toolkit) wraps WxWindows wraps gtk wraps xlib.
 
 There are still some places where toilet paper wrappers need to get coded again and again.
 
-For example JSON does not support datetime, timedelta and binary data. See [Let's fix JS](https://github.com/guettli/lets-fix-js). Speak to the upstream, to whoever is responsible for this, even if you think they are way too big, and you way too small.
+For example, JSON does not support datetime, timedelta, and binary data. See [Let's fix JS](https://github.com/guettli/lets-fix-js). Speak to the upstream, to whoever is responsible for this, even if you think they are way too big, and you are way too small.
 
 ### If unsure use MIT License
 
