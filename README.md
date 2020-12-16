@@ -1,9 +1,6 @@
 # Programming Guidelines
 
-My opinionated programming guidelines. **Please provide feedback**, tell me
-what's wrong, what's missing, and please create a new issue here:
-<https://github.com/guettli/programming-guidelines/issues> or write me a
-mail to <guettliml@thomas-guettler.de>
+My opinionated programming guidelines. 
 
 [1. Introduction](#1-introduction)
 
@@ -39,6 +36,14 @@ This list summarises a lot of mistakes I did in the past. I wrote it, to
 help you, to avoid these mistakes.
 
 It's my personal opinion and feeling. No facts, no single truth.
+
+### I need your feedback
+
+**Please provide me your feedback**.
+
+If you have a general question, please start a [new discussion](https://github.com/guettli/programming-guidelines/discussions/new).
+
+If you think something is wrong or missing, feel free to open an issue or pull request.
 
 ### Relaxed focus on your monitor
 
@@ -3345,6 +3350,15 @@ See [Thomas doing working out loud](https://github.com/guettli/wol)
 ### Related
 
 - [Hacker-Laws](https://github.com/dwmkerr/hacker-laws)
+
+
+### I need your feedback
+
+**Please provide me your feedback**.
+
+If you have a general question, please start a [new discussion](https://github.com/guettli/programming-guidelines/discussions/new).
+
+If you think something is wrong or missing, feel free to open an issue or pull request.
 
 ### Thank you
 
