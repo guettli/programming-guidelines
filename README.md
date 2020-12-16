@@ -39,8 +39,6 @@ It's my personal opinion and feeling. No facts, no single truth.
 
 ### I need your feedback
 
-**Please provide me your feedback**.
-
 If you have a general question, please start a [new discussion](https://github.com/guettli/programming-guidelines/discussions/new).
 
 If you think something is wrong or missing, feel free to open an issue or pull request.
@@ -3353,8 +3351,6 @@ See [Thomas doing working out loud](https://github.com/guettli/wol)
 
 
 ### I need your feedback
-
-**Please provide me your feedback**.
 
 If you have a general question, please start a [new discussion](https://github.com/guettli/programming-guidelines/discussions/new).
 
