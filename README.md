@@ -194,7 +194,7 @@ the input/output of your data will be much easier.
 
 Imagine you have a table "meeting" and a table "place". The table
 "meeting" has a ForeignKey to table "place". In the beginning, it might
-be not clear yet where the meeting will be. Most developers will make
+be not clear where the meeting will be. Most developers will make
 the ForeignKey optional (nullable). WAIT: This will create a condition
 in your data structure. There is a way easier solution: Create a place
 called "unknown". Use this [senitel value](https://en.wikipedia.org/wiki/Sentinel_value) as default. This data
@@ -243,7 +243,7 @@ is only one variant of "empty".
 
 ### SQL: I prefer subqueries to joins
 
-I most cases, I use an ORM to access data and don't write SQL by hand.
+In most cases, I use an ORM to access data and don't write SQL by hand.
 
 If I do write SQL by hand, then I often prefer [SQL Subqueries](https://en.wikipedia.org/wiki/SQL_syntax#Subqueries)
 to SQL Joins. 
@@ -263,7 +263,7 @@ belong to a category that has expired.
 
 ### Use all features PostgreSQL does offer
 
-If you want to store structured data, then PostgreSQL is a save default
+If you want to store structured data, then PostgreSQL is a safe default
 choice. It fits in most cases. Use all features PostgreSQL does offer.
 Don't constrain yourself to use only the portable SQL features. It's ok
 if your code does work only with PostgreSQL and no other database if
@@ -350,7 +350,7 @@ rolled back, but the concept in PostgreSQL is not itself hierarchical.
 
 ### My customer wants to extend the data schema...
 
-Imagine you created some kind of issue-tracking system. Up to now you provide attributes like "subject", "description", "datetime created",
+Imagine you created some kind of issue-tracking system. Up until now, you provide attributes like "subject", "description", "datetime created",
 "datetime last-modified", "tags", "related issues", "priority", ...
 
 Now the customer wants to add some new attributes to issues. It would be quite easy for you to update
@@ -385,7 +385,7 @@ return try {
 No! I want a clear schema where all values in a column are of the same type.
 
 Of course, my wish has a draw-back: If you want to upgrade a table in a production relational database, you might have downtime, because the database needs some
-minutes to convert all rows to the new schema. But at least in my context, this was never a big problem up to now.
+minutes to convert all rows to the new schema. But at least in my context, this was never a big problem up until now.
 
 Related: [StackOverflow "class java.lang.Double cannot be cast to class java.lang.Long"](https://stackoverflow.com/questions/65141475/mongodb-class-java-lang-double-cannot-be-cast-to-class-java-lang-long)
 
@@ -506,10 +506,10 @@ I was unhappy with all of them and looked for a new language. I narrowed
 down the languages, I was interested in and there were two choices left.
 One was ruby, the other was Python. I choose Python. It looked simpler,
 like executable pseudo-code. Since 2001 I use it nearly every work-day.
-I like it, and up to now, no other language attracts me.
+I like it, and till now, no other language attracts me.
 
 I am not married to Python. I am willing to change. But the next
-language needs to be better. Up to now, I see no alternative.
+language needs to be better. Up until now, I see no alternative.
 
 JavaScript has a big benefit, that it can be executed in the browser.
 But I don't like it. Why I don't like it? I don't know. Sometimes
@@ -767,7 +767,7 @@ See [Why we ban the AGPL](https://www.theregister.com/2011/03/31/google_on_open_
 
 Do the filtering in the database. In most cases, it is faster than the
 loops in your programming language. And if the DB is not fast enough,
-then I guess there is just the matching index missing up to now.
+then I guess there is just the matching index missing up until now.
 
 ### Do permission checking via SQL
 
@@ -1332,7 +1332,7 @@ Although I use PyCharm and VSCode, the introduction of [Gitpod](https://www.gitp
 ### Setting up a new development environment should be easy
 
 This happened to me several times: I wanted to improve some open source
-software. Up to now I only used the software, now I want to write a
+software. Up until now I only used the software, now I want to write a
 patch. If setting up a new development environment and running the tests
 is too complicated or not documented, then I will resign and won't
 provide a patch. These steps need to be simple for people starting from
@@ -1470,7 +1470,7 @@ easily and you fix it. Done?
 I think you are not done yet. I try to follow this guideline:
 
 Before fixing the bug, search test\_do\_foo(). There is no test for this
-method up to now? Then write it.
+method up until now? Then write it.
 
 Now you have test\_do\_foo().
 
@@ -1576,7 +1576,7 @@ virtualization, and automation are your friends.
 
 The "untestable" code needs to be cared for. Code is always testable,
 there is no untestable code. Maybe your knowledge of testing is limited
-up to now. Finding untestable code and making it testable is the
+up until now. Finding untestable code and making it testable is the
 beginning of an interesting adventure.
 
 ### Flaky Tests
@@ -1600,8 +1600,8 @@ The bigger your environment, the more likely you have flaky tests.
 
 This is the way to avoid flaky tests:
 
-* Keep your test simple. Try to write stateless methods that receive only a few input.
-* keep the environment simple. If you can avoid Selenium, then avoid it. This will save you time.
+* Keep your test, simple. Try to write stateless methods that receive only a few input.
+* keep the environment, simple. If you can avoid Selenium, then avoid it. This will save you time.
 * Avoid shared resources. Tests should have their own database, their own cache, ...
 * ...
 
@@ -1738,7 +1738,7 @@ where this warning comes from. You can use this solution:
 
 ### Avoid writing a native GUI
 
-Imagine you have developed web applications up to now. You have never
+Imagine you have developed web applications up until now. You have never
 developed a native GUI before. Now a new potential customer has a use
 case and you think: This time a native GUI would be a good solution.
 
@@ -1783,12 +1783,12 @@ native app. If you can avoid it, then avoid writing a native app.
 The development and release process is much slower.
 
 Of course, the age of [Progressive Web Apps](https://web.dev/progressive-web-apps/) has just begun.
-A lot of things are not possible in a web app up to now. Just be warned, that this road is
+A lot of things are not possible in a web app up until now. Just be warned, that this road is
 slow and in the long run deprecated, since the environments for PWAs are getting better every year.
 
 ### Learn one programming language, not ten.
 
-Most young developers think you need to learn many programming languages
+Most young developers think they need to learn many programming languages
 to be a good developer.
 
 My opinion: Learn Python, SQL, and some JavaScript.
@@ -1801,7 +1801,7 @@ instrument, long-distance running, family
 
 "git bisect" is a great tool in conjunction with unit tests. It is easy
 to find the commit, which introduced an error. Unfortunately, it is not a
-one-liner up to now. You can use it like this:
+one-liner for now. You can use it like this:
 
 ``` {.sourceCode .shell}
 user@host> git bisect start HEAD HEAD~10 
@@ -1819,7 +1819,7 @@ hardly need "git bisect".
 ### Avoid Conditional Breakpoints
 
 Imagine, you can reproduce a bug in a test. But you could not
-fix it up to now. If you want to create a conditional breakpoint to find
+fix it at the moment. If you want to create a conditional breakpoint to find
 the root of the problem, then you could be on the wrong track. Rewrite
 the code first, to make it more fine-grained debuggable and testable.
 
@@ -1873,7 +1873,7 @@ General guidelines: Avoid [Homonyms](https://en.wikipedia.org/wiki/Homonym)
 
 ### Idempotence is great
 
-Idempotence is great, since it ensures, that it does not harm if
+Idempotence is great, since it ensures that it does no harm if
 the method is called twice.
 
 Errors (for example power outage) can happen in every millisecond.
@@ -2521,8 +2521,10 @@ Drawback: You need knowledge about Linux.
 Kubernetes: This is the current hype. It's great for huge data centers... but ...
 do you have a huge data center?
 
-PaaS: Plattform as a Service. For the example provided by Heroku, Google, Amazon. They try
-to make your life easier. Pro: easy to use. Con: more expensive.
+PaaS: Platform as a Service. For the example provided by Heroku, Google, Amazon. They try
+to make your life easier.
+Pro: easy to use.
+Con: more expensive.
 
 My hint: if unsure use PaaS. If you want to learn the basics of running a server, then use a VPS.
 
@@ -2572,7 +2574,7 @@ obsolete](https://stackoverflow.com/a/30189540/633961)
 Systemd allows you to create a template and create several services from
 this template. See: <http://0pointer.de/blog/projects/instances.html>
 
-First I thought this is great. But some months later I realized: It is
+First, I thought this was great. But some months later I realized: It is
 better to have one source for templates: Your configuration management.
 If you want several almost equal services, then use templates in your
 configuration management.
@@ -2592,7 +2594,7 @@ the changes to a different location. It is very handy. Example:
 
     cd /etc/apt
     git log .
-
+    
     ---> you see all git commits which changed files in the /etc/apt directory.
 
 But etckeeper is no backup tool. It is just a handy tool to see what has
@@ -2613,8 +2615,7 @@ made to the configuration, then there should be no commit in /etc/.git.
 If you do coding/programming to implement your backup of data, then you
 are on the wrong track.
 
-You will likely do it wrong, and this will be a big
-risk.
+You will likely do it wrong, and this will be a big risk.
 
 Why? Because you will notice your fault if you try to recover your data.
 
@@ -2623,7 +2624,7 @@ it, but don't write it yourself.
 
 ### Avoid re-inventing replication
 
-That's what the customer wants from you to implement:
+That's what the customer wants you to implement:
 
 You should transfer data from database A to database B. Every time there
 is an update in database A, data should get copied to database B.
@@ -2635,7 +2636,7 @@ Why do you want redundancy in your data storage? The only reasons I can
 think of are speed/performance and fault-tolerant (like DNS/LDAP).
 
 If replication is needed, then take the replication tools the
-databases offer. Do not implement replication yourself. This is not
+databases offers. Do not implement replication yourself. This is not
 trivial and experts with more knowledge than you and me have solved this
 issue before.
 
@@ -2813,7 +2814,7 @@ Care for both: brain and body.
 
 This and the following parts are about "Requirement Engineering".
 
-If a discussion brings not progress, then grab a pen. Start with V1. The
+If a discussion does not bring progress, then grab a pen. Start with V1. The
 letter V stands for "Solution Variant" or "One strategy of several to
 get to a goal". Find a term or short description of the first possible
 strategy. Write it down. Then: which other ways could be used? V2, V3,
@@ -2858,7 +2859,7 @@ In a professional environment, these notes about the options and the decision ca
 
 ### Avoid Office Documents or UML-tools
 
-Use a way to edit content (use cases, specs, ...) over the internet. Use
+Choose a way to edit content (use cases, specs, ...) over the internet. Use
 an issue tracking system or wiki.
 
 Don't waste time with UML tools. UML is like
@@ -2872,7 +2873,7 @@ step, third step ...
 
 [Sketch](https://en.wikipedia.org/wiki/Sketch_(drawing)) screenshots you
 want to build with your team with a pen. I avoid any digital device for
-this since up to now paper or a whiteboard is far more real. If you
+this since paper or a whiteboard is far more real. If you
 need the result in digital format, just take a picture with your cell
 phone at the end.
 
@@ -2930,7 +2931,7 @@ developer) provide a checklist of things to test, then the likelihood to
 get feedback is bigger.
 
 It is wise to create this checklist for testing as early as possible. It
-tells the developer the desired result.
+tells the customer the desired result.
 
 ### Dare to say "Please wait, I want to take a note"
 
@@ -2938,7 +2939,7 @@ Most people can listen and write at once. I can't. And I guess a lot of
 developers have this problem. I can only do one thing at a time. If you
 are telephoning with a customer and he has a lot of things to tell you,
 don't fool yourself. You will only remember 4 of 5 issues. Dare to say
-"please wait, I want to take a note". This way you can care for all
+"please wait, I want to take a note". This way, you can take care of all
 issues, which results in happy customers.
 
 
@@ -2947,10 +2948,9 @@ issues, which results in happy customers.
 Gossip creates an atmosphere that promotes negativity (bad karma).
 Avoid making jokes about other teammates or customers. Yes, some people do strange stuff and have strange attitudes. Making jokes
 about them makes everything worse. Please be aware that this guideline
-has a major drawback. Sometimes all people around you are laughing about
-a customer or a teammate which is not here right now ... and you are
-the only one who is not laughing. It is up to you how to react. Be
-patient.
+has a major drawback. Sometimes, the people around you are laughing about
+a customer or a teammate in their absenc ... and you are
+the only one who is not laughing. It is up to you how to react. Be patient.
 
 Same for irony and sarcasm. You and your friends might think it is funny. New team members and
 other people won't understand you. It is not funny, it is confusing and childish.
@@ -3003,7 +3003,7 @@ Yes, this chat-based workflow is doable and it is better than direct messages to
 Nevertheless **self-service** is better. Wouldn't it be great if setting up a new demo system
 is simple and can be done by a salesperson who has no deep technical knowledge?
 
-Communication is important, but daily tasks should get automated so that the one who wants something
+Communication is important, but daily tasks should get automated so that anyone who wants something
 can help himself.
 
 ### Architectural Decision Records
@@ -3035,14 +3035,13 @@ chosen this job. If you think about something too long, then you get
 blind to the obvious and easy solution. It helps to talk.
 
 There is something called [Rubber duck
-debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging). This
-might help, but talking to humans helps much more. If you find no
+debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging). This might help, but talking to humans helps much more. If you find no
 solution in 30 minutes. Take a break. Do something different, talk to a
 teammate or friend, take a small walk outside.
 
 ### Be curious
 
-There is always something you don't have understood up to now. Ask
+There is always something you have not understood. Ask
 questions, even if you think you know the answer. For one question,
 there are always several answers. If you know one answer, then it is
 likely that someone has a better answer.
@@ -3106,8 +3105,8 @@ related to my personal life? I stop and write a mail to my account.
 
 That's how most of this guide-line was created: Most items came to my
 mind during cycling, walking, listening to music, or laying in the bathtub.
-A short mail to myself, and some days later I take the mail which contains
-just a handful of words and I formulate it.
+A short mail to myself, and some days later I opened the mail which contains
+just a handful of words that I have articulated.
 
 ### Cut bigger problems into smaller ones
 
@@ -3203,19 +3202,19 @@ keep this separated.
 
 ### Clean up your desk
 
-Don't forget to clean your desk. I don't write this here because I do it
-often and with joy. No, exactly the opposite. I write it down since I want
+Don't forget to clean your desk. I didn't write this here because I do it
+often and with joy. No, exactly the opposite. I wrote it down since I want
 to push myself.
 
 Don't look at all these things on your desk at once. Start on the left
-side take the first thing. Where is the best place for this thing single
+side, take the first thing. Where is the best place for this single
 thing? Unsure? Why not throw it in the trash can? If you are unsure put
 it at least in a box behind a closed cabinet door. Some month later you
 might be able to throw it in the garbage.
 
 Then wipe the dust.
 
-If you have never time do this, then there is something wrong. Slow
+If you never have time to do this, then there is something wrong. Slow
 down.
 
 ### Thrive for consistency
@@ -3330,7 +3329,7 @@ the things which only one person knows. Tell him about your concerns
 (Bus factor). Maybe talk to his boss.
 
 Imagine there is an action that needs to be done roughly twice a year.
-For example, setting up a new server. Up to now, Bob did this every time.
+For example, setting up a new server. Up until now, Bob did this every time.
 Talk to your teammates. Explain that every action should be known to at
 least two people. In practice, this means the next time Bob won't do it.
 It needs to be done by someone else.
