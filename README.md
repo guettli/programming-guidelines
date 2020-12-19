@@ -930,7 +930,7 @@ Especially in JavaScript, functions often return [Promises](https://developer.mo
 
 The `Promise` represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
-I don't like this. I want a method to do what it should execute synchronously and then return the result.
+I don't like this. I want a method to execute synchronously and then return the result.
 
 If I want a method to be executed asynchronously, then I (the caller) can use a Promise. But I don't want the function to decide "async or sync?".
 
@@ -957,6 +957,7 @@ hyperlink (synchronous). If the user wants to open the hyperlink in a new tab (a
 then this decision should
 be done by the user, not by the one who created this hyperlink.
 
+I have seen JavaScript code where almost every line contained `await`. That's childish.
 
 ### Don't waste time doing it "generic and reusable" if you don't need to
 
