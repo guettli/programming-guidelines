@@ -581,39 +581,6 @@ In the above case (IMAP protocol) the EXPUNGE is like a COMMIT in relational dat
 
 Stateless is like IPO: Input-Processing-Output.
 
-### Functions should return values, Not Promises.
-
-Especially in JavaScript, functions often return [Promises](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
-The `Promise` represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
-
-I don't like this. I want a method to do what it should execute synchronously and then return the result.
-
-If I want a method to be executed asynchronously, then I (the caller) can use a Promise. But I don't want the function to decide "async or sync?".
-
-I want to decide this, and I want the default to be "synchronous execution".
-
-Pseudo Code (synchronous):
-```
-response = fetch('https://example.com')
-my_json = response.json()
-```
-
-JavaScript (asynchronously)
-```
-const my_json = async () => {
-    const response = await fetch('https://example.com');
-    return response.json();
-}
-```
-
-The second code snippet is way more complicated. 
-
-I think this can be compared to hyperlinks on web pages. The default is to follow the
-hyperlink (synchronous). If the user wants to open the hyperlink in a new tab (asynchronous), 
-then this decision should
-be done by the user, not by the one who created this hyperlink.
-
 
 
 ### No Shell Scripting
@@ -956,6 +923,39 @@ the building blocks. But taks-queues exist. There is no need to re-invent them.
 I like to use task-queues, and write my code in a very predictable single-thread,
 single-process synchronous way.
 
+
+### Functions should return values, Not Promises.
+
+Especially in JavaScript, functions often return [Promises](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+The `Promise` represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+I don't like this. I want a method to do what it should execute synchronously and then return the result.
+
+If I want a method to be executed asynchronously, then I (the caller) can use a Promise. But I don't want the function to decide "async or sync?".
+
+I want to decide this, and I want the default to be "synchronous execution".
+
+Pseudo Code (synchronous):
+```
+response = fetch('https://example.com')
+my_json = response.json()
+```
+
+JavaScript (asynchronously)
+```
+const my_json = async () => {
+    const response = await fetch('https://example.com');
+    return response.json();
+}
+```
+
+The second code snippet is way more complicated. 
+
+I think this can be compared to hyperlinks on web pages. The default is to follow the
+hyperlink (synchronous). If the user wants to open the hyperlink in a new tab (asynchronous), 
+then this decision should
+be done by the user, not by the one who created this hyperlink.
 
 
 ### Don't waste time doing it "generic and reusable" if you don't need to
