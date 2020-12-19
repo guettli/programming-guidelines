@@ -924,7 +924,7 @@ switch to a different ci tool (example from Jenkins to GitLab), then
 this is easy if your logic is in scripts and not in ci tool
 configuration.
 
-### Avoid Threads and Async
+### Avoid Threads, Async and Promises
 
 Threads and Async are fascinating. BUT: It's hard to debug. You will
 need much longer than you initially estimated. Avoid it, if you want to
@@ -948,6 +948,15 @@ don't have this problem. If you don't have this problem, then don't use
 technology which was invented to solve this issue :-)
 
 The related part of the [Google Codereview Guidelines "Functionality"](https://google.github.io/eng-practices/review/reviewer/looking-for.html#functionality)
+
+There is a huge difference between implementing a task-queue and using
+a task-queue. If you implement a task-queue, then threads/async/promises/multiprocessing are
+the building blocks. But taks-queues exist. There is no need to re-invent them.
+
+I like to use task-queues, and write my code in a very predictable single-thread,
+single-process synchronous way.
+
+
 
 ### Don't waste time doing it "generic and reusable" if you don't need to
 
