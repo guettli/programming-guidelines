@@ -1315,6 +1315,13 @@ If you are managing a project: Care for newcomers. Provide them with
 guidelines. But don't reinvent docs. Provide links to the relevant
 upstream docs, if you just use a piece of software.
 
+### Good example for "care for newcomers"
+
+> Writing plugins
+> It is easy to implement local conftest plugins .... Please refer to [Installing and Using plugins](https://docs.pytest.org/en/stable/plugins.html#using-plugins) if you only want to use but not write plugins.
+
+That's great. That's newcomer focused documentation.
+
 ### Keep custom IDE configuration small
 
 Imagine you lost your PC and you lost your development environment:
