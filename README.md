@@ -728,7 +728,7 @@ For me "freedom" means no constraints. That's why I prefer
 the MIT License, since GPL and AGPL have the constraint
 that you must open your source, too.
 
-See [Why we ban the AGPL](https://www.theregister.com/2011/03/31/google_on_open_source_licenses/)
+See [Why we ban the AGPL](https://www.theregister.com/2011/03/31/google_on_open_source_licenses/), [Code licensed under AGPL MUST NOT be used at Google](https://opensource.google/docs/using/agpl-policy/)
 
 ### Loop in DB, not in your code
 
