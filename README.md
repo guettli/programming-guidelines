@@ -2757,6 +2757,43 @@ Logs should contain the stack trace and the local variables of each frame
 in the stack trace (a tool like sentry could be used), if real errors
 occur.
 
+### Logs vs Rows
+
+Imagine you have a application-to-application synchronization process. Data from
+system A needs to be pushed to system B. It is a custom synchronization and
+you won't support this syncing, you just want to develop it. After developing this plugin
+for system A you want it hand over to the customer.
+
+Of course there are several error-conditions which can occur. The network between
+both systems can be broken. One system can be down for some minutes, or there
+is data which does not validate ....
+
+If you implement traditional logging you have a time-stamp and some additional 
+data like error messages or snippets of data which provide additional information.
+
+You could dump this log together with thousand completely unrelated logs into NoSQL
+based logging solution. The Logs coming from different sources have nothing in
+common, except that they accidently have all a timestamp and a message.
+
+Does this provide the best possible user experience? I don't think so.
+
+There is big gap between system A and the important logging information.
+
+Imagine ther is a data-set called "foo". This data-set could not get synced.
+Of course system A has a page for "foo". 
+
+The best user-experience would be a link from the page "foo" of system A to the
+current state of the sync.
+
+How to implement this? It is easy: Stop logging, start creating rows in a table.
+
+If you have a table and rows in system A, then it is easy to provide a useful interface
+for the operator of system A to see what's going. The big gap is gone. Information
+is visible where you need it.
+
+Of course this does not apply to every kind of logging. It hardly makes sense to 
+write every http request/response into a database table. 
+
 
 ## ???. Web-Development
 
