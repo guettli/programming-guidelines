@@ -1806,6 +1806,14 @@ Of course, the age of [Progressive Web Apps](https://web.dev/progressive-web-app
 A lot of things are not possible in a web app up until now. Just be warned, that this road is
 slow and in the long run deprecated, since the environments for PWAs are getting better every year.
 
+### My prefered Web Stack
+
+Python, Django, Gunicorn, Nginx, PostgreSQL, [htmx](https://htmx.org/), Bootstrap5.
+
+This way I can write responsive mobile friendly applications.
+
+I think React/Vue are in general overrated and not needed for my use cases.
+
 ### Learn one programming language, not ten.
 
 Most young developers think they need to learn many programming languages
