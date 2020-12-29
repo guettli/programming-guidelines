@@ -2591,6 +2591,34 @@ recommended using a tool where don't fiddle with files daily.
 
 See [12factor App: #11 Treat logs as event streams](https://12factor.net/logs)
 
+### Logging: Symptom vs root-cause
+
+Filtering or ignoring errors is easy. People love it. But wait, why not fix the root-cause?
+
+One example from hosting a Django application on a VPS:
+
+You will see these messages soon after you set up your VPS:
+
+> DisallowedHost at / Invalid HTTP_HOST header: '198.211.x.y'. You may need to add '198.211.x.y' to ALLOWED_HOSTS.
+
+I guess you don't want your site to be accessed via IP, but some script-kiddies scan all public accessible
+IPs all the time and check if http-host-header-validation is active.
+
+The easy solution: Extend the ALLOWED_HOST setting and add your IP. But this does solve the issue just for some hours.
+Soon some script-kiddies will use fakted HTTP_HOST header and you get useless warnings again.
+
+What the next step? You use google and find a way to ignore the annoying error messages.
+
+You could solve this by filtering the logs. You could ignore all `django.security.DisallowedHost` logs.
+
+Now to the heading of this chapter: "Symptom vs root-cause"
+
+Filtering logs just hides the symptom.
+
+Fixing the root-cause means to configure the webserver in front of Django (for example Nginx)
+to handle the broken request. These broken requests should not be forwarded to Django,
+and then you don't need to add IP addresses to ALLOWED_HOSTS or ignore logs.
+
 ### Use Systemd
 
 It is available, don't reinvent it. Don't do double-fork magic anymore.
