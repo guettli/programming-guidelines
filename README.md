@@ -592,24 +592,22 @@ writing shell scripts.
 
 Reasons:
 
--   If an error happens in a shell script, the interpreter steps silently to the next line. Yes, I know you can use "set -e". But you don't get a stack trace. Without a stack trace, you waste a lot of time analyzing why this error happened.
--   AFAIK you can't do object-oriented programming in a shell. I like
-    inheritance.
--   AFAIK you can't raise exceptions in shell scripts.
--   Shell-Scripts tend to call a lot of subprocesses. Every call to grep, head, tail, cut creates a new process. This tends to get slow.
+- If an error happens in a shell script, the interpreter steps silently to the next line. Yes, I know you can use "set -e". But you don't get a stack trace. Without a stack trace, you waste a lot of time analyzing why this error happened.
+- AFAIK you can't do object-oriented programming in a shell. Often OOP is overkill, but sometimes it is really great.
+- AFAIK you can't raise exceptions in shell scripts.
+- It makes sense to use (or run) an application monitoring platform. For example "Shell" is not a [supported plattform of Sentry](https://docs.sentry.io/platforms/). If you configure it for your prefered environment once, then you get great error reporting in once place. Even if your small backup-script is only a three lines long shell script: It is unreliable, use a real language!
+- Shell-Scripts tend to call a lot of subprocesses. Every call to grep, head, tail, cut creates a new process. This tends to get slow.
     I have seen shell scripts that start thousands of processes per second.
     After re-writing them in Python they were 100 times faster and 100
     times more readable.
--   I do this "find ... | xargs" daily, but only while using the shell interactively. But what happens if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find
+- I do this "find ... | xargs" daily, but only while using the shell interactively. But what happens if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find
     .. | grep | xargs" does not work anymore... It is dirty and will never get clean.
--   Look at all the pitfalls: [Bash
+- Look at all the pitfalls: [Bash
     Pitfalls](https://mywiki.wooledge.org/BashPitfalls) My conclusion: I
     prefer to walk on solid ground, I don't write shell scripts anymore.
+- Even Crontab lines are dangerous. Look at this cron-job which should clean the directory of the temporary files:
 
-Even Crontab lines are dangerous. Look at this:
-
-> @weekly . \~/.bashrc && find \$TMPDIR -mindepth 1 -maxdepth 1 -mtime
-> +1 -print0 | xargs -r0 rm -rf
+> @weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
 
 Do you spot the big risk?
 
