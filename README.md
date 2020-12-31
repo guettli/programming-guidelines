@@ -3130,6 +3130,20 @@ debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging). This might help
 solution in 30 minutes. Take a break. Do something different, talk to a
 teammate or friend, take a small walk outside.
 
+### Being kind
+
+Imagine you ask a question in a forum and your question gets down-voted and this comment:
+
+> Hardware recommendations are off-topic at this site. 
+
+That's not kind, not friendly.
+
+But this is:
+
+> You can may be try [Hardware Recommendations](https://hardwarerecs.stackexchange.com/)
+
+Guideline: If you say "no", then at least provide a hint where he/she could find help.
+
 ### Be curious
 
 There is always something you have not understood. Ask
