@@ -1099,13 +1099,19 @@ as input data.
 
 From time to time you need to do text processing. Unfortunately, there
 are several regex flavors. My guide-line: Use PCRE. They are available
-in Python, Postfix, and many other tools. Don't waste time with other
+in Python, Postfix, in `grep -P` and many other tools. Don't waste time with other
 regex flavors, if PCRE is available.
 
 Current Linux distributions ship with a grep version which has the -P
 option to enable PCRE. AFAIK this is the only way to grep for special
 characters like the binary null: [How to grep for special
 character](https://superuser.com/a/612336/95878)
+
+### Use a password manager
+
+I use keepass. And sync it via Nextcloud.
+
+Don't forget to add the content of your ~/.ssh/id_rsa file to it. 
 
 ### CSV - Comma-separated values
 
