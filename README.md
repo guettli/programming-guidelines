@@ -1750,15 +1750,12 @@ where this warning comes from. You can use this solution:
 
 ### Avoid magic or uncommon things
 
--   hard links in Linux file systems.
--   file system ACLs (Access control lists). Try to use as little as
-    possible chmod/chown.
--   git submodules (Please use configuration management, deployment
-    tools, ...)
--   [seek()](https://en.cppreference.com/w/c/io/fseek). Stateless is better. If you use seek() the file position is a state. Sooner or later the position (state) will be wrong.
--   Scripts which get executed via OpenSSH
-    [ForceCommand](http://man.openbsd.org/OpenBSD-current/man5/sshd_config.5#ForceCommand)
-    or "command" in .ssh/authorized\_keys. SSH is not an API use http.
+- hard links in Linux file systems.
+- file system ACLs (Access control lists). Try to use as little as possible chmod/chown.
+- git submodules (Please use dependency management, configuration management, deployment, tools, ...)
+- [seek()](https://en.cppreference.com/w/c/io/fseek). Stateless is better. If you use seek() the file position is a state. Sooner or later the position (state) will be wrong.
+- Scripts which get executed via OpenSSH [ForceCommand](http://man.openbsd.org/OpenBSD-current/man5/sshd_config.5#ForceCommand) or "command" in .ssh/authorized_keys. SSH is not an API use http.
+- I think even [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are strange and outdated. Just some minutes ago I got confused because `grep -r foo .` did not show a result, but `grep foo ./my-dir/abc.txt` showed a result. Root-cause: `my-dir` was a symlink.
 
 ### Avoid writing a native GUI
 
