@@ -132,7 +132,11 @@ See heading.
 The famous quote "premature optimization is the root of all evil." is true.
 You can read more about this here [When to optimize](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize).
 
-First, get a [MVP (minimum valuable product)](https://en.wikipedia.org/wiki/Minimum_viable_product) to your customer, and then listen to their feedback. Care for their needs, not for your vision of a super performant application.
+### MVP
+
+You should know what an [MVP (minimum valuable product)](https://en.wikipedia.org/wiki/Minimum_viable_product) is. Building an MVP means to bring something useable to your customer, and then listen to their feedback. Care for their needs, not for your vision of a super performant application.
+
+Avoid i18n in MVP. German is my mother tongue. If I develop a MVP for German users, than I won't to i18n. This can be done later, if needed.
 
 ------------------------------------------------------------------------
 
