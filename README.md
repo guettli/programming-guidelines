@@ -1902,6 +1902,12 @@ too similar to "Authentication".
 Related question:
 <https://softwareengineering.stackexchange.com/questions/362350/synonym-for-authorization/363690#363690>
 
+Even the http-spec confuses both similar sounding words: 
+
+> There's a problem with 401 Unauthorized, the HTTP status code for authentication errors. And that’s just it: it’s for authentication, not authorization. Receiving a 401 response is the server telling you, “you aren’t authenticated–either not authenticated at all or authenticated incorrectly–but please reauthenticate and try again.
+
+Source: [403 Forbidden vs 401 Unauthorized HTTP responses](https://stackoverflow.com/questions/3297048/403-forbidden-vs-401-unauthorized-http-responses)
+
 General guidelines: Avoid [Homonyms](https://en.wikipedia.org/wiki/Homonym)
 
 ### Idempotence is great
