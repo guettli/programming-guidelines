@@ -774,6 +774,21 @@ See [premature optimization is the root of all evil](#premature-optimization-is-
 
 Make your life easy, use ORM.
 
+Example: [Django ORM "Filtering on a Subquery() or Exists() expressions"](https://docs.djangoproject.com/en/dev/ref/models/expressions/#filtering-on-a-subquery-or-exists-expressions). 
+
+```
+# Select all rows of the model Post, which have a comment which was created a day ago:
+
+one_day_ago = timezone.now() - timedelta(days=1)
+recent_comments = Comment.objects.filter(
+     post=OuterRef('pk'),
+     created_at__gte=one_day_ago,
+)
+
+Post.objects.filter(Exists(recent_comments))
+```
+For me above code is super easy to read.
+
 ### SQL is an API
 
 If you have a database-driven application and a third party tool wants
