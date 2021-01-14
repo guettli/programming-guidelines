@@ -1552,27 +1552,28 @@ holding hands :-)
 Related [Guideline of Google: Codereview "Tests"](
 https://google.github.io/eng-practices/review/reviewer/looking-for.html#tests)
 
+### pre-commit hook
+
+For basic syntax checking (aka linting) before commit I use [pre-commit](https://pre-commit.com/)
+
 ### aaa-tests (smoke tests)
 
-Do you want to check your source code before commit? Great initiative, you are on
-the right track. This source code checking is usually called [Linting](https://en.wikipedia.org/wiki/Linting).
+If you have a huge test-suite, which takes more than ten minutes to execute, then I recommend
+to flag some tests. I call these tests "aaa" tests. These tests should be fast and check the basic
+stuff. 
 
-Now you write a [git pre-commit hook](https://git-scm.com/docs/githooks#_pre_commit) as a shell script which does some magic checking/linting and you are
-happy.
-
-I think this has a draw-back. You created a second/redundant place where tests happen: In CI and in pre-commit hook.
-You invest your valuable time into the pre-commit hook, and finally, it might not get called.
-If you work in a team, likely, somebody does not use the pre-commit hook you created.
-
-That's why I suggest this: aaa-test. These tests pass quickly and check basic stuff. It is up to you
-how much want to do in these tests. Some basic linting, some basic unit-test, ... Then calls these
-tests during CI and can call them in your (optional) pre-commit hook. 
+This way you can check if most parts are all right before pushing code and triggering CI.
 
 Some call these "smoke tests".
 
-In most development environments you can execute tests by giving a part of the name. Example: `pytest -k aaa` executes all tests containing "aaa". 
-This has the benefit that you can add a new test anywhere you like. You don't need to register this somewhere.
+Why "aaa"?
 
+Most test runners allow you to execute all tests which match a certain pattern. I name the tests "test_aaa_...",
+and then I can easily run all these tests. Example: `pytest -k aaa`.
+
+Running all aaa-tests should take less then a minute
+
+But I don't call it automatically before each commit. 
 
 ### Creating test data is much more important than you initially think
 
