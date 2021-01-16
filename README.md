@@ -615,6 +615,10 @@ Reasons:
 
 Do you spot the big risk?
 
+Shell scripts are fine if they are conditionless. This means no "if", no "else", no "for".
+For example in a Dockerfile you can use "RUN ...." commands to create a custom image. But I would not call things like this a shell script. 
+It is just a sequence of commands to execute.
+
 ### Portable Shell Scripts
 
 I think writing portable shell scripts and avoiding bashism (shell
