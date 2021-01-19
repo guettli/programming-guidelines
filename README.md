@@ -2320,8 +2320,6 @@ Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all t
 
 Continuous Integration, Continuous Deployment
 
-Continuous Integration, Continuous Deployment
-
 ### Canary release
 
 
