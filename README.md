@@ -2486,21 +2486,16 @@ Operation. The last two characters of DevOp.
 
 ### Configuration Management
 
-Use a configuration management tool like Ansible.
+In the past configuration management tool like Ansible, SaltStack, Puppet or Chef
+where used. Roughly since 2020 they are less important.
 
-Use CI here, too. Otherwise, only a few people dare to make changes. And
-this means the speed of incremental evolution to a more efficient way
-will decreases.
+Configuration management is great for updating servers. But there are fewer
+servers these days which get updated. Code runs in containers. 
 
-I do not use RPM/DPKG to configure a system.
+To configure a container, you don't need fancy configuration management.
 
-Do you know why modern configuration management tools like Ansible use
-the term
-"[file.absent](https://docs.ansible.com/ansible/latest/modules/file_module.html)"
-and not "file.remove"?
-
-[Google search for "Declarative vs
-Imperative"](https://www.google.com/search?q=Declarative+vs+Imperative)
+A simple conditionless (no "if", no "else", no "for") shell script (with `set -e`) 
+is enough to create a container image.
 
 #### The magic reload feature of Config Management is not needed anymore
 
