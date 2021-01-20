@@ -868,6 +868,31 @@ Run only the tests of the code you touched `py.test -k my_keyword`.
 It's the job of automated CI (Continuous Integration) to run all tests.
 That's not your job.
 
+### Time is too short to care for "E302 expected 2 blank lines, found 1"
+
+Style Guide Enforcements (like [flake8 for Python](https://flake8.pycqa.org/en/latest/)) don't help much.
+
+Time is too short to manually make the style guide checker happy by 
+editing the source code.
+
+>  E302 expected 2 blank lines, found 1
+
+I don't want to waste my time with "errors" like above. This is no error.
+The code is great and makes the customer happy.
+
+Reading the message, understanding it, opening the file, editing it, re-runing
+the checker .... No, this is not productive.
+
+The solution is (like almost always) **automation**
+
+Style guide enforcement does not help.
+
+Automated source code styling helps.
+
+Unfortuantely this is not solved yet.
+
+For the Python there is [black](https://github.com/psf/black), but it is not ready yet.
+
 ### CI
 
 Use continuous integration. Only tested code is allowed to get deployed.
