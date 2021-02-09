@@ -693,6 +693,20 @@ again wastes a lot of CPU time. You can see this with the command line tool `top
 If the `sy` value is high, then your server is busy starting new processes. A library is
 way more efficient, since you don't start new processes again and again.
 
+### Shell Scripts are ok, if ...
+
+Shell Scipts are ok, if they are conditionless: No "if", no "else", no "for".
+
+For example creating containers with one or several `RUN ...` commands is ok.
+
+I use this heading, to ensure that the script stops if something is wrong:
+
+```
+#!/bin/bash
+set -euxo pipefail
+...
+```
+
 ### Avoid toilet paper programming (wrapping)
 
 What is "toilet paper programming"? This is a pattern which was often
