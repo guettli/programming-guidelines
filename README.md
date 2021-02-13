@@ -913,8 +913,11 @@ Use continuous integration. Only tested code is allowed to get deployed.
 This needs to be automated. Humans make more errors than automated
 processes.
 
-I documented how to set up Github commit, Travis CI, bumpversion, Upload
-to PyPI: <https://github.com/guettli/github-travis-bumpversion-pypi>
+Github Actions are great.
+
+Increasing the version number can be done with [BumpVer](https://pypi.org/project/bumpver/) which
+can use [Calendar Versioning](https://calver.org/) (for example YYYY.MM.X)
+
 
 All I need to do is to commit. All other steps are automated :-)
 
@@ -2432,6 +2435,10 @@ And software? Some associate with stability "peace of mind", I associate with st
 If you still think Semantic Versioning is useful, then please read [Philosophy of Abseil](https://abseil.io/about/philosophy)
 
 Related: [Does SemVer work?](https://books.google.de/books?id=V3TTDwAAQBAJ&pg=PA445&dq=does%20semver%20work) [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/)
+
+So if not SemVer, what else? 
+
+I like [Calendar Versioning](https://calver.org/) with [BumpVer](https://pypi.org/project/bumpver/).
 
 ------------------------------------------------------------------------
 
