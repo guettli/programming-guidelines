@@ -1546,6 +1546,59 @@ That's all: Instead of hard-coded dependencies, you provide a way to configure y
 red, green, refactor. More verbose: make the test fail, make the test
 pass, refactor (simplify) code.
 
+### Extract Method to get full coverage
+
+Imagine you have a method like this:
+```
+def my_method(a, b, c):
+    # ten 
+    # lines
+    # of 
+    # code
+    
+    if a > b:
+        # ....
+        
+    # again
+    # ten
+    # lines 
+    # of 
+    # code
+```
+
+One thing is 100% sure: You can get full coverage with one test. You would
+need to call the method twice: Once with `a > b` and once with opposite.
+
+But you don't want to call this method twice, since useless executing
+of the code above and below the "if" statementent. You want to avoid
+that you test suite gets too big and too slow.
+
+Maybe you could extract the condition into an new method:
+
+```
+def my_method(a, b, c):
+    # ten 
+    # lines
+    # of 
+    # code
+    
+    d = handle_case_foo(a, b)
+        
+    # again
+    # ten
+    # lines 
+    # of 
+    # code
+
+def handle_case_foo(a, b):
+    if a > b:
+        return ...
+    return ...
+```
+
+This way you can test `my_method()` with one test, and you can write
+a small test for `handle_case_foo()`.
+
 ### From bug to fix
 
 First, make your bug reproducible. If it is reproducible, then it is easy
