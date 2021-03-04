@@ -2493,6 +2493,48 @@ So if not SemVer, what else?
 
 I like [Calendar Versioning](https://calver.org/) with [BumpVer](https://pypi.org/project/bumpver/).
 
+### List of API Types
+
+#### IPC
+[IPC (Inter-Process Communication](https://en.wikipedia.org/wiki/Inter-process_communication)
+
+For example you can configure an Nginx webserver to talk to your Python code via an unix-domain socket. Or you can access your PostgreSQL database running on localhost via an unix-domain socket.
+
+#### Command line
+
+Command line tools are like an API. The command receives structured input and creates output.
+
+#### TCP/UDP
+
+For example Wireguard uses UDP to create a VPN.
+
+### http based 
+
+RESTful
+
+grpc
+
+#### Library
+
+A library can provide methods which you can use. For example the Python Standard Library provides many usefull methods which make your live easier.
+
+### GraphQL / SQL
+
+I have not found a matching generic term for this.
+
+#### Conclusion?
+
+Most people think "API" mean "http". But that's not true. 
+
+For me, as a developer a library provides more value than an http API.
+
+For example: Reducing the size of an image. If I have library which reduces
+the size of an image, I have a handy tool. An http API which provides me
+this services is not that easy. I need bandwith, what happens if the service is down,
+I need to pay the bill for the service, ....
+
+
+
 ------------------------------------------------------------------------
 
 ## 4. Remote APIs
