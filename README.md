@@ -1753,6 +1753,16 @@ This is the way to avoid flaky tests:
 This blog from [Google Testing Blog "Hermetic Servers"](https://testing.googleblog.com/2012/10/hermetic-servers.html) explains it in-depth: 
 End-to-End tests are faster and less flaky if they run on localhost and don't need other resources.
 
+This usualy means:
+
+* The database is running on localhost
+* storage server (S3) is running on localhost or in-memory
+* Cache Server (Redis) is running on localhost or in-memory.
+
+For storage and cache it is easy to find an in-memory solution (for Django [dj-inmemorystorage](https://github.com/waveaccounting/dj-inmemorystorage),
+but for the database it is more difficult. My opinion: Use PostgreSQL during development.
+Don't use SQLite, since it does not support all features of PostgreSQL.
+
 ### Unit-Tests may use the ORM.
 
 Imagine you use a framework that provides you a nice ORM to create, read, update, and delete your data.
