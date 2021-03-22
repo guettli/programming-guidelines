@@ -849,13 +849,13 @@ mercurial, CVS, darcs, bazaar) can be considered "dead". See
 ### Avoid long-living branches
 
 Avoid long-living branches in your git repos. The more time that passes,
-the less likely is that your work will ever get merged. For me two weeks
-are ok, but five weeks are too long.
+the less likely is that your work will ever get merged. For me one week
+is ok, but three weeks are too long.
 
 Ten lines of improvement that get pushed to master today have much more value
 than 1000 lines which are in a branch which will never get pushed to master.
 
-Trunk based development goes further. Here you hardly work with branches.
+Trunk based development goes further. Sounds good:
 
 > ... each developer divides their work into small batches and merges that 
 > work into the trunk at least once (and potentially several times) a day.
