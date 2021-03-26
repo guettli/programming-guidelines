@@ -3228,6 +3228,15 @@ other people won't understand you. It is not funny, it is confusing and childish
 Avoid [bike-shedding](https://exceptionnotfound.net/bikeshedding-the-daily-software-anti-pattern/). Please read this link. It is fun.
 After you read this, you will see it happen again and again.
 
+Examples: "Should we switch to microservices?". This question is very broad and almost every enganged developer has his own opinion. This is a great topic for general blublublabla which might just eat your time without improving the customer satisfaction. 
+
+You can make it much more actionable by asking three questions: 
+
+* Which part of our could would be a good candidate for a microservice?
+* What are the benefits and draw-backs?
+* How to implement this particular change?
+
+
 ### S/N
 
 [S/N](https://en.wikipedia.org/wiki/Signal-to-noise_ratio) means "Signal-to-noise ratio". It is a measure used in science and engineering that compares the level of the desired signal to the level of background noise. But it can be used for reflecting on his input, too.
