@@ -54,6 +54,8 @@ down (to keyboard) and up (to monitor) several hundred times per day.
 This saves a lot of energy. This is a simple tool to help you to learn touch typing:
 [tipp10](https://www.tipp10.com/en/)
 
+Measure your typing speed: [10fastfingers.com](//10fastfingers.com/)
+
 Avoid switching between mouse and keyboard too much.
 
 I like Lenovo keyboards with track point. If you want the track point to
