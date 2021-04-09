@@ -991,6 +991,17 @@ I like to use task-queues, and write my code in a very predictable single-thread
 single-process synchronous way.
 
 
+[Hick's Law](https://en.wikipedia.org/wiki/Hick%27s_law):
+
+> increasing the number of choices will increase the decision time logarithmically.
+ 
+Everytime I need to deal with async or task-queues (like celery or rq) my output decreases.
+There are so many ways to handle parallelism. Now you could argue: "Thomas, parallelism is not the problem. The problem is that you are too stupid."
+Maybe this is correct. Maybe I am too stupid. I guess I am just an medicore developer.
+My experience is that the environment should be optimized for medicore (normal) people. This will provide the best result.
+Thus my rule of thumb: keep it simple and try to avoid Threads, Async and all this parallel computing.
+
+
 ### Functions should return values, Not Promises.
 
 Especially in JavaScript, functions often return [Promises](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise).
