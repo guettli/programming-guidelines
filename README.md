@@ -997,7 +997,7 @@ single-process synchronous way.
  
 Everytime I need to deal with async or task-queues (like celery or rq) my output decreases.
 There are so many ways to handle parallelism. Now you could argue: "Thomas, parallelism is not the problem. The problem is that you are too stupid."
-Maybe this is correct. Maybe I am too stupid. I guess I am just an medicore developer.
+Maybe this is correct. Maybe I am too stupid (or not familiar with this topic). I guess I am just an medicore developer.
 My experience is that the environment should be optimized for medicore (normal) people. This will provide the best result.
 Thus my rule of thumb: keep it simple and try to avoid Threads, Async and all this parallel computing.
 
