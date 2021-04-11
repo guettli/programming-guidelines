@@ -1664,6 +1664,14 @@ holding hands :-)
 Related [Guideline of Google: Codereview "Tests"](
 https://google.github.io/eng-practices/review/reviewer/looking-for.html#tests)
 
+### 80% unit-tests
+
+* 80% unit-tests
+* 15% integration tests
+* 5% end-to-end tests
+
+From [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/)
+
 ### pre-commit hook
 
 For basic syntax checking (aka linting) before commit I use [pre-commit](https://pre-commit.com/)
