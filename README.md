@@ -60,7 +60,7 @@ Avoid switching between mouse and keyboard too much.
 
 I like Lenovo keyboards with track point. If you want the track point to
 have more grip you can use sandpaper. Here is an image to illustrate
-what I use [sandpaper-sticked-on-track-point.jpg](https://raw.githubusercontent.com/guettli/programming-guidelines/master/sandpaper-sticked-on-track-point.jpg)
+what I use [Sandpaper glued on Track Point](https://raw.githubusercontent.com/guettli/programming-guidelines/master/sandpaper-glued-on-track-point.jpg)
 
 Once I was fascinated by the copy+paste history of Emacs and PyCharm.
 But then I thought to myself: "I want more. I am hungry. I want a
