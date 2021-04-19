@@ -3322,7 +3322,15 @@ Template:
 
 Source: [adr.github.io](https://adr.github.io/)
 
+### Missing Docs Process
 
+Every company has processes. Only few companies have a clear process for missing or outdated docs.
+
+Start the discussion about it, and raise awareness. What should you do if you are missing docs?
+
+How to find the owner of the current documentation you are looking at?
+
+How to contact the owners to give them feedback?
 
 
 ------------------------------------------------------------------------
