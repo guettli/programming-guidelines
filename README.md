@@ -2578,6 +2578,23 @@ I need to pay the bill for the service, ....
 
 ## 4. Remote APIs
 
+### Don't split Backend and Frontend
+
+Don't split frontend and backend into two seperare git repos. This will make things more
+complicated and will slow down your development.
+
+Soon your frontend code will need a change in the backend. If you have one git repo, then
+you don't need to handle the dependency. You can be sure if the changes in the backend
+and the changes in the frontend get into the main branch in one Pull-Request, then
+you don't need to handle the dependency.
+
+If you have two independent git repos, than you need to handle the dependency somehow. This 
+is a interesting task. I guess some developers will like this challenge. They will invest
+a lot of time, energy and emotions into this interesing task ..... And the clock on the
+wall goes tick-tack-tick-tack. And you customers won't notice and won't honor all the effort.
+
+I think you gain nothing if you split the backend code and the frontend code.
+
 ### Use http, avoid ftp/sftp/scp/rsync/smb/mail
 
 Use http for data transfer. Avoid the old ways
