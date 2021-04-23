@@ -2440,6 +2440,14 @@ You confuse newcomers if your development branch has a different name. If you ca
 
 Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all the coding in the "development" branch. The master branch was not updated for three years. I thought this project was dead. The maintainer was upset because he recently pushed changes into this branch. See [issue #9](https://github.com/sergeyksv/tinelic/issues/9#issuecomment-558557925)
 
+### monorepo != monolith
+
+Using a [monorepo](https://en.wikipedia.org/wiki/Monorepo) can be handy. You have one git repository which contains several projects.
+
+This does not mean you need to run a [monolithic application](https://en.wikipedia.org/wiki/Monolithic_application).
+
+
+
 ------------------------------------------------------------------------
 
 ## 4. CI/CD
