@@ -1726,8 +1726,15 @@ I don't see why a special library for creating test data is needed. If
 you use an ORM in your production code, then use the ORM to create your
 test data.
 
-In Python/Django I use cached-properties and
-MyModel.objects.update\_or\_create(...) to create the test data.
+### How to create QA and staging systems?
+
+Many teams create the QA and staging systems by copying the production system.
+
+This works, but I think it is better to create these systems from code stored in
+version control.
+
+Creating a test system via code looks complicated at first, but it helps you to create
+reliable, reproducible systems. This makes you faster in the long run.
 
 ### This is untestable code
 
