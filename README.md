@@ -2664,6 +2664,11 @@ mails. But it is unlikely that mails get lost.
 
 I know this conflicts with the general guideline "avoid polling".
 
+### Don't do Virus/Malware/Spam detection
+
+Virus/Malware/Spam detection and prevention is an endless battle. It will take a lot of time
+to do it properly. So if possible, avoid the responsibilty for it. Except
+is is your main task and you have customers who are willing to pay.
 
 ------------------------------------------------------------------------
 
