@@ -1105,7 +1105,7 @@ Look at the actual code which does something. I used five lines with
 complex. The "return" simplifies the code. For me, the second version is
 much easier to read.
 
-For Python there exists a "complexity checker": [check McCabe complexity](https://pypi.org/project/mccabe/).
+For Python there exists a "complexity checker": [radon](https://pypi.org/project/radon/).
 
 ### Source code vs generated code
 
