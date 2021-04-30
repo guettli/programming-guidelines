@@ -2525,6 +2525,23 @@ does not work anymore. You have the explicit input and the indirect input from t
 
 If you can avoid conditions, then do it. Conditionless is the goal.
 
+### Avoid to catch all exceptions
+
+This is good:
+
+```
+try:
+   something()
+except SpecificException as exc:
+   ...
+```
+
+The try..except block is small.
+
+The `except` catches a specific exception.
+
+Don't catch all exception. More about this in [The Most Diabolical Python Antipattern](https://realpython.com/the-most-diabolical-python-antipattern/)
+
 ### Live at head
 
 [Semantic Versioning (SemVer)](https://semver.org/) is well-known because it promises stability. But why do applications like Google Chrome or Firefox just push the first number? At the moment I use Chromium 87.0.4280.88, and soon I will use Version 88.x.y.z.
