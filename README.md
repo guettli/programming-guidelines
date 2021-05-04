@@ -170,6 +170,7 @@ I don't like NoSQL, except for caching (simple key-value DB).
 The [PostgreSQL Documentation](https://www.postgresql.org/docs/current/index.html) contains
 an introduction to SQL and is easy to read.
 
+If you want to share small SQL snippets, you can use https://dbfiddle.uk/
 
 ### Cardinality
 
