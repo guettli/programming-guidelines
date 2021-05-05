@@ -847,6 +847,7 @@ For version control of software, I use git. I think all other tools (svn,
 mercurial, CVS, darcs, bazaar) can be considered "dead". See
 [StackOverflow TagTrend](http://sotagtrends.com/?tags=git+svn+mercurial+cvs+darcs+bazaar)
 
+The only exception to the rule "use git" is Google. They use their [own gigantic monorepo](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext). 
 
 
 ### Avoid long-living branches
