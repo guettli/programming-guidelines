@@ -2386,6 +2386,11 @@ Continuous Integration is nowadays done by almost everybody. But Continuous Depl
 Push it! If you are able to release daily your development speed will increase, and you
 have less pressure that a change did not make it into the current release.
 
+And if something brakes, than your change set which I need to debug is much smaller. 
+
+Since you can't release native apps daily, I avoid to develop native apps.
+
+
 ### Misc
 
 -   [Rough consensus and running code](https://en.wikipedia.org/wiki/Rough_consensus)
