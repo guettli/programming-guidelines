@@ -2377,12 +2377,18 @@ for one customer, you miss the great benefit of software: You can write
 it once and make several customers happy. Of course, every business
 starts small. But try to create a re-usable product soon.
 
+# Release daily.
+
+[Release early, release often](https://en.wikipedia.org/wiki/Release_early,_release_often)
+
+Continuous Integration is nowadays done by almost everybody. But Continuous Deployment not.
+
+Push it! If you are able to release daily your development speed will increase, and you
+have less pressure that a change did not make it into the current release.
+
 ### Misc
 
--   [Release early, release
-    often](https://en.wikipedia.org/wiki/Release_early,_release_often)
--   [Rough consensus and running
-    code.](https://en.wikipedia.org/wiki/Rough_consensus)
+-   [Rough consensus and running code](https://en.wikipedia.org/wiki/Rough_consensus)
 
 ### Background tasks should preserve Buffer Cache State
 
