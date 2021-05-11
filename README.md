@@ -1275,6 +1275,8 @@ what's written there, and they will say "it is ok".
 
 My solution: resubmission: Read the text again 30 days later.
 
+A good example is [gVisor](https://github.com/google/gvisor) the README starts with "What is gVisor?" and "Why does gVisor exist?"
+
 ### Canonical docs
 
 Look at the question concerning OpenSSH options at the Q+A site [serverfault.com](https://serverfault.com/).
