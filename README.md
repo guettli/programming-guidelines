@@ -1402,6 +1402,7 @@ If you are managing a project: Care for newcomers. Provide them with
 guidelines. But don't reinvent docs. Provide links to the relevant
 upstream docs, if you just use a piece of software.
 
+
 ### Good example for "care for newcomers"
 
 > Writing plugins
@@ -1561,6 +1562,7 @@ That's all: Instead of hard-coded dependencies, you provide a way to configure y
 
 red, green, refactor. More verbose: make the test fail, make the test
 pass, refactor (simplify) code.
+
 
 ### Extract Method to get full coverage
 
@@ -1875,6 +1877,15 @@ Tests should be straight forward:
 > 1.  Build environment: Data structures, ...
 > 2.  Run the code which operates on the data structures
 > 3.  Ensure that the output is like you want it to.
+
+### Code Review: Start to look at the tests first
+
+If I do a code review, I like to look at the tests first. This hides
+the implementation from my eyes and shows how the method get used.
+
+A clean interface is more important than a clean implementation. The
+implementation can get refactored easily. The interface is harder to change,
+since in most cases all usages of the interface need to be updated.
 
 ### Don't search the needle in a haystack. Inject dynamite and let it explode
 
