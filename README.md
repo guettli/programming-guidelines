@@ -2363,11 +2363,13 @@ If you use Django, you can use the [ManifestStaticFilesStorage](https://docs.dja
 
 A good introduction to caching: [Caching (Mozilla Foundation)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
-### Robust Cache-Invalidation
+### Robust Cache-Invalidation: Database Index
 
 A database index is like caching: Redundant data gets created to achieve faster lookups.
 
-If possible, use this robust caching and cache-invalidation provided by databases instead of creating your implementation.
+If possible, use this robust caching and cache-invalidation provided by a database index instead of creating your implementation.
+
+Related: https://www.postgresql.org/docs/current/indexes-expressional.html
 
 ### CDN for private data?
 
