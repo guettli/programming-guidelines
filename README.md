@@ -1738,7 +1738,7 @@ I don't see why a special library for creating test data is needed. If
 you use an ORM in your production code, then use the ORM to create your
 test data.
 
-### No funny stuff in test data
+### No jokes in test data
 
 It is tempting to use some funny names and jokes in test data, since customers won't see this.
 
@@ -1835,6 +1835,7 @@ For me, it is 100% ok if unit-tests use the ORM.
 In other words: Only mock away things that take too long or things that need resources
 which are not available (e.g. an SMTP server).
 
+Related Podast: [Don't Mock your Database (Jeff Triplett)](https://testandcode.com/154)
 ### Is config code or data?
 
 The heading "Is config code or data?" could be phrased as "config: DB or git?", too.
