@@ -1157,6 +1157,11 @@ the input and your script.
 You can store "foo" in a cache to improve performance. But do not store
 it permanently. Don't make a backup of it.
 
+Don't store automatically created data in your database. Instead re-calculate the data again
+and again. Maybe a
+[Materialized View (PostgreSQL)](https://www.postgresql.org/docs/current/rules-materializedviews.html) helps
+you do improve speed.
+
 A term that is often a hint to this anti-pattern is "generator". Yes,
 you can generate a lot of data. But this bloated, generated data is just hot air with
 little value.
