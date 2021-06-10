@@ -3698,20 +3698,25 @@ I think it helps to write a diary. Sitting down and writing about the
 last days help you to reflect on the things you did. It helps you to focus
 on your goals. Do you have goals? I found out that late (age of 40). A
 diary is fun to read several months later. I try to do it at least once
-a week. I have three types of diaries.
+a week. I have several of diaries.
 
 One on Facebook readable for everyone. It contains things from my daily
 life, written in german. <https://www.facebook.com/thomas.guttler.52>
 
-There is one on google-plus which contains IT topics (open source,
-python, Linux, PostgreSQL), written in English and readable by everyone.
-<https://plus.google.com/112821159206665920618>
-
+There is one on twitter which contains IT topics (open source,
+Python, Django, Linux, PostgreSQL), written in English and readable by everyone.
+[@guettli](https://twitter.com/guettli)
+    
 And there is a private which I maintain with Anki. Anki is a flashcard
 app. The front side is the question and the backside is the answer. I
 use the first side for the date and one to three words, and the backside contains the text. This way I can ask myself what was on my mind
 these days. But all this should be fun, not a burden.
 
+To relax and enjoy my emotions at work I have a private document with the heading "Grrr and Smile". I 
+use it to write down things I like and dislike. This doc is handy for a feedback call with your manager.
+If the same (negative) topic raises again and again, then it is time for a change.
+    
+    
 ### The Bus factor
 
 From Wikipedia: The bus factor is a measurement of the risk resulting
