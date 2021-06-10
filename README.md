@@ -1542,7 +1542,7 @@ Of course, this is opinionated, and it is 100% ok if you prefer the OOP-way and 
 
 For me, the term [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and the corresponding Wikipedia article are way too complicated.
 
-For me, it is just "Configuration". But some people don't like it simple, they prefer .... (I removed this since it was provocative. Feel free to add your favorite terms here)
+For me, it is just "Configuration". But some people don't like it simple, they prefer .... (I removed this phrase since it was provocative. Feel free to add your favorite phrase here)
 
 From Wikipedia "Dependency injection"
 
@@ -1562,6 +1562,8 @@ DATABASES = {
 ```
 
 That's all: Instead of hard-coded dependencies, you provide a way to configure your software.
+
+I avoid the term "Dependency injection", since it is unclear to me.
 
 ### Test-Driven Development
 
