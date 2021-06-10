@@ -1736,6 +1736,16 @@ I don't see why a special library for creating test data is needed. If
 you use an ORM in your production code, then use the ORM to create your
 test data.
 
+### No funny stuff in test data
+
+It is tempting to use some funny names and jokes in test data, since customers won't see this.
+
+Nevertheless: Don't do it.
+
+For you it is funny, and for new team members it might be just confusing.
+
+Keep it obvious, use "Dummy name" or something like this. This reduces cognitive load in the long run.
+
 ### How to create QA and staging systems?
 
 Many teams create the QA and staging systems by copying the production system.
