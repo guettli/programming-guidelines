@@ -491,6 +491,14 @@ and should be avoided.
 
 For commands called via the command line it is the same: I prefer command line arguments instead of environment variables.
 
+Imagine you have a typo in the environment variable name. A dirty shell script will use an empty string and it is likely that
+it will do something wrong. Compare this to a script: If you have a typo in the argument for the command, it will fail and tell
+you that the given argument is unknown.
+
+A shell script might make you faster during the first 10 minutes. But it will make you slower in the long run. 
+
+Writing a Python script with `argparse` takes longer, but will provide you much more reliablity.
+
 I know [12factor App](https://12factor.net/):
 
 > III. Config
