@@ -478,6 +478,30 @@ If the same code works in one environment, but not in a different environment, a
 then this tool might help: [dumpenv](https://github.com/guettli/dumpenv) it writes the environment to
 a list of files, which you can compare with your favorite diff tool (e.g. Meld).
 
+### Environment variables for conditions?
+
+Environment variables are great for providing applications/containers values for database connection strings, URL 
+to a storage server ...
+
+As soon as an environment variable is used in a condition like `if $FOO equals "BAR", then ... else ...`, then
+it is some kind of magic input.
+
+I prefer "clear" input: For a http request this means the GET/POST data. Using the http header is some kind of magic,
+and should be avoided.
+
+For commands called via the command line it is the same: I prefer command line arguments instead of environment variables.
+
+I know [12factor App](https://12factor.net/):
+
+> III. Config
+>
+> Store config in the environment
+
+I agree with connection URLs and passwords/keys/tokens which connect the app to the environment. But if the
+configuration influences the behaviour, then I think traditional configuration or configuration stored in a database
+makes more sense.
+
+
 
 
 ### Zen of Python
