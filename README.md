@@ -478,7 +478,7 @@ If the same code works in one environment, but not in a different environment, a
 then this tool might help: [dumpenv](https://github.com/guettli/dumpenv) it writes the environment to
 a list of files, which you can compare with your favorite diff tool (e.g. Meld).
 
-### Environment variables for conditions?
+### Environment variables for configuration?
 
 Environment variables are great for providing applications/containers values for database connection strings, URL 
 to a storage server ...
@@ -509,7 +509,9 @@ I agree with connection URLs and passwords/keys/tokens which connect the app to 
 configuration influences the behaviour, then I think traditional configuration or configuration stored in a database
 makes more sense.
 
+For connection-URL and passwords the data type is easy: It is a string.
 
+But you configuration needs booleans or other data types, then environment variables are not well suited.
 
 
 ### Zen of Python
