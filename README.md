@@ -2611,6 +2611,16 @@ I like [Calendar Versioning](https://calver.org/) with [BumpVer](https://pypi.or
 
 ### List of API Types
 
+#### Client: Human or machine-to-machine?
+
+You create applications? You create a server. Whom do you serve? 
+
+There is a huge difference between creating an API for a GUI for humans and an API for a machine-to-machine communication.
+
+An machine-to-machine API needs to be stable. If you create a new version, you usualy support the old version for some months in parallel to the new API.
+
+If you create a GUI, then you do fancy things like A/B testing.
+
 #### IPC
 [IPC (Inter-Process Communication](https://en.wikipedia.org/wiki/Inter-process_communication)
 
