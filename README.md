@@ -1316,6 +1316,12 @@ My solution: resubmission: Read the text again 30 days later.
 
 A good example is [gVisor](https://github.com/google/gvisor) the README starts with "What is gVisor?" and "Why does gVisor exist?"
 
+### Test your docs
+
+Keeping your docs in the same git repo like your code makes sense. This has the benefit that you have a review and testing process.
+
+Integrate automated spell checking into the CI process.
+
 ### Canonical docs
 
 Look at the question concerning OpenSSH options at the Q+A site [serverfault.com](https://serverfault.com/).
