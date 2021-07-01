@@ -3426,6 +3426,27 @@ You can make it much more actionable by asking three questions:
 * What are the benefits and draw-backs?
 * How to implement this particular change?
 
+# Cargo Culting
+
+[Cargo Culting](https://en.wikipedia.org/wiki/Cargo_cult_programming) is everywhere:
+
+* Scrum
+* Fat JS frontends which consume JSON APIs (React, Vue)
+* Microservices
+
+[You ain't gonna need it (YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
+
+About Microservices: 
+
+> #1 rule of distribute computing: Don’t distribute your computing! At least if you can in any way avoid it.
+
+Source: [The Majestic Monolith](https://m.signalvnoise.com/the-majestic-monolith/)
+
+What to do instead?
+
+Make customers happy, don't beautify your tech. Under the hood every machine is ugly. That's ok, as long it works reliably.
+Invent new stuff instead of beautifing internals.
+
 
 ### S/N
 
