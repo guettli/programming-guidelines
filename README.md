@@ -2055,7 +2055,10 @@ Then learn other topics: PostgreSQL, Configuration management,
 continuous-integration, organizing, teamwork, learn to play a musical
 instrument, long-distance running, family
 
-### Learn "git bisect"
+
+### git 
+
+#### Learn "git bisect"
 
 "git bisect" is a great tool in conjunction with unit tests. It is easy
 to find the commit, which introduced an error. Unfortunately, it is not a
@@ -2073,6 +2076,15 @@ Author: ...
 
 But if your pull-requests get tested before they get merged, then you
 hardly need "git bisect".
+
+##### git diff main...
+
+What was changed on the branch since the branch was created?
+
+```
+git diff main...
+```
+
 
 ### Avoid Conditional Breakpoints
 
