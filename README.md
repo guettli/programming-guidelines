@@ -3448,7 +3448,7 @@ What to do instead?
 Make customers happy, don't beautify your tech. Under the hood every machine is ugly. That's ok, as long it works reliably.
 Don't beautifying internals. Improve customer experience, raise test coverage, automate boring stuff. 
 
-### Limitations of Pull-Request Reviews
+### Dark side of Pull-Request Reviews
 
 Pull-Request reviews have limitations
 
@@ -3467,6 +3467,15 @@ I think PR-Review should follow these rules:
 * Usualy one review is enough. Two reviews should only be used for special cases.
 * Larger changes should be reviewed in a video call with two or three people. But not more than four people. These calls are usualy very productive.
 
+Imagine you are developer and you spot a tiny typo. Will you change it or not? It depends on:
+
+* it depends on your emotions. Do you feel connected to the code and to the other team members?
+* the process: is it easy to fix this tiny thing?
+
+The more fear people have that developers could break something, the more processes exist.
+This means it is less likely is that the developer will fix this tiny thing.
+This means in the long run the code will be dirty. This means people who care and are clever and creative will soon leave the company.
+Only developers which don't care will stay.
 
 
 ### S/N
