@@ -3426,13 +3426,14 @@ You can make it much more actionable by asking three questions:
 * What are the benefits and draw-backs?
 * How to implement this particular change?
 
-# Cargo Culting
+### Cargo Culting
 
 [Cargo Culting](https://en.wikipedia.org/wiki/Cargo_cult_programming) is everywhere:
 
 * Scrum
 * Fat JS frontends which consume JSON APIs (React, Vue)
 * Microservices
+* Forced Pull-Request reviews
 
 [You ain't gonna need it (YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
 
@@ -3446,6 +3447,27 @@ What to do instead?
 
 Make customers happy, don't beautify your tech. Under the hood every machine is ugly. That's ok, as long it works reliably.
 Don't beautifying internals. Improve customer experience, raise test coverage, automate boring stuff. 
+
+### Limitations of Pull-Request Reviews
+
+Pull-Request reviews have limitations
+
+* the person doing a PR review is not able to create new stuff during this time. He/she is blocked.
+* PR review can't detect code duplication. If you look at a PR, you have no clue if the lines which where added where written or copied.
+
+You think PR-Review is important?
+
+Please grab a pen and write down your reasons.
+
+Now have a look at your list of fear and concerns. What can be automated?
+
+I think PR-Review should follow these rules:
+
+* If a developer thinks a PR needs to review, then dev should be allowed to push without a review.
+* Usualy one review is enough. Two reviews should only be used for special cases.
+* Larger changes should be reviewed in a video call with two or three people. But not more than four people. These calls are usualy very productive.
+
+
 
 ### S/N
 
