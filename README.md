@@ -3445,8 +3445,7 @@ Source: [The Majestic Monolith](https://m.signalvnoise.com/the-majestic-monolith
 What to do instead?
 
 Make customers happy, don't beautify your tech. Under the hood every machine is ugly. That's ok, as long it works reliably.
-Invent new stuff instead of beautifing internals.
-
+Don't beautifying internals. Improve customer experience, raise test coverage, automate boring stuff. 
 
 ### S/N
 
