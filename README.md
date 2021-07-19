@@ -2077,7 +2077,11 @@ Author: ...
 But if your pull-requests get tested before they get merged, then you
 hardly need "git bisect".
 
-##### git diff main...
+##### git diff
+
+Imagine you work on a branch which is a pull-request.
+
+You want to see all changes of your pull-request.
 
 What was changed on the branch since the branch was created?
 
@@ -2085,6 +2089,13 @@ What was changed on the branch since the branch was created?
 git diff main...
 ```
 
+Unfortunately this does not show your local changes, which are not committed yet.
+
+To see them, too:
+
+```
+git diff $(git merge-base master)
+```
 
 ### Avoid Conditional Breakpoints
 
