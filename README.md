@@ -2094,7 +2094,7 @@ Unfortunately this does not show your local changes, which are not committed yet
 To see them, too:
 
 ```
-git diff $(git merge-base master)
+git diff $(git merge-base master HEAD)
 ```
 
 ### Avoid Conditional Breakpoints
