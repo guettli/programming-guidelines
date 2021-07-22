@@ -890,8 +890,8 @@ Avoid long-living branches in your git repos. The more time that passes,
 the less likely is that your work will ever get merged. For me one week
 is ok, but three weeks are too long.
 
-Ten lines of improvement that get pushed to master today have much more value
-than 1000 lines which are in a branch which will never get pushed to master.
+Ten lines of improvement that get pushed to main today have much more value
+than 1000 lines which are in a branch which will never get pushed to main.
 
 Trunk based development goes further. Sounds good:
 
@@ -2094,7 +2094,7 @@ Unfortunately this does not show your local changes, which are not committed yet
 To see them, too:
 
 ```
-git diff $(git merge-base master HEAD)
+git diff $(git merge-base main HEAD)
 ```
 
 ### Avoid Conditional Breakpoints
@@ -2549,11 +2549,11 @@ There are commercial tools and some open-source tools.
 
 For Python, there is [py-spy](https://github.com/benfred/py-spy) to dump the stack traces. The dumps can get analyzed by [speedscope](https://github.com/jlfwong/speedscope).
 
-### Use "master" for development
+### Use "main" for development
 
-You confuse newcomers if your development branch has a different name. If you call the development branch "master", then all introduction material at Github does apply. And if your code is at Github, all people can see that your project is still alive, since the master branch gets displayed per default.
+You confuse newcomers if your development branch has a different name. If you call the development branch "main", then all introduction material at Github does apply. And if your code is at Github, all people can see that your project is still alive, since the main branch gets displayed per default.
 
-Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all the coding in the "development" branch. The master branch was not updated for three years. I thought this project was dead. The maintainer was upset because he recently pushed changes into this branch. See [issue #9](https://github.com/sergeyksv/tinelic/issues/9#issuecomment-558557925)
+Anecdote: The [tinelic](https://github.com/sergeyksv/tinelic/) project did all the coding in the "development" branch. The main branch was not updated for three years. I thought this project was dead. The maintainer was upset because he recently pushed changes into this branch. See [issue #9](https://github.com/sergeyksv/tinelic/issues/9#issuecomment-558557925)
 
 ### monorepo != monolith
 
