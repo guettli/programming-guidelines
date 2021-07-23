@@ -3424,6 +3424,9 @@ the only one who is not laughing. It is up to you how to react. Be patient.
 Same for irony and sarcasm. You and your friends might think it is funny. New team members and
 other people won't understand you. It is not funny, it is confusing and childish.
 
+What can you do if your team mates complain and laugh about customers daily? If you are an employee, then it easy. You can leave. And maybe
+you should leave. Laughing and complaining about customers is the beginning of the end.
+
 ### Avoid bike-shedding
 
 Avoid [bike-shedding](https://exceptionnotfound.net/bikeshedding-the-daily-software-anti-pattern/). Please read this link. It is fun.
