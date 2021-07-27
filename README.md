@@ -3462,6 +3462,50 @@ What to do instead?
 Make customers happy, don't beautify your tech. Under the hood every machine is ugly. That's ok, as long it works reliably.
 Don't beautifying internals. Improve customer experience, raise test coverage, automate boring stuff. 
 
+### Microservices and Esperanto
+
+Imagine you have ten years old code base which is a monolith: One git repo, one DB, one logical http service.
+
+The overall motivation is mediocre and development feels slow.
+
+Management wants to improve the situation.
+
+Briliant software architects provide a simple solution: Microservices and Kubernetes!
+
+They provide presentation where the overall architecture is drawn on one slide.
+
+It looks simple. Noone dares to disagree, because the company does not foster
+the habit of disagreeing. Nobody has the role of playing the devil's advocate.
+
+Management decides to go this route: Microservices and Kubernetes. 
+
+Everybody does what the upper management wants. Some leave and go to a different company.
+
+How does this relate do "Esperanto"? Esperanto is a constructed international auxiliary language.
+The idea is briliant: Let's create a language that everybody understands, and then we are all 
+happy because we understand each other. There is a huge difference between briliant theory
+and practice.
+
+Back to IT: You don't change a ten years old code base with 100k lines of code to a Kubernetes
+based Microservice in some weeks.
+
+And all the time and energy you invest into getting to microservices does not improve the customer
+experience. 
+
+I think instead of microservices and Kubernetes these things provide more:
+
+* release daily.
+* relaxed PR review.
+* Automated code quality checks (coverage). 
+* Automated code formatting (like "black" for Python)
+* Teamleads need skill to foster collective intelligence and avoid groupthink.
+* Quartely goals (maybe with OKRs).
+* Get customer feedback. The application should provide a simple way for users to provide feedback.
+
+
+
+
+
 ### Dark side of Pull-Request Reviews
 
 Pull-Request reviews have limitations
