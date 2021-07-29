@@ -3233,7 +3233,24 @@ See [Liste of Static Site Generators](https://github.com/guettli/static-site-gen
 
 
 
+## ?. Sofware Lifecycle
 
+
+## Don't waste time supporting old software.
+
+Don't waste time supporting old software. The clock is ticking faster today than in the past.
+
+My rule of thumb: There is no need to support software which is older than the Ubuntu LTS of last year.
+
+Example: 
+
+Today is July 2021. Last year was July 2020. The current Ubuntu LTS of July 2020 was 20.04. This shipped with Python 3.8.
+This means for me: Today (July 2021), there is no need to support Python 3.7 or lower. 
+
+This applies if you create a library which gets used by other parties.
+
+If you run an application which is only run in an environment which you control, then do what you want.
+There is no need to support older versions.
 
 ------------------------------------------------------------------------
 
