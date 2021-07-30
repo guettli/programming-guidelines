@@ -3477,7 +3477,7 @@ Source: [The Majestic Monolith](https://m.signalvnoise.com/the-majestic-monolith
 What to do instead?
 
 Make customers happy, don't beautify your tech. Under the hood every machine is ugly. That's ok, as long it works reliably.
-Don't beautifying internals. Improve customer experience, raise test coverage, automate boring stuff. 
+Don't beautify internals. Improve customer experience, raise test coverage, automate boring stuff. 
 
 ### Microservices and Esperanto
 
@@ -3519,9 +3519,19 @@ I think instead of microservices and Kubernetes these things provide more:
 * Quartely goals (maybe with OKRs).
 * Get customer feedback. The application should provide a simple way for users to provide feedback.
 
+### Instead of Microservices?
 
+I think a great web applications has three types of parts:
 
+* It uses a well-known open-soure web framework (for example Django).
+* The project is a monolith. In most cases this is closed-source software.
+* Many tiny libraries. Some are open-source, some are (inhouse) closed-source.
 
+The last part is important. Imagine you want to run several projects, then putting
+generic code into the monolith makes it harder for you to create several projects.
+
+This architecture works fine for 99% of all projects. If you reach the limit,
+then you have enough money and development teams to refactor.
 
 ### Dark side of Pull-Request Reviews
 
