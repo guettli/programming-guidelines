@@ -451,6 +451,14 @@ If you tell your navigation system of your car "Please show me the route to Casa
 -   Code maintained by a reliable upstream (like Python, PostgreSQL,
     Django, Linux, Node.js, Typescript, ...) is more reliable than my code.
 
+### Avoid low-level stuff
+
+For me this means to avoid: Assembler, C, C++, Rust, golang ...
+
+These tools are great if you want maximum performance.
+
+My goal is to create something useful. Maybe I optimize later.
+
 ### fewer resources, fewer bugs
 
 There are several ways to give data to a method.
