@@ -3533,6 +3533,30 @@ generic code into the monolith makes it harder for you to create several project
 This architecture works fine for 99% of all projects. If you reach the limit,
 then you have enough money and development teams to refactor.
 
+### How to get to "many tiny libraries"?
+
+First: What is "cookie-cutter"?
+
+> If you describe something as having a cookie-cutter approach or style, you mean that the same approach or style is always used and not enough attention is paid to individual differences.
+
+Source: [collinsdictionary.com](https://www.collinsdictionary.com/de/worterbuch/englisch/cookie-cutter)
+
+In IT the term is often used for bootstrapping a new application. Such a tool helps you to set up your initial configuration and directory structure.
+
+There are ready made cookie-cutter tools like [cookiecutter-django](https://cookiecutter-django.readthedocs.io/)
+
+I personally think the ready made cookie cutter tools are too bloated. 
+
+If you are new to a framework, then read their docs and follow the instructions. This should get you to your first running project.
+
+Sooner or later you will create several projects, and you want to stream-line the development process (running tests, releasing new versions, uploading to a package repository, ...).
+
+Then it is time to write your own cookie-cutter. I think it is perfectly fine if every team has its own cookie-cutter scripts.
+
+With the help of cookie-cutter scripts, you will be easily get to "many tiny libaries".
+
+[Anthony Sottile](https://github.com/asottile) is a good example. He has at the moment [74 projects at pypi](https://pypi.org/user/asottile/). Allthough I don't know if he uses cookie cutter scripts or not.
+
 ### Dark side of Pull-Request Reviews
 
 Pull-Request reviews have limitations
