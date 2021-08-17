@@ -2661,18 +2661,11 @@ Don't catch all exception. More about this in [The Most Diabolical Python Antipa
 
 ### Live at head
 
-[Semantic Versioning (SemVer)](https://semver.org/) is well-known because it promises stability. But why do applications like Google Chrome or Firefox just push the first number? At the moment I use Chromium 87.0.4280.88, and soon I will use Version 88.x.y.z.
-
-Chrome is not a software library, but where does LTS (long-term support) make sense?
+[Semantic Versioning (SemVer)](https://semver.org/) is well-known because it promises stability. Don't take take it too serious.
 
 There is only one future. Which version of Gmail do you use? 
 
-Bridges, streets, and houses need to be stable. The stability of the overall infrastructure is important. And therefore we see a steady
-reconstruction of bridges, streets, houses, and supply channels.
-
-And software? Some associate with stability "peace of mind", I associate with stability a graveyard.
-
-If you still think Semantic Versioning is useful, then please read [Philosophy of Abseil](https://abseil.io/about/philosophy)
+Related: [Philosophy of Abseil](https://abseil.io/about/philosophy)
 
 Related: [Does SemVer work?](https://books.google.de/books?id=V3TTDwAAQBAJ&pg=PA445&dq=does%20semver%20work) [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/)
 
