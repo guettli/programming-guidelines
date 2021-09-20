@@ -1149,7 +1149,11 @@ Look at the actual code which does something. I used five lines with
 complex. The "return" simplifies the code. For me, the second version is
 much easier to read.
 
-For Python there exists a "complexity checker": [radon](https://pypi.org/project/radon/).
+Please tell me, if you know a tool which can detect and maybe fix missing early returns for Python
+code.
+
+For Python there exists a "complexity checker": [radon](https://pypi.org/project/radon/), but AFAIK
+it can't be used to detect missing early-returns.
 
 ### Source code vs generated code
 
