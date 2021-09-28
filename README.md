@@ -1792,6 +1792,15 @@ Some people use libraries which create random user names and addresses (street, 
 
 I don't see why a special library for creating test data is needed. Random data leads to flaky tests.
 
+If you need four different users for testing some code, then use "Test User 1", "Test User 2", "Test User 3", "Test User 4".
+This way it is far easier to debug a test which works on your machine, but fails in CI. If you use random data, then
+this is much harder. Imagine in CI a mail gets send to only three users, although four users should get an email. If you
+use random data you can't differentiate between the users. If you use the above boring naming scheme, then you can distinguish between
+the users. You don't need names like "Alice" or "Bob".
+
+This guideline is about writing tests. If you create demo-systems, then it is the same: Don't use
+random data. The output should repeatable. Although for a demo-system you usualy want nice names.
+
 If you use an ORM in your production code, then use the ORM to create your
 test data.
 
