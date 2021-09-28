@@ -3245,7 +3245,7 @@ See [Liste of Static Site Generators](https://github.com/guettli/static-site-gen
 
 Don't waste time supporting old software. The clock is ticking faster today than in the past.
 
-My rule of thumb: There is no need to support software which is older than the Ubuntu LTS of last year.
+My rule of thumb: There is no need to support software which is older than the Ubuntu LTS (long-term-support) of last year.
 
 Example: 
 
@@ -3256,6 +3256,14 @@ This applies if you create a library which gets used by other parties.
 
 If you run an application which is only run in an environment which you control, then do what you want.
 There is no need to support older versions.
+
+But on the other hand this means: Your software needs to run on the software stack of the Ubuntu LTS
+12 months ago. Don't fall behind this. If your software stack is older then the Ubuntu LTS of last year,
+then you should upgrade your stack.
+
+Example: Ubuntu 20.04 shipped with PostgreSQL 12.8. This long-term-support version of Ubuntu was released in April 2020. This means
+that you should upgrade your applications to at least PostgreSQL 12.8 around April 2021. Otherwise your
+stack gets too old.
 
 ------------------------------------------------------------------------
 
