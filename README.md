@@ -1788,10 +1788,11 @@ and automated tests.
 Do not use random data for tests. It just makes no sense: the test environment should
 be reproducible, not flaky.
 
-Some people use libraries which create random user names and addresses (street, city, postal code, .....)
+Some people use libraries which create random user names and addresses (street, city, postal code, .....) like [Faker](https://pypi.org/project/Faker/).
 
-I don't see why a special library for creating test data is needed. If
-you use an ORM in your production code, then use the ORM to create your
+I don't see why a special library for creating test data is needed. Random data leads to flaky tests.
+
+If you use an ORM in your production code, then use the ORM to create your
 test data.
 
 I like [pytest fixtures](https://docs.pytest.org/en/latest/explanation/fixtures.html).
