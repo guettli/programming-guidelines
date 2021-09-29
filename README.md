@@ -1792,6 +1792,10 @@ Some people use libraries which create random user names and addresses (street, 
 
 I don't see why a special library for creating test data is needed. Random data leads to flaky tests.
 
+If you need some a list of names/addresses/ to fill you database, then you can take data from here: https://github.com/joke2k/faker/tree/master/faker/providers
+But don't do so in a random way. Take the same data each time, so that your script produces reproduciable output.
+
+
 If you need four different users for testing some code, then use "Test User 1", "Test User 2", "Test User 3", "Test User 4".
 This way it is far easier to debug a test which works on your machine, but fails in CI. If you use random data, then
 this is much harder. Imagine in CI a mail gets send to only three users, although four users should get an email. If you
