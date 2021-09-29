@@ -1830,6 +1830,16 @@ version control.
 Creating a test system via code looks complicated at first, but it helps you to create
 reliable, reproducible systems. This makes you faster in the long run.
 
+### Don't check for counts in unittests.
+
+> AssertionError: 8 != 9
+
+That's a useless error message.
+
+You have absolutely no clue if a test fails with a message like this.
+
+It is much more useful to compare a list of strings.
+
 ### This is untestable code
 
 If you are new to software testing, then you might think ... "some parts
@@ -1908,6 +1918,7 @@ In other words: Only mock away things that take too long or things that need res
 which are not available (e.g. an SMTP server).
 
 Related Podast: [Don't Mock your Database (Jeff Triplett)](https://testandcode.com/154)
+
 ### Is config code or data?
 
 The heading "Is config code or data?" could be phrased as "config: DB or git?", too.
@@ -2015,7 +2026,7 @@ where this warning comes from. You can use this solution:
 - file system ACLs (Access control lists). Try to use as little as possible chmod/chown.
 - git submodules (Please use dependency management, configuration management, deployment, tools, ...)
 - [seek()](https://en.cppreference.com/w/c/io/fseek). Stateless is better. If you use seek() the file position is a state. Sooner or later the position (state) will be wrong.
-- Scripts which get executed via OpenSSH [ForceCommand](http://man.openbsd.org/OpenBSD-current/man5/sshd_config.5#ForceCommand) or "command" in .ssh/authorized_keys. SSH is not an API use http.
+- Scripts which get executed via OpenSSH [ForceCommand](http://man.openbsd.org/OpenBSD-current/man5/sshd_config.5#ForceCommand) or "command" in .ssh/authorized_keys. SSH is not an API, use http.
 - I think even [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are strange and outdated. Just some minutes ago I got confused because `grep -r foo .` did not show a result, but `grep foo ./my-dir/abc.txt` showed a result. Root-cause: `my-dir` was a symlink.
 
 ### Avoid writing a native GUI
