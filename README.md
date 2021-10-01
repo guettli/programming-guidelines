@@ -1819,7 +1819,7 @@ If you need some a list of names/addresses/ to fill you database, then I see the
 * Option0: If you users have different roles, use a corresponding name: like "Admin", "Staff", "User", ...
 * Option1: Be creative and/or use names which come to your mind: Bob Geldof, Steve Wonder, Mr. Bean, ...
 * Option2: you can take data from here by hand: https://github.com/joke2k/faker/tree/master/faker/providers
-* Option3: Use the faker library **once** and create some JSON. Store this JSON in your code or in an extra file. Then uninstall faker.
+* Option3: Use the [faker](https://faker.readthedocs.io/en/master/) library **once** and create some JSON. Store this JSON in your code or in an extra file. Then uninstall faker.
 
 
 This way it is far easier to debug a test which works on your machine, but fails in CI. If you use random data, then
