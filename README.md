@@ -1814,15 +1814,18 @@ Some people use libraries which create random user names and addresses (street, 
 
 I don't see why a special library for creating test data is needed. Random data leads to flaky tests.
 
-If you need some a list of names/addresses/ to fill you database, then you can take data from here: https://github.com/joke2k/faker/tree/master/faker/providers
-But don't do so in a random way. Take the same data each time, so that your script produces reproduciable output.
+If you need some a list of names/addresses/ to fill you database, then I see these options:
+
+* Option0: If you users have different roles, use a corresponding name: like "Admin", "Staff", "User", ...
+* Option1: Be creative and/or use names which come to your mind: Bob Geldof, Steve Wonder, Mr. Bean, ...
+* Option2: you can take data from here by hand: https://github.com/joke2k/faker/tree/master/faker/providers
+* Option3: Use the faker library **once** and create some JSON. Store this JSON in your code or in an extra file. Then uninstall faker.
 
 
-If you need four different users for testing some code, then use "Test User 1", "Test User 2", "Test User 3", "Test User 4".
 This way it is far easier to debug a test which works on your machine, but fails in CI. If you use random data, then
 this is much harder. Imagine in CI a mail gets send to only three users, although four users should get an email. If you
-use random data you can't differentiate between the users. If you use the above boring naming scheme, then you can distinguish between
-the users. You don't need names like "Alice" or "Bob".
+use random data you can't differentiate between the users. If you use a predictable naming scheme, then you can distinguish between
+the users.
 
 This guideline is about writing tests. If you create demo-systems, then it is the same: Don't use
 random data. The output should repeatable. Although for a demo-system you usualy want nice names.
@@ -1831,16 +1834,6 @@ If you use an ORM in your production code, then use the ORM to create your
 test data.
 
 I like [pytest fixtures](https://docs.pytest.org/en/latest/explanation/fixtures.html).
-
-### No jokes in test data
-
-It is tempting to use some funny names and jokes in test data, since customers won't see this.
-
-Nevertheless: Don't do it.
-
-For you it is funny, and for new team members it might be just confusing.
-
-Keep it obvious, use "Dummy name" or something like this. This reduces cognitive load in the long run.
 
 ### How to create QA and staging systems?
 
