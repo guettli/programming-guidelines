@@ -1142,6 +1142,8 @@ easier to read and understand. See
 
 Example:
 
+    # Code with unnecessary complexity
+    
     def my_method(my_model_instance):
         if my_model_instance.is_active:
             if my_model_instance.number > MyModel.MAX_NUMBER:
@@ -1152,7 +1154,10 @@ Example:
                     ....
                     ....
 
+Better:
 
+    # Less complex because less indentation
+    
     def my_method(my_model_instance):
         if not my_model_instance.is_active:
             return
