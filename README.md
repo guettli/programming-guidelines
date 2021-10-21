@@ -1767,6 +1767,8 @@ From [Software Engineering at Google](https://www.oreilly.com/library/view/softw
 
 For basic syntax checking (aka linting) before commit I use [pre-commit](https://pre-commit.com/)
 
+Adding simple checks is very easy: [hook to reject commit if a file contains a specific string](https://stackoverflow.com/a/66171121/633961)
+
 ### aaa-tests (smoke tests)
 
 If you have a huge test-suite, which takes more than ten minutes to execute, then I recommend
