@@ -1917,6 +1917,17 @@ For storage and cache it is easy to find an in-memory solution (for Django [dj-i
 but for the database it is more difficult. My opinion: Use PostgreSQL during development.
 Don't use SQLite, since it does not support all features of PostgreSQL.
 
+### Hermetic Testing: N times on localhost
+
+It should be easy for developers to set up several test-systems on his local machine.
+
+If you are working on a larger change, it is really helpful to have one system with the old state, and
+a second system with the new state.
+
+Both systems should be hermetic, which means that they don't share resources.
+
+Using the same database server is fine, but both should use different databases.
+
 ### Unit-Tests may use the ORM.
 
 Imagine you use a framework that provides you a nice ORM to create, read, update, and delete your data.
