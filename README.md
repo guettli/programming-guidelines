@@ -845,6 +845,8 @@ for trouble. Sooner or later your permission checks get more complex and then on
 
 That's why I think: do permission checking via SQL
 
+Some call this "Authorization predicate push-down"
+
 ### Real men use ORM
 
 [ORM (Object-relational mapping)](https://en.wikipedia.org/wiki/Object-relational_mapping) makes daily
