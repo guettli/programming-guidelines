@@ -907,6 +907,31 @@ needs and he likely wants new features not faster execution.
 
 Higher-level languages have a better "zero to [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)" speed.
 
+### Three time dimensions
+
+I think in software development there are three dimension of "time".
+
+Most developer immediatley think about "execution time": How fast is the code? How can I make the code even faster?
+
+But there are:
+
+Time for "From wish to wow": How long does it take to implement and deploy a feature, so that the customer is happy?
+
+Time for "From ? to Aha!": How fast can an other developer understand your code.
+
+I think in most cases the proprity is like this: First "From wish to wow", then "From ? to Aha!", then "execution time".
+
+Of course this depends on your context. If you developing on PostgreSQL-core, Python-core, Kubernetes-core or Linux-kernel then
+execution time is very important.
+
+But mere mortals do application development.
+
+Of course the application should have a good performance.
+
+But my hint is to optimize the performance of the application by using statistical profiling
+of the production system. But just looking at the code and guessing how to optimize performance 
+won't help, if you have not measured the performance of the production system.
+
 ### Version Control: git
 
 For version control of software, I use git. I think all other tools (svn,
