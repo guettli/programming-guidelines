@@ -2743,6 +2743,38 @@ So if not SemVer, what else?
 
 I like [Calendar Versioning](https://calver.org/) with [BumpVer](https://pypi.org/project/bumpver/).
 
+### How to structure libraries?
+
+In the past we had a handy (closed source) library called `djangotools`. It contained a lot of methods which helped us to re-use code in different projects.
+
+But there was a problem: The methods in djangotools needed third-party libraries. For example:
+
+* for reading excel files our methods needed xlrd
+* for thumbnailing images our methods needed Pillow
+* ....
+
+This means the list of dependencies of our library djangotools got very long.
+
+If a project needed a single small method from djangotools, it needed to install the dependecies of djangotools. Diskspace
+is cheap, but nevertheless it eats your time in the long run if you bloat your projects.
+
+How to solve this?
+
+The solution sounds easy: Create serveral libraries, not one huge library.
+
+But how to structure libraries?
+
+Now I know that it makes sense structure the libraries by their dependecies.
+
+Examples:
+
+* xlrd_utils
+* pillow_utils
+* ....
+
+This way a project which needs a method from pillow_utils just need Pillow, and not xlrd.
+
+
 ### List of API Types
 
 #### Client: Human or machine-to-machine?
