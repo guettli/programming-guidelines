@@ -2873,21 +2873,33 @@ wall goes tick-tack-tick-tack. And you customers won't notice and won't honor al
 
 I think you gain nothing if you split the backend code and the frontend code.
 
-### Use http, avoid ftp/sftp/scp/rsync/smb/mail
+### Use http, avoid ftp/sftp/scp/rsync/smb/mail (to import data)
 
 Use http for data transfer. Avoid the old ways
 (ftp/sftp/scp/rsync/smb/mail).
 
+Especialy if the sender is a different company or different department.
+
+The old protocols ftp/sftp/scp/rsync/smb/mail don't let you validate the
+data you receive.
+
+This means invalid data can be send to you, and then you are responsible
+to care for the invalid data. This is usually manual work which causes
+useless interruptions.
+
+If it just a simple file backup, then these protocols (except mail) might
+be ok. But if you want to impport the data into your system, and
+the data could be invalid, then avoid these old protocols.
+
 If you want to transfer files via HTTP from shell/cron you can use:
-[tbzuploader](https://github.com/guettli/tbzuploader).
+[tbzuploader](https://github.com/guettli/tbzuploader). This way
+the sender can call a simple script, and the receiver can validate
+the data before accepting it.
 
 The next step is to avoid clever
 [inotify](https://en.wikipedia.org/wiki/Inotify)-daemons. You don't need
 this anymore if you receive your data via HTTP.
 
-Why is HTTP better? Because HTTP can validate the data. If it is not
-valid, the data can be rejected. That's something you can't do with
-FTP/sFTP/SCP/rsync/smb/mail.
 
 ### Avoid Polling
 
