@@ -2873,21 +2873,18 @@ wall goes tick-tack-tick-tack. And you customers won't notice and won't honor al
 
 I think you gain nothing if you split the backend code and the frontend code.
 
-### Use http, avoid ftp/sftp/scp/rsync/smb/mail
+### Don't Dodge Validation
 
-Use http for data transfer. Avoid the old ways
-(ftp/sftp/scp/rsync/smb/mail).
+When you have API endpoints for receiving data, try to avoid the temptation to
+bypass them with things like SFTP, scp, rsync or SMB. This ensures that your
+validation step will always be run, keeping your data structurally sound.
+
+This also avoids the need for clever inotify-daemons and unnecessary
+communication with your (human) clients as the API will respond with clear
+validation errors if the data is incorrect.
 
 If you want to transfer files via HTTP from shell/cron you can use:
 [tbzuploader](https://github.com/guettli/tbzuploader).
-
-The next step is to avoid clever
-[inotify](https://en.wikipedia.org/wiki/Inotify)-daemons. You don't need
-this anymore if you receive your data via HTTP.
-
-Why is HTTP better? Because HTTP can validate the data. If it is not
-valid, the data can be rejected. That's something you can't do with
-FTP/sFTP/SCP/rsync/smb/mail.
 
 ### Avoid Polling
 
