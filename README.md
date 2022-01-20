@@ -2068,7 +2068,7 @@ Sometimes you can't use a database constraint to find the relevant
 stack trace, but often there are other ways.....
 
 If you can't use a database constraint, maybe this helps: Raise
-Exception on unwanted syscall
+Exception on unwanted syscall (Python+GDB)
 <http://stackoverflow.com/a/42669844/633961>
 
 If you want to find the line where unwanted output in stdout gets
@@ -2078,6 +2078,9 @@ If you have a library that logs a warning, but the warning does not
 help, since it is missing important information. And you have no clue
 where this warning comes from. You can use this solution:
 <http://stackoverflow.com/a/43232091/633961>
+
+You can use `strace -e inject...` to perform syscall tampering for 
+the specified set of syscalls.
 
 
 ### Avoid magic or uncommon things
