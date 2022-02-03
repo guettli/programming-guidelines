@@ -2513,6 +2513,8 @@ If you use Django, you can use the [ManifestStaticFilesStorage](https://docs.dja
 
 A good introduction to caching: [Caching (Mozilla Foundation)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
+An other good article about caching [Caching Header Best Practices](https://simonhearne.com/2022/caching-header-best-practices/)
+
 ### Robust Cache-Invalidation: Database Index
 
 A database index is like caching: Redundant data gets created to achieve faster lookups.
