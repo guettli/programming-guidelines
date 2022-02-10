@@ -58,9 +58,8 @@ Measure your typing speed: [10fastfingers.com](//10fastfingers.com/)
 
 Avoid switching between mouse and keyboard too much.
 
-I like Lenovo keyboards with track point. If you want the track point to
-have more grip you can use sandpaper. Here is an image to illustrate
-what I use [Sandpaper glued on Track Point](https://raw.githubusercontent.com/guettli/programming-guidelines/master/sandpaper-glued-on-track-point.jpg)
+I like Lenovo keyboards with track point. If you want more grip, then
+read [Desktop Tips "Keyboard"](https://github.com/guettli/desktop-tips-and-tricks/blob/master/README.md#keyboard)
 
 Once I was fascinated by the copy+paste history of Emacs and PyCharm.
 But then I thought to myself: "I want more. I am hungry. I want a
