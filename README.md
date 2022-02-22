@@ -2619,6 +2619,8 @@ There are commercial tools and some open-source tools.
 
 For Python, there is [py-spy](https://github.com/benfred/py-spy) to dump the stack traces. The dumps can get analyzed by [speedscope](https://github.com/jlfwong/speedscope).
 
+For Kubernetes there is [Parca](//parca.dev)
+
 ### Use "main" for development
 
 You confuse newcomers if your development branch has a different name. If you call the development branch "main", then all introduction material at Github does apply. And if your code is at Github, all people can see that your project is still alive, since the main branch gets displayed per default.
