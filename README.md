@@ -264,7 +264,7 @@ express "empty":
 Avoid it if possible. In most cases, you just need one variant of
 "empty". Simplest solution: avoid that a column holding character data is allowed to be null.
 
-If you think the character column should be allowed to be NULL,
+If you think the character column should be allowed to be NULL (for example you want a unique, but optional identifier for rows),
 then consider a constraint: If the character string in the column is not
 NULL, then the string must not be empty. This way ensure that there are
 is only one variant of "empty".
