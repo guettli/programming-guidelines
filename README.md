@@ -1868,6 +1868,10 @@ test data.
 
 I like [pytest fixtures](https://docs.pytest.org/en/latest/explanation/fixtures.html).
 
+I know that there special cases and corresponing libraries which use fuzzing to test edge cases.
+For example Golang has the package [fuzz](https://go.dev/doc/fuzz/). But that's only for special cases,
+if is not needed for most application programming.
+
 ### How to create QA and staging systems?
 
 Many teams create the QA and staging systems by copying the production system.
