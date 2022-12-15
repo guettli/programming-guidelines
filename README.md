@@ -663,18 +663,14 @@ writing shell scripts.
 Reasons:
 
 - If an error happens in a shell script, the interpreter steps silently to the next line. Yes, I know you can use "set -e". But you don't get a stack trace. Without a stack trace, you waste a lot of time analyzing why this error happened.
-- AFAIK you can't do object-oriented programming in a shell. Often OOP is overkill, but sometimes it is really great.
-- AFAIK you can't raise exceptions in shell scripts.
 - It makes sense to use (or run) an application monitoring platform. For example "Shell" is not a [supported plattform of Sentry](https://docs.sentry.io/platforms/). If you configure it for your prefered environment once, then you get great error reporting in once place. Even if your small backup-script is only a three lines long shell script: It is unreliable, use a real language!
 - Shell-Scripts tend to call a lot of subprocesses. Every call to grep, head, tail, cut creates a new process. This tends to get slow.
     I have seen shell scripts that start thousands of processes per second.
     After re-writing them in Python they were 100 times faster and 100
     times more readable.
-- I do this "find ... | xargs" daily, but only while using the shell interactively. But what happens if a filename contains a newline character? Yes, I know "find ... -print0 | xargs -r0", but now "find
-    .. | grep | xargs" does not work anymore... It is dirty and will never get clean.
+- I do this `find ... | xargs` daily, but only while using the shell interactively. But what happens if a filename contains a space character? Yes, I know `find ... -print0 | xargs -r0`. BTW, I switched from find+xargs to [rg](https://github.com/BurntSushi/ripgrep) for most cases.
 - Look at all the pitfalls: [Bash
-    Pitfalls](https://mywiki.wooledge.org/BashPitfalls) My conclusion: I
-    prefer to walk on solid ground, I don't write shell scripts anymore.
+    Pitfalls](https://mywiki.wooledge.org/BashPitfalls)
 - Even Crontab lines are dangerous. Look at this cron-job which should clean the directory of the temporary files:
 
 > @weekly . ~/.bashrc && find $TMPDIR -mindepth 1 -maxdepth 1 -mtime +1 -print0 | xargs -r0 rm -rf
@@ -691,10 +687,10 @@ I think writing portable shell scripts and avoiding bashism (shell
 scripts that use features that are only available in the bash) is a
 useless goal. It is wasting time. It feels productive, but it is not.
 
-Avoid \#!/bin/sh. The interpreter could be bash, dash, busybox, or something else.
+Avoid `#!/bin/sh`. The interpreter could be bash, dash, busybox, or something else.
 See [Comparison of command
 shells](https://en.wikipedia.org/wiki/Comparison_of_command_shells).
-Please be explicit. Use \#!/bin/your-favorite-shell.
+Please be explicit. Use `#!/bin/your-favorite-shell`.
 
 If I look at this page
 ([DashAsBinSh](https://wiki.ubuntu.com/DashAsBinSh)), which explains how
@@ -710,8 +706,7 @@ If you are not able to create a dependency to bash, then solve this
 issue. Use rpm/dpkg or configuration management to handle "my script
 foo.sh needs bash".
 
-I know that there are some edge cases where the bash is not available
-(for example, a container image based on Alpine Linux),
+I know that there are some edge cases where the bash is not available,
 but in most cases, the time to get things done is far more important.
 Execution performance is not that important. First: get it done
 including automated tests.
