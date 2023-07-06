@@ -681,6 +681,7 @@ Shell scripts are fine if they are conditionless. This means no "if", no "else",
 For example in a Dockerfile you can use "RUN ...." commands to create a custom image. But I would not call things like this a shell script. 
 It is just a sequence of commands to execute.
 
+
 ### Portable Shell Scripts
 
 I think writing portable shell scripts and avoiding bashism (shell
@@ -760,13 +761,17 @@ Shell Scipts are ok, if they are conditionless: No "if", no "else", no "for".
 
 For example creating containers with one or several `RUN ...` commands is ok.
 
-I use this heading, to ensure that the script stops if something is wrong:
+I use this heading, to ensure that the script is using Bash and stops if something is wrong:
 
 ```
 #!/bin/bash
 set -euxo pipefail
 ...
 ```
+And:
+
+* you should check your script in CI with [shellcheck](https://github.com/koalaman/shellcheck).
+* Use an IDE plugin which uses shellcheck.
 
 ### Avoid toilet paper programming (wrapping)
 
