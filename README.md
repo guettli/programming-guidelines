@@ -2729,17 +2729,20 @@ Don't catch all exception. More about this in [The Most Diabolical Python Antipa
 
 ### Live at head
 
-[Semantic Versioning (SemVer)](https://semver.org/) is well-known because it promises stability. Don't take take it too serious.
+[Semantic Versioning (SemVer)](https://semver.org/) is well-known because it promises stability.
 
-There is only one future. Which version of Gmail do you use? 
+But if it is useful or slowing down, depends on the context.
+
+If you develop something for end-users, the version plays no big role. Do you know the version of your mail-user-agent (gmail, thunderbird, ...) or browser? 
+Users should not need to care about that.
+
+On the other hand, if you develop a software library, or if you provide APIs, then versioning, release notes and a clear deprecation time-line are important.
 
 Related: [Philosophy of Abseil](https://abseil.io/about/philosophy)
 
 Related: [Does SemVer work?](https://books.google.de/books?id=V3TTDwAAQBAJ&pg=PA445&dq=does%20semver%20work) [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/)
 
-So if not SemVer, what else? 
-
-I like [Calendar Versioning](https://calver.org/) with [BumpVer](https://pypi.org/project/bumpver/).
+BTW, I like [Calendar Versioning](https://calver.org/) with [BumpVer](https://pypi.org/project/bumpver/).
 
 ### How to structure libraries?
 
