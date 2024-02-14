@@ -766,6 +766,8 @@ I use this heading, to ensure that the script is using Bash and stops if somethi
 ```
 #!/bin/bash
 set -euxo pipefail
+trap 'echo "Warning: A command has failed. Exiting the script. Line was ($0:$LINENO): $(sed -n "${LINENO}p" "$0")"; exit 3' ERR
+
 ...
 ```
 And:
