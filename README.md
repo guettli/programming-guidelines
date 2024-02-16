@@ -65,9 +65,8 @@ Once I was fascinated by the copy+paste history of Emacs and PyCharm.
 But then I thought to myself: "I want more. I am hungry. I want a
 copy+paste history not only in one application, but I also want it for the whole
 desktop". The solution is very simple, but somehow only a few people use
-it. The solution is called a clipboard manager. I use Diodon (Linux) and
-CopyQ (for Windows). I use ctrl+alt+v to open the list of last
-copy+paste texts.
+it. The solution is called a clipboard manager. I use [CopyQ](https://hluk.github.io/CopyQ/). I use ctrl+alt+v to open the list of last
+copy+paste texts. CopyQ supports regex searches in the history. 
 
 ### Avoid searching with your eyes
 
