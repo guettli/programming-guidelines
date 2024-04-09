@@ -764,8 +764,8 @@ I use this heading, to ensure that the script is using Bash and stops if somethi
 
 ```
 #!/bin/bash
-set -euxo pipefail
 trap 'echo "Warning: A command has failed. Exiting the script. Line was ($0:$LINENO): $(sed -n "${LINENO}p" "$0")"; exit 3' ERR
+set -euxo pipefail
 
 ...
 ```
@@ -773,6 +773,7 @@ And:
 
 * you should check your script in CI with [shellcheck](https://github.com/koalaman/shellcheck).
 * Use an IDE plugin which uses shellcheck.
+* For formatting you can use [shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format) based on [shfmt](https://github.com/mvdan/sh)
 
 ### Avoid toilet paper programming (wrapping)
 
