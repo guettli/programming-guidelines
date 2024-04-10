@@ -756,16 +756,14 @@ way more efficient, since you don't start new processes again and again.
 
 ### Shell Scripts are ok, if ...
 
-Shell Scipts are ok, if they are conditionless: No "if", no "else", no "for".
+Shell Scipts are ok, if they are almost aconditionless: Few "if", "else" or "for".
 
-For example creating containers with one or several `RUN ...` commands is ok.
-
-I use this heading, to ensure that the script is using Bash and stops if something is wrong:
+I use this heading, to ensure that the script is using Bash and stops if something is wrong (aka "Bash strict mode"):
 
 ```
 #!/bin/bash
 trap 'echo "Warning: A command has failed. Exiting the script. Line was ($0:$LINENO): $(sed -n "${LINENO}p" "$0")"; exit 3' ERR
-set -euxo pipefail
+set -Eeuo pipefail
 
 ...
 ```
