@@ -897,6 +897,9 @@ But for internal services PostgreSQL with a custom role (only access to one tabl
 only allowed to do INSERT) works fine. You can use NOTIFY, so that you can handle the inserted data
 immediately.
 
+For professional internal services you can use [nats.io](https://nats.io/). But using NATS for small
+project makes no sense.
+
 ### C is slow
 
 ... looking at the time you need to get things implemented. Yes, the
