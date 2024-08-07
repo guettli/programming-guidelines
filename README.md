@@ -891,8 +891,11 @@ there is a change to the data structure, then the API needs to be
 changed, too.
 
 I don't say that SQL is always the best solution. Of course, HTTP based
-APIs are better in general. But in some use cases doing more is not
-needed.
+APIs are often better for services which get consumed by third paries.
+
+But for internal services PostgreSQL with a custom role (only access to one table, and
+only allowed to do INSERT) works fine. You can use NOTIFY, so that you can handle the inserted data
+immediately.
 
 ### C is slow
 
