@@ -773,6 +773,8 @@ And:
 * Use an IDE plugin which uses shellcheck.
 * For formatting you can use [shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format) based on [shfmt](https://github.com/mvdan/sh)
 
+I elaborated that here [Bash Strict Mode](https://github.com/guettli/bash-strict-mode)
+
 ### Avoid toilet paper programming (wrapping)
 
 What is "toilet paper programming"? This is a pattern which was often
