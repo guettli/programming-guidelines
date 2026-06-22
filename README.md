@@ -24,6 +24,12 @@ My opinionated programming guidelines.
 
 ### About this README
 
+---
+
+This long text was written several years ago. It was not updated yet. Time and opinions have changed. Don't take these guidelines too serious.
+
+---
+
 I was born in 1976. I started coding with basic and assembler when I was
 13. Later turbo pascal. From 1996-2001 I studied computer science at
 HTW-Dresden (Germany). I learned Shell, Perl, Prolog, C, C++, Java, PHP, and finally Python.
