@@ -1,7 +1,0 @@
-# See https://pre-commit.com (run by prek via the global git hook from guettli/dotfiles).
-repos:
-  # Block commits that contain secrets.
-  - repo: https://github.com/betterleaks/betterleaks
-    rev: v1.10.1
-    hooks:
-      - id: betterleaks

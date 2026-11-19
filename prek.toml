@@ -1,0 +1,16 @@
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+#:schema https://www.schemastore.org/prek.json
+
+# Block commits that contain secrets. betterleaks is pinned in mise.toml.
+[[repos]]
+repo = "local"
+hooks = [
+  {
+    id = "betterleaks",
+    name = "betterleaks (secrets)",
+    entry = "mise exec betterleaks -- betterleaks git --pre-commit --staged --redact --verbose",
+    language = "system",
+    pass_filenames = false
+  }
+]
